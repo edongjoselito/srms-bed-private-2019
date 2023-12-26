@@ -225,6 +225,12 @@
     <Compile Include="Registrar\Registrar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Registrar\StudeProfile.Designer.vb">
+      <DependentUpon>StudeProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\StudeProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reports\ReportsDashboard.Designer.vb">
       <DependentUpon>ReportsDashboard.vb</DependentUpon>
     </Compile>
@@ -274,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registrar\Registrar.resx">
       <DependentUpon>Registrar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\StudeProfile.resx">
+      <DependentUpon>StudeProfile.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ReportsDashboard.resx">
       <DependentUpon>ReportsDashboard.vb</DependentUpon>
@@ -359,6 +368,7 @@
     <None Include="Resources\Update User.png" />
     <None Include="Resources\Spectators On Seats.png" />
     <None Include="Resources\Popular Man.png" />
+    <None Include="Resources\Student Registration.png" />
     <Content Include="School.ico" />
     <Content Include="Scripts\fontawesome\all.js" />
     <Content Include="Scripts\fontawesome\all.min.js" />

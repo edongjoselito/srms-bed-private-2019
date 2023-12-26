@@ -28,21 +28,21 @@ Partial Class frmRegistrar
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton4 = New System.Windows.Forms.ToolStripSplitButton()
         Me.ENCODEGRADESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MODIFYGRADESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Panel6.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.Panel5.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
+        Me.Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -87,6 +87,7 @@ Partial Class frmRegistrar
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(84, Byte), Integer))
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
@@ -94,37 +95,6 @@ Partial Class frmRegistrar
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1337, 727)
         Me.Panel2.TabIndex = 15
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
-        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel7.Location = New System.Drawing.Point(0, 86)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(1337, 10)
-        Me.Panel7.TabIndex = 12
-        '
-        'Panel5
-        '
-        Me.Panel5.Controls.Add(Me.IconButton1)
-        Me.Panel5.Controls.Add(Me.Label2)
-        Me.Panel5.Controls.Add(Me.Panel6)
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel5.Location = New System.Drawing.Point(0, 0)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1337, 86)
-        Me.Panel5.TabIndex = 11
-        '
-        'IconButton1
-        '
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.FileContract
-        Me.IconButton1.IconColor = System.Drawing.Color.Black
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(24, 6)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(75, 72)
-        Me.IconButton1.TabIndex = 7
-        Me.IconButton1.UseVisualStyleBackColor = True
         '
         'ToolStrip1
         '
@@ -165,16 +135,6 @@ Partial Class frmRegistrar
         Me.ToolStripButton3.Size = New System.Drawing.Size(216, 52)
         Me.ToolStripButton3.Text = "SUBJECTS ENLISTMENT"
         '
-        'ToolStripButton5
-        '
-        Me.ToolStripButton5.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton5.Image = Global.SRMS_BED.My.Resources.Resources.Graph_Report
-        Me.ToolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton5.Name = "ToolStripButton5"
-        Me.ToolStripButton5.Size = New System.Drawing.Size(124, 52)
-        Me.ToolStripButton5.Text = "REPORTS"
-        '
         'ToolStripButton4
         '
         Me.ToolStripButton4.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ENCODEGRADESToolStripMenuItem, Me.MODIFYGRADESToolStripMenuItem})
@@ -189,14 +149,55 @@ Partial Class frmRegistrar
         'ENCODEGRADESToolStripMenuItem
         '
         Me.ENCODEGRADESToolStripMenuItem.Name = "ENCODEGRADESToolStripMenuItem"
-        Me.ENCODEGRADESToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ENCODEGRADESToolStripMenuItem.Size = New System.Drawing.Size(211, 26)
         Me.ENCODEGRADESToolStripMenuItem.Text = "ENCODE GRADES"
         '
         'MODIFYGRADESToolStripMenuItem
         '
         Me.MODIFYGRADESToolStripMenuItem.Name = "MODIFYGRADESToolStripMenuItem"
-        Me.MODIFYGRADESToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.MODIFYGRADESToolStripMenuItem.Size = New System.Drawing.Size(211, 26)
         Me.MODIFYGRADESToolStripMenuItem.Text = "MODIFY GRADES"
+        '
+        'ToolStripButton5
+        '
+        Me.ToolStripButton5.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripButton5.Image = Global.SRMS_BED.My.Resources.Resources.Graph_Report
+        Me.ToolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton5.Name = "ToolStripButton5"
+        Me.ToolStripButton5.Size = New System.Drawing.Size(124, 52)
+        Me.ToolStripButton5.Text = "REPORTS"
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel7.Location = New System.Drawing.Point(0, 86)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(1337, 10)
+        Me.Panel7.TabIndex = 12
+        '
+        'Panel5
+        '
+        Me.Panel5.Controls.Add(Me.IconButton1)
+        Me.Panel5.Controls.Add(Me.Label2)
+        Me.Panel5.Controls.Add(Me.Panel6)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel5.Location = New System.Drawing.Point(0, 0)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(1337, 86)
+        Me.Panel5.TabIndex = 11
+        '
+        'IconButton1
+        '
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.FileContract
+        Me.IconButton1.IconColor = System.Drawing.Color.Black
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.Location = New System.Drawing.Point(24, 6)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(75, 72)
+        Me.IconButton1.TabIndex = 7
+        Me.IconButton1.UseVisualStyleBackColor = True
         '
         'frmRegistrar
         '
@@ -217,10 +218,10 @@ Partial Class frmRegistrar
         Me.Panel6.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
