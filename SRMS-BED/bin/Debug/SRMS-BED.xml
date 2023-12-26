@@ -127,6 +127,11 @@ SRMS-BED
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SRMS_BED.My.Resources.Resources.Save_All">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SRMS_BED.My.Resources.Resources.Search_Account">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -143,6 +148,11 @@ SRMS-BED
 </summary>
 </member>
 <member name="P:SRMS_BED.My.Resources.Resources.Stack_of_Coins">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources.Student_Registration">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

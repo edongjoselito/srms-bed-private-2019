@@ -369,6 +369,7 @@
     <None Include="Resources\Spectators On Seats.png" />
     <None Include="Resources\Popular Man.png" />
     <None Include="Resources\Student Registration.png" />
+    <None Include="Resources\Save All.png" />
     <Content Include="School.ico" />
     <Content Include="Scripts\fontawesome\all.js" />
     <Content Include="Scripts\fontawesome\all.min.js" />
