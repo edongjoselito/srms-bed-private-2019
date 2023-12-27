@@ -61,7 +61,7 @@ Partial Class frmReportsDashboard
         Me.ToolStripButton5.Image = CType(resources.GetObject("ToolStripButton5.Image"), System.Drawing.Image)
         Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton5.Name = "ToolStripButton5"
-        Me.ToolStripButton5.Size = New System.Drawing.Size(127, 24)
+        Me.ToolStripButton5.Size = New System.Drawing.Size(107, 24)
         Me.ToolStripButton5.Text = "Class Program"
         '
         'ToolStripButton4
@@ -69,7 +69,7 @@ Partial Class frmReportsDashboard
         Me.ToolStripButton4.Image = CType(resources.GetObject("ToolStripButton4.Image"), System.Drawing.Image)
         Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton4.Name = "ToolStripButton4"
-        Me.ToolStripButton4.Size = New System.Drawing.Size(88, 24)
+        Me.ToolStripButton4.Size = New System.Drawing.Size(75, 24)
         Me.ToolStripButton4.Text = "Subjects"
         '
         'ToolStripButton3
@@ -77,7 +77,7 @@ Partial Class frmReportsDashboard
         Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
         Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(82, 24)
+        Me.ToolStripButton3.Size = New System.Drawing.Size(70, 24)
         Me.ToolStripButton3.Text = "Adviser"
         '
         'Panel4
@@ -104,7 +104,7 @@ Partial Class frmReportsDashboard
         Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(96, 24)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(82, 24)
         Me.ToolStripButton1.Text = "Programs"
         '
         'ToolStripButton2
@@ -112,7 +112,7 @@ Partial Class frmReportsDashboard
         Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
         Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(143, 24)
+        Me.ToolStripButton2.Size = New System.Drawing.Size(118, 24)
         Me.ToolStripButton2.Text = "Track and Strand"
         '
         'ToolStripButton6
@@ -120,7 +120,7 @@ Partial Class frmReportsDashboard
         Me.ToolStripButton6.Image = CType(resources.GetObject("ToolStripButton6.Image"), System.Drawing.Image)
         Me.ToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton6.Name = "ToolStripButton6"
-        Me.ToolStripButton6.Size = New System.Drawing.Size(126, 24)
+        Me.ToolStripButton6.Size = New System.Drawing.Size(105, 24)
         Me.ToolStripButton6.Text = "Manage Users"
         '
         'Panel1
@@ -167,7 +167,7 @@ Partial Class frmReportsDashboard
         Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(105, 26)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(105, 29)
+        Me.Label2.Size = New System.Drawing.Size(82, 23)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "REPORTS"
         '
@@ -194,8 +194,9 @@ Partial Class frmReportsDashboard
         '
         'frmReportsDashboard
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1337, 823)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel1)

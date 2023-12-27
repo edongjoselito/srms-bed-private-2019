@@ -57,7 +57,7 @@ Partial Class frmMedical
         Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(144, 52)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(128, 52)
         Me.ToolStripButton1.Text = "PERSONNEL"
         '
         'ToolStripButton3
@@ -68,19 +68,19 @@ Partial Class frmMedical
         Me.ToolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(213, 52)
+        Me.ToolStripButton3.Size = New System.Drawing.Size(184, 52)
         Me.ToolStripButton3.Text = "LIST OF PERSONNEL"
         '
         'ACCOUNTSToolStripMenuItem
         '
         Me.ACCOUNTSToolStripMenuItem.Name = "ACCOUNTSToolStripMenuItem"
-        Me.ACCOUNTSToolStripMenuItem.Size = New System.Drawing.Size(210, 26)
+        Me.ACCOUNTSToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.ACCOUNTSToolStripMenuItem.Text = "ALL"
         '
         'OTHERSERVICESToolStripMenuItem
         '
         Me.OTHERSERVICESToolStripMenuItem.Name = "OTHERSERVICESToolStripMenuItem"
-        Me.OTHERSERVICESToolStripMenuItem.Size = New System.Drawing.Size(210, 26)
+        Me.OTHERSERVICESToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.OTHERSERVICESToolStripMenuItem.Text = "BY DEPARTMENT"
         '
         'btnClose
@@ -101,7 +101,7 @@ Partial Class frmMedical
         Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(105, 26)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(205, 29)
+        Me.Label2.Size = New System.Drawing.Size(162, 23)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "MEDICAL  MODULE"
         '
@@ -156,8 +156,9 @@ Partial Class frmMedical
         '
         'frmMedical
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1337, 823)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Panel7)

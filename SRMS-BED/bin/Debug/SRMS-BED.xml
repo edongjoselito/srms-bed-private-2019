@@ -22,6 +22,31 @@ SRMS-BED
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:SRMS_BED.My.Resources.Resources._48_px___Profiles">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources._48_px___Profiles1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources._48_px_Bookmark">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources._48_px_Teacher">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources._96px___Profiles">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SRMS_BED.My.Resources.Resources.Add_Time">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -58,6 +83,11 @@ SRMS-BED
 </summary>
 </member>
 <member name="P:SRMS_BED.My.Resources.Resources.Contacts2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources.COVER">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

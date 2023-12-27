@@ -370,6 +370,12 @@
     <None Include="Resources\Popular Man.png" />
     <None Include="Resources\Student Registration.png" />
     <None Include="Resources\Save All.png" />
+    <None Include="Resources\COVER.png" />
+    <None Include="Resources\96px - Profiles.png" />
+    <None Include="Resources\48 px - Profiles.png" />
+    <None Include="Resources\48 px - Profiles1.png" />
+    <None Include="Resources\48 px Teacher.png" />
+    <None Include="Resources\48 px Bookmark.png" />
     <Content Include="School.ico" />
     <Content Include="Scripts\fontawesome\all.js" />
     <Content Include="Scripts\fontawesome\all.min.js" />

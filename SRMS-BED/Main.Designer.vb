@@ -42,6 +42,7 @@ Partial Class frmMain
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.IconButton8 = New FontAwesome.Sharp.IconButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
@@ -52,6 +53,19 @@ Partial Class frmMain
         Me.stSemester = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblSY = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -59,6 +73,12 @@ Partial Class frmMain
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel9.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel10.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -342,6 +362,7 @@ Partial Class frmMain
         '
         'Panel5
         '
+        Me.Panel5.Controls.Add(Me.Label9)
         Me.Panel5.Controls.Add(Me.IconButton8)
         Me.Panel5.Controls.Add(Me.Label2)
         Me.Panel5.Controls.Add(Me.Panel6)
@@ -350,6 +371,16 @@ Partial Class frmMain
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1060, 86)
         Me.Panel5.TabIndex = 3
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(76, 50)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(325, 29)
+        Me.Label9.TabIndex = 3
+        Me.Label9.Text = "PASAY CITY, METRO MANILA, PHILIPPINES"
         '
         'IconButton8
         '
@@ -368,12 +399,12 @@ Partial Class frmMain
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(75, 29)
+        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(75, 19)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(141, 29)
+        Me.Label2.Size = New System.Drawing.Size(553, 36)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "DASHBOARD"
+        Me.Label2.Text = "WESLEYAN COLLEGE OF MANILA (WCM)"
         '
         'Panel6
         '
@@ -437,11 +468,153 @@ Partial Class frmMain
         'Timer1
         '
         '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(168, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel8.Controls.Add(Me.Label3)
+        Me.Panel8.Controls.Add(Me.PictureBox2)
+        Me.Panel8.Controls.Add(Me.Label1)
+        Me.Panel8.Location = New System.Drawing.Point(267, 173)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(248, 89)
+        Me.Panel8.TabIndex = 7
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(13, 49)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(130, 34)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "STUDENTS"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.SRMS_BED.My.Resources.Resources._48_px___Profiles1
+        Me.PictureBox2.Location = New System.Drawing.Point(191, 3)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(54, 54)
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.SandyBrown
+        Me.Label1.Location = New System.Drawing.Point(12, 16)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(80, 41)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "1,000"
+        '
+        'Panel9
+        '
+        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(158, Byte), Integer))
+        Me.Panel9.Controls.Add(Me.Label4)
+        Me.Panel9.Controls.Add(Me.PictureBox3)
+        Me.Panel9.Controls.Add(Me.Label5)
+        Me.Panel9.Location = New System.Drawing.Point(551, 173)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(249, 89)
+        Me.Panel9.TabIndex = 8
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(13, 49)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(235, 34)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "FACULTY AND STAFF"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.SRMS_BED.My.Resources.Resources._48_px_Teacher
+        Me.PictureBox3.Location = New System.Drawing.Point(192, 3)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(54, 54)
+        Me.PictureBox3.TabIndex = 1
+        Me.PictureBox3.TabStop = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.SandyBrown
+        Me.Label5.Location = New System.Drawing.Point(12, 16)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(80, 41)
+        Me.Label5.TabIndex = 0
+        Me.Label5.Text = "1,000"
+        '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(86, Byte), Integer))
+        Me.Panel10.Controls.Add(Me.Label6)
+        Me.Panel10.Controls.Add(Me.PictureBox4)
+        Me.Panel10.Controls.Add(Me.Label7)
+        Me.Panel10.Location = New System.Drawing.Point(836, 173)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(248, 89)
+        Me.Panel10.TabIndex = 9
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(13, 49)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(136, 34)
+        Me.Label6.TabIndex = 2
+        Me.Label6.Text = "PROGRAMS"
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.SRMS_BED.My.Resources.Resources._48_px_Bookmark
+        Me.PictureBox4.Location = New System.Drawing.Point(191, 3)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(54, 54)
+        Me.PictureBox4.TabIndex = 1
+        Me.PictureBox4.TabStop = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.SandyBrown
+        Me.Label7.Location = New System.Drawing.Point(12, 16)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(44, 41)
+        Me.Label7.TabIndex = 0
+        Me.Label7.Text = "10"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 18.0!)
+        Me.Label8.Location = New System.Drawing.Point(263, 123)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(158, 36)
+        Me.Label8.TabIndex = 3
+        Me.Label8.Text = "DASHBOARD"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1305, 1018)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Panel10)
+        Me.Controls.Add(Me.Panel9)
+        Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel5)
@@ -463,6 +636,15 @@ Partial Class frmMain
         Me.Panel6.ResumeLayout(False)
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel9.ResumeLayout(False)
+        Me.Panel9.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel10.ResumeLayout(False)
+        Me.Panel10.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -496,4 +678,18 @@ Partial Class frmMain
     Friend WithEvents IconButton11 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton10 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton12 As FontAwesome.Sharp.IconButton
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents Label4 As Label
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
 End Class

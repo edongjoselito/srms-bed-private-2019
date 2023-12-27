@@ -24,17 +24,17 @@ Partial Class frmHR
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmHR))
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripSplitButton()
+        Me.ACCOUNTSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OTHERSERVICESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripSplitButton()
-        Me.ACCOUNTSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OTHERSERVICESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -49,6 +49,39 @@ Partial Class frmHR
         Me.ToolStrip1.Size = New System.Drawing.Size(1337, 55)
         Me.ToolStrip1.TabIndex = 23
         Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripButton1.Image = Global.SRMS_BED.My.Resources.Resources.Update_User
+        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(128, 52)
+        Me.ToolStripButton1.Text = "PERSONNEL"
+        '
+        'ToolStripButton3
+        '
+        Me.ToolStripButton3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ACCOUNTSToolStripMenuItem, Me.OTHERSERVICESToolStripMenuItem})
+        Me.ToolStripButton3.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripButton3.Image = Global.SRMS_BED.My.Resources.Resources.Popular_Man
+        Me.ToolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton3.Name = "ToolStripButton3"
+        Me.ToolStripButton3.Size = New System.Drawing.Size(184, 52)
+        Me.ToolStripButton3.Text = "LIST OF PERSONNEL"
+        '
+        'ACCOUNTSToolStripMenuItem
+        '
+        Me.ACCOUNTSToolStripMenuItem.Name = "ACCOUNTSToolStripMenuItem"
+        Me.ACCOUNTSToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.ACCOUNTSToolStripMenuItem.Text = "ALL"
+        '
+        'OTHERSERVICESToolStripMenuItem
+        '
+        Me.OTHERSERVICESToolStripMenuItem.Name = "OTHERSERVICESToolStripMenuItem"
+        Me.OTHERSERVICESToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.OTHERSERVICESToolStripMenuItem.Text = "BY DEPARTMENT"
         '
         'btnClose
         '
@@ -68,7 +101,7 @@ Partial Class frmHR
         Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(105, 26)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(304, 29)
+        Me.Label2.Size = New System.Drawing.Size(239, 23)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "HUMAN RESOURCE MODULE"
         '
@@ -101,48 +134,6 @@ Partial Class frmHR
         Me.Panel5.Size = New System.Drawing.Size(1337, 86)
         Me.Panel5.TabIndex = 20
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 813)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1337, 10)
-        Me.Panel1.TabIndex = 22
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton1.Image = Global.SRMS_BED.My.Resources.Resources.Update_User
-        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(144, 52)
-        Me.ToolStripButton1.Text = "PERSONNEL"
-        '
-        'ToolStripButton3
-        '
-        Me.ToolStripButton3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ACCOUNTSToolStripMenuItem, Me.OTHERSERVICESToolStripMenuItem})
-        Me.ToolStripButton3.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton3.Image = Global.SRMS_BED.My.Resources.Resources.Popular_Man
-        Me.ToolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(213, 52)
-        Me.ToolStripButton3.Text = "LIST OF PERSONNEL"
-        '
-        'ACCOUNTSToolStripMenuItem
-        '
-        Me.ACCOUNTSToolStripMenuItem.Name = "ACCOUNTSToolStripMenuItem"
-        Me.ACCOUNTSToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.ACCOUNTSToolStripMenuItem.Text = "ALL"
-        '
-        'OTHERSERVICESToolStripMenuItem
-        '
-        Me.OTHERSERVICESToolStripMenuItem.Name = "OTHERSERVICESToolStripMenuItem"
-        Me.OTHERSERVICESToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.OTHERSERVICESToolStripMenuItem.Text = "BY DEPARTMENT"
-        '
         'IconButton1
         '
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.FileContract
@@ -154,10 +145,20 @@ Partial Class frmHR
         Me.IconButton1.TabIndex = 7
         Me.IconButton1.UseVisualStyleBackColor = True
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(0, 813)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1337, 10)
+        Me.Panel1.TabIndex = 22
+        '
         'frmHR
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1337, 823)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Panel7)

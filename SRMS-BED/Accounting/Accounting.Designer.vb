@@ -26,6 +26,7 @@ Partial Class frmAccounting
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.btnClose = New System.Windows.Forms.Button()
@@ -43,7 +44,6 @@ Partial Class frmAccounting
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripSplitButton()
         Me.REPORTAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REPORTBToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -78,13 +78,24 @@ Partial Class frmAccounting
         Me.Panel5.Size = New System.Drawing.Size(1337, 86)
         Me.Panel5.TabIndex = 16
         '
+        'IconButton1
+        '
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.FileContract
+        Me.IconButton1.IconColor = System.Drawing.Color.Black
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.Location = New System.Drawing.Point(24, 6)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(75, 72)
+        Me.IconButton1.TabIndex = 7
+        Me.IconButton1.UseVisualStyleBackColor = True
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(105, 26)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(246, 29)
+        Me.Label2.Size = New System.Drawing.Size(194, 23)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "ACCOUNTING MODULE"
         '
@@ -126,7 +137,7 @@ Partial Class frmAccounting
         Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(219, 52)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(188, 52)
         Me.ToolStripButton1.Text = "STUDENTS' ACCOUNTS"
         '
         'ToolStripButton3
@@ -137,19 +148,19 @@ Partial Class frmAccounting
         Me.ToolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(152, 52)
+        Me.ToolStripButton3.Size = New System.Drawing.Size(133, 52)
         Me.ToolStripButton3.Text = "PAYMENTS"
         '
         'ACCOUNTSToolStripMenuItem
         '
         Me.ACCOUNTSToolStripMenuItem.Name = "ACCOUNTSToolStripMenuItem"
-        Me.ACCOUNTSToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
+        Me.ACCOUNTSToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.ACCOUNTSToolStripMenuItem.Text = "ACCOUNTS"
         '
         'OTHERSERVICESToolStripMenuItem
         '
         Me.OTHERSERVICESToolStripMenuItem.Name = "OTHERSERVICESToolStripMenuItem"
-        Me.OTHERSERVICESToolStripMenuItem.Size = New System.Drawing.Size(209, 26)
+        Me.OTHERSERVICESToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.OTHERSERVICESToolStripMenuItem.Text = "OTHER SERVICES"
         '
         'ToolStripButton4
@@ -160,19 +171,19 @@ Partial Class frmAccounting
         Me.ToolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton4.Name = "ToolStripButton4"
-        Me.ToolStripButton4.Size = New System.Drawing.Size(205, 52)
+        Me.ToolStripButton4.Size = New System.Drawing.Size(178, 52)
         Me.ToolStripButton4.Text = "OFFICIAL RECEIPTS"
         '
         'SEARCHORToolStripMenuItem
         '
         Me.SEARCHORToolStripMenuItem.Name = "SEARCHORToolStripMenuItem"
-        Me.SEARCHORToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.SEARCHORToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.SEARCHORToolStripMenuItem.Text = "SEARCH O.R."
         '
         'VOIDORToolStripMenuItem
         '
         Me.VOIDORToolStripMenuItem.Name = "VOIDORToolStripMenuItem"
-        Me.VOIDORToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.VOIDORToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.VOIDORToolStripMenuItem.Text = "VOID O.R."
         '
         'ToolStripButton5
@@ -183,19 +194,19 @@ Partial Class frmAccounting
         Me.ToolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton5.Name = "ToolStripButton5"
-        Me.ToolStripButton5.Size = New System.Drawing.Size(143, 52)
+        Me.ToolStripButton5.Size = New System.Drawing.Size(127, 52)
         Me.ToolStripButton5.Text = "SETTINGS"
         '
         'FEESDESCRIPTIONToolStripMenuItem
         '
         Me.FEESDESCRIPTIONToolStripMenuItem.Name = "FEESDESCRIPTIONToolStripMenuItem"
-        Me.FEESDESCRIPTIONToolStripMenuItem.Size = New System.Drawing.Size(256, 26)
+        Me.FEESDESCRIPTIONToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.FEESDESCRIPTIONToolStripMenuItem.Text = "FEES DESCRIPTION"
         '
         'PAYMENTDESCRIPTIONToolStripMenuItem
         '
         Me.PAYMENTDESCRIPTIONToolStripMenuItem.Name = "PAYMENTDESCRIPTIONToolStripMenuItem"
-        Me.PAYMENTDESCRIPTIONToolStripMenuItem.Size = New System.Drawing.Size(256, 26)
+        Me.PAYMENTDESCRIPTIONToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.PAYMENTDESCRIPTIONToolStripMenuItem.Text = "PAYMENT DESCRIPTION"
         '
         'ToolStripButton6
@@ -206,36 +217,26 @@ Partial Class frmAccounting
         Me.ToolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton6.Name = "ToolStripButton6"
-        Me.ToolStripButton6.Size = New System.Drawing.Size(139, 52)
+        Me.ToolStripButton6.Size = New System.Drawing.Size(124, 52)
         Me.ToolStripButton6.Text = "REPORTS"
         '
         'REPORTAToolStripMenuItem
         '
         Me.REPORTAToolStripMenuItem.Name = "REPORTAToolStripMenuItem"
-        Me.REPORTAToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.REPORTAToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
         Me.REPORTAToolStripMenuItem.Text = "REPORT A"
         '
         'REPORTBToolStripMenuItem
         '
         Me.REPORTBToolStripMenuItem.Name = "REPORTBToolStripMenuItem"
-        Me.REPORTBToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.REPORTBToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
         Me.REPORTBToolStripMenuItem.Text = "REPORT B"
-        '
-        'IconButton1
-        '
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.FileContract
-        Me.IconButton1.IconColor = System.Drawing.Color.Black
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(24, 6)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(75, 72)
-        Me.IconButton1.TabIndex = 7
-        Me.IconButton1.UseVisualStyleBackColor = True
         '
         'frmAccounting
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1337, 823)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Panel1)

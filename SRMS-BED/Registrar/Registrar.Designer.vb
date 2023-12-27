@@ -29,6 +29,8 @@ Partial Class frmRegistrar
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
@@ -36,8 +38,6 @@ Partial Class frmRegistrar
         Me.ENCODEGRADESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MODIFYGRADESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Panel6.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -72,7 +72,7 @@ Partial Class frmRegistrar
         Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(105, 26)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(221, 29)
+        Me.Label2.Size = New System.Drawing.Size(174, 23)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "REGISTRAR MODULE"
         '
@@ -87,7 +87,7 @@ Partial Class frmRegistrar
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(84, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
@@ -105,68 +105,6 @@ Partial Class frmRegistrar
         Me.ToolStrip1.Size = New System.Drawing.Size(1337, 55)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton1.Image = Global.SRMS_BED.My.Resources.Resources.Client_Management
-        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(198, 52)
-        Me.ToolStripButton1.Text = "STUDENTS' PROFILE"
-        '
-        'ToolStripButton2
-        '
-        Me.ToolStripButton2.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton2.Image = Global.SRMS_BED.My.Resources.Resources.Contacts2
-        Me.ToolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(157, 52)
-        Me.ToolStripButton2.Text = "ENROLLMENT"
-        '
-        'ToolStripButton3
-        '
-        Me.ToolStripButton3.Image = Global.SRMS_BED.My.Resources.Resources.Syllabus
-        Me.ToolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(216, 52)
-        Me.ToolStripButton3.Text = "SUBJECTS ENLISTMENT"
-        '
-        'ToolStripButton4
-        '
-        Me.ToolStripButton4.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ENCODEGRADESToolStripMenuItem, Me.MODIFYGRADESToolStripMenuItem})
-        Me.ToolStripButton4.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton4.Image = Global.SRMS_BED.My.Resources.Resources.Grades
-        Me.ToolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton4.Name = "ToolStripButton4"
-        Me.ToolStripButton4.Size = New System.Drawing.Size(133, 52)
-        Me.ToolStripButton4.Text = "GRADES"
-        '
-        'ENCODEGRADESToolStripMenuItem
-        '
-        Me.ENCODEGRADESToolStripMenuItem.Name = "ENCODEGRADESToolStripMenuItem"
-        Me.ENCODEGRADESToolStripMenuItem.Size = New System.Drawing.Size(211, 26)
-        Me.ENCODEGRADESToolStripMenuItem.Text = "ENCODE GRADES"
-        '
-        'MODIFYGRADESToolStripMenuItem
-        '
-        Me.MODIFYGRADESToolStripMenuItem.Name = "MODIFYGRADESToolStripMenuItem"
-        Me.MODIFYGRADESToolStripMenuItem.Size = New System.Drawing.Size(211, 26)
-        Me.MODIFYGRADESToolStripMenuItem.Text = "MODIFY GRADES"
-        '
-        'ToolStripButton5
-        '
-        Me.ToolStripButton5.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton5.Image = Global.SRMS_BED.My.Resources.Resources.Graph_Report
-        Me.ToolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton5.Name = "ToolStripButton5"
-        Me.ToolStripButton5.Size = New System.Drawing.Size(124, 52)
-        Me.ToolStripButton5.Text = "REPORTS"
         '
         'Panel7
         '
@@ -188,6 +126,68 @@ Partial Class frmRegistrar
         Me.Panel5.Size = New System.Drawing.Size(1337, 86)
         Me.Panel5.TabIndex = 11
         '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripButton1.Image = Global.SRMS_BED.My.Resources.Resources.Client_Management
+        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(173, 52)
+        Me.ToolStripButton1.Text = "STUDENTS' PROFILE"
+        '
+        'ToolStripButton2
+        '
+        Me.ToolStripButton2.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripButton2.Image = Global.SRMS_BED.My.Resources.Resources.Contacts2
+        Me.ToolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton2.Name = "ToolStripButton2"
+        Me.ToolStripButton2.Size = New System.Drawing.Size(140, 52)
+        Me.ToolStripButton2.Text = "ENROLLMENT"
+        '
+        'ToolStripButton3
+        '
+        Me.ToolStripButton3.Image = Global.SRMS_BED.My.Resources.Resources.Syllabus
+        Me.ToolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton3.Name = "ToolStripButton3"
+        Me.ToolStripButton3.Size = New System.Drawing.Size(181, 52)
+        Me.ToolStripButton3.Text = "SUBJECTS ENLISTMENT"
+        '
+        'ToolStripButton4
+        '
+        Me.ToolStripButton4.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ENCODEGRADESToolStripMenuItem, Me.MODIFYGRADESToolStripMenuItem})
+        Me.ToolStripButton4.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripButton4.Image = Global.SRMS_BED.My.Resources.Resources.Grades
+        Me.ToolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton4.Name = "ToolStripButton4"
+        Me.ToolStripButton4.Size = New System.Drawing.Size(119, 52)
+        Me.ToolStripButton4.Text = "GRADES"
+        '
+        'ENCODEGRADESToolStripMenuItem
+        '
+        Me.ENCODEGRADESToolStripMenuItem.Name = "ENCODEGRADESToolStripMenuItem"
+        Me.ENCODEGRADESToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.ENCODEGRADESToolStripMenuItem.Text = "ENCODE GRADES"
+        '
+        'MODIFYGRADESToolStripMenuItem
+        '
+        Me.MODIFYGRADESToolStripMenuItem.Name = "MODIFYGRADESToolStripMenuItem"
+        Me.MODIFYGRADESToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.MODIFYGRADESToolStripMenuItem.Text = "MODIFY GRADES"
+        '
+        'ToolStripButton5
+        '
+        Me.ToolStripButton5.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripButton5.Image = Global.SRMS_BED.My.Resources.Resources.Graph_Report
+        Me.ToolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton5.Name = "ToolStripButton5"
+        Me.ToolStripButton5.Size = New System.Drawing.Size(112, 52)
+        Me.ToolStripButton5.Text = "REPORTS"
+        '
         'IconButton1
         '
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.FileContract
@@ -201,7 +201,7 @@ Partial Class frmRegistrar
         '
         'frmRegistrar
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1337, 823)
         Me.Controls.Add(Me.Panel1)

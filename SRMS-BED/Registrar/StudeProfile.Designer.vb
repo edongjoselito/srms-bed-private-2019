@@ -31,11 +31,7 @@ Partial Class frmStudeProfile
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.txtNotes = New System.Windows.Forms.TextBox()
         Me.Label60 = New System.Windows.Forms.Label()
         Me.lblStudentNumber = New System.Windows.Forms.Label()
@@ -97,22 +93,22 @@ Partial Class frmStudeProfile
         Me.mskStudentNumber = New System.Windows.Forms.TextBox()
         Me.txtLName = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label59 = New System.Windows.Forms.Label()
-        Me.txtMotherContactNo = New System.Windows.Forms.TextBox()
-        Me.Label58 = New System.Windows.Forms.Label()
-        Me.txtFatherContactNo = New System.Windows.Forms.TextBox()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Label40 = New System.Windows.Forms.Label()
-        Me.txtMotherOccupation = New System.Windows.Forms.TextBox()
+        Me.txtMotherContactNo = New System.Windows.Forms.TextBox()
         Me.labelMother = New System.Windows.Forms.Label()
+        Me.txtMotherOccupation = New System.Windows.Forms.TextBox()
+        Me.Label58 = New System.Windows.Forms.Label()
         Me.txtMother = New System.Windows.Forms.TextBox()
         Me.Label42 = New System.Windows.Forms.Label()
-        Me.txtFatherOccupation = New System.Windows.Forms.TextBox()
+        Me.txtFatherContactNo = New System.Windows.Forms.TextBox()
         Me.lblFather = New System.Windows.Forms.Label()
+        Me.txtFatherOccupation = New System.Windows.Forms.TextBox()
         Me.txtFather = New System.Windows.Forms.TextBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.Label25 = New System.Windows.Forms.Label()
@@ -127,17 +123,21 @@ Partial Class frmStudeProfile
         Me.Label18 = New System.Windows.Forms.Label()
         Me.btnSet = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel6.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel14.SuspendLayout()
         Me.Panel13.SuspendLayout()
         Me.Panel12.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnClose
@@ -158,7 +158,7 @@ Partial Class frmStudeProfile
         Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(82, 25)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(211, 29)
+        Me.Label2.Size = New System.Drawing.Size(165, 23)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "STUDENT'S PROFILE"
         '
@@ -209,7 +209,7 @@ Partial Class frmStudeProfile
         Me.TabControl1.Location = New System.Drawing.Point(12, 173)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1291, 656)
+        Me.TabControl1.Size = New System.Drawing.Size(1291, 561)
         Me.TabControl1.TabIndex = 15
         '
         'TabPage1
@@ -276,64 +276,25 @@ Partial Class frmStudeProfile
         Me.TabPage1.Controls.Add(Me.mskStudentNumber)
         Me.TabPage1.Controls.Add(Me.txtLName)
         Me.TabPage1.Controls.Add(Me.Button2)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 30)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 26)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1283, 622)
+        Me.TabPage1.Size = New System.Drawing.Size(1283, 531)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "BASIC INFO"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'TabPage2
+        'Button3
         '
-        Me.TabPage2.Controls.Add(Me.GroupBox3)
-        Me.TabPage2.Controls.Add(Me.GroupBox2)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 30)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1283, 622)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "GUARDIAN INFO"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'TabPage3
-        '
-        Me.TabPage3.Location = New System.Drawing.Point(4, 30)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(1283, 622)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "REQUIREMENTS SUBMITTED"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'TabPage4
-        '
-        Me.TabPage4.Location = New System.Drawing.Point(4, 30)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(1283, 622)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "OTHER INFO"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(1135, 835)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(138, 39)
-        Me.Button1.TabIndex = 16
-        Me.Button1.Text = "SAVE"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SRMS_BED.My.Resources.Resources.Student_Registration
-        Me.PictureBox1.Location = New System.Drawing.Point(24, 15)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(52, 49)
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(659, 374)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(28, 23)
+        Me.Button3.TabIndex = 158
+        Me.Button3.TabStop = False
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'txtNotes
         '
@@ -344,7 +305,7 @@ Partial Class frmStudeProfile
         Me.txtNotes.Multiline = True
         Me.txtNotes.Name = "txtNotes"
         Me.txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtNotes.Size = New System.Drawing.Size(1105, 178)
+        Me.txtNotes.Size = New System.Drawing.Size(493, 103)
         Me.txtNotes.TabIndex = 157
         '
         'Label60
@@ -354,7 +315,7 @@ Partial Class frmStudeProfile
         Me.Label60.Location = New System.Drawing.Point(24, 410)
         Me.Label60.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(56, 21)
+        Me.Label60.Size = New System.Drawing.Size(46, 17)
         Me.Label60.TabIndex = 156
         Me.Label60.Text = "NOTES"
         '
@@ -363,7 +324,7 @@ Partial Class frmStudeProfile
         Me.lblStudentNumber.AutoSize = True
         Me.lblStudentNumber.Location = New System.Drawing.Point(52, 17)
         Me.lblStudentNumber.Name = "lblStudentNumber"
-        Me.lblStudentNumber.Size = New System.Drawing.Size(64, 21)
+        Me.lblStudentNumber.Size = New System.Drawing.Size(52, 17)
         Me.lblStudentNumber.TabIndex = 155
         Me.lblStudentNumber.Text = "Label60"
         Me.lblStudentNumber.Visible = False
@@ -376,7 +337,7 @@ Partial Class frmStudeProfile
         Me.txtCollegeAddress.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtCollegeAddress.Name = "txtCollegeAddress"
         Me.txtCollegeAddress.ReadOnly = True
-        Me.txtCollegeAddress.Size = New System.Drawing.Size(490, 27)
+        Me.txtCollegeAddress.Size = New System.Drawing.Size(490, 23)
         Me.txtCollegeAddress.TabIndex = 144
         '
         'Button9
@@ -399,7 +360,7 @@ Partial Class frmStudeProfile
         Me.txtCollege.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtCollege.Name = "txtCollege"
         Me.txtCollege.ReadOnly = True
-        Me.txtCollege.Size = New System.Drawing.Size(493, 27)
+        Me.txtCollege.Size = New System.Drawing.Size(493, 23)
         Me.txtCollege.TabIndex = 142
         '
         'txtMonthlyIncome
@@ -409,7 +370,7 @@ Partial Class frmStudeProfile
         Me.txtMonthlyIncome.Location = New System.Drawing.Point(916, 301)
         Me.txtMonthlyIncome.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtMonthlyIncome.Name = "txtMonthlyIncome"
-        Me.txtMonthlyIncome.Size = New System.Drawing.Size(109, 27)
+        Me.txtMonthlyIncome.Size = New System.Drawing.Size(109, 23)
         Me.txtMonthlyIncome.TabIndex = 139
         Me.txtMonthlyIncome.Text = "0"
         '
@@ -420,7 +381,7 @@ Partial Class frmStudeProfile
         Me.Label31.Location = New System.Drawing.Point(26, 375)
         Me.Label31.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(104, 21)
+        Me.Label31.Size = New System.Drawing.Size(84, 17)
         Me.Label31.TabIndex = 100
         Me.Label31.Text = "LAST SCHOOL"
         '
@@ -433,7 +394,7 @@ Partial Class frmStudeProfile
         Me.cboScholarship.Location = New System.Drawing.Point(157, 336)
         Me.cboScholarship.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboScholarship.Name = "cboScholarship"
-        Me.cboScholarship.Size = New System.Drawing.Size(493, 29)
+        Me.cboScholarship.Size = New System.Drawing.Size(493, 25)
         Me.cboScholarship.TabIndex = 140
         '
         'Label32
@@ -443,7 +404,7 @@ Partial Class frmStudeProfile
         Me.Label32.ForeColor = System.Drawing.Color.Black
         Me.Label32.Location = New System.Drawing.Point(693, 375)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(73, 21)
+        Me.Label32.Size = New System.Drawing.Size(61, 17)
         Me.Label32.TabIndex = 110
         Me.Label32.Text = "ADDRESS"
         '
@@ -466,7 +427,7 @@ Partial Class frmStudeProfile
         Me.Label57.Location = New System.Drawing.Point(26, 339)
         Me.Label57.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(107, 21)
+        Me.Label57.Size = New System.Drawing.Size(87, 17)
         Me.Label57.TabIndex = 98
         Me.Label57.Text = "SCHOLARSHIP"
         '
@@ -477,7 +438,7 @@ Partial Class frmStudeProfile
         Me.Label15.Location = New System.Drawing.Point(693, 268)
         Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(94, 21)
+        Me.Label15.Size = New System.Drawing.Size(79, 17)
         Me.Label15.TabIndex = 101
         Me.Label15.Text = "MOBILE NO."
         '
@@ -489,7 +450,7 @@ Partial Class frmStudeProfile
         Me.dtpAdmission.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dtpAdmission.MaxDate = New Date(2099, 12, 31, 0, 0, 0, 0)
         Me.dtpAdmission.Name = "dtpAdmission"
-        Me.dtpAdmission.Size = New System.Drawing.Size(178, 27)
+        Me.dtpAdmission.Size = New System.Drawing.Size(178, 23)
         Me.dtpAdmission.TabIndex = 141
         Me.dtpAdmission.TabStop = False
         '
@@ -500,7 +461,7 @@ Partial Class frmStudeProfile
         Me.Label46.ForeColor = System.Drawing.Color.Black
         Me.Label46.Location = New System.Drawing.Point(693, 339)
         Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(130, 21)
+        Me.Label46.Size = New System.Drawing.Size(108, 17)
         Me.Label46.TabIndex = 108
         Me.Label46.Text = "ADMISSION DATE"
         '
@@ -511,7 +472,7 @@ Partial Class frmStudeProfile
         Me.Label28.ForeColor = System.Drawing.Color.Black
         Me.Label28.Location = New System.Drawing.Point(26, 313)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(54, 21)
+        Me.Label28.Size = New System.Drawing.Size(45, 17)
         Me.Label28.TabIndex = 107
         Me.Label28.Text = "EMAIL"
         '
@@ -526,7 +487,7 @@ Partial Class frmStudeProfile
         Me.cboCitizenship.Location = New System.Drawing.Point(796, 231)
         Me.cboCitizenship.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboCitizenship.Name = "cboCitizenship"
-        Me.cboCitizenship.Size = New System.Drawing.Size(466, 27)
+        Me.cboCitizenship.Size = New System.Drawing.Size(466, 23)
         Me.cboCitizenship.TabIndex = 131
         Me.cboCitizenship.Text = "FILIPINO"
         '
@@ -537,7 +498,7 @@ Partial Class frmStudeProfile
         Me.txtEmail.Location = New System.Drawing.Point(157, 301)
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(210, 27)
+        Me.txtEmail.Size = New System.Drawing.Size(210, 23)
         Me.txtEmail.TabIndex = 136
         '
         'mskTelNumber
@@ -547,7 +508,7 @@ Partial Class frmStudeProfile
         Me.mskTelNumber.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.mskTelNumber.Mask = "(999) 000-0000"
         Me.mskTelNumber.Name = "mskTelNumber"
-        Me.mskTelNumber.Size = New System.Drawing.Size(157, 27)
+        Me.mskTelNumber.Size = New System.Drawing.Size(157, 23)
         Me.mskTelNumber.TabIndex = 135
         '
         'Label20
@@ -557,7 +518,7 @@ Partial Class frmStudeProfile
         Me.Label20.ForeColor = System.Drawing.Color.Black
         Me.Label20.Location = New System.Drawing.Point(693, 303)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(212, 21)
+        Me.Label20.Size = New System.Drawing.Size(174, 17)
         Me.Label20.TabIndex = 105
         Me.Label20.Text = "PARENTS' MONTHLY INCOME"
         '
@@ -573,7 +534,7 @@ Partial Class frmStudeProfile
         Me.cboCivilStatus.Location = New System.Drawing.Point(500, 231)
         Me.cboCivilStatus.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboCivilStatus.Name = "cboCivilStatus"
-        Me.cboCivilStatus.Size = New System.Drawing.Size(150, 27)
+        Me.cboCivilStatus.Size = New System.Drawing.Size(150, 23)
         Me.cboCivilStatus.TabIndex = 130
         '
         'cboEthnicity
@@ -585,7 +546,7 @@ Partial Class frmStudeProfile
         Me.cboEthnicity.Location = New System.Drawing.Point(500, 301)
         Me.cboEthnicity.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboEthnicity.Name = "cboEthnicity"
-        Me.cboEthnicity.Size = New System.Drawing.Size(150, 29)
+        Me.cboEthnicity.Size = New System.Drawing.Size(150, 25)
         Me.cboEthnicity.TabIndex = 137
         '
         'Label16
@@ -595,7 +556,7 @@ Partial Class frmStudeProfile
         Me.Label16.ForeColor = System.Drawing.Color.Black
         Me.Label16.Location = New System.Drawing.Point(1049, 269)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(67, 21)
+        Me.Label16.Size = New System.Drawing.Size(57, 17)
         Me.Label16.TabIndex = 138
         Me.Label16.Text = "TEL. NO."
         '
@@ -605,7 +566,7 @@ Partial Class frmStudeProfile
         Me.Label7.ForeColor = System.Drawing.Color.Black
         Me.Label7.Location = New System.Drawing.Point(693, 233)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(94, 21)
+        Me.Label7.Size = New System.Drawing.Size(79, 17)
         Me.Label7.TabIndex = 122
         Me.Label7.Text = "CITIZENSHIP"
         '
@@ -616,7 +577,7 @@ Partial Class frmStudeProfile
         Me.Label17.Location = New System.Drawing.Point(395, 304)
         Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(81, 21)
+        Me.Label17.Size = New System.Drawing.Size(69, 17)
         Me.Label17.TabIndex = 97
         Me.Label17.Text = "ETHNICITY"
         '
@@ -627,7 +588,7 @@ Partial Class frmStudeProfile
         Me.mskMobileNumber.Location = New System.Drawing.Point(796, 266)
         Me.mskMobileNumber.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.mskMobileNumber.Name = "mskMobileNumber"
-        Me.mskMobileNumber.Size = New System.Drawing.Size(229, 27)
+        Me.mskMobileNumber.Size = New System.Drawing.Size(229, 23)
         Me.mskMobileNumber.TabIndex = 134
         '
         'Label13
@@ -636,7 +597,7 @@ Partial Class frmStudeProfile
         Me.Label13.ForeColor = System.Drawing.Color.Black
         Me.Label13.Location = New System.Drawing.Point(395, 233)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(99, 21)
+        Me.Label13.Size = New System.Drawing.Size(81, 17)
         Me.Label13.TabIndex = 103
         Me.Label13.Text = "CIVIL STATUS"
         '
@@ -659,7 +620,7 @@ Partial Class frmStudeProfile
         Me.Label3.Location = New System.Drawing.Point(26, 233)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(35, 21)
+        Me.Label3.Size = New System.Drawing.Size(28, 17)
         Me.Label3.TabIndex = 94
         Me.Label3.Text = "SEX"
         '
@@ -671,7 +632,7 @@ Partial Class frmStudeProfile
         Me.txtReligion.FormattingEnabled = True
         Me.txtReligion.Location = New System.Drawing.Point(157, 265)
         Me.txtReligion.Name = "txtReligion"
-        Me.txtReligion.Size = New System.Drawing.Size(176, 29)
+        Me.txtReligion.Size = New System.Drawing.Size(176, 25)
         Me.txtReligion.TabIndex = 132
         '
         'txtBirthPlace
@@ -682,7 +643,7 @@ Partial Class frmStudeProfile
         Me.txtBirthPlace.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtBirthPlace.Name = "txtBirthPlace"
         Me.txtBirthPlace.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.txtBirthPlace.Size = New System.Drawing.Size(466, 27)
+        Me.txtBirthPlace.Size = New System.Drawing.Size(466, 23)
         Me.txtBirthPlace.TabIndex = 127
         '
         'Label11
@@ -692,7 +653,7 @@ Partial Class frmStudeProfile
         Me.Label11.Location = New System.Drawing.Point(26, 272)
         Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(75, 21)
+        Me.Label11.Size = New System.Drawing.Size(64, 17)
         Me.Label11.TabIndex = 96
         Me.Label11.Text = "RELIGION"
         '
@@ -708,7 +669,7 @@ Partial Class frmStudeProfile
         Me.cboSex.Location = New System.Drawing.Point(157, 231)
         Me.cboSex.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cboSex.Name = "cboSex"
-        Me.cboSex.Size = New System.Drawing.Size(196, 27)
+        Me.cboSex.Size = New System.Drawing.Size(196, 23)
         Me.cboSex.TabIndex = 129
         '
         'txtBloodType
@@ -718,7 +679,7 @@ Partial Class frmStudeProfile
         Me.txtBloodType.Location = New System.Drawing.Point(500, 266)
         Me.txtBloodType.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtBloodType.Name = "txtBloodType"
-        Me.txtBloodType.Size = New System.Drawing.Size(150, 27)
+        Me.txtBloodType.Size = New System.Drawing.Size(150, 23)
         Me.txtBloodType.TabIndex = 133
         '
         'Label8
@@ -727,7 +688,7 @@ Partial Class frmStudeProfile
         Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(693, 201)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(98, 21)
+        Me.Label8.Size = New System.Drawing.Size(82, 17)
         Me.Label8.TabIndex = 119
         Me.Label8.Text = "BIRTH PLACE"
         '
@@ -738,7 +699,7 @@ Partial Class frmStudeProfile
         Me.Label12.ForeColor = System.Drawing.Color.Black
         Me.Label12.Location = New System.Drawing.Point(395, 270)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(95, 21)
+        Me.Label12.Size = New System.Drawing.Size(80, 17)
         Me.Label12.TabIndex = 106
         Me.Label12.Text = "BLOOD TYPE"
         '
@@ -748,7 +709,7 @@ Partial Class frmStudeProfile
         Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.Location = New System.Drawing.Point(26, 201)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(90, 21)
+        Me.Label6.Size = New System.Drawing.Size(77, 17)
         Me.Label6.TabIndex = 111
         Me.Label6.Text = "BIRTH DATE"
         '
@@ -758,7 +719,7 @@ Partial Class frmStudeProfile
         Me.txtSubdivision.Location = New System.Drawing.Point(796, 160)
         Me.txtSubdivision.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtSubdivision.Name = "txtSubdivision"
-        Me.txtSubdivision.Size = New System.Drawing.Size(466, 28)
+        Me.txtSubdivision.Size = New System.Drawing.Size(466, 24)
         Me.txtSubdivision.TabIndex = 125
         '
         'Label14
@@ -767,7 +728,7 @@ Partial Class frmStudeProfile
         Me.Label14.ForeColor = System.Drawing.Color.Black
         Me.Label14.Location = New System.Drawing.Point(395, 198)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(39, 21)
+        Me.Label14.Size = New System.Drawing.Size(32, 17)
         Me.Label14.TabIndex = 146
         Me.Label14.Text = "AGE"
         '
@@ -778,7 +739,7 @@ Partial Class frmStudeProfile
         Me.Label24.Location = New System.Drawing.Point(693, 163)
         Me.Label24.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(93, 21)
+        Me.Label24.Size = New System.Drawing.Size(77, 17)
         Me.Label24.TabIndex = 150
         Me.Label24.Text = "STREET/SUB"
         '
@@ -788,7 +749,7 @@ Partial Class frmStudeProfile
         Me.txtAge.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtAge.Name = "txtAge"
         Me.txtAge.ReadOnly = True
-        Me.txtAge.Size = New System.Drawing.Size(150, 28)
+        Me.txtAge.Size = New System.Drawing.Size(150, 24)
         Me.txtAge.TabIndex = 128
         Me.txtAge.TabStop = False
         '
@@ -799,7 +760,7 @@ Partial Class frmStudeProfile
         Me.txtNameExt.Location = New System.Drawing.Point(1163, 89)
         Me.txtNameExt.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtNameExt.Name = "txtNameExt"
-        Me.txtNameExt.Size = New System.Drawing.Size(94, 28)
+        Me.txtNameExt.Size = New System.Drawing.Size(94, 24)
         Me.txtNameExt.TabIndex = 118
         '
         'Label56
@@ -809,7 +770,7 @@ Partial Class frmStudeProfile
         Me.Label56.Location = New System.Drawing.Point(358, 58)
         Me.Label56.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(37, 21)
+        Me.Label56.Size = New System.Drawing.Size(31, 17)
         Me.Label56.TabIndex = 116
         Me.Label56.Text = "LRN"
         '
@@ -821,7 +782,7 @@ Partial Class frmStudeProfile
         Me.cboBrgy.FormattingEnabled = True
         Me.cboBrgy.Location = New System.Drawing.Point(157, 160)
         Me.cboBrgy.Name = "cboBrgy"
-        Me.cboBrgy.Size = New System.Drawing.Size(493, 29)
+        Me.cboBrgy.Size = New System.Drawing.Size(493, 25)
         Me.cboBrgy.TabIndex = 124
         '
         'dtpBirthDate
@@ -832,7 +793,7 @@ Partial Class frmStudeProfile
         Me.dtpBirthDate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dtpBirthDate.MaxDate = New Date(2099, 12, 31, 0, 0, 0, 0)
         Me.dtpBirthDate.Name = "dtpBirthDate"
-        Me.dtpBirthDate.Size = New System.Drawing.Size(196, 27)
+        Me.dtpBirthDate.Size = New System.Drawing.Size(196, 23)
         Me.dtpBirthDate.TabIndex = 126
         '
         'Label23
@@ -842,7 +803,7 @@ Partial Class frmStudeProfile
         Me.Label23.Location = New System.Drawing.Point(26, 163)
         Me.Label23.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(87, 21)
+        Me.Label23.Size = New System.Drawing.Size(72, 17)
         Me.Label23.TabIndex = 148
         Me.Label23.Text = "BARANGAY"
         '
@@ -853,7 +814,7 @@ Partial Class frmStudeProfile
         Me.Label30.Location = New System.Drawing.Point(1108, 92)
         Me.Label30.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(50, 21)
+        Me.Label30.Size = New System.Drawing.Size(42, 17)
         Me.Label30.TabIndex = 120
         Me.Label30.Text = "EXTN."
         '
@@ -865,7 +826,7 @@ Partial Class frmStudeProfile
         Me.cboMuncipality.FormattingEnabled = True
         Me.cboMuncipality.Location = New System.Drawing.Point(796, 124)
         Me.cboMuncipality.Name = "cboMuncipality"
-        Me.cboMuncipality.Size = New System.Drawing.Size(466, 29)
+        Me.cboMuncipality.Size = New System.Drawing.Size(466, 25)
         Me.cboMuncipality.TabIndex = 123
         '
         'Label21
@@ -875,7 +836,7 @@ Partial Class frmStudeProfile
         Me.Label21.Location = New System.Drawing.Point(693, 127)
         Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(87, 21)
+        Me.Label21.Size = New System.Drawing.Size(72, 17)
         Me.Label21.TabIndex = 147
         Me.Label21.Text = "MUN./CITY"
         '
@@ -886,7 +847,7 @@ Partial Class frmStudeProfile
         Me.Label5.Location = New System.Drawing.Point(693, 92)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(91, 21)
+        Me.Label5.Size = New System.Drawing.Size(74, 17)
         Me.Label5.TabIndex = 115
         Me.Label5.Text = "LAST NAME"
         '
@@ -895,7 +856,7 @@ Partial Class frmStudeProfile
         Me.txtLRN.Location = New System.Drawing.Point(449, 55)
         Me.txtLRN.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtLRN.Name = "txtLRN"
-        Me.txtLRN.Size = New System.Drawing.Size(201, 28)
+        Me.txtLRN.Size = New System.Drawing.Size(201, 24)
         Me.txtLRN.TabIndex = 109
         '
         'cboProvince
@@ -906,7 +867,7 @@ Partial Class frmStudeProfile
         Me.cboProvince.FormattingEnabled = True
         Me.cboProvince.Location = New System.Drawing.Point(157, 121)
         Me.cboProvince.Name = "cboProvince"
-        Me.cboProvince.Size = New System.Drawing.Size(493, 29)
+        Me.cboProvince.Size = New System.Drawing.Size(493, 25)
         Me.cboProvince.TabIndex = 121
         '
         'Label1
@@ -916,7 +877,7 @@ Partial Class frmStudeProfile
         Me.Label1.Location = New System.Drawing.Point(26, 127)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 21)
+        Me.Label1.Size = New System.Drawing.Size(67, 17)
         Me.Label1.TabIndex = 95
         Me.Label1.Text = "PROVINCE"
         '
@@ -927,7 +888,7 @@ Partial Class frmStudeProfile
         Me.Label4.Location = New System.Drawing.Point(359, 95)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(73, 21)
+        Me.Label4.Size = New System.Drawing.Size(60, 17)
         Me.Label4.TabIndex = 114
         Me.Label4.Text = "M.NAME"
         '
@@ -938,7 +899,7 @@ Partial Class frmStudeProfile
         Me.Label9.Location = New System.Drawing.Point(26, 92)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(95, 21)
+        Me.Label9.Size = New System.Drawing.Size(78, 17)
         Me.Label9.TabIndex = 99
         Me.Label9.Text = "FIRST NAME"
         '
@@ -949,7 +910,7 @@ Partial Class frmStudeProfile
         Me.txtFName.Location = New System.Drawing.Point(157, 88)
         Me.txtFName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtFName.Name = "txtFName"
-        Me.txtFName.Size = New System.Drawing.Size(196, 28)
+        Me.txtFName.Size = New System.Drawing.Size(196, 24)
         Me.txtFName.TabIndex = 112
         '
         'Label44
@@ -959,7 +920,7 @@ Partial Class frmStudeProfile
         Me.Label44.Location = New System.Drawing.Point(26, 58)
         Me.Label44.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(104, 21)
+        Me.Label44.Size = New System.Drawing.Size(87, 17)
         Me.Label44.TabIndex = 102
         Me.Label44.Text = "STUDENT NO."
         '
@@ -970,7 +931,7 @@ Partial Class frmStudeProfile
         Me.txtMName.Location = New System.Drawing.Point(449, 88)
         Me.txtMName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtMName.Name = "txtMName"
-        Me.txtMName.Size = New System.Drawing.Size(201, 28)
+        Me.txtMName.Size = New System.Drawing.Size(201, 24)
         Me.txtMName.TabIndex = 113
         '
         'mskStudentNumber
@@ -978,7 +939,7 @@ Partial Class frmStudeProfile
         Me.mskStudentNumber.Location = New System.Drawing.Point(157, 55)
         Me.mskStudentNumber.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.mskStudentNumber.Name = "mskStudentNumber"
-        Me.mskStudentNumber.Size = New System.Drawing.Size(196, 28)
+        Me.mskStudentNumber.Size = New System.Drawing.Size(196, 24)
         Me.mskStudentNumber.TabIndex = 104
         '
         'txtLName
@@ -988,7 +949,7 @@ Partial Class frmStudeProfile
         Me.txtLName.Location = New System.Drawing.Point(796, 89)
         Me.txtLName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtLName.Name = "txtLName"
-        Me.txtLName.Size = New System.Drawing.Size(282, 28)
+        Me.txtLName.Size = New System.Drawing.Size(282, 24)
         Me.txtLName.TabIndex = 117
         '
         'Button2
@@ -1002,17 +963,17 @@ Partial Class frmStudeProfile
         Me.Button2.Text = "Close"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button3
+        'TabPage2
         '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(659, 374)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(28, 23)
-        Me.Button3.TabIndex = 158
-        Me.Button3.TabStop = False
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.TabPage2.Controls.Add(Me.GroupBox3)
+        Me.TabPage2.Controls.Add(Me.GroupBox2)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 26)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(1283, 531)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "GUARDIAN INFO"
+        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'GroupBox3
         '
@@ -1044,34 +1005,102 @@ Partial Class frmStudeProfile
         Me.Label59.AutoSize = True
         Me.Label59.Location = New System.Drawing.Point(3, 199)
         Me.Label59.Name = "Label59"
-        Me.Label59.Size = New System.Drawing.Size(92, 21)
+        Me.Label59.Size = New System.Drawing.Size(75, 17)
         Me.Label59.TabIndex = 1
         Me.Label59.Text = "Contact No."
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Location = New System.Drawing.Point(7, 167)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(72, 17)
+        Me.Label40.TabIndex = 1
+        Me.Label40.Text = "Occupation"
         '
         'txtMotherContactNo
         '
         Me.txtMotherContactNo.Location = New System.Drawing.Point(109, 199)
         Me.txtMotherContactNo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtMotherContactNo.Name = "txtMotherContactNo"
-        Me.txtMotherContactNo.Size = New System.Drawing.Size(322, 28)
+        Me.txtMotherContactNo.Size = New System.Drawing.Size(322, 24)
         Me.txtMotherContactNo.TabIndex = 11
+        '
+        'labelMother
+        '
+        Me.labelMother.AutoSize = True
+        Me.labelMother.Location = New System.Drawing.Point(40, 127)
+        Me.labelMother.Name = "labelMother"
+        Me.labelMother.Size = New System.Drawing.Size(51, 17)
+        Me.labelMother.TabIndex = 5
+        Me.labelMother.Text = "Mother"
+        '
+        'txtMotherOccupation
+        '
+        Me.txtMotherOccupation.Location = New System.Drawing.Point(109, 163)
+        Me.txtMotherOccupation.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtMotherOccupation.Name = "txtMotherOccupation"
+        Me.txtMotherOccupation.Size = New System.Drawing.Size(322, 24)
+        Me.txtMotherOccupation.TabIndex = 9
         '
         'Label58
         '
         Me.Label58.AutoSize = True
         Me.Label58.Location = New System.Drawing.Point(6, 88)
         Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(92, 21)
+        Me.Label58.Size = New System.Drawing.Size(75, 17)
         Me.Label58.TabIndex = 5
         Me.Label58.Text = "Contact No."
+        '
+        'txtMother
+        '
+        Me.txtMother.Location = New System.Drawing.Point(109, 124)
+        Me.txtMother.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtMother.Name = "txtMother"
+        Me.txtMother.Size = New System.Drawing.Size(322, 24)
+        Me.txtMother.TabIndex = 7
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Location = New System.Drawing.Point(6, 52)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(72, 17)
+        Me.Label42.TabIndex = 23
+        Me.Label42.Text = "Occupation"
         '
         'txtFatherContactNo
         '
         Me.txtFatherContactNo.Location = New System.Drawing.Point(109, 88)
         Me.txtFatherContactNo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtFatherContactNo.Name = "txtFatherContactNo"
-        Me.txtFatherContactNo.Size = New System.Drawing.Size(322, 28)
+        Me.txtFatherContactNo.Size = New System.Drawing.Size(322, 24)
         Me.txtFatherContactNo.TabIndex = 5
+        '
+        'lblFather
+        '
+        Me.lblFather.AutoSize = True
+        Me.lblFather.Location = New System.Drawing.Point(19, 21)
+        Me.lblFather.Name = "lblFather"
+        Me.lblFather.Size = New System.Drawing.Size(45, 17)
+        Me.lblFather.TabIndex = 0
+        Me.lblFather.Text = "Father"
+        '
+        'txtFatherOccupation
+        '
+        Me.txtFatherOccupation.Location = New System.Drawing.Point(111, 52)
+        Me.txtFatherOccupation.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtFatherOccupation.Name = "txtFatherOccupation"
+        Me.txtFatherOccupation.Size = New System.Drawing.Size(323, 24)
+        Me.txtFatherOccupation.TabIndex = 3
+        '
+        'txtFather
+        '
+        Me.txtFather.Location = New System.Drawing.Point(109, 16)
+        Me.txtFather.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtFather.Name = "txtFather"
+        Me.txtFather.Size = New System.Drawing.Size(322, 24)
+        Me.txtFather.TabIndex = 1
         '
         'Button6
         '
@@ -1092,74 +1121,6 @@ Partial Class frmStudeProfile
         Me.Button5.TabIndex = 17
         Me.Button5.Text = "Set as Guardian"
         Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(7, 167)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(88, 21)
-        Me.Label40.TabIndex = 1
-        Me.Label40.Text = "Occupation"
-        '
-        'txtMotherOccupation
-        '
-        Me.txtMotherOccupation.Location = New System.Drawing.Point(109, 163)
-        Me.txtMotherOccupation.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtMotherOccupation.Name = "txtMotherOccupation"
-        Me.txtMotherOccupation.Size = New System.Drawing.Size(322, 28)
-        Me.txtMotherOccupation.TabIndex = 9
-        '
-        'labelMother
-        '
-        Me.labelMother.AutoSize = True
-        Me.labelMother.Location = New System.Drawing.Point(40, 127)
-        Me.labelMother.Name = "labelMother"
-        Me.labelMother.Size = New System.Drawing.Size(63, 21)
-        Me.labelMother.TabIndex = 5
-        Me.labelMother.Text = "Mother"
-        '
-        'txtMother
-        '
-        Me.txtMother.Location = New System.Drawing.Point(109, 124)
-        Me.txtMother.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtMother.Name = "txtMother"
-        Me.txtMother.Size = New System.Drawing.Size(322, 28)
-        Me.txtMother.TabIndex = 7
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(6, 52)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(88, 21)
-        Me.Label42.TabIndex = 23
-        Me.Label42.Text = "Occupation"
-        '
-        'txtFatherOccupation
-        '
-        Me.txtFatherOccupation.Location = New System.Drawing.Point(111, 52)
-        Me.txtFatherOccupation.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtFatherOccupation.Name = "txtFatherOccupation"
-        Me.txtFatherOccupation.Size = New System.Drawing.Size(323, 28)
-        Me.txtFatherOccupation.TabIndex = 3
-        '
-        'lblFather
-        '
-        Me.lblFather.AutoSize = True
-        Me.lblFather.Location = New System.Drawing.Point(19, 21)
-        Me.lblFather.Name = "lblFather"
-        Me.lblFather.Size = New System.Drawing.Size(55, 21)
-        Me.lblFather.TabIndex = 0
-        Me.lblFather.Text = "Father"
-        '
-        'txtFather
-        '
-        Me.txtFather.Location = New System.Drawing.Point(109, 16)
-        Me.txtFather.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtFather.Name = "txtFather"
-        Me.txtFather.Size = New System.Drawing.Size(322, 28)
-        Me.txtFather.TabIndex = 1
         '
         'GroupBox2
         '
@@ -1196,7 +1157,7 @@ Partial Class frmStudeProfile
         Me.Label25.AutoSize = True
         Me.Label25.Location = New System.Drawing.Point(14, 5)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(87, 21)
+        Me.Label25.Size = New System.Drawing.Size(70, 17)
         Me.Label25.TabIndex = 1
         Me.Label25.Text = "Mobile No."
         '
@@ -1205,7 +1166,7 @@ Partial Class frmStudeProfile
         Me.txtGuardianContact.Location = New System.Drawing.Point(101, 2)
         Me.txtGuardianContact.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtGuardianContact.Name = "txtGuardianContact"
-        Me.txtGuardianContact.Size = New System.Drawing.Size(121, 28)
+        Me.txtGuardianContact.Size = New System.Drawing.Size(121, 24)
         Me.txtGuardianContact.TabIndex = 18
         '
         'lblMother
@@ -1213,7 +1174,7 @@ Partial Class frmStudeProfile
         Me.lblMother.AutoSize = True
         Me.lblMother.Location = New System.Drawing.Point(251, 5)
         Me.lblMother.Name = "lblMother"
-        Me.lblMother.Size = New System.Drawing.Size(60, 21)
+        Me.lblMother.Size = New System.Drawing.Size(51, 17)
         Me.lblMother.TabIndex = 25
         Me.lblMother.Text = "Tel. No."
         '
@@ -1223,7 +1184,7 @@ Partial Class frmStudeProfile
         Me.mskGuardianTel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.mskGuardianTel.Mask = "(999) 000-0000"
         Me.mskGuardianTel.Name = "mskGuardianTel"
-        Me.mskGuardianTel.Size = New System.Drawing.Size(116, 28)
+        Me.mskGuardianTel.Size = New System.Drawing.Size(116, 24)
         Me.mskGuardianTel.TabIndex = 19
         '
         'Panel13
@@ -1243,7 +1204,7 @@ Partial Class frmStudeProfile
         Me.Label36.AutoSize = True
         Me.Label36.Location = New System.Drawing.Point(14, 5)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(95, 21)
+        Me.Label36.Size = New System.Drawing.Size(77, 17)
         Me.Label36.TabIndex = 23
         Me.Label36.Text = "Relationship"
         '
@@ -1252,7 +1213,7 @@ Partial Class frmStudeProfile
         Me.txtGuardianRelationship.Location = New System.Drawing.Point(101, 1)
         Me.txtGuardianRelationship.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtGuardianRelationship.Name = "txtGuardianRelationship"
-        Me.txtGuardianRelationship.Size = New System.Drawing.Size(326, 28)
+        Me.txtGuardianRelationship.Size = New System.Drawing.Size(326, 24)
         Me.txtGuardianRelationship.TabIndex = 15
         '
         'Panel12
@@ -1274,7 +1235,7 @@ Partial Class frmStudeProfile
         Me.txtGuardian.FormattingEnabled = True
         Me.txtGuardian.Location = New System.Drawing.Point(101, 0)
         Me.txtGuardian.Name = "txtGuardian"
-        Me.txtGuardian.Size = New System.Drawing.Size(325, 29)
+        Me.txtGuardian.Size = New System.Drawing.Size(325, 25)
         Me.txtGuardian.TabIndex = 13
         '
         'Label18
@@ -1282,7 +1243,7 @@ Partial Class frmStudeProfile
         Me.Label18.AutoSize = True
         Me.Label18.Location = New System.Drawing.Point(14, 5)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(74, 21)
+        Me.Label18.Size = New System.Drawing.Size(60, 17)
         Me.Label18.TabIndex = 0
         Me.Label18.Text = "Guardian"
         '
@@ -1301,15 +1262,55 @@ Partial Class frmStudeProfile
         Me.Label26.AutoSize = True
         Me.Label26.Location = New System.Drawing.Point(19, 102)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(66, 21)
+        Me.Label26.Size = New System.Drawing.Size(52, 17)
         Me.Label26.TabIndex = 5
         Me.Label26.Text = "Address"
         '
+        'TabPage3
+        '
+        Me.TabPage3.Location = New System.Drawing.Point(4, 26)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Size = New System.Drawing.Size(1283, 531)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "REQUIREMENTS SUBMITTED"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Location = New System.Drawing.Point(4, 26)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Size = New System.Drawing.Size(1283, 531)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "OTHER INFO"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(1140, 740)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(138, 39)
+        Me.Button1.TabIndex = 16
+        Me.Button1.Text = "SAVE"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SRMS_BED.My.Resources.Resources.Student_Registration
+        Me.PictureBox1.Location = New System.Drawing.Point(24, 15)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(52, 49)
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
         'frmStudeProfile
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1315, 898)
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientSize = New System.Drawing.Size(1315, 814)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Panel1)
@@ -1329,7 +1330,6 @@ Partial Class frmStudeProfile
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -1340,6 +1340,7 @@ Partial Class frmStudeProfile
         Me.Panel13.PerformLayout()
         Me.Panel12.ResumeLayout(False)
         Me.Panel12.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
