@@ -219,6 +219,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Registrar\CompleteList.Designer.vb">
+      <DependentUpon>CompleteList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\CompleteList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Registrar\Registrar.Designer.vb">
       <DependentUpon>Registrar.vb</DependentUpon>
     </Compile>
@@ -235,6 +241,30 @@
       <DependentUpon>ReportsDashboard.vb</DependentUpon>
     </Compile>
     <Compile Include="Reports\ReportsDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\AddEthnicity.Designer.vb">
+      <DependentUpon>AddEthnicity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\AddEthnicity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\AddReligion.Designer.vb">
+      <DependentUpon>AddReligion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\AddReligion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\AddScholarship.Designer.vb">
+      <DependentUpon>AddScholarship.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\AddScholarship.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\SelectSchool0.Designer.vb">
+      <DependentUpon>SelectSchool0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SelectSchool0.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Settings\Settings.Designer.vb">
@@ -278,6 +308,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\CompleteList.resx">
+      <DependentUpon>CompleteList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registrar\Registrar.resx">
       <DependentUpon>Registrar.vb</DependentUpon>
     </EmbeddedResource>
@@ -286,6 +319,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ReportsDashboard.resx">
       <DependentUpon>ReportsDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\AddEthnicity.resx">
+      <DependentUpon>AddEthnicity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\AddReligion.resx">
+      <DependentUpon>AddReligion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\AddScholarship.resx">
+      <DependentUpon>AddScholarship.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\SelectSchool0.resx">
+      <DependentUpon>SelectSchool0.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\Settings.resx">
       <DependentUpon>Settings.vb</DependentUpon>
@@ -376,6 +421,8 @@
     <None Include="Resources\48 px - Profiles1.png" />
     <None Include="Resources\48 px Teacher.png" />
     <None Include="Resources\48 px Bookmark.png" />
+    <None Include="Resources\srms-logo1.jpg" />
+    <None Include="Resources\Search Contacts.png" />
     <Content Include="School.ico" />
     <Content Include="Scripts\fontawesome\all.js" />
     <Content Include="Scripts\fontawesome\all.min.js" />

@@ -1,9 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class frmSubjects
     Dim str As String
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Me.Close()
-    End Sub
+
 
     Public Sub formLoad()
         txtCode.Focus()
@@ -24,7 +22,7 @@ Public Class frmSubjects
         getSubjects()
     End Sub
 
-    Public Sub getSubjects()
+    Public Sub GetSubjects()
         str = "select * from subjects order by subjectCode"
         conn.Open()
         Dim Search As New MySqlDataAdapter(str, conn)
@@ -198,5 +196,9 @@ Public Class frmSubjects
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
             conn.Close()
         End Try
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
     End Sub
 End Class

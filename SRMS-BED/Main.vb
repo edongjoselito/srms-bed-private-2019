@@ -58,4 +58,8 @@
     Private Sub IconButton7_Click(sender As Object, e As EventArgs) Handles IconButton7.Click
         frmSettings.ShowDialog()
     End Sub
+
+    Private Sub StatusStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles StatusStrip1.ItemClicked
+
+    End Sub
 End Class

@@ -167,12 +167,22 @@ SRMS-BED
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SRMS_BED.My.Resources.Resources.Search_Contacts">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SRMS_BED.My.Resources.Resources.Spectators_On_Seats">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:SRMS_BED.My.Resources.Resources.srms_logo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources.srms_logo1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

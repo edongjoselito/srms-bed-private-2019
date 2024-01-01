@@ -341,10 +341,10 @@ Partial Class frmMain
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.SRMS_BED.My.Resources.Resources.srms_logo
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 6)
+        Me.PictureBox1.Image = Global.SRMS_BED.My.Resources.Resources.srms_logo1
+        Me.PictureBox1.Location = New System.Drawing.Point(3, -4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(239, 80)
+        Me.PictureBox1.Size = New System.Drawing.Size(239, 91)
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
@@ -478,6 +478,7 @@ Partial Class frmMain
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(248, 89)
         Me.Panel8.TabIndex = 7
+        Me.Panel8.Visible = False
         '
         'Label3
         '
@@ -520,6 +521,7 @@ Partial Class frmMain
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(249, 89)
         Me.Panel9.TabIndex = 8
+        Me.Panel9.Visible = False
         '
         'Label4
         '
@@ -562,6 +564,7 @@ Partial Class frmMain
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(248, 89)
         Me.Panel10.TabIndex = 9
+        Me.Panel10.Visible = False
         '
         'Label6
         '
@@ -603,6 +606,7 @@ Partial Class frmMain
         Me.Label8.Size = New System.Drawing.Size(158, 36)
         Me.Label8.TabIndex = 3
         Me.Label8.Text = "DASHBOARD"
+        Me.Label8.Visible = False
         '
         'frmMain
         '

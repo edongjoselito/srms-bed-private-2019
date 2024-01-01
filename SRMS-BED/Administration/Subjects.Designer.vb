@@ -22,7 +22,7 @@ Partial Class frmSubjects
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -30,6 +30,7 @@ Partial Class frmSubjects
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cboYearLevel = New System.Windows.Forms.ComboBox()
@@ -49,13 +50,12 @@ Partial Class frmSubjects
         Me.txtCode = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dg1 = New System.Windows.Forms.DataGridView()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel5.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dg1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -128,6 +128,15 @@ Partial Class frmSubjects
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1147, 86)
         Me.Panel5.TabIndex = 13
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SRMS_BED.My.Resources.Resources.Case_Study
+        Me.PictureBox1.Location = New System.Drawing.Point(24, 15)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(52, 49)
+        Me.PictureBox1.TabIndex = 4
+        Me.PictureBox1.TabStop = False
         '
         'Panel7
         '
@@ -344,8 +353,8 @@ Partial Class frmSubjects
         '
         Me.dg1.AllowUserToAddRows = False
         Me.dg1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.LightGray
-        Me.dg1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray
+        Me.dg1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dg1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg1.Location = New System.Drawing.Point(492, 160)
         Me.dg1.Name = "dg1"
@@ -355,15 +364,6 @@ Partial Class frmSubjects
         Me.dg1.Size = New System.Drawing.Size(649, 500)
         Me.dg1.TabIndex = 17
         Me.dg1.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SRMS_BED.My.Resources.Resources.Case_Study
-        Me.PictureBox1.Location = New System.Drawing.Point(24, 15)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(52, 49)
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
         '
         'frmSubjects
         '
@@ -388,10 +388,10 @@ Partial Class frmSubjects
         Me.Panel6.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dg1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
