@@ -6,7 +6,7 @@ Public Class frmSelectSchool0
             Str = "select * from prevschool order by School"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(Str, conn)
-            Dim ds As New DataSet
+            Dim ds As New Data.DataSet
             mysda.Fill(ds, "prevschool")
             dg1.DataSource = ds.Tables("prevschool")
             conn.Close()
@@ -25,7 +25,7 @@ Public Class frmSelectSchool0
             str = "select * from prevschool where School like '%" & txtSearch.Text & "%' order by School"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
-            Dim ds As New DataSet
+            Dim ds As New Data.DataSet
             mysda.Fill(ds, "prevschool")
             dg1.DataSource = ds.Tables("prevschool")
             conn.Close()

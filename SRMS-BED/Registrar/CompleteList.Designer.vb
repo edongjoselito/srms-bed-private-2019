@@ -31,6 +31,7 @@ Partial Class frmCompleteList
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.dgstudentsearch = New System.Windows.Forms.DataGridView()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.lblSource = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
@@ -59,7 +60,7 @@ Partial Class frmCompleteList
         Me.chkLastName.ForeColor = System.Drawing.Color.White
         Me.chkLastName.Location = New System.Drawing.Point(552, 8)
         Me.chkLastName.Name = "chkLastName"
-        Me.chkLastName.Size = New System.Drawing.Size(113, 25)
+        Me.chkLastName.Size = New System.Drawing.Size(93, 21)
         Me.chkLastName.TabIndex = 29
         Me.chkLastName.Text = "LAST NAME"
         Me.chkLastName.UseVisualStyleBackColor = True
@@ -71,7 +72,7 @@ Partial Class frmCompleteList
         Me.chkStudentNumber.ForeColor = System.Drawing.Color.White
         Me.chkStudentNumber.Location = New System.Drawing.Point(420, 9)
         Me.chkStudentNumber.Name = "chkStudentNumber"
-        Me.chkStudentNumber.Size = New System.Drawing.Size(126, 25)
+        Me.chkStudentNumber.Size = New System.Drawing.Size(106, 21)
         Me.chkStudentNumber.TabIndex = 28
         Me.chkStudentNumber.Text = "STUDENT NO."
         Me.chkStudentNumber.UseVisualStyleBackColor = True
@@ -83,7 +84,7 @@ Partial Class frmCompleteList
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(15, 10)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 21)
+        Me.Label1.Size = New System.Drawing.Size(53, 17)
         Me.Label1.TabIndex = 27
         Me.Label1.Text = "SEARCH"
         '
@@ -93,7 +94,7 @@ Partial Class frmCompleteList
         Me.txtSearch.ForeColor = System.Drawing.Color.Black
         Me.txtSearch.Location = New System.Drawing.Point(86, 7)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(301, 28)
+        Me.txtSearch.Size = New System.Drawing.Size(301, 24)
         Me.txtSearch.TabIndex = 2
         '
         'btnCancel
@@ -124,12 +125,23 @@ Partial Class frmCompleteList
         '
         'Panel5
         '
+        Me.Panel5.Controls.Add(Me.lblSource)
         Me.Panel5.Controls.Add(Me.Panel6)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel5.Location = New System.Drawing.Point(0, 0)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(803, 49)
         Me.Panel5.TabIndex = 14
+        '
+        'lblSource
+        '
+        Me.lblSource.AutoSize = True
+        Me.lblSource.Location = New System.Drawing.Point(98, 15)
+        Me.lblSource.Name = "lblSource"
+        Me.lblSource.Size = New System.Drawing.Size(44, 15)
+        Me.lblSource.TabIndex = 1
+        Me.lblSource.Text = "Source"
+        Me.lblSource.Visible = False
         '
         'Panel6
         '
@@ -154,7 +166,7 @@ Partial Class frmCompleteList
         '
         'frmCompleteList
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(147, Byte), Integer))
         Me.CancelButton = Me.btnCancel
@@ -174,6 +186,7 @@ Partial Class frmCompleteList
         Me.Panel1.PerformLayout()
         CType(Me.dgstudentsearch, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
         Me.Panel6.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -189,4 +202,5 @@ Partial Class frmCompleteList
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents btnClose As Button
+    Friend WithEvents lblSource As Label
 End Class

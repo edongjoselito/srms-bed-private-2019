@@ -62,4 +62,8 @@
     Private Sub StatusStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles StatusStrip1.ItemClicked
 
     End Sub
+
+    Private Sub IconButton12_Click(sender As Object, e As EventArgs) Handles IconButton12.Click
+        frmBackup.ShowDialog()
+    End Sub
 End Class

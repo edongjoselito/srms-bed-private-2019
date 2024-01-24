@@ -15,4 +15,24 @@ Module connection
         Return strResult
     End Function
 
+    Public Sub AddSemSubjects(ByVal ls As ListView, ByVal subjectcode As String, ByVal Description As String, ByVal SchedTime As String, ByVal Room As String, ByVal Section As String, ByVal IDNumber As String)
+        Dim lv As New ListViewItem
+        ls.Items.Add(lv)
+        lv.Text = subjectcode
+        lv.SubItems.Add(Description)
+        lv.SubItems.Add(SchedTime)
+        lv.SubItems.Add(Room)
+        lv.SubItems.Add(Section)
+        lv.SubItems.Add(IDNumber)
+
+    End Sub
+
+    Public Sub AddFees(ByVal lv As ListView, ByVal Description As String, ByVal Amount As Double)
+        Dim n As New ListViewItem
+        lv.Items.Add(n)
+        n.Text = Description
+        n.SubItems.Add(Amount)
+
+    End Sub
+
 End Module

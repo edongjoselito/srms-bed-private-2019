@@ -38,7 +38,7 @@ Public Class AddReligion
             str = "select * from settings_religion order by religion"
             conn.Open()
             Dim Search As New MySqlDataAdapter(Str, conn)
-            Dim ds As DataSet = New DataSet
+            Dim ds As Data.DataSet = New Data.DataSet
             Search.Fill(ds, "settings_religion")
             dg1.DataSource = ds.Tables("settings_religion")
             conn.Close()

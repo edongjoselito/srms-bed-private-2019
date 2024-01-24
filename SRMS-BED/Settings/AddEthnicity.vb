@@ -40,7 +40,7 @@ Public Class AddEthnicity
             str = "select * from settings_ethnicity order by ethnicity"
             conn.Open()
             Dim Search As New MySqlDataAdapter(Str, conn)
-            Dim ds As DataSet = New DataSet
+            Dim ds As Data.DataSet = New Data.DataSet
             Search.Fill(ds, "settings_ethnicity")
             dg1.DataSource = ds.Tables("settings_ethnicity")
             conn.Close()

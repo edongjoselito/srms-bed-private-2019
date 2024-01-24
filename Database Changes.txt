@@ -1,0 +1,24 @@
+semsubjects:
+-remove
+	- ,'" & txtLecUnits.Text & "'
+	,'" & txtLabUnits.Text & "'
+,'" & txtSlot.Text & "'
+,'" & cboTime3.Text & "'
+,'" & cboAM3.Text & "'
+,'" & cboTime4.Text & "'
+,'" & cboAM4.Text & "'
+,'" & txtDaysLec.Text & "'
+,'" & txtDaysLab.Text & "'
+-remove also the LabTime
+-remove also the Instructor
+
+
+From the registration table:
+remove
+	- term
+	- firstname
+	- middlename
+	- lastname
+
+
+

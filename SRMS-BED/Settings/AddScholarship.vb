@@ -15,6 +15,10 @@ Public Class frmAddScholarship
                 frmStudeProfile.getScholarship()
                 MsgBox("New data added.", MsgBoxStyle.Information)
                 formLoad()
+
+                frmSemStudent.getScholarship()
+                frmStudeProfile.getScholarship()
+
             Else
                 str = "update scholarships set Scholarship='" & txtScholarship.Text & "' where scholarshipID ='" & lblID.Text & "'"
                 conn.Open()
@@ -27,6 +31,10 @@ Public Class frmAddScholarship
                 frmStudeProfile.getScholarship()
                 MsgBox("New data added.", MsgBoxStyle.Information)
                 formLoad()
+
+                frmSemStudent.getScholarship()
+                frmStudeProfile.getScholarship()
+
             End If
 
         Catch ex As Exception
@@ -43,7 +51,7 @@ Public Class frmAddScholarship
             str = "select * from scholarships order by Scholarship"
             conn.Open()
             Dim Search As New MySqlDataAdapter(Str, conn)
-            Dim ds As DataSet = New DataSet
+            Dim ds As Data.DataSet = New Data.DataSet
             Search.Fill(ds, "scholarships")
             dg1.DataSource = ds.Tables("scholarships")
             conn.Close()
@@ -58,6 +66,8 @@ Public Class frmAddScholarship
 
             btnDelete.Enabled = False
             btnAdd.Text = "+ ADD"
+
+
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Information)
@@ -85,6 +95,9 @@ Public Class frmAddScholarship
             conn.Close()
 
             formLoad()
+            frmSemStudent.getScholarship()
+            frmStudeProfile.getScholarship()
+
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
             conn.Close()

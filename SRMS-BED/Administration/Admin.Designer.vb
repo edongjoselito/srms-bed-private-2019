@@ -25,14 +25,12 @@ Partial Class frmAdmin
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAdmin))
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.stSemester = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.stSY = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
@@ -40,12 +38,15 @@ Partial Class frmAdmin
         Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.stSemester = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.stSY = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.lblSettingsID = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel7
@@ -67,6 +68,17 @@ Partial Class frmAdmin
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1337, 86)
         Me.Panel5.TabIndex = 5
+        '
+        'IconButton1
+        '
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.FileContract
+        Me.IconButton1.IconColor = System.Drawing.Color.Black
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.Location = New System.Drawing.Point(24, 6)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(75, 72)
+        Me.IconButton1.TabIndex = 7
+        Me.IconButton1.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -119,30 +131,6 @@ Partial Class frmAdmin
         Me.Panel2.Size = New System.Drawing.Size(1337, 717)
         Me.Panel2.TabIndex = 10
         '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.stSemester, Me.stSY})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 691)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1337, 26)
-        Me.StatusStrip1.TabIndex = 0
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'stSemester
-        '
-        Me.stSemester.BackColor = System.Drawing.Color.Transparent
-        Me.stSemester.Name = "stSemester"
-        Me.stSemester.Size = New System.Drawing.Size(101, 20)
-        Me.stSemester.Text = "First Semester"
-        '
-        'stSY
-        '
-        Me.stSY.BackColor = System.Drawing.Color.Transparent
-        Me.stSY.Name = "stSY"
-        Me.stSY.Size = New System.Drawing.Size(25, 20)
-        Me.stSY.Text = "SY"
-        '
         'ToolStrip1
         '
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
@@ -160,8 +148,8 @@ Partial Class frmAdmin
         Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(129, 52)
-        Me.ToolStripButton1.Text = "Programs"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(144, 52)
+        Me.ToolStripButton1.Text = "PROGRAMS"
         '
         'ToolStripButton2
         '
@@ -170,8 +158,8 @@ Partial Class frmAdmin
         Me.ToolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(178, 52)
-        Me.ToolStripButton2.Text = "Track and Strand"
+        Me.ToolStripButton2.Size = New System.Drawing.Size(202, 52)
+        Me.ToolStripButton2.Text = "TRACK AND STRAND"
         '
         'ToolStripButton3
         '
@@ -180,8 +168,8 @@ Partial Class frmAdmin
         Me.ToolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(114, 52)
-        Me.ToolStripButton3.Text = "Adviser"
+        Me.ToolStripButton3.Size = New System.Drawing.Size(121, 52)
+        Me.ToolStripButton3.Text = "ADVISER"
         '
         'ToolStripButton4
         '
@@ -190,8 +178,8 @@ Partial Class frmAdmin
         Me.ToolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton4.Name = "ToolStripButton4"
-        Me.ToolStripButton4.Size = New System.Drawing.Size(120, 52)
-        Me.ToolStripButton4.Text = "Subjects"
+        Me.ToolStripButton4.Size = New System.Drawing.Size(128, 52)
+        Me.ToolStripButton4.Text = "SUBJECTS"
         '
         'ToolStripButton5
         '
@@ -200,8 +188,8 @@ Partial Class frmAdmin
         Me.ToolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton5.Name = "ToolStripButton5"
-        Me.ToolStripButton5.Size = New System.Drawing.Size(161, 52)
-        Me.ToolStripButton5.Text = "Class Program"
+        Me.ToolStripButton5.Size = New System.Drawing.Size(182, 52)
+        Me.ToolStripButton5.Text = "CLASS PROGRAM"
         '
         'ToolStripButton6
         '
@@ -210,19 +198,39 @@ Partial Class frmAdmin
         Me.ToolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton6.Name = "ToolStripButton6"
-        Me.ToolStripButton6.Size = New System.Drawing.Size(161, 52)
-        Me.ToolStripButton6.Text = "Manage Users"
+        Me.ToolStripButton6.Size = New System.Drawing.Size(175, 52)
+        Me.ToolStripButton6.Text = "MANAGE USERS"
         '
-        'IconButton1
+        'StatusStrip1
         '
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.FileContract
-        Me.IconButton1.IconColor = System.Drawing.Color.Black
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(24, 6)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(75, 72)
-        Me.IconButton1.TabIndex = 7
-        Me.IconButton1.UseVisualStyleBackColor = True
+        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.stSemester, Me.stSY, Me.lblSettingsID})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 691)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(1337, 26)
+        Me.StatusStrip1.TabIndex = 0
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'stSemester
+        '
+        Me.stSemester.BackColor = System.Drawing.Color.Transparent
+        Me.stSemester.Name = "stSemester"
+        Me.stSemester.Size = New System.Drawing.Size(101, 20)
+        Me.stSemester.Text = "First Semester"
+        '
+        'stSY
+        '
+        Me.stSY.BackColor = System.Drawing.Color.Transparent
+        Me.stSY.Name = "stSY"
+        Me.stSY.Size = New System.Drawing.Size(79, 20)
+        Me.stSY.Text = "2023-2024"
+        '
+        'lblSettingsID
+        '
+        Me.lblSettingsID.Name = "lblSettingsID"
+        Me.lblSettingsID.Size = New System.Drawing.Size(75, 20)
+        Me.lblSettingsID.Text = "settingsID"
+        Me.lblSettingsID.Visible = False
         '
         'frmAdmin
         '
@@ -247,10 +255,10 @@ Partial Class frmAdmin
         Me.Panel6.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.StatusStrip1.ResumeLayout(False)
-        Me.StatusStrip1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -273,4 +281,5 @@ Partial Class frmAdmin
     Friend WithEvents ToolStripButton4 As ToolStripButton
     Friend WithEvents ToolStripButton5 As ToolStripButton
     Friend WithEvents ToolStripButton6 As ToolStripButton
+    Friend WithEvents lblSettingsID As ToolStripStatusLabel
 End Class

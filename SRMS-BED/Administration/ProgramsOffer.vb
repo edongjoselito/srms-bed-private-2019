@@ -10,7 +10,7 @@ Public Class frmProgramsOffer
             Str = "select * from course_table order by CourseCode"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(Str, conn)
-            Dim ds As New DataSet
+            Dim ds As New Data.DataSet
             mysda.Fill(ds, "course_table")
             dg1.DataSource = ds.Tables("course_table")
             conn.Close()

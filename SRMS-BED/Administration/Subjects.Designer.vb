@@ -73,7 +73,7 @@ Partial Class frmSubjects
         '
         Me.txtSearch.Location = New System.Drawing.Point(910, 19)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(225, 28)
+        Me.txtSearch.Size = New System.Drawing.Size(225, 24)
         Me.txtSearch.TabIndex = 1
         Me.txtSearch.TabStop = False
         '
@@ -83,7 +83,7 @@ Partial Class frmSubjects
         Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label8.Location = New System.Drawing.Point(839, 22)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(65, 21)
+        Me.Label8.Size = New System.Drawing.Size(53, 17)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "SEARCH"
         '
@@ -105,7 +105,7 @@ Partial Class frmSubjects
         Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(82, 25)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(109, 29)
+        Me.Label2.Size = New System.Drawing.Size(85, 23)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "SUBJECTS"
         '
@@ -181,7 +181,7 @@ Partial Class frmSubjects
         Me.cboYearLevel.Items.AddRange(New Object() {"", "Elementary", "Junior High School", "Senior High School"})
         Me.cboYearLevel.Location = New System.Drawing.Point(119, 147)
         Me.cboYearLevel.Name = "cboYearLevel"
-        Me.cboYearLevel.Size = New System.Drawing.Size(352, 29)
+        Me.cboYearLevel.Size = New System.Drawing.Size(352, 25)
         Me.cboYearLevel.TabIndex = 16
         '
         'cboDepartment
@@ -193,7 +193,7 @@ Partial Class frmSubjects
         Me.cboDepartment.Items.AddRange(New Object() {"", "Elementary", "Junior High School", "Senior High School"})
         Me.cboDepartment.Location = New System.Drawing.Point(119, 113)
         Me.cboDepartment.Name = "cboDepartment"
-        Me.cboDepartment.Size = New System.Drawing.Size(352, 29)
+        Me.cboDepartment.Size = New System.Drawing.Size(352, 25)
         Me.cboDepartment.TabIndex = 4
         '
         'Label7
@@ -201,7 +201,7 @@ Partial Class frmSubjects
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(12, 116)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(105, 21)
+        Me.Label7.Size = New System.Drawing.Size(88, 17)
         Me.Label7.TabIndex = 15
         Me.Label7.Text = "DEPARTMENT"
         '
@@ -214,7 +214,7 @@ Partial Class frmSubjects
         Me.cboSem.Items.AddRange(New Object() {"", "First Semester", "Second Semester"})
         Me.cboSem.Location = New System.Drawing.Point(200, 182)
         Me.cboSem.Name = "cboSem"
-        Me.cboSem.Size = New System.Drawing.Size(271, 29)
+        Me.cboSem.Size = New System.Drawing.Size(271, 25)
         Me.cboSem.TabIndex = 5
         '
         'cboCategory
@@ -226,7 +226,7 @@ Partial Class frmSubjects
         Me.cboCategory.Items.AddRange(New Object() {"", "Applied", "Core", "Specialized"})
         Me.cboCategory.Location = New System.Drawing.Point(200, 216)
         Me.cboCategory.Name = "cboCategory"
-        Me.cboCategory.Size = New System.Drawing.Size(271, 29)
+        Me.cboCategory.Size = New System.Drawing.Size(271, 25)
         Me.cboCategory.TabIndex = 6
         '
         'Label6
@@ -234,7 +234,7 @@ Partial Class frmSubjects
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(12, 219)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(182, 21)
+        Me.Label6.Size = New System.Drawing.Size(146, 17)
         Me.Label6.TabIndex = 13
         Me.Label6.Text = "CATEGORY (for SHS only)"
         '
@@ -243,7 +243,7 @@ Partial Class frmSubjects
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(12, 185)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(181, 21)
+        Me.Label5.Size = New System.Drawing.Size(145, 17)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "SEMESTER (for SHS only)"
         '
@@ -252,13 +252,14 @@ Partial Class frmSubjects
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(12, 150)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 21)
+        Me.Label1.Size = New System.Drawing.Size(75, 17)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "YEAR LEVEL"
         '
         'btnCancel
         '
         Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(156, Byte), Integer), CType(CType(18, Byte), Integer))
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.FlatAppearance.BorderSize = 0
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.ForeColor = System.Drawing.Color.Gainsboro
@@ -278,7 +279,7 @@ Partial Class frmSubjects
         Me.lblID.AutoSize = True
         Me.lblID.Location = New System.Drawing.Point(23, 304)
         Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(24, 21)
+        Me.lblID.Size = New System.Drawing.Size(21, 17)
         Me.lblID.TabIndex = 6
         Me.lblID.Text = "ID"
         Me.lblID.Visible = False
@@ -322,7 +323,7 @@ Partial Class frmSubjects
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(12, 82)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(101, 21)
+        Me.Label4.Size = New System.Drawing.Size(85, 17)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "DESCRIPTION"
         '
@@ -330,14 +331,14 @@ Partial Class frmSubjects
         '
         Me.txtDescription.Location = New System.Drawing.Point(119, 79)
         Me.txtDescription.Name = "txtDescription"
-        Me.txtDescription.Size = New System.Drawing.Size(352, 28)
+        Me.txtDescription.Size = New System.Drawing.Size(352, 24)
         Me.txtDescription.TabIndex = 2
         '
         'txtCode
         '
         Me.txtCode.Location = New System.Drawing.Point(119, 45)
         Me.txtCode.Name = "txtCode"
-        Me.txtCode.Size = New System.Drawing.Size(352, 28)
+        Me.txtCode.Size = New System.Drawing.Size(352, 24)
         Me.txtCode.TabIndex = 1
         '
         'Label3
@@ -345,7 +346,7 @@ Partial Class frmSubjects
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(12, 48)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(48, 21)
+        Me.Label3.Size = New System.Drawing.Size(40, 17)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "CODE"
         '
@@ -368,8 +369,9 @@ Partial Class frmSubjects
         'frmSubjects
         '
         Me.AcceptButton = Me.btnSave
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(1147, 665)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.dg1)

@@ -10,7 +10,7 @@ Public Class frmTrack
             str = "select * from track_strand order by track"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(Str, conn)
-            Dim ds As New DataSet
+            Dim ds As New Data.DataSet
             mysda.Fill(ds, "track_strand")
             dg1.DataSource = ds.Tables("track_strand")
             conn.Close()

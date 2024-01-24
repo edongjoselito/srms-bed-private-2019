@@ -82,9 +82,6 @@
     <Reference Include="MySql.Data, Version=8.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.2.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySqlConnector.2.3.3\lib\net471\MySqlConnector.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -153,16 +150,112 @@
     <Compile Include="Accounting\Accounting.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Accounting\AddFees.Designer.vb">
+      <DependentUpon>AddFees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\AddFees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\Billing.Designer.vb">
+      <DependentUpon>Billing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\Billing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\EditPayments.Designer.vb">
+      <DependentUpon>EditPayments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\EditPayments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\Fees.Designer.vb">
+      <DependentUpon>Fees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\Fees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\OfficialReceipt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OfficialReceipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Accounting\ORServices.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ORServices.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Accounting\OtherIncome.Designer.vb">
+      <DependentUpon>OtherIncome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\OtherIncome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\Payment.Designer.vb">
+      <DependentUpon>Payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\Payment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\SearchAccountforPayments.Designer.vb">
+      <DependentUpon>SearchAccountforPayments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\SearchAccountforPayments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\SearchAccounts.Designer.vb">
+      <DependentUpon>SearchAccounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\SearchAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\SearchBilling.Designer.vb">
+      <DependentUpon>SearchBilling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\SearchBilling.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\SearchORforVoid.Designer.vb">
+      <DependentUpon>SearchORforVoid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\SearchORforVoid.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Administration\Admin.Designer.vb">
       <DependentUpon>Admin.vb</DependentUpon>
     </Compile>
     <Compile Include="Administration\Admin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Administration\Advisers.Designer.vb">
+      <DependentUpon>Advisers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Advisers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\Backup.Designer.vb">
+      <DependentUpon>Backup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Backup.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Administration\ProgramsOffer.Designer.vb">
       <DependentUpon>ProgramsOffer.vb</DependentUpon>
     </Compile>
     <Compile Include="Administration\ProgramsOffer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\SearchSubjects.Designer.vb">
+      <DependentUpon>SearchSubjects.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\SearchSubjects.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administration\SemSubjects.Designer.vb">
+      <DependentUpon>SemSubjects.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\SemSubjects.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administration\Subjects.Designer.vb">
@@ -177,17 +270,75 @@
     <Compile Include="Administration\Track.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Bulk Uploading\BulkUploadStudent.Designer.vb">
+      <DependentUpon>BulkUploadStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bulk Uploading\BulkUploadStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bulk Upload\BulkUploadFees.Designer.vb">
+      <DependentUpon>BulkUploadFees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bulk Upload\BulkUploadFees.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="connection.vb" />
+    <Compile Include="Data Sets\DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data Sets\Reports4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reports4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Guidance\Guidance.Designer.vb">
       <DependentUpon>Guidance.vb</DependentUpon>
     </Compile>
     <Compile Include="Guidance\Guidance.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Human Resource\ByDepartment.Designer.vb">
+      <DependentUpon>ByDepartment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Human Resource\ByDepartment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Human Resource\familyBackground.Designer.vb">
+      <DependentUpon>familyBackground.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Human Resource\familyBackground.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Human Resource\HR.Designer.vb">
       <DependentUpon>HR.vb</DependentUpon>
     </Compile>
     <Compile Include="Human Resource\HR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Human Resource\PersonnelList.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonnelList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Human Resource\SearchPersonnel.Designer.vb">
+      <DependentUpon>SearchPersonnel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Human Resource\SearchPersonnel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Human Resource\Staff.Designer.vb">
+      <DependentUpon>Staff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Human Resource\Staff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\SemChoiceV2.Designer.vb">
+      <DependentUpon>SemChoiceV2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\SemChoiceV2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.vb">
@@ -225,10 +376,94 @@
     <Compile Include="Registrar\CompleteList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Registrar\COR.Designer.vb">
+      <DependentUpon>COR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\COR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\EncodeGrades.Designer.vb">
+      <DependentUpon>EncodeGrades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\EncodeGrades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\FirstGrading.Designer.vb">
+      <DependentUpon>FirstGrading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\FirstGrading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\FirstGradingSearch.Designer.vb">
+      <DependentUpon>FirstGradingSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\FirstGradingSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\MapehComponent.Designer.vb">
+      <DependentUpon>MapehComponent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\MapehComponent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\MasterlistDashboardbyCourse.Designer.vb">
+      <DependentUpon>MasterlistDashboardbyCourse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\MasterlistDashboardbyCourse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\ModifyGrades.Designer.vb">
+      <DependentUpon>ModifyGrades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\ModifyGrades.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Registrar\Registrar.Designer.vb">
       <DependentUpon>Registrar.vb</DependentUpon>
     </Compile>
     <Compile Include="Registrar\Registrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\SearchCOR.Designer.vb">
+      <DependentUpon>SearchCOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\SearchCOR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\SearchEnrollees.Designer.vb">
+      <DependentUpon>SearchEnrollees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\SearchEnrollees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\SearchForEncodeGrades.Designer.vb">
+      <DependentUpon>SearchForEncodeGrades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\SearchForEncodeGrades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\SearchSemesterStudent.Designer.vb">
+      <DependentUpon>SearchSemesterStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\SearchSemesterStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\SearchSemSubjects.Designer.vb">
+      <DependentUpon>SearchSemSubjects.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\SearchSemSubjects.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\searchStudeEncodeGrades.Designer.vb">
+      <DependentUpon>searchStudeEncodeGrades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\searchStudeEncodeGrades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\SemStudent.Designer.vb">
+      <DependentUpon>SemStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\SemStudent.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registrar\StudeProfile.Designer.vb">
@@ -237,10 +472,64 @@
     <Compile Include="Registrar\StudeProfile.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reports\Class List.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Class List.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ListPerSection.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListPerSection.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MasterList.Designer.vb">
+      <DependentUpon>MasterList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MasterList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PerSpecialization.Designer.vb">
+      <DependentUpon>PerSpecialization.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PerSpecialization.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\PerSpecializationReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PerSpecializationReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\report-per-sectionvb.Designer.vb">
+      <DependentUpon>report-per-sectionvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\report-per-sectionvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reports\ReportsDashboard.Designer.vb">
       <DependentUpon>ReportsDashboard.vb</DependentUpon>
     </Compile>
     <Compile Include="Reports\ReportsDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SelectSubject-Masterlist.Designer.vb">
+      <DependentUpon>SelectSubject-Masterlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SelectSubject-Masterlist.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\StudentList.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings\AddEmpStat.Designer.vb">
+      <DependentUpon>AddEmpStat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\AddEmpStat.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Settings\AddEthnicity.Designer.vb">
@@ -255,10 +544,22 @@
     <Compile Include="Settings\AddReligion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Settings\AddRooms.Designer.vb">
+      <DependentUpon>AddRooms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\AddRooms.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Settings\AddScholarship.Designer.vb">
       <DependentUpon>AddScholarship.vb</DependentUpon>
     </Compile>
     <Compile Include="Settings\AddScholarship.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\AddSection.Designer.vb">
+      <DependentUpon>AddSection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\AddSection.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Settings\SelectSchool0.Designer.vb">
@@ -278,11 +579,52 @@
     <EmbeddedResource Include="Accounting\Accounting.resx">
       <DependentUpon>Accounting.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Billing.resx">
+      <DependentUpon>Billing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Fees.resx">
+      <DependentUpon>Fees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\OfficialReceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OfficialReceipt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\ORServices.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ORServices.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\OtherIncome.resx">
+      <DependentUpon>OtherIncome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\Payment.resx">
+      <DependentUpon>Payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\SearchAccountforPayments.resx">
+      <DependentUpon>SearchAccountforPayments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\SearchAccounts.resx">
+      <DependentUpon>SearchAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\SearchBilling.resx">
+      <DependentUpon>SearchBilling.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\SearchORforVoid.resx">
+      <DependentUpon>SearchORforVoid.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\Admin.resx">
       <DependentUpon>Admin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administration\Advisers.resx">
+      <DependentUpon>Advisers.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\ProgramsOffer.resx">
       <DependentUpon>ProgramsOffer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\SearchSubjects.resx">
+      <DependentUpon>SearchSubjects.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administration\SemSubjects.resx">
+      <DependentUpon>SemSubjects.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\Subjects.resx">
       <DependentUpon>Subjects.vb</DependentUpon>
@@ -293,8 +635,27 @@
     <EmbeddedResource Include="Guidance\Guidance.resx">
       <DependentUpon>Guidance.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Human Resource\ByDepartment.resx">
+      <DependentUpon>ByDepartment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Human Resource\familyBackground.resx">
+      <DependentUpon>familyBackground.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Human Resource\HR.resx">
       <DependentUpon>HR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Human Resource\PersonnelList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PersonnelList.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Human Resource\SearchPersonnel.resx">
+      <DependentUpon>SearchPersonnel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Human Resource\Staff.resx">
+      <DependentUpon>Staff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\SemChoiceV2.resx">
+      <DependentUpon>SemChoiceV2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
@@ -311,14 +672,78 @@
     <EmbeddedResource Include="Registrar\CompleteList.resx">
       <DependentUpon>CompleteList.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\COR.resx">
+      <DependentUpon>COR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\FirstGrading.resx">
+      <DependentUpon>FirstGrading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\FirstGradingSearch.resx">
+      <DependentUpon>FirstGradingSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\MasterlistDashboardbyCourse.resx">
+      <DependentUpon>MasterlistDashboardbyCourse.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registrar\Registrar.resx">
       <DependentUpon>Registrar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\SearchCOR.resx">
+      <DependentUpon>SearchCOR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\SearchEnrollees.resx">
+      <DependentUpon>SearchEnrollees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\SearchForEncodeGrades.resx">
+      <DependentUpon>SearchForEncodeGrades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\SearchSemesterStudent.resx">
+      <DependentUpon>SearchSemesterStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\SearchSemSubjects.resx">
+      <DependentUpon>SearchSemSubjects.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\searchStudeEncodeGrades.resx">
+      <DependentUpon>searchStudeEncodeGrades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\SemStudent.resx">
+      <DependentUpon>SemStudent.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registrar\StudeProfile.resx">
       <DependentUpon>StudeProfile.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Class List.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Class List.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ListPerSection.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ListPerSection.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MasterList.resx">
+      <DependentUpon>MasterList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PerSpecialization.resx">
+      <DependentUpon>PerSpecialization.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PerSpecializationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PerSpecializationReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\report-per-sectionvb.resx">
+      <DependentUpon>report-per-sectionvb.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\ReportsDashboard.resx">
       <DependentUpon>ReportsDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SelectSubject-Masterlist.resx">
+      <DependentUpon>SelectSubject-Masterlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StudentList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StudentList.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\AddEmpStat.resx">
+      <DependentUpon>AddEmpStat.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\AddEthnicity.resx">
       <DependentUpon>AddEthnicity.vb</DependentUpon>
@@ -326,8 +751,14 @@
     <EmbeddedResource Include="Settings\AddReligion.resx">
       <DependentUpon>AddReligion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Settings\AddRooms.resx">
+      <DependentUpon>AddRooms.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Settings\AddScholarship.resx">
       <DependentUpon>AddScholarship.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\AddSection.resx">
+      <DependentUpon>AddSection.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\SelectSchool0.resx">
       <DependentUpon>SelectSchool0.vb</DependentUpon>
@@ -342,6 +773,28 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <None Include="Data Sets\DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data Sets\DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data Sets\DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data Sets\Reports4.xsc">
+      <DependentUpon>Reports4.xsd</DependentUpon>
+    </None>
+    <None Include="Data Sets\Reports4.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Reports4.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data Sets\Reports4.xss">
+      <DependentUpon>Reports4.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -423,6 +876,27 @@
     <None Include="Resources\48 px Bookmark.png" />
     <None Include="Resources\srms-logo1.jpg" />
     <None Include="Resources\Search Contacts.png" />
+    <None Include="Resources\softtech logo.png" />
+    <None Include="Resources\softtech logo2.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Save1.png" />
+    <None Include="Resources\Delete Document.png" />
+    <None Include="Resources\Search in List.png" />
+    <None Include="Resources\Replace.png" />
+    <None Include="Resources\Save as.png" />
+    <None Include="Resources\Save2.png" />
+    <None Include="Resources\Data Transfer.png" />
+    <None Include="Resources\Lock.png" />
+    <None Include="Resources\Preview File 30px.png" />
+    <None Include="Resources\Settings.png" />
+    <None Include="Resources\Delete Document1.png" />
+    <None Include="Resources\Save as 30px.png" />
+    <None Include="Resources\Delete Document 30px.png" />
+    <None Include="Resources\Upload File 30px.png" />
+    <None Include="Resources\New Copy.png" />
+    <None Include="Resources\View 30px.png" />
+    <None Include="Resources\Print 30px.png" />
+    <None Include="Resources\Refresh 48px.png" />
     <Content Include="School.ico" />
     <Content Include="Scripts\fontawesome\all.js" />
     <Content Include="Scripts\fontawesome\all.min.js" />
@@ -442,6 +916,8 @@
     <Content Include="webfonts\fa-regular-400.svg" />
     <Content Include="webfonts\fa-solid-900.svg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

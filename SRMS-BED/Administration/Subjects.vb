@@ -26,7 +26,7 @@ Public Class frmSubjects
         str = "select * from subjects order by subjectCode"
         conn.Open()
         Dim Search As New MySqlDataAdapter(str, conn)
-        Dim ds As DataSet = New DataSet
+        Dim ds As Data.DataSet = New Data.DataSet
         Search.Fill(ds, "subjects")
         dg1.DataSource = ds.Tables("subjects")
         conn.Close()
@@ -47,7 +47,7 @@ Public Class frmSubjects
             str = "select * from course_table group by CourseDescription order by CourseDescription"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
-            Dim ds As New DataSet
+            Dim ds As New Data.DataSet
             mysda.Fill(ds, "course_table")
             conn.Close()
             cboDepartment.ValueMember = "course_table"
@@ -65,7 +65,7 @@ Public Class frmSubjects
             str = "select * from course_table where CourseDescription='" & cboDepartment.Text & "' order by Major"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
-            Dim ds As New DataSet
+            Dim ds As New Data.DataSet
             mysda.Fill(ds, "course_table")
             conn.Close()
             cboYearLevel.ValueMember = "course_table"
@@ -178,7 +178,7 @@ Public Class frmSubjects
             str = "select * from subjects where subjectCode like '%" & txtSearch.Text & "%' or description like '%" & txtSearch.Text & "%' order by subjectCode"
             conn.Open()
             Dim Search As New MySqlDataAdapter(str, conn)
-            Dim ds As DataSet = New DataSet
+            Dim ds As Data.DataSet = New Data.DataSet
             Search.Fill(ds, "subjects")
             dg1.DataSource = ds.Tables("subjects")
             conn.Close()
@@ -198,7 +198,8 @@ Public Class frmSubjects
         End Try
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Me.Close()
     End Sub
 End Class

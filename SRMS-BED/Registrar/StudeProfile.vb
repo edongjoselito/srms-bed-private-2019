@@ -12,7 +12,7 @@ Public Class frmStudeProfile
                 str = "select * from studeprofile where StudentNumber='" & mskStudentNumber.Text & "'"
                 conn.Open()
                 Dim mysda As New MySqlDataAdapter(str, conn)
-                Dim ds As New DataSet
+                Dim ds As New Data.DataSet
                 mysda.Fill(ds, "studeprofile")
 
                 If ds.Tables("studeprofile").Rows.Count = 1 Then
@@ -34,7 +34,7 @@ Public Class frmStudeProfile
                 str = "select * from studeprofile where FirstName='" & txtFName.Text & "' and LastName='" & txtLName.Text & "'"
                 conn.Open()
                 Dim mysda1 As New MySqlDataAdapter(str, conn)
-                Dim ds1 As New DataSet
+                Dim ds1 As New Data.DataSet
                 mysda1.Fill(ds1, "studeprofile")
 
                 If ds1.Tables("studeprofile").Rows.Count = 1 Then
@@ -406,7 +406,7 @@ Public Class frmStudeProfile
             str = "Select Province from settings_address group by Province order by Province"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
-            Dim ds As New DataSet
+            Dim ds As New Data.DataSet
             mysda.Fill(ds, "settings_address")
             conn.Close()
             cboProvince.ValueMember = "settings_address"
@@ -423,7 +423,7 @@ Public Class frmStudeProfile
             str = "Select City from settings_address where Province='" & cboProvince.Text & "' group by City order by City"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
-            Dim ds As New DataSet
+            Dim ds As New Data.DataSet
             mysda.Fill(ds, "settings_address")
             conn.Close()
             cboMuncipality.ValueMember = "settings_address"
@@ -440,7 +440,7 @@ Public Class frmStudeProfile
             str = "select Brgy from settings_address where Province='" & cboProvince.Text & "' and City='" & cboMuncipality.Text & "' order by Brgy"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
-            Dim ds As New DataSet
+            Dim ds As New Data.DataSet
             mysda.Fill(ds, "settings_address")
             conn.Close()
             cboBrgy.ValueMember = "settings_address"
@@ -457,7 +457,7 @@ Public Class frmStudeProfile
             str = "select religion from settings_religion order by religion"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
-            Dim ds As New DataSet
+            Dim ds As New Data.DataSet
             mysda.Fill(ds, "settings_religion")
             conn.Close()
             txtReligion.ValueMember = "settings_religion"
@@ -474,7 +474,7 @@ Public Class frmStudeProfile
             str = "select ethnicity from settings_ethnicity order by ethnicity"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
-            Dim ds As New DataSet
+            Dim ds As New Data.DataSet
             mysda.Fill(ds, "settings_ethnicity")
             conn.Close()
             cboEthnicity.ValueMember = "settings_ethnicity"
@@ -501,7 +501,7 @@ Public Class frmStudeProfile
             str = "select * from scholarships order by Scholarship"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
-            Dim ds As New DataSet
+            Dim ds As New Data.DataSet
             mysda.Fill(ds, "scholarships")
 
             cboScholarship.ValueMember = "scholarships"
@@ -563,7 +563,7 @@ Public Class frmStudeProfile
             str = "select * from studeprofile group by Guardian order by Guardian "
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
-            Dim ds As New DataSet
+            Dim ds As New Data.DataSet
             mysda.Fill(ds, "qualifications")
             conn.Close()
 
@@ -607,6 +607,7 @@ Public Class frmStudeProfile
     End Sub
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+        frmCompleteList.lblSource.Text = "Profile Form"
         frmCompleteList.ShowDialog()
     End Sub
 
@@ -790,5 +791,9 @@ Public Class frmStudeProfile
 
     Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
         btnSave.PerformClick()
+    End Sub
+
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        frmBulkUploadStudent.ShowDialog()
     End Sub
 End Class

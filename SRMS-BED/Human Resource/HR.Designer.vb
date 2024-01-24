@@ -35,9 +35,12 @@ Partial Class frmHR
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.crViewer = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel5.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -154,12 +157,34 @@ Partial Class frmHR
         Me.Panel1.Size = New System.Drawing.Size(1337, 10)
         Me.Panel1.TabIndex = 22
         '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.crViewer)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(0, 151)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1337, 662)
+        Me.Panel2.TabIndex = 24
+        '
+        'crViewer
+        '
+        Me.crViewer.ActiveViewIndex = -1
+        Me.crViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.crViewer.Cursor = System.Windows.Forms.Cursors.Default
+        Me.crViewer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.crViewer.Location = New System.Drawing.Point(0, 0)
+        Me.crViewer.Name = "crViewer"
+        Me.crViewer.Size = New System.Drawing.Size(1337, 662)
+        Me.crViewer.TabIndex = 0
+        Me.crViewer.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+        '
         'frmHR
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1337, 823)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel5)
@@ -176,6 +201,7 @@ Partial Class frmHR
         Me.Panel6.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -193,4 +219,6 @@ Partial Class frmHR
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents crViewer As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class
