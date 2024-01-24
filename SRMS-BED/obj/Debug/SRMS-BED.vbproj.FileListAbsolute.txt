@@ -282,6 +282,7 @@ D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\
 D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\obj\Debug\SRMS_BED.frmSearchAccountforPayments.resources
 D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\obj\Debug\SRMS_BED.SearchAccounts.resources
 D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\obj\Debug\SRMS_BED.frmSearchBilling.resources
+D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\obj\Debug\SRMS_BED.frmSearchORforVoid.resources
 D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\obj\Debug\SRMS_BED.frmAdmin.resources
 D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\obj\Debug\SRMS_BED.frmAdvisers.resources
 D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\obj\Debug\SRMS_BED.frmProgramsOffer.resources
@@ -328,8 +329,6 @@ D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\
 D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\obj\Debug\SRMS_BED.frmSettings.resources
 D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\obj\Debug\SRMS-BED.vbproj.GenerateResource.cache
 D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\obj\Debug\SRMS-BED.vbproj.CoreCompileInputs.cache
-D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\obj\Debug\SRMS-BED.vbproj.AssemblyReference.cache
-D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\obj\Debug\SRMS_BED.frmSearchORforVoid.resources
 D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\bin\Debug\SRMS-BED.exe.config
 D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\bin\Debug\SRMS-BED.exe
 D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\bin\Debug\SRMS-BED.pdb
@@ -389,3 +388,4 @@ D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\
 D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\obj\Debug\SRMS-BED.exe
 D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\obj\Debug\SRMS-BED.xml
 D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\obj\Debug\SRMS-BED.pdb
+D:\OneDrive MIS\OneDrive - Department of Education\VB 2019 - System Development\srms-bed-private-2019\SRMS-BED\obj\Debug\SRMS_BED.frmVoidOR.resources

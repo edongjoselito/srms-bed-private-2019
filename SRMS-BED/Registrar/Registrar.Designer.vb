@@ -72,6 +72,7 @@ Partial Class frmRegistrar
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ToolStripButton9 = New System.Windows.Forms.ToolStripButton()
         Me.Panel6.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -211,7 +212,7 @@ Partial Class frmRegistrar
         'ToolStrip1
         '
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton6, Me.ToolStripButton7, Me.ToolStripButton5, Me.ToolStripButton8})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton6, Me.ToolStripButton7, Me.ToolStripButton5, Me.ToolStripButton8, Me.ToolStripButton9})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1337, 55)
@@ -473,6 +474,15 @@ Partial Class frmRegistrar
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1000
         '
+        'ToolStripButton9
+        '
+        Me.ToolStripButton9.Image = Global.SRMS_BED.My.Resources.Resources.Refresh_48px
+        Me.ToolStripButton9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton9.Name = "ToolStripButton9"
+        Me.ToolStripButton9.Size = New System.Drawing.Size(168, 52)
+        Me.ToolStripButton9.Text = "RELOAD [ CTRL + R ]"
+        '
         'frmRegistrar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -553,4 +563,5 @@ Partial Class frmRegistrar
     Friend WithEvents StudentProfileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EnrollmentToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SubjectEnlistmentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripButton9 As ToolStripButton
 End Class

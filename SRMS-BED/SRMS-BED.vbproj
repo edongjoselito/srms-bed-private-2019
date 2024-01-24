@@ -216,10 +216,22 @@
     <Compile Include="Accounting\SearchBilling.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Accounting\SearchOR.Designer.vb">
+      <DependentUpon>SearchOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\SearchOR.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Accounting\SearchORforVoid.Designer.vb">
       <DependentUpon>SearchORforVoid.vb</DependentUpon>
     </Compile>
     <Compile Include="Accounting\SearchORforVoid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting\VoidOR.Designer.vb">
+      <DependentUpon>VoidOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\VoidOR.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administration\Admin.Designer.vb">
@@ -611,6 +623,9 @@
     <EmbeddedResource Include="Accounting\SearchORforVoid.resx">
       <DependentUpon>SearchORforVoid.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\VoidOR.resx">
+      <DependentUpon>VoidOR.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administration\Admin.resx">
       <DependentUpon>Admin.vb</DependentUpon>
     </EmbeddedResource>
@@ -897,6 +912,7 @@
     <None Include="Resources\View 30px.png" />
     <None Include="Resources\Print 30px.png" />
     <None Include="Resources\Refresh 48px.png" />
+    <None Include="Resources\Void 48px.png" />
     <Content Include="School.ico" />
     <Content Include="Scripts\fontawesome\all.js" />
     <Content Include="Scripts\fontawesome\all.min.js" />

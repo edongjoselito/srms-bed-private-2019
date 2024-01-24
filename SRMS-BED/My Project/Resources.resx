@@ -133,8 +133,14 @@
   <data name="View 30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\View 30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Replace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Replace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="48 px - Profiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\48 px - Profiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Refresh 48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Refresh 48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,23 +163,11 @@
   <data name="Update User" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Update User.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Spectators On Seats" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Spectators On Seats.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="User Secured" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\User Secured.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Layers" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Layers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Popular Man" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Popular Man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Laptop Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Laptop Settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Preview File 30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Preview File 30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Data Transfer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Data Transfer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,8 +199,11 @@
   <data name="Save2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Save as 30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Save as 30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Graph Report" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graph Report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Laptop Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Laptop Settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Search in List" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search in List.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,11 +220,14 @@
   <data name="softtech logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\softtech logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Contacts2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Contacts2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Student Registration" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Student Registration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Replace" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Replace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="User Secured" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User Secured.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Search Contacts" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search Contacts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,8 +235,8 @@
   <data name="Stack of Coins" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Stack of Coins.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Spectators On Seats" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Spectators On Seats.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Save as" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save as.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,8 +259,8 @@
   <data name="Grades" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Grades.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Graph Report" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Graph Report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Save as 30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save as 30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Print 30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Print 30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,8 +286,11 @@
   <data name="Add Time" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add Time.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Contacts2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Contacts2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Preview File 30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Preview File 30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Upload File 30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Upload File 30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,7 +298,7 @@
   <data name="News" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\News.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Refresh 48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Refresh 48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Void 48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Void 48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

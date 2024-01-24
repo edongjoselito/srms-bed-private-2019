@@ -43,5 +43,11 @@ Public Class frmAccounting
         formLoad()
     End Sub
 
+    Private Sub VOIDORToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VOIDORToolStripMenuItem.Click
+        frmVoidOR.ShowDialog()
+    End Sub
 
+    Private Sub SEARCHORToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SEARCHORToolStripMenuItem.Click
+        frmSearchOR.ShowDialog()
+    End Sub
 End Class
