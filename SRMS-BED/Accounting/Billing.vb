@@ -56,7 +56,7 @@ Public Class frmBilling
 
     Public Sub getTotalAccount()
         Dim TotalAccount As Double
-        TotalAccount = (Val(txtTuition.Text) + Val(txtLab.Text) + Val(txtTotalFees.Text) + Val(txtTotalAdditional.Text) + Val(txtRegFee.Text) + Val(txtInstallmentFee.Text))
+        TotalAccount = (Val(txtTotalFees.Text) + Val(txtRegFee.Text) + Val(txtInstallmentFee.Text))
         txtTotalAcct.Text = Format(TotalAccount, "0.00")
 
     End Sub
@@ -65,13 +65,6 @@ Public Class frmBilling
         Dim Balance As Double
         Balance = (Val(txtTotalAcct.Text) + Val(txtOldAccount.Text)) - (Val(txtPayments.Text) + Val(txtDiscount.Text))
         txtBalance.Text = Format(Balance, "0.00")
-    End Sub
-
-    Public Sub getDiscount()
-        Dim total As Double
-        total = Val(txtDiscAmount1.Text) + Val(txtDiscAmount2.Text) + Val(txtDiscAmount3.Text) + Val(txtDiscAmount4.Text) + Val(txtDiscAmount5.Text)
-        lblDiscTotal.Text = Format(total, "0.00")
-        txtDiscount.Text = lblDiscTotal.Text
     End Sub
 
     Private Sub btnCompute_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCompute.Click
@@ -90,24 +83,7 @@ Public Class frmBilling
         SearchAccounts.ShowDialog()
     End Sub
 
-    Private Sub txtTotalLecUnits_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtTotalLecUnits.TextChanged
-        ComputeTuition()
-    End Sub
-
-    Private Sub txtLecRate_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtLecRate.TextChanged
-        ComputeTuition()
-    End Sub
-
-    Private Sub txtTotalLabUnits_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtTotalLabUnits.TextChanged
-        ComputeLab()
-    End Sub
-
-    Private Sub txtLabRate_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtLabRate.TextChanged
-        ComputeLab()
-    End Sub
-
     Private Sub txtDiscountPerecentage_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        getDiscount()
         getBalance()
     End Sub
 
@@ -120,47 +96,24 @@ Public Class frmBilling
         cboCourse.ResetText()
         cboYear.ResetText()
         cboStatus.ResetText()
-        txtDesc1.Clear()
-        txtDesc2.Clear()
-        txtDesc3.Clear()
-        txtDesc4.Clear()
-        txtDesc5.Clear()
-        txtAmount1.Text = 0
-        txtAmount2.Text = 0
-        txtAmount3.Text = 0
-        txtAmount4.Text = 0
-        txtAmount5.Text = 0
-        txtTotalLecUnits.Text = 0
-        txtTotalLabUnits.Text = 0
-        cboPaymentMode.ResetText()
+
         txtInstallmentFee.Text = 0
         txtRegFee.Text = 0
         txtTotalAcct.Text = 0
         txtPayments.Text = 0
         txtOldAccount.Text = 0
-        txtDiscAmount1.Text = 0
-        txtDiscAmount2.Text = 0
-        txtDiscAmount3.Text = 0
-        txtDiscAmount4.Text = 0
-        txtDiscAmount5.Text = 0
+
         txtBalance.Text = 0
         txtOldAccount.Text = 0
         txtTotalFees.Text = 0
         txtTotalAcct.Text = 0
         txtBalance.Text = 0
 
-        txtDisc1.Clear()
-        txtDisc2.Clear()
-        txtDisc3.Clear()
-        txtDisc4.Clear()
-        txtDisc5.Clear()
-
         tsNew.Enabled = True
         tsSave.Enabled = False
         tsUpdate.Enabled = False
         tsDelete.Enabled = False
 
-        schoolInfo()
 
         btnCompute.PerformClick()
 
@@ -178,23 +131,12 @@ Public Class frmBilling
     Private Sub NewAccountToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         SearchAccounts.ShowDialog()
     End Sub
-    Private Sub txtTuition_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtTuition.TextChanged
+    Private Sub txtTuition_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         getTotalAccount()
     End Sub
 
-    Private Sub txtLab_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtLab.TextChanged
+    Private Sub txtLab_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         getTotalAccount()
-    End Sub
-    Public Sub ComputeTuition()
-        Dim tuitionfee As Double
-
-        tuitionfee = (Val(txtTotalLecUnits.Text) * Val(txtLecRate.Text))
-        txtTuition.Text = Format(tuitionfee, "0.0")
-    End Sub
-    Public Sub ComputeLab()
-        Dim labfee As Double
-        labfee = Val(txtTotalLabUnits.Text) * Val(txtLabRate.Text)
-        txtLab.Text = Format(labfee, "0.0")
     End Sub
 
     Private Sub txtTotalAcct_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTotalAcct.KeyPress
@@ -210,37 +152,6 @@ Public Class frmBilling
     Private Sub txtDiscount_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         getBalance()
     End Sub
-    Public Sub getAdditionalFees()
-        Dim total As Double
-        total = Val(txtAmount1.Text) + Val(txtAmount2.Text) + Val(txtAmount3.Text) + Val(txtAmount4.Text) + Val(txtAmount5.Text)
-        txtTotalAdditional.Text = Format(total, "0.0")
-
-    End Sub
-
-    Private Sub txtAmount1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtAmount1.TextChanged
-        getAdditionalFees()
-        getTotalAccount()
-    End Sub
-
-    Private Sub txtAmount2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtAmount2.TextChanged
-        getAdditionalFees()
-        getTotalAccount()
-    End Sub
-
-    Private Sub txtAmount3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtAmount3.TextChanged
-        getAdditionalFees()
-        getTotalAccount()
-    End Sub
-
-    Private Sub txtAmount4_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtAmount4.TextChanged
-        getAdditionalFees()
-        getTotalAccount()
-    End Sub
-
-    Private Sub txtAmount5_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtAmount5.TextChanged
-        getAdditionalFees()
-        getTotalAccount()
-    End Sub
 
     Private Sub btnClose_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Close()
@@ -248,13 +159,13 @@ Public Class frmBilling
     Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOldAcct.Click
         Try
             Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
-            str = "select p.StudentNumber, concat(p.LastName,', ',p.FirstName,' ',p.MiddleName) as StudentName, b.LecUnits, b.LecRate, b.LabUnits, b.LabRate, b.OldAccount, TotalLec, b.TotalLab, b.FeesDesc, b.FeesAmount, b.TotalFees, b.AcctTotal, b.Discount, b.CurrentBalance, b.TotalPayments, b.DiscPercentage, b.Sem, b.SY, b.AccountID from studeprofile p join studeaccount b on p.StudentNumber=b.StudentNumber where p.StudentNumber='" & mskStudentNumber.Text & "' order by b.AccountID desc limit 1"
+            str = "select CurrentBalance from studeaccount where StudentNumber='" & mskStudentNumber.Text & "' order by AccountID desc limit 1"
             conn.Open()
             Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
             objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
             dtReader = objCmd.ExecuteReader()
             If dtReader.Read Then
-                txtOldAccount.Text = Format(dtReader.Item(14), "0.0")
+                txtOldAccount.Text = Format(dtReader.Item(0), "0.0")
             End If
             conn.Close()
 
@@ -270,13 +181,6 @@ Public Class frmBilling
     Private Sub txtRegFee_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtRegFee.TextChanged
         getTotalAccount()
     End Sub
-    Private Sub txtNSTP_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        ComputeTuition()
-    End Sub
-    Private Sub txtNSTPRate_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        ComputeTuition()
-    End Sub
-
     Private Sub tsNew_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsNew.Click
         lvAccts.Items.Clear()
         Formload()
@@ -292,7 +196,7 @@ Public Class frmBilling
                 Exit Sub
             End If
 
-            str = "select * from studeaccount where StudentNumber like '" & mskStudentNumber.Text & "%' and Sem='" & frmAccounting.stSemester.Text & "' and SY='" & frmAccounting.stSY.Text & "'"
+            str = "select * from studeaccount where StudentNumber ='" & mskStudentNumber.Text & "' and Sem='" & frmAccounting.stSemester.Text & "' and SY='" & frmAccounting.stSY.Text & "'"
             conn.Open()
             Dim mysDA1 As New MySqlDataAdapter(str, conn)
             Dim ds1 As New DataSet
@@ -308,20 +212,14 @@ Public Class frmBilling
             End If
 
             conn.Close()
-            'str = "delete from studeaccount where StudentNumber='" & mskStudentNumber.Text & "' and Sem='" & Me.lblSem.Text & "' and SY='" & Me.lblSY.Text & "'"
-            'conn.Open()
-            'Dim mysc1 As New MySqlCommand(str, conn)
-            'mysc1.ExecuteNonQuery()
-            'conn.Close()
 
             If lvAccts.Items.Count = 0 Then
                 MsgBox("No Fees Added!", MsgBoxStyle.Critical)
                 Exit Sub
             End If
 
-
             For i As Integer = 0 To lvAccts.Items.Count - 1
-                str = "insert into studeaccount values('0','" & mskStudentNumber.Text & "','" & txtFname.Text & "','" & txtMName.Text & "','" & txtLastName.Text & "','" & cboCourse.Text & "','" & cboYear.Text & "','" & cboStatus.Text & "','" & txtTotalLecUnits.Text & "','" & txtLecRate.Text & "','" & txtTuition.Text & "','" & txtTotalLabUnits.Text & "','" & txtLabRate.Text & "','" & txtLab.Text & "','" & txtOldAccount.Text & "','" & lvAccts.Items(i).SubItems(0).Text.Replace("'", "''") & "','" & lvAccts.Items(i).SubItems(1).Text & "','" & txtTotalFees.Text & "','" & txtDiscountPercentage.Text & "','" & txtDiscount.Text & "','" & txtTotalAcct.Text & "','" & txtPayments.Text & "','" & txtBalance.Text & "','" & frmAccounting.stSemester.Text & "','" & frmAccounting.stSY.Text & "','" & txtDesc1.Text & "','" & txtAmount1.Text & "','" & txtDesc2.Text & "','" & txtAmount2.Text & "','" & txtDesc3.Text & "','" & txtAmount3.Text & "','" & txtDesc4.Text & "','" & txtAmount4.Text & "','" & txtDesc5.Text & "','" & txtAmount5.Text & "','" & txtRegFee.Text & "','" & txtSection.Text & "','" & cboPaymentMode.Text & "','" & txtDisc1.Text & "','" & txtDiscAmount1.Text & "','" & txtDisc2.Text & "','" & txtDiscAmount2.Text & "','" & txtDisc3.Text & "','" & txtDiscAmount3.Text & "','" & txtDisc4.Text & "','" & txtDiscAmount4.Text & "','" & txtDisc5.Text & "','" & txtDiscAmount5.Text & "','" & lblSettingsID.Text & "')"
+                str = "insert into studeaccount values('0','" & mskStudentNumber.Text & "','" & cboCourse.Text & "','" & cboYear.Text & "','" & cboStatus.Text & "','" & txtOldAccount.Text & "','" & lvAccts.Items(i).SubItems(0).Text.Replace("'", "''") & "','" & lvAccts.Items(i).SubItems(1).Text & "','" & txtTotalFees.Text & "','" & txtDiscount.Text & "','" & txtTotalAcct.Text & "','" & txtPayments.Text & "','" & txtBalance.Text & "','" & frmAccounting.stSemester.Text & "','" & frmAccounting.stSY.Text & "','" & txtSection.Text & "','" & frmAccounting.lblSettingsID.Text & "')"
                 conn.Open()
                 Dim mysC As New MySqlCommand(str, conn)
                 mysC.ExecuteNonQuery()
@@ -365,7 +263,7 @@ Public Class frmBilling
             End If
 
             For i As Integer = 0 To lvAccts.Items.Count - 1
-                str = "insert into studeaccount values('0','" & mskStudentNumber.Text & "','" & txtFname.Text & "','" & txtMName.Text & "','" & txtLastName.Text & "','" & cboCourse.Text & "','" & cboYear.Text & "','" & cboStatus.Text & "','" & txtTotalLecUnits.Text & "','" & txtLecRate.Text & "','" & txtTuition.Text & "','" & txtTotalLabUnits.Text & "','" & txtLabRate.Text & "','" & txtLab.Text & "','" & txtOldAccount.Text & "','" & lvAccts.Items(i).SubItems(0).Text.Replace("'", "''") & "','" & lvAccts.Items(i).SubItems(1).Text & "','" & txtTotalFees.Text & "','" & txtDiscountPercentage.Text & "','" & txtDiscount.Text & "','" & txtTotalAcct.Text & "','" & txtPayments.Text & "','" & txtBalance.Text & "','" & frmAccounting.stSemester.Text & "','" & frmAccounting.stSY.Text & "','" & txtDesc1.Text & "','" & txtAmount1.Text & "','" & txtDesc2.Text & "','" & txtAmount2.Text & "','" & txtDesc3.Text & "','" & txtAmount3.Text & "','" & txtDesc4.Text & "','" & txtAmount4.Text & "','" & txtDesc5.Text & "','" & txtAmount5.Text & "','" & txtRegFee.Text & "','" & txtSection.Text & "','" & cboPaymentMode.Text & "','" & txtDisc1.Text & "','" & txtDiscAmount1.Text & "','" & txtDisc2.Text & "','" & txtDiscAmount2.Text & "','" & txtDisc3.Text & "','" & txtDiscAmount3.Text & "','" & txtDisc4.Text & "','" & txtDiscAmount4.Text & "','" & txtDisc5.Text & "','" & txtDiscAmount5.Text & "','" & lblSettingsID.Text & "')"
+                str = "insert into studeaccount values('0','" & mskStudentNumber.Text & "','" & cboCourse.Text & "','" & cboYear.Text & "','" & cboStatus.Text & "','" & txtOldAccount.Text & "','" & lvAccts.Items(i).SubItems(0).Text.Replace("'", "''") & "','" & lvAccts.Items(i).SubItems(1).Text & "','" & txtTotalFees.Text & "','" & txtDiscount.Text & "','" & txtTotalAcct.Text & "','" & txtPayments.Text & "','" & txtBalance.Text & "','" & frmAccounting.stSemester.Text & "','" & frmAccounting.stSY.Text & "','" & txtSection.Text & "','" & frmAccounting.lblSettingsID.Text & "')"
                 conn.Open()
                 Dim mysC1 As New MySqlCommand(str, conn)
                 mysC1.ExecuteNonQuery()
@@ -424,26 +322,6 @@ Public Class frmBilling
             conn.Close()
         End Try
     End Sub
-    Public Sub CourseFees()
-        Try
-            Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
-            str = "select * from coursefees where Course='" & cboCourse.Text & "' and Major='" & lblMajor.Text & "' "
-            conn.Open()
-            Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
-            objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
-            dtReader = objCmd.ExecuteReader()
-            If dtReader.Read Then
-                txtLecRate.Text = dtReader.Item(3)
-                txtLabRate.Text = dtReader.Item(4)
-            End If
-            conn.Close()
-
-            btnCompute.PerformClick()
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            conn.Close()
-        End Try
-    End Sub
     Public Sub LoadAcct()
         Try
 
@@ -454,8 +332,8 @@ Public Class frmBilling
             mysda.Fill(dt)
             Dim newrow As DataRow
             For Each newrow In dt.Rows
-                lvAccts.Items.Add(newrow.Item(15)) '
-                lvAccts.Items(lvAccts.Items.Count - 1).SubItems.Add(newrow.Item(16))
+                lvAccts.Items.Add(newrow.Item(6)) '
+                lvAccts.Items(lvAccts.Items.Count - 1).SubItems.Add(newrow.Item(7))
             Next
             conn.Close()
             btnCompute.PerformClick()
@@ -484,7 +362,7 @@ Public Class frmBilling
         End Try
     End Sub
 
-    Private Sub cboPaymentMode_SelectedIndexChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboPaymentMode.SelectedIndexChanged
+    Private Sub cboPaymentMode_SelectedIndexChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             'Dim plan As Double
             '  str = "select * from installmentfee where Course='" & cboCourse.Text & "' and YearLevel='" & cboYear.Text & "' and Plan='" & cboPaymentMode.Text & "'"
@@ -521,47 +399,6 @@ Public Class frmBilling
         getBalance()
     End Sub
 
-    Private Sub txtDiscAmount1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtDiscAmount1.TextChanged
-        getDiscount()
-    End Sub
-
-    Private Sub txtDiscAmount2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtDiscAmount2.TextChanged
-        getDiscount()
-    End Sub
-
-    Private Sub txtDiscAmount3_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtDiscAmount3.TextChanged
-        getDiscount()
-    End Sub
-
-    Private Sub txtDiscAmount4_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtDiscAmount4.TextChanged
-        getDiscount()
-    End Sub
-
-    Private Sub txtDiscAmount5_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtDiscAmount5.TextChanged
-        getDiscount()
-    End Sub
-
-    Private Sub lblDiscTotal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblDiscTotal.Click
-        getDiscount()
-    End Sub
-    Public Sub schoolInfo()
-        Try
-            Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
-            str = "select * from srms_settings limit 1"
-            conn.Open()
-            Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
-            objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
-            dtReader = objCmd.ExecuteReader()
-            If dtReader.Read Then
-                lblSettingsID.Text = dtReader(0)
-            End If
-            conn.Close()
-
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            conn.Close()
-        End Try
-    End Sub
 
     Private Sub txtTotalFees_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTotalFees.KeyPress
         If Not Char.IsNumber(e.KeyChar) AndAlso Not e.KeyChar = "." AndAlso Not Char.IsControl(e.KeyChar) Then

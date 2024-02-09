@@ -80,8 +80,8 @@ Public Class frmSearchAccountforPayments
             Dim mysDR2 As MySqlDataReader = mysC2.ExecuteReader
 
             While mysDR2.Read
-                totalAccount = Val(mysDR2(11))
-                Discount = Val(mysDR2(10))
+                totalAccount = Val(mysDR2(10))
+                Discount = Val(mysDR2(9))
             End While
 
             frmPayment.txtTotalAccts.Text = Format(totalAccount, "00.00")

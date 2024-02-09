@@ -28,6 +28,7 @@ Partial Class frmRegistrar
         Me.btnClose = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.lblAccountLevel = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.crViewer = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
@@ -42,16 +43,16 @@ Partial Class frmRegistrar
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton4 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.tsGrades = New System.Windows.Forms.ToolStripDropDownButton()
         Me.ENCODEGRADESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StGradingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NdGradingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RdGradingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ThGradingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MODIFYGRADESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LOCKGRADESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton5 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.ENROLMENTREPORTSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VERSION1ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VERSION2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VERSION3ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MASTERLISTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BYSUBJECTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BYDEPARTMENTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -60,8 +61,12 @@ Partial Class frmRegistrar
         Me.GRADINGSHEETSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CONSOLIDATEDGRADESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RECEIVEGRADINGSHEETSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.STUDENTSREPORTSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripButton8 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.CLASSDAYSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UPDATEAVERGAEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SWITCHSEMESTERToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripButton9 = New System.Windows.Forms.ToolStripButton()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReloadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -72,7 +77,6 @@ Partial Class frmRegistrar
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.ToolStripButton9 = New System.Windows.Forms.ToolStripButton()
         Me.Panel6.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -114,12 +118,23 @@ Partial Class frmRegistrar
         '
         'Panel6
         '
+        Me.Panel6.Controls.Add(Me.lblAccountLevel)
         Me.Panel6.Controls.Add(Me.btnClose)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel6.Location = New System.Drawing.Point(1137, 0)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(200, 86)
         Me.Panel6.TabIndex = 0
+        '
+        'lblAccountLevel
+        '
+        Me.lblAccountLevel.AutoSize = True
+        Me.lblAccountLevel.Location = New System.Drawing.Point(12, 61)
+        Me.lblAccountLevel.Name = "lblAccountLevel"
+        Me.lblAccountLevel.Size = New System.Drawing.Size(86, 17)
+        Me.lblAccountLevel.TabIndex = 9
+        Me.lblAccountLevel.Text = "Account Level"
+        Me.lblAccountLevel.Visible = False
         '
         'Panel2
         '
@@ -179,6 +194,7 @@ Partial Class frmRegistrar
         Me.stUser.Name = "stUser"
         Me.stUser.Size = New System.Drawing.Size(34, 17)
         Me.stUser.Text = "User"
+        Me.stUser.Visible = False
         '
         'stSemester
         '
@@ -212,7 +228,7 @@ Partial Class frmRegistrar
         'ToolStrip1
         '
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton6, Me.ToolStripButton7, Me.ToolStripButton5, Me.ToolStripButton8, Me.ToolStripButton9})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.tsGrades, Me.ToolStripButton6, Me.ToolStripButton5, Me.ToolStripButton8, Me.ToolStripButton9})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1337, 55)
@@ -249,53 +265,34 @@ Partial Class frmRegistrar
         Me.ToolStripButton3.Size = New System.Drawing.Size(178, 52)
         Me.ToolStripButton3.Text = "SUBJECTS ENLISTMENT"
         '
-        'ToolStripButton4
+        'tsGrades
         '
-        Me.ToolStripButton4.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ENCODEGRADESToolStripMenuItem, Me.MODIFYGRADESToolStripMenuItem})
-        Me.ToolStripButton4.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton4.Image = Global.SRMS_BED.My.Resources.Resources.Grades
-        Me.ToolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton4.Name = "ToolStripButton4"
-        Me.ToolStripButton4.Size = New System.Drawing.Size(110, 52)
-        Me.ToolStripButton4.Text = "GRADES"
+        Me.tsGrades.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ENCODEGRADESToolStripMenuItem, Me.MODIFYGRADESToolStripMenuItem, Me.LOCKGRADESToolStripMenuItem})
+        Me.tsGrades.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tsGrades.Image = Global.SRMS_BED.My.Resources.Resources.Grades
+        Me.tsGrades.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsGrades.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsGrades.Name = "tsGrades"
+        Me.tsGrades.Size = New System.Drawing.Size(110, 52)
+        Me.tsGrades.Text = "GRADES"
         '
         'ENCODEGRADESToolStripMenuItem
         '
-        Me.ENCODEGRADESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StGradingToolStripMenuItem, Me.NdGradingToolStripMenuItem, Me.RdGradingToolStripMenuItem, Me.ThGradingToolStripMenuItem})
         Me.ENCODEGRADESToolStripMenuItem.Name = "ENCODEGRADESToolStripMenuItem"
-        Me.ENCODEGRADESToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.ENCODEGRADESToolStripMenuItem.Size = New System.Drawing.Size(216, 22)
         Me.ENCODEGRADESToolStripMenuItem.Text = "ENCODE GRADES"
-        '
-        'StGradingToolStripMenuItem
-        '
-        Me.StGradingToolStripMenuItem.Name = "StGradingToolStripMenuItem"
-        Me.StGradingToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
-        Me.StGradingToolStripMenuItem.Text = "1ST GRADING"
-        '
-        'NdGradingToolStripMenuItem
-        '
-        Me.NdGradingToolStripMenuItem.Name = "NdGradingToolStripMenuItem"
-        Me.NdGradingToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
-        Me.NdGradingToolStripMenuItem.Text = "2ND GRADING"
-        '
-        'RdGradingToolStripMenuItem
-        '
-        Me.RdGradingToolStripMenuItem.Name = "RdGradingToolStripMenuItem"
-        Me.RdGradingToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
-        Me.RdGradingToolStripMenuItem.Text = "3RD GRADING"
-        '
-        'ThGradingToolStripMenuItem
-        '
-        Me.ThGradingToolStripMenuItem.Name = "ThGradingToolStripMenuItem"
-        Me.ThGradingToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
-        Me.ThGradingToolStripMenuItem.Text = "4TH GRADING"
         '
         'MODIFYGRADESToolStripMenuItem
         '
         Me.MODIFYGRADESToolStripMenuItem.Name = "MODIFYGRADESToolStripMenuItem"
-        Me.MODIFYGRADESToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.MODIFYGRADESToolStripMenuItem.Size = New System.Drawing.Size(216, 22)
         Me.MODIFYGRADESToolStripMenuItem.Text = "MODIFY GRADES"
+        '
+        'LOCKGRADESToolStripMenuItem
+        '
+        Me.LOCKGRADESToolStripMenuItem.Name = "LOCKGRADESToolStripMenuItem"
+        Me.LOCKGRADESToolStripMenuItem.Size = New System.Drawing.Size(216, 22)
+        Me.LOCKGRADESToolStripMenuItem.Text = "LOCK/UNLOCK ALL GRADES"
         '
         'ToolStripButton6
         '
@@ -306,19 +303,11 @@ Partial Class frmRegistrar
         Me.ToolStripButton6.Name = "ToolStripButton6"
         Me.ToolStripButton6.Size = New System.Drawing.Size(119, 52)
         Me.ToolStripButton6.Text = "RECIEVE GS"
-        '
-        'ToolStripButton7
-        '
-        Me.ToolStripButton7.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton7.Image = Global.SRMS_BED.My.Resources.Resources.Lock
-        Me.ToolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton7.Name = "ToolStripButton7"
-        Me.ToolStripButton7.Size = New System.Drawing.Size(153, 52)
-        Me.ToolStripButton7.Text = "LOCK/UNLOCK GRADES"
+        Me.ToolStripButton6.Visible = False
         '
         'ToolStripButton5
         '
-        Me.ToolStripButton5.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MASTERLISTToolStripMenuItem, Me.GRADINGSHEETSToolStripMenuItem, Me.CONSOLIDATEDGRADESToolStripMenuItem, Me.RECEIVEGRADINGSHEETSToolStripMenuItem})
+        Me.ToolStripButton5.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ENROLMENTREPORTSToolStripMenuItem, Me.MASTERLISTToolStripMenuItem, Me.GRADINGSHEETSToolStripMenuItem, Me.CONSOLIDATEDGRADESToolStripMenuItem, Me.RECEIVEGRADINGSHEETSToolStripMenuItem, Me.STUDENTSREPORTSToolStripMenuItem})
         Me.ToolStripButton5.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripButton5.Image = Global.SRMS_BED.My.Resources.Resources.Graph_Report
         Me.ToolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -326,6 +315,31 @@ Partial Class frmRegistrar
         Me.ToolStripButton5.Name = "ToolStripButton5"
         Me.ToolStripButton5.Size = New System.Drawing.Size(116, 52)
         Me.ToolStripButton5.Text = "REPORTS"
+        '
+        'ENROLMENTREPORTSToolStripMenuItem
+        '
+        Me.ENROLMENTREPORTSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VERSION1ToolStripMenuItem, Me.VERSION2ToolStripMenuItem, Me.VERSION3ToolStripMenuItem})
+        Me.ENROLMENTREPORTSToolStripMenuItem.Name = "ENROLMENTREPORTSToolStripMenuItem"
+        Me.ENROLMENTREPORTSToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.ENROLMENTREPORTSToolStripMenuItem.Text = "ENROLMENT REPORTS"
+        '
+        'VERSION1ToolStripMenuItem
+        '
+        Me.VERSION1ToolStripMenuItem.Name = "VERSION1ToolStripMenuItem"
+        Me.VERSION1ToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.VERSION1ToolStripMenuItem.Text = "VERSION 1"
+        '
+        'VERSION2ToolStripMenuItem
+        '
+        Me.VERSION2ToolStripMenuItem.Name = "VERSION2ToolStripMenuItem"
+        Me.VERSION2ToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.VERSION2ToolStripMenuItem.Text = "VERSION 2"
+        '
+        'VERSION3ToolStripMenuItem
+        '
+        Me.VERSION3ToolStripMenuItem.Name = "VERSION3ToolStripMenuItem"
+        Me.VERSION3ToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.VERSION3ToolStripMenuItem.Text = "VERSION 3"
         '
         'MASTERLISTToolStripMenuItem
         '
@@ -337,26 +351,26 @@ Partial Class frmRegistrar
         'BYSUBJECTToolStripMenuItem
         '
         Me.BYSUBJECTToolStripMenuItem.Name = "BYSUBJECTToolStripMenuItem"
-        Me.BYSUBJECTToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.BYSUBJECTToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.BYSUBJECTToolStripMenuItem.Text = "BY SUBJECT"
         '
         'BYDEPARTMENTToolStripMenuItem
         '
         Me.BYDEPARTMENTToolStripMenuItem.Name = "BYDEPARTMENTToolStripMenuItem"
-        Me.BYDEPARTMENTToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.BYDEPARTMENTToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.BYDEPARTMENTToolStripMenuItem.Text = "BY DEPARTMENT"
         '
         'BYSECTIONToolStripMenuItem
         '
         Me.BYSECTIONToolStripMenuItem.Name = "BYSECTIONToolStripMenuItem"
-        Me.BYSECTIONToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.BYSECTIONToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
         Me.BYSECTIONToolStripMenuItem.Text = "BY SECTION"
         '
         'BYSPECIALIZATIONToolStripMenuItem
         '
         Me.BYSPECIALIZATIONToolStripMenuItem.Name = "BYSPECIALIZATIONToolStripMenuItem"
-        Me.BYSPECIALIZATIONToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
-        Me.BYSPECIALIZATIONToolStripMenuItem.Text = "BY SPECIALIZATION"
+        Me.BYSPECIALIZATIONToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.BYSPECIALIZATIONToolStripMenuItem.Text = "BY STRAND"
         '
         'GRADINGSHEETSToolStripMenuItem
         '
@@ -376,9 +390,15 @@ Partial Class frmRegistrar
         Me.RECEIVEGRADINGSHEETSToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
         Me.RECEIVEGRADINGSHEETSToolStripMenuItem.Text = "RECEIVE GRADING SHEETS"
         '
+        'STUDENTSREPORTSToolStripMenuItem
+        '
+        Me.STUDENTSREPORTSToolStripMenuItem.Name = "STUDENTSREPORTSToolStripMenuItem"
+        Me.STUDENTSREPORTSToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.STUDENTSREPORTSToolStripMenuItem.Text = "STUDENTS' REPORTS"
+        '
         'ToolStripButton8
         '
-        Me.ToolStripButton8.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SWITCHSEMESTERToolStripMenuItem})
+        Me.ToolStripButton8.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CLASSDAYSToolStripMenuItem, Me.UPDATEAVERGAEToolStripMenuItem, Me.SWITCHSEMESTERToolStripMenuItem})
         Me.ToolStripButton8.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripButton8.Image = Global.SRMS_BED.My.Resources.Resources.Laptop_Settings
         Me.ToolStripButton8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -387,11 +407,32 @@ Partial Class frmRegistrar
         Me.ToolStripButton8.Size = New System.Drawing.Size(118, 52)
         Me.ToolStripButton8.Text = "SETTINGS"
         '
+        'CLASSDAYSToolStripMenuItem
+        '
+        Me.CLASSDAYSToolStripMenuItem.Name = "CLASSDAYSToolStripMenuItem"
+        Me.CLASSDAYSToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.CLASSDAYSToolStripMenuItem.Text = "CLASS DAYS"
+        '
+        'UPDATEAVERGAEToolStripMenuItem
+        '
+        Me.UPDATEAVERGAEToolStripMenuItem.Name = "UPDATEAVERGAEToolStripMenuItem"
+        Me.UPDATEAVERGAEToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.UPDATEAVERGAEToolStripMenuItem.Text = "UPDATE AVERAGE"
+        '
         'SWITCHSEMESTERToolStripMenuItem
         '
         Me.SWITCHSEMESTERToolStripMenuItem.Name = "SWITCHSEMESTERToolStripMenuItem"
         Me.SWITCHSEMESTERToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.SWITCHSEMESTERToolStripMenuItem.Text = "SWITCH SEMESTER"
+        '
+        'ToolStripButton9
+        '
+        Me.ToolStripButton9.Image = Global.SRMS_BED.My.Resources.Resources.Refresh_48px
+        Me.ToolStripButton9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton9.Name = "ToolStripButton9"
+        Me.ToolStripButton9.Size = New System.Drawing.Size(168, 52)
+        Me.ToolStripButton9.Text = "RELOAD [ CTRL + R ]"
         '
         'MenuStrip1
         '
@@ -474,15 +515,6 @@ Partial Class frmRegistrar
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1000
         '
-        'ToolStripButton9
-        '
-        Me.ToolStripButton9.Image = Global.SRMS_BED.My.Resources.Resources.Refresh_48px
-        Me.ToolStripButton9.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton9.Name = "ToolStripButton9"
-        Me.ToolStripButton9.Size = New System.Drawing.Size(168, 52)
-        Me.ToolStripButton9.Text = "RELOAD [ CTRL + R ]"
-        '
         'frmRegistrar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -501,6 +533,7 @@ Partial Class frmRegistrar
         Me.Text = "::"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
@@ -546,15 +579,10 @@ Partial Class frmRegistrar
     Friend WithEvents CONSOLIDATEDGRADESToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RECEIVEGRADINGSHEETSToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripButton6 As ToolStripButton
-    Friend WithEvents ToolStripButton7 As ToolStripButton
-    Friend WithEvents ToolStripButton4 As ToolStripDropDownButton
+    Friend WithEvents tsGrades As ToolStripDropDownButton
     Friend WithEvents ENCODEGRADESToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MODIFYGRADESToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents crViewer As CrystalDecisions.Windows.Forms.CrystalReportViewer
-    Friend WithEvents StGradingToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NdGradingToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RdGradingToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ThGradingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripButton8 As ToolStripDropDownButton
     Friend WithEvents SWITCHSEMESTERToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuStrip1 As MenuStrip
@@ -564,4 +592,13 @@ Partial Class frmRegistrar
     Friend WithEvents EnrollmentToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SubjectEnlistmentToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripButton9 As ToolStripButton
+    Friend WithEvents CLASSDAYSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UPDATEAVERGAEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lblAccountLevel As Label
+    Friend WithEvents LOCKGRADESToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents STUDENTSREPORTSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ENROLMENTREPORTSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents VERSION1ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents VERSION2ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents VERSION3ToolStripMenuItem As ToolStripMenuItem
 End Class

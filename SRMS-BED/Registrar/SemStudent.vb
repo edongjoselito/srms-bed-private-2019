@@ -23,6 +23,9 @@ Public Class frmSemStudent
         cboYear.ResetText()
         cboSection.ResetText()
 
+        btnSave.Text = "SAVE"
+        btnDelete.Visible = False
+
         btnAccecelrated.Enabled = False
         btnDropped.Enabled = False
         btnTransferredOut.Enabled = False
@@ -408,6 +411,7 @@ Public Class frmSemStudent
                 conn.Close()
 
                 formLoad()
+
             End If
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)

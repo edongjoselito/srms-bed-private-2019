@@ -286,6 +286,54 @@ Public Class frmCompleteList
 
                 Me.Close()
 
+            ElseIf lblSource.Text = "Medical Info" Then
+                frmAddMedicalInfo.txtStudenNumber.Text = dgstudentsearch.Item(0, dclick).Value
+                frmAddMedicalInfo.txtFname.Text = dgstudentsearch.Item(1, dclick).Value
+                frmAddMedicalInfo.txtMname.Text = dgstudentsearch.Item(2, dclick).Value
+                frmAddMedicalInfo.txtLname.Text = dgstudentsearch.Item(3, dclick).Value
+
+                Me.Close()
+
+            ElseIf lblSource.Text = "Medical Records" Then
+                frmAddMedicalRecords.txtStudenNumber.Text = dgstudentsearch.Item(0, dclick).Value
+                frmAddMedicalRecords.txtFname.Text = dgstudentsearch.Item(1, dclick).Value
+                frmAddMedicalRecords.txtMname.Text = dgstudentsearch.Item(2, dclick).Value
+                frmAddMedicalRecords.txtLname.Text = dgstudentsearch.Item(3, dclick).Value
+
+                Me.Close()
+
+            ElseIf lblSource.Text = "Counselling" Then
+                frmAddCounselling.txtStudenNumber.Text = dgstudentsearch.Item(0, dclick).Value
+                frmAddCounselling.txtFname.Text = dgstudentsearch.Item(1, dclick).Value
+                frmAddCounselling.txtMname.Text = dgstudentsearch.Item(2, dclick).Value
+                frmAddCounselling.txtLname.Text = dgstudentsearch.Item(3, dclick).Value
+
+                Me.Close()
+
+            ElseIf lblSource.Text = "Incidents" Then
+                frmAddIncidents.txtStudenNumber.Text = dgstudentsearch.Item(0, dclick).Value
+                frmAddIncidents.txtFname.Text = dgstudentsearch.Item(1, dclick).Value
+                frmAddIncidents.txtMname.Text = dgstudentsearch.Item(2, dclick).Value
+                frmAddIncidents.txtLname.Text = dgstudentsearch.Item(3, dclick).Value
+
+                Me.Close()
+
+            ElseIf lblSource.Text = "Users" Then
+                frmManageUsers.txtUsername.Text = dgstudentsearch.Item(0, dclick).Value
+                frmManageUsers.txtFName.Text = dgstudentsearch.Item(1, dclick).Value
+                frmManageUsers.txtMName.Text = dgstudentsearch.Item(2, dclick).Value
+                frmManageUsers.txtLName.Text = dgstudentsearch.Item(3, dclick).Value
+
+                frmManageUsers.txtpassword1.ReadOnly = False
+                frmManageUsers.txtConfirm.ReadOnly = False
+
+                Me.Close()
+
+            ElseIf lblSource.Text = "Reports" Then
+                frmStudeReports.mskStudentNumber.Text = dgstudentsearch.Item(0, dclick).Value
+                frmStudeReports.txtName.Text = dgstudentsearch.Item(1, dclick).Value + " " + dgstudentsearch.Item(2, dclick).Value + " " + dgstudentsearch.Item(3, dclick).Value
+
+                Me.Close()
 
             ElseIf lblSource.Text = "Profile Form" Then
                 frmStudeProfile.mskStudentNumber.Text = dgstudentsearch.Item(0, dclick).Value
@@ -397,10 +445,6 @@ Public Class frmCompleteList
     End Sub
 
     Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
-
-    End Sub
-
-    Private Sub dgstudentsearch_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgstudentsearch.CellContentClick
 
     End Sub
 End Class

@@ -87,7 +87,7 @@ Public Class SearchAccounts
         Try
 
 
-            str = "SELECT s.StudentNumber, p.FirstName, p.MiddleName, p.LastName, s.Course, YearLevel, Section, Status FROM semesterstude s join studeprofile p on s.StudentNumber=p.StudentNumber where LastName like '%" & txtSearch.Text & "%' or p.StudentNumber like '%" & txtSearch.Text & "%' and Semester='" & frmAccounting.stSemester.Text & "' and SY='" & frmAccounting.stSY.Text & "'"
+            str = "SELECT s.StudentNumber, p.FirstName, p.MiddleName, p.LastName, s.Course, YearLevel, Section, Status FROM semesterstude s join studeprofile p on s.StudentNumber=p.StudentNumber where Semester='" & frmAccounting.stSemester.Text & "' and SY='" & frmAccounting.stSY.Text & "' and (LastName like '%" & txtSearch.Text & "%' or p.StudentNumber like '%" & txtSearch.Text & "%')"
             conn.Open()
             Dim Search As New MySqlDataAdapter(str, conn)
             Dim ds As DataSet = New DataSet

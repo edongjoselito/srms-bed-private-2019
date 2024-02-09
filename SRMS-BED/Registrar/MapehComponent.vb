@@ -10,7 +10,7 @@
             Exit Sub
         Else
 
-            frmFirstGrading.cboSubSubject.Text = cboComp.Text
+            TeacherGradesEncoding.cboSubSubject.Text = cboComp.Text
             ' frmSecondGrading.cboSubSubject.Text = cboComp.Text
             '   frmThirdGrading.cboSubSubject.Text = cboComp.Text
             '   frmFouthGrading.cboSubSubject.Text = cboComp.Text

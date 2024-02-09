@@ -39,6 +39,7 @@ Partial Class frmVoidOR
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.tsSave = New System.Windows.Forms.ToolStripButton()
         Me.tsSearch = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lblStudentNumber = New System.Windows.Forms.Label()
@@ -52,7 +53,6 @@ Partial Class frmVoidOR
         Me.txtCurrentPayments = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txtTotalAccts = New System.Windows.Forms.TextBox()
-        Me.tsSave = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox2.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -220,18 +220,30 @@ Partial Class frmVoidOR
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(12, 12, 1, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(658, 67)
+        Me.ToolStrip1.Size = New System.Drawing.Size(658, 64)
         Me.ToolStrip1.TabIndex = 30
+        '
+        'tsSave
+        '
+        Me.tsSave.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tsSave.Image = Global.SRMS_BED.My.Resources.Resources.Save
+        Me.tsSave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsSave.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsSave.Name = "tsSave"
+        Me.tsSave.Size = New System.Drawing.Size(64, 49)
+        Me.tsSave.Text = "VOID O.R."
+        Me.tsSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'tsSearch
         '
         Me.tsSearch.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tsSearch.Image = Global.SRMS_BED.My.Resources.Resources.Search_in_List
+        Me.tsSearch.Image = Global.SRMS_BED.My.Resources.Resources.View_30px
         Me.tsSearch.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.tsSearch.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsSearch.Name = "tsSearch"
-        Me.tsSearch.Size = New System.Drawing.Size(100, 52)
+        Me.tsSearch.Size = New System.Drawing.Size(52, 49)
         Me.tsSearch.Text = "SEARCH"
+        Me.tsSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'GroupBox1
         '
@@ -373,16 +385,6 @@ Partial Class frmVoidOR
         Me.txtTotalAccts.TabIndex = 16
         Me.txtTotalAccts.Text = "0.00"
         Me.txtTotalAccts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'tsSave
-        '
-        Me.tsSave.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tsSave.Image = Global.SRMS_BED.My.Resources.Resources.Void_48px
-        Me.tsSave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.tsSave.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsSave.Name = "tsSave"
-        Me.tsSave.Size = New System.Drawing.Size(112, 52)
-        Me.tsSave.Text = "VOID O.R."
         '
         'frmVoidOR
         '

@@ -26,9 +26,9 @@ Partial Class frmSemChoiceV2
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnOK = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -73,6 +73,7 @@ Partial Class frmSemChoiceV2
         'btnClose
         '
         Me.btnClose.BackColor = System.Drawing.Color.Red
+        Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClose.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnClose.Location = New System.Drawing.Point(157, 6)
@@ -82,6 +83,17 @@ Partial Class frmSemChoiceV2
         Me.btnClose.TabStop = False
         Me.btnClose.Text = "x"
         Me.btnClose.UseVisualStyleBackColor = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(18, 9)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(307, 26)
+        Me.Label4.TabIndex = 26
+        Me.Label4.Text = "SWITCH SEMESTER/SCHOOL YEAR"
         '
         'Panel1
         '
@@ -107,17 +119,6 @@ Partial Class frmSemChoiceV2
         Me.btnOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnOK.UseVisualStyleBackColor = False
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(18, 9)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(392, 33)
-        Me.Label4.TabIndex = 26
-        Me.Label4.Text = "SWITCH SEMESTER/SCHOOL YEAR"
-        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -142,7 +143,7 @@ Partial Class frmSemChoiceV2
         Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label3.Location = New System.Drawing.Point(379, 35)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(15, 21)
+        Me.Label3.Size = New System.Drawing.Size(11, 15)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "-"
         '
@@ -153,7 +154,7 @@ Partial Class frmSemChoiceV2
         Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label2.Location = New System.Drawing.Point(65, 33)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(128, 21)
+        Me.Label2.Size = New System.Drawing.Size(96, 15)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "ACADEMIC  YEAR"
         '
@@ -165,7 +166,7 @@ Partial Class frmSemChoiceV2
         Me.txtSYto.Location = New System.Drawing.Point(400, 32)
         Me.txtSYto.Name = "txtSYto"
         Me.txtSYto.ReadOnly = True
-        Me.txtSYto.Size = New System.Drawing.Size(154, 27)
+        Me.txtSYto.Size = New System.Drawing.Size(154, 23)
         Me.txtSYto.TabIndex = 3
         Me.txtSYto.TabStop = False
         Me.txtSYto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -177,7 +178,7 @@ Partial Class frmSemChoiceV2
         Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label1.Location = New System.Drawing.Point(65, 72)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(82, 21)
+        Me.Label1.Size = New System.Drawing.Size(61, 15)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "SEMESTER"
         '
@@ -188,7 +189,7 @@ Partial Class frmSemChoiceV2
         Me.txtSYfrom.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.txtSYfrom.Location = New System.Drawing.Point(216, 32)
         Me.txtSYfrom.Name = "txtSYfrom"
-        Me.txtSYfrom.Size = New System.Drawing.Size(154, 27)
+        Me.txtSYfrom.Size = New System.Drawing.Size(154, 23)
         Me.txtSYfrom.TabIndex = 2
         Me.txtSYfrom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -204,7 +205,7 @@ Partial Class frmSemChoiceV2
         Me.cboSem.Items.AddRange(New Object() {"", "First Semester", "Second Semester"})
         Me.cboSem.Location = New System.Drawing.Point(216, 69)
         Me.cboSem.Name = "cboSem"
-        Me.cboSem.Size = New System.Drawing.Size(338, 27)
+        Me.cboSem.Size = New System.Drawing.Size(338, 23)
         Me.cboSem.TabIndex = 4
         '
         'Button1
@@ -220,8 +221,10 @@ Partial Class frmSemChoiceV2
         '
         'frmSemChoiceV2
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
+        Me.AcceptButton = Me.btnOK
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(178, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(715, 368)
         Me.Controls.Add(Me.btnOK)

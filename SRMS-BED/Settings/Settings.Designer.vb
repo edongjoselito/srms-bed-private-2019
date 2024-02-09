@@ -53,11 +53,11 @@ Partial Class frmSettings
         'ToolStripButton1
         '
         Me.ToolStripButton1.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton1.Image = Global.SRMS_BED.My.Resources.Resources.Update_User
+        Me.ToolStripButton1.Image = Global.SRMS_BED.My.Resources.Resources.School
         Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(157, 52)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(137, 52)
         Me.ToolStripButton1.Text = "SCHOOL INFO"
         '
         'ToolStripButton3
@@ -68,19 +68,19 @@ Partial Class frmSettings
         Me.ToolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(194, 52)
+        Me.ToolStripButton3.Size = New System.Drawing.Size(170, 52)
         Me.ToolStripButton3.Text = "OTHER SETTINGS"
         '
         'ACCOUNTSToolStripMenuItem
         '
         Me.ACCOUNTSToolStripMenuItem.Name = "ACCOUNTSToolStripMenuItem"
-        Me.ACCOUNTSToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ACCOUNTSToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.ACCOUNTSToolStripMenuItem.Text = "SCHOLARSHIP"
         '
         'OTHERSERVICESToolStripMenuItem
         '
         Me.OTHERSERVICESToolStripMenuItem.Name = "OTHERSERVICESToolStripMenuItem"
-        Me.OTHERSERVICESToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.OTHERSERVICESToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.OTHERSERVICESToolStripMenuItem.Text = "BY DEPARTMENT"
         '
         'btnClose
@@ -101,7 +101,7 @@ Partial Class frmSettings
         Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(105, 26)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(192, 29)
+        Me.Label2.Size = New System.Drawing.Size(152, 23)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "SYSTEM SETTINGS"
         '
@@ -136,7 +136,7 @@ Partial Class frmSettings
         '
         'IconButton1
         '
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.FileContract
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Whmcs
         Me.IconButton1.IconColor = System.Drawing.Color.Black
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton1.Location = New System.Drawing.Point(24, 6)
@@ -156,7 +156,7 @@ Partial Class frmSettings
         '
         'frmSettings
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1337, 823)

@@ -2,7 +2,13 @@
 Public Class frmHR
     Dim str As String
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Me.Close()
+        If lblAccountLevel.Text = "Super Admin" Then
+            Me.Close()
+        ElseIf lblAccountLevel.Text = "Admin" Then
+            Me.Close()
+        Else
+            End
+        End If
     End Sub
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
@@ -36,5 +42,9 @@ Public Class frmHR
 
     Private Sub OTHERSERVICESToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OTHERSERVICESToolStripMenuItem.Click
         frmByDepartment.Show()
+    End Sub
+
+    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+        frmLoading.Show()
     End Sub
 End Class

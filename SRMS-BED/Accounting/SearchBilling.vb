@@ -7,12 +7,12 @@ Public Class frmSearchBilling
     End Sub
     Public Sub FormLoad()
         Try
-            str = "SELECT AccountID, p.StudentNumber, FirstName, MiddleName, LastName, s.Course, YearLevel, Status, OldAccount, FeesDesc, FeesAmount, TotalFees, DiscPercentage, Discount, AcctTotal, TotalPayments, CurrentBalance, Sem, SY, Desc1, Amount1, Desc2, Amount2, Desc3, Amount3, Desc4, Amount4, Desc5, Amount5, RegFee, Section, PaymentMode, DiscDesc1, DiscAmount1, DiscDesc2, DiscAmount2, DiscDesc3, DiscAmount3, DiscDesc4, DiscAmount4, DiscDesc5, DiscAmount5 FROM studeaccount s join studeprofile p on s.StudentNumber=p.StudentNumber where SY='" & frmAccounting.stSY.Text & "' and Sem='" & frmAccounting.stSemester.Text & "' group by StudentNumber"
+            str = "SELECT AccountID, p.StudentNumber, FirstName, MiddleName, LastName, s.Course, YearLevel, Status, OldAccount, FeesDesc, FeesAmount, TotalFees, Discount, AcctTotal, TotalPayments, CurrentBalance, Sem, SY, Section FROM studeaccount s join studeprofile p on s.StudentNumber=p.StudentNumber where SY='" & frmAccounting.stSY.Text & "' and Sem='" & frmAccounting.stSemester.Text & "' group by StudentNumber"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
             Dim ds As New DataSet
-            mysda.Fill(ds, "studeaccount")
-            dg1.DataSource = ds.Tables("studeaccount")
+            mysda.Fill(ds, "studeaccount, studeprofile")
+            dg1.DataSource = ds.Tables("studeaccount, studeprofile")
             conn.Close()
             dg1.Columns(0).Visible = False
         Catch ex As Exception
@@ -23,7 +23,7 @@ Public Class frmSearchBilling
 
     Private Sub txtSearch_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtSearch.TextChanged
         Try
-            str = "SELECT AccountID, p.StudentNumber, FirstName, MiddleName, LastName, s.Course, YearLevel, Status, OldAccount, FeesDesc, FeesAmount, TotalFees, DiscPercentage, Discount, AcctTotal, TotalPayments, CurrentBalance, Sem, SY, Desc1, Amount1, Desc2, Amount2, Desc3, Amount3, Desc4, Amount4, Desc5, Amount5, RegFee, Section, PaymentMode, DiscDesc1, DiscAmount1, DiscDesc2, DiscAmount2, DiscDesc3, DiscAmount3, DiscDesc4, DiscAmount4, DiscDesc5, DiscAmount5 FROM studeaccount s join studeprofile p on s.StudentNumber=p.StudentNumber where StudentNumber like '%" & txtSearch.Text & "%' or LastName like '%" & txtSearch.Text & "%' and SY='" & frmAccounting.stSY.Text & "' and Sem='" & frmAccounting.stSemester.Text & "' group by StudentNumber"
+            str = "SELECT AccountID, p.StudentNumber, FirstName, MiddleName, LastName, s.Course, YearLevel, Status, OldAccount, FeesDesc, FeesAmount, TotalFees, Discount, AcctTotal, TotalPayments, CurrentBalance, Sem, SY, Section FROM studeaccount s join studeprofile p on s.StudentNumber=p.StudentNumber where (p.StudentNumber like '%" & txtSearch.Text & "%' or p.LastName like '%" & txtSearch.Text & "%') and SY='" & frmAccounting.stSY.Text & "' and Sem='" & frmAccounting.stSemester.Text & "' group by p.StudentNumber"
             conn.Open()
             Dim Search As New MySqlDataAdapter(str, conn)
             Dim ds As DataSet = New DataSet
@@ -57,43 +57,12 @@ Public Class frmSearchBilling
             frmBilling.cboCourse.Text = dg1.Item(5, n).Value
             frmBilling.cboYear.Text = dg1.Item(6, n).Value
             frmBilling.cboStatus.Text = dg1.Item(7, n).Value
-            frmBilling.txtTotalLecUnits.Text = dg1.Item(8, n).Value
-            frmBilling.txtLecRate.Text = dg1.Item(9, n).Value
-            frmBilling.txtTuition.Text = dg1.Item(10, n).Value
-            frmBilling.txtTotalLabUnits.Text = dg1.Item(11, n).Value
-            frmBilling.txtLabRate.Text = dg1.Item(12, n).Value
-            frmBilling.txtLab.Text = dg1.Item(13, n).Value
-            frmBilling.txtOldAccount.Text = dg1.Item(14, n).Value
-            frmBilling.txtTotalFees.Text = dg1.Item(17, n).Value
-            frmBilling.txtDiscountPercentage.Text = dg1.Item(18, n).Value
-            frmBilling.txtDiscount.Text = dg1.Item(19, n).Value
-            frmBilling.txtTotalAcct.Text = dg1.Item(20, n).Value
-            frmBilling.txtPayments.Text = dg1.Item(21, n).Value
-            frmBilling.txtBalance.Text = dg1.Item(22, n).Value
-
-            frmBilling.txtDesc1.Text = dg1.Item(25, n).Value
-            frmBilling.txtAmount1.Text = dg1.Item(26, n).Value
-            frmBilling.txtDesc2.Text = dg1.Item(27, n).Value
-            frmBilling.txtAmount2.Text = dg1.Item(28, n).Value
-            frmBilling.txtDesc3.Text = dg1.Item(29, n).Value
-            frmBilling.txtAmount3.Text = dg1.Item(30, n).Value
-            frmBilling.txtDesc4.Text = dg1.Item(31, n).Value
-            frmBilling.txtAmount4.Text = dg1.Item(32, n).Value
-            frmBilling.txtDesc5.Text = dg1.Item(33, n).Value
-            frmBilling.txtAmount5.Text = dg1.Item(34, n).Value
-            frmBilling.txtRegFee.Text = dg1.Item(35, n).Value
-            frmBilling.txtSection.Text = dg1.Item(36, n).Value
-            frmBilling.cboPaymentMode.Text = dg1.Item(37, n).Value
-            frmBilling.txtDisc1.Text = dg1.Item(38, n).Value
-            frmBilling.txtDiscAmount1.Text = dg1.Item(39, n).Value
-            frmBilling.txtDisc2.Text = dg1.Item(40, n).Value
-            frmBilling.txtDiscAmount2.Text = dg1.Item(41, n).Value
-            frmBilling.txtDisc3.Text = dg1.Item(42, n).Value
-            frmBilling.txtDiscAmount3.Text = dg1.Item(43, n).Value
-            frmBilling.txtDisc4.Text = dg1.Item(44, n).Value
-            frmBilling.txtDiscAmount4.Text = dg1.Item(45, n).Value
-            frmBilling.txtDisc5.Text = dg1.Item(46, n).Value
-            frmBilling.txtDiscAmount5.Text = dg1.Item(47, n).Value
+            frmBilling.txtOldAccount.Text = dg1.Item(8, n).Value
+            frmBilling.txtTotalFees.Text = dg1.Item(11, n).Value
+            frmBilling.txtDiscount.Text = dg1.Item(12, n).Value
+            frmBilling.txtTotalAcct.Text = dg1.Item(13, n).Value
+            frmBilling.txtPayments.Text = dg1.Item(14, n).Value
+            frmBilling.txtBalance.Text = dg1.Item(15, n).Value
 
             Dim totalpayment As Double
 

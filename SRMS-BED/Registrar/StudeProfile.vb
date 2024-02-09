@@ -564,12 +564,12 @@ Public Class frmStudeProfile
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
             Dim ds As New Data.DataSet
-            mysda.Fill(ds, "qualifications")
+            mysda.Fill(ds, "studeprofile")
             conn.Close()
 
             txtGuardian.ValueMember = "Guardian"
             txtGuardian.DisplayMember = "Guardian"
-            txtGuardian.DataSource = ds.Tables("qualifications")
+            txtGuardian.DataSource = ds.Tables("studeprofile")
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)

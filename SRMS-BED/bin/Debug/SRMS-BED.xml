@@ -47,7 +47,17 @@ SRMS-BED
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SRMS_BED.My.Resources.Resources.Access">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SRMS_BED.My.Resources.Resources.Add_Time">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources.Bar_Chart">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -57,7 +67,22 @@ SRMS-BED
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SRMS_BED.My.Resources.Resources.C">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources.Caduceus_Medical">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SRMS_BED.My.Resources.Resources.Case_Study">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources.Cash_Register_Euro_48px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -73,6 +98,11 @@ SRMS-BED
 </summary>
 </member>
 <member name="P:SRMS_BED.My.Resources.Resources.Clock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources.Conflict">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -122,6 +152,16 @@ SRMS-BED
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SRMS_BED.My.Resources.Resources.File_Cardiogram">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources.forlogin">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SRMS_BED.My.Resources.Resources.Grades">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -132,7 +172,27 @@ SRMS-BED
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SRMS_BED.My.Resources.Resources.In_Inventory">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources.Information">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources.Information1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SRMS_BED.My.Resources.Resources.Invoice">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources.Laptop_Medical">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -147,6 +207,11 @@ SRMS-BED
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SRMS_BED.My.Resources.Resources.List_View">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SRMS_BED.My.Resources.Resources.Lock">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -157,12 +222,22 @@ SRMS-BED
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SRMS_BED.My.Resources.Resources.Move__Out_48px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SRMS_BED.My.Resources.Resources.New_Copy">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:SRMS_BED.My.Resources.Resources.News">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources.No_Synchronize">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -237,6 +312,11 @@ SRMS-BED
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SRMS_BED.My.Resources.Resources.School">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SRMS_BED.My.Resources.Resources.Search_Account">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -253,6 +333,11 @@ SRMS-BED
 </summary>
 </member>
 <member name="P:SRMS_BED.My.Resources.Resources.Settings">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources.Settings_48px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -287,7 +372,17 @@ SRMS-BED
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SRMS_BED.My.Resources.Resources.Statistic_Document_60px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SRMS_BED.My.Resources.Resources.Student_Registration">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources.Summary_List">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -298,6 +393,11 @@ SRMS-BED
 </summary>
 </member>
 <member name="P:SRMS_BED.My.Resources.Resources.Tick_Box">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources.Timetable">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -313,6 +413,11 @@ SRMS-BED
 </summary>
 </member>
 <member name="P:SRMS_BED.My.Resources.Resources.User_Secured">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SRMS_BED.My.Resources.Resources.UsersIcon1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -390,6 +495,11 @@ Update Order Option
 <member name="T:SRMS_BED.DataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:SRMS_BED.Reports3">
+<summary>
+Represents a strongly typed in-memory cache of data.
 </summary>
 </member>
 <member name="T:SRMS_BED.Reports4">

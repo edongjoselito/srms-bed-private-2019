@@ -43,7 +43,7 @@ Public Class frmSearchStudeEncodeGrades
 
     Private Sub txtSearch_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtSearch.TextChanged
         Try
-            str = "select p.StudentNumber, concat(p.LastName,', ',p.FirstName) as StudeName, ss.YearLevel, ss.Track, ss.Qualification from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber where ss.LName like '%" & txtSearch.Text & "%' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "' group by p.StudentNumber order by p.LastName"
+            str = "select p.StudentNumber, concat(p.LastName,', ',p.FirstName) as StudeName, ss.YearLevel, ss.Track, ss.Qualification from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber where p.LastName like '%" & txtSearch.Text & "%' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "' group by p.StudentNumber order by p.LastName"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
             Dim ds As New DataSet

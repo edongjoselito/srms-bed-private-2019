@@ -341,7 +341,6 @@ Public Class frmPayment
     Private Sub mskStudentNumber_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mskStudentNumber.TextChanged
         CourseCode()
         PaymentHistory()
-        getPaymentMode()
     End Sub
     Public Sub PaymentHistory()
         Try
@@ -363,23 +362,7 @@ Public Class frmPayment
             conn.Close()
         End Try
     End Sub
-    Public Sub getPaymentMode()
-        Try
-            Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
-            str = "select PaymentMode from studeaccount where StudentNumber='" & mskStudentNumber.Text & "' and Sem='" & frmAccounting.stSemester.Text & "' and SY='" & frmAccounting.stSY.Text & "'"
-            conn.Open()
-            Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
-            objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
-            dtReader = objCmd.ExecuteReader()
-            If dtReader.Read Then
-                lblPaymentMode.Text = dtReader.Item(0)
-            End If
-            conn.Close()
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            conn.Close()
-        End Try
-    End Sub
+
 
     Private Sub txtDiscount_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtDiscount.TextChanged
         CurrentBalance()

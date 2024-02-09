@@ -10,11 +10,14 @@
         frmRegistrar.stSemester.Text = cboSem.Text
         frmRegistrar.stSY.Text = txtSYfrom.Text + "-" + txtSYto.Text
 
-        ' frmAccountingForm.lblSem.Text = cboSem.Text
-        ' frmAccountingForm.lblSY.Text = txtSYfrom.Text + "-" + txtSYto.Text
+        frmAccounting.stSemester.Text = cboSem.Text
+        frmAccounting.stSY.Text = txtSYfrom.Text + "-" + txtSYto.Text
 
-        ' frmAdmissionForm.lblSem.Text = cboSem.Text
-        ' frmAdmissionForm.lblSY.Text = txtSYfrom.Text + "-" + txtSYto.Text
+        frmMain.stSemester.Text = cboSem.Text
+        frmMain.stSY.Text = txtSYfrom.Text + "-" + txtSYto.Text
+
+        frmTeacher.stSemester.Text = cboSem.Text
+        frmTeacher.stSY.Text = txtSYfrom.Text + "-" + txtSYto.Text
 
         Me.Close()
     End Sub

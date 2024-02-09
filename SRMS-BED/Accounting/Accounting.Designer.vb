@@ -29,24 +29,34 @@ Partial Class frmAccounting
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.lblAccountLevel = New System.Windows.Forms.Label()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.tsAcccounts = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.ACCOUNTSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OTHERSERVICESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripButton4 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.tsSchoolExpenses = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.EXPENSESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EXPENSESREPORTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsOR = New System.Windows.Forms.ToolStripDropDownButton()
         Me.SEARCHORToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VOIDORToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripButton6 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.tsReports = New System.Windows.Forms.ToolStripDropDownButton()
         Me.REPORTAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.REPORTBToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BYCASHIERToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BYDATEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BYDESCRIPTIONToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.STUDENTSACCOUNTSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.STUDENTSWITHBALANCEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LISTOFVOIDRECEIPTSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.FEESDESCRIPTIONToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsFeesDescription = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SWITCHSEMESTERToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.stDate = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.stTime = New System.Windows.Forms.ToolStripStatusLabel()
         Me.stUser = New System.Windows.Forms.ToolStripStatusLabel()
         Me.stSemester = New System.Windows.Forms.ToolStripStatusLabel()
         Me.stSY = New System.Windows.Forms.ToolStripStatusLabel()
@@ -117,12 +127,23 @@ Partial Class frmAccounting
         '
         'Panel6
         '
+        Me.Panel6.Controls.Add(Me.lblAccountLevel)
         Me.Panel6.Controls.Add(Me.btnClose)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel6.Location = New System.Drawing.Point(1137, 0)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(200, 86)
         Me.Panel6.TabIndex = 0
+        '
+        'lblAccountLevel
+        '
+        Me.lblAccountLevel.AutoSize = True
+        Me.lblAccountLevel.Location = New System.Drawing.Point(20, 61)
+        Me.lblAccountLevel.Name = "lblAccountLevel"
+        Me.lblAccountLevel.Size = New System.Drawing.Size(86, 17)
+        Me.lblAccountLevel.TabIndex = 8
+        Me.lblAccountLevel.Text = "Account Level"
+        Me.lblAccountLevel.Visible = False
         '
         'btnClose
         '
@@ -139,22 +160,22 @@ Partial Class frmAccounting
         'ToolStrip1
         '
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton6, Me.ToolStripButton2, Me.ToolStripButton7})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsAcccounts, Me.ToolStripButton3, Me.tsSchoolExpenses, Me.tsOR, Me.tsReports, Me.ToolStripButton2, Me.ToolStripButton7})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 96)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1337, 55)
         Me.ToolStrip1.TabIndex = 19
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'tsAcccounts
         '
-        Me.ToolStripButton1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton1.Image = Global.SRMS_BED.My.Resources.Resources.Invoice
-        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(177, 52)
-        Me.ToolStripButton1.Text = "STUDENTS' ACCOUNTS"
+        Me.tsAcccounts.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tsAcccounts.Image = Global.SRMS_BED.My.Resources.Resources.Invoice
+        Me.tsAcccounts.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsAcccounts.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsAcccounts.Name = "tsAcccounts"
+        Me.tsAcccounts.Size = New System.Drawing.Size(177, 52)
+        Me.tsAcccounts.Text = "STUDENTS' ACCOUNTS"
         '
         'ToolStripButton3
         '
@@ -179,55 +200,115 @@ Partial Class frmAccounting
         Me.OTHERSERVICESToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
         Me.OTHERSERVICESToolStripMenuItem.Text = "OTHER SERVICES"
         '
-        'ToolStripButton4
+        'tsSchoolExpenses
         '
-        Me.ToolStripButton4.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SEARCHORToolStripMenuItem, Me.VOIDORToolStripMenuItem})
-        Me.ToolStripButton4.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton4.Image = Global.SRMS_BED.My.Resources.Resources.Stack_of_Coins
-        Me.ToolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton4.Name = "ToolStripButton4"
-        Me.ToolStripButton4.Size = New System.Drawing.Size(168, 52)
-        Me.ToolStripButton4.Text = "OFFICIAL RECEIPTS"
+        Me.tsSchoolExpenses.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EXPENSESToolStripMenuItem, Me.EXPENSESREPORTToolStripMenuItem})
+        Me.tsSchoolExpenses.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tsSchoolExpenses.Image = Global.SRMS_BED.My.Resources.Resources.Cash_Register_Euro_48px
+        Me.tsSchoolExpenses.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsSchoolExpenses.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsSchoolExpenses.Name = "tsSchoolExpenses"
+        Me.tsSchoolExpenses.Size = New System.Drawing.Size(167, 52)
+        Me.tsSchoolExpenses.Text = "SCHOOL EXPENSES"
+        '
+        'EXPENSESToolStripMenuItem
+        '
+        Me.EXPENSESToolStripMenuItem.Name = "EXPENSESToolStripMenuItem"
+        Me.EXPENSESToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EXPENSESToolStripMenuItem.Text = "EXPENSES"
+        '
+        'EXPENSESREPORTToolStripMenuItem
+        '
+        Me.EXPENSESREPORTToolStripMenuItem.Name = "EXPENSESREPORTToolStripMenuItem"
+        Me.EXPENSESREPORTToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EXPENSESREPORTToolStripMenuItem.Text = "EXPENSES REPORT"
+        '
+        'tsOR
+        '
+        Me.tsOR.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SEARCHORToolStripMenuItem, Me.VOIDORToolStripMenuItem})
+        Me.tsOR.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tsOR.Image = Global.SRMS_BED.My.Resources.Resources.Stack_of_Coins
+        Me.tsOR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsOR.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsOR.Name = "tsOR"
+        Me.tsOR.Size = New System.Drawing.Size(168, 52)
+        Me.tsOR.Text = "OFFICIAL RECEIPTS"
         '
         'SEARCHORToolStripMenuItem
         '
         Me.SEARCHORToolStripMenuItem.Name = "SEARCHORToolStripMenuItem"
-        Me.SEARCHORToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SEARCHORToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.SEARCHORToolStripMenuItem.Text = "SEARCH O.R."
         '
         'VOIDORToolStripMenuItem
         '
         Me.VOIDORToolStripMenuItem.Name = "VOIDORToolStripMenuItem"
-        Me.VOIDORToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.VOIDORToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.VOIDORToolStripMenuItem.Text = "VOID O.R."
         '
-        'ToolStripButton6
+        'tsReports
         '
-        Me.ToolStripButton6.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REPORTAToolStripMenuItem, Me.REPORTBToolStripMenuItem})
-        Me.ToolStripButton6.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton6.Image = Global.SRMS_BED.My.Resources.Resources.Business_Report
-        Me.ToolStripButton6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton6.Name = "ToolStripButton6"
-        Me.ToolStripButton6.Size = New System.Drawing.Size(116, 52)
-        Me.ToolStripButton6.Text = "REPORTS"
+        Me.tsReports.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REPORTAToolStripMenuItem, Me.REPORTBToolStripMenuItem, Me.STUDENTSACCOUNTSToolStripMenuItem, Me.STUDENTSWITHBALANCEToolStripMenuItem, Me.LISTOFVOIDRECEIPTSToolStripMenuItem})
+        Me.tsReports.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tsReports.Image = Global.SRMS_BED.My.Resources.Resources.Business_Report
+        Me.tsReports.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.tsReports.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsReports.Name = "tsReports"
+        Me.tsReports.Size = New System.Drawing.Size(116, 52)
+        Me.tsReports.Text = "REPORTS"
         '
         'REPORTAToolStripMenuItem
         '
         Me.REPORTAToolStripMenuItem.Name = "REPORTAToolStripMenuItem"
-        Me.REPORTAToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
-        Me.REPORTAToolStripMenuItem.Text = "REPORT A"
+        Me.REPORTAToolStripMenuItem.Size = New System.Drawing.Size(245, 22)
+        Me.REPORTAToolStripMenuItem.Text = "STUDENTS' FINANCIAL REPORTS"
         '
         'REPORTBToolStripMenuItem
         '
+        Me.REPORTBToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BYCASHIERToolStripMenuItem, Me.BYDATEToolStripMenuItem, Me.BYDESCRIPTIONToolStripMenuItem})
         Me.REPORTBToolStripMenuItem.Name = "REPORTBToolStripMenuItem"
-        Me.REPORTBToolStripMenuItem.Size = New System.Drawing.Size(126, 22)
-        Me.REPORTBToolStripMenuItem.Text = "REPORT B"
+        Me.REPORTBToolStripMenuItem.Size = New System.Drawing.Size(245, 22)
+        Me.REPORTBToolStripMenuItem.Text = "COLLECTION REPORTS"
+        '
+        'BYCASHIERToolStripMenuItem
+        '
+        Me.BYCASHIERToolStripMenuItem.Name = "BYCASHIERToolStripMenuItem"
+        Me.BYCASHIERToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.BYCASHIERToolStripMenuItem.Text = "BY CASHIER"
+        '
+        'BYDATEToolStripMenuItem
+        '
+        Me.BYDATEToolStripMenuItem.Name = "BYDATEToolStripMenuItem"
+        Me.BYDATEToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.BYDATEToolStripMenuItem.Text = "BY DATE"
+        '
+        'BYDESCRIPTIONToolStripMenuItem
+        '
+        Me.BYDESCRIPTIONToolStripMenuItem.Name = "BYDESCRIPTIONToolStripMenuItem"
+        Me.BYDESCRIPTIONToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.BYDESCRIPTIONToolStripMenuItem.Text = "BY DESCRIPTION"
+        '
+        'STUDENTSACCOUNTSToolStripMenuItem
+        '
+        Me.STUDENTSACCOUNTSToolStripMenuItem.Name = "STUDENTSACCOUNTSToolStripMenuItem"
+        Me.STUDENTSACCOUNTSToolStripMenuItem.Size = New System.Drawing.Size(245, 22)
+        Me.STUDENTSACCOUNTSToolStripMenuItem.Text = "STUDENTS ACCOUNTS"
+        '
+        'STUDENTSWITHBALANCEToolStripMenuItem
+        '
+        Me.STUDENTSWITHBALANCEToolStripMenuItem.Name = "STUDENTSWITHBALANCEToolStripMenuItem"
+        Me.STUDENTSWITHBALANCEToolStripMenuItem.Size = New System.Drawing.Size(245, 22)
+        Me.STUDENTSWITHBALANCEToolStripMenuItem.Text = "STUDENTS WITH ACCTS. PAYABLE"
+        '
+        'LISTOFVOIDRECEIPTSToolStripMenuItem
+        '
+        Me.LISTOFVOIDRECEIPTSToolStripMenuItem.Name = "LISTOFVOIDRECEIPTSToolStripMenuItem"
+        Me.LISTOFVOIDRECEIPTSToolStripMenuItem.Size = New System.Drawing.Size(245, 22)
+        Me.LISTOFVOIDRECEIPTSToolStripMenuItem.Text = "LIST OF VOID RECEIPTS"
         '
         'ToolStripButton2
         '
-        Me.ToolStripButton2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FEESDESCRIPTIONToolStripMenuItem1})
+        Me.ToolStripButton2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsFeesDescription, Me.SWITCHSEMESTERToolStripMenuItem})
         Me.ToolStripButton2.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripButton2.Image = Global.SRMS_BED.My.Resources.Resources.Laptop_Settings
         Me.ToolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -236,26 +317,33 @@ Partial Class frmAccounting
         Me.ToolStripButton2.Size = New System.Drawing.Size(118, 52)
         Me.ToolStripButton2.Text = "SETTINGS"
         '
-        'FEESDESCRIPTIONToolStripMenuItem1
+        'tsFeesDescription
         '
-        Me.FEESDESCRIPTIONToolStripMenuItem1.Name = "FEESDESCRIPTIONToolStripMenuItem1"
-        Me.FEESDESCRIPTIONToolStripMenuItem1.Size = New System.Drawing.Size(173, 22)
-        Me.FEESDESCRIPTIONToolStripMenuItem1.Text = "FEES DESCRIPTION"
+        Me.tsFeesDescription.Name = "tsFeesDescription"
+        Me.tsFeesDescription.Size = New System.Drawing.Size(174, 22)
+        Me.tsFeesDescription.Text = "FEES DESCRIPTION"
+        '
+        'SWITCHSEMESTERToolStripMenuItem
+        '
+        Me.SWITCHSEMESTERToolStripMenuItem.Name = "SWITCHSEMESTERToolStripMenuItem"
+        Me.SWITCHSEMESTERToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.SWITCHSEMESTERToolStripMenuItem.Text = "SWITCH SEMESTER"
         '
         'ToolStripButton7
         '
+        Me.ToolStripButton7.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripButton7.Image = Global.SRMS_BED.My.Resources.Resources.Refresh_48px
         Me.ToolStripButton7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton7.Name = "ToolStripButton7"
-        Me.ToolStripButton7.Size = New System.Drawing.Size(168, 52)
+        Me.ToolStripButton7.Size = New System.Drawing.Size(162, 52)
         Me.ToolStripButton7.Text = "RELOAD [ CTRL + R ]"
         '
         'StatusStrip1
         '
         Me.StatusStrip1.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.stDate, Me.stTime, Me.stUser, Me.stSemester, Me.stSY, Me.lblSettingsID})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.stDate, Me.stUser, Me.stSemester, Me.stSY, Me.lblSettingsID})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 791)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(1337, 22)
@@ -269,19 +357,13 @@ Partial Class frmAccounting
         Me.stDate.Size = New System.Drawing.Size(36, 17)
         Me.stDate.Text = "Date"
         '
-        'stTime
-        '
-        Me.stTime.BackColor = System.Drawing.Color.Transparent
-        Me.stTime.Name = "stTime"
-        Me.stTime.Size = New System.Drawing.Size(36, 17)
-        Me.stTime.Text = "Time"
-        '
         'stUser
         '
         Me.stUser.BackColor = System.Drawing.Color.Transparent
         Me.stUser.Name = "stUser"
         Me.stUser.Size = New System.Drawing.Size(34, 17)
         Me.stUser.Text = "User"
+        Me.stUser.Visible = False
         '
         'stSemester
         '
@@ -385,6 +467,7 @@ Partial Class frmAccounting
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
@@ -404,21 +487,20 @@ Partial Class frmAccounting
     Friend WithEvents Panel6 As Panel
     Friend WithEvents btnClose As Button
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents tsAcccounts As ToolStripButton
     Friend WithEvents ToolStripButton3 As ToolStripDropDownButton
     Friend WithEvents ACCOUNTSToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OTHERSERVICESToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripButton4 As ToolStripDropDownButton
+    Friend WithEvents tsOR As ToolStripDropDownButton
     Friend WithEvents SEARCHORToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VOIDORToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripButton6 As ToolStripDropDownButton
+    Friend WithEvents tsReports As ToolStripDropDownButton
     Friend WithEvents REPORTAToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents REPORTBToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripButton2 As ToolStripDropDownButton
-    Friend WithEvents FEESDESCRIPTIONToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents tsFeesDescription As ToolStripMenuItem
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents stDate As ToolStripStatusLabel
-    Friend WithEvents stTime As ToolStripStatusLabel
     Friend WithEvents stUser As ToolStripStatusLabel
     Friend WithEvents stSemester As ToolStripStatusLabel
     Friend WithEvents stSY As ToolStripStatusLabel
@@ -431,4 +513,15 @@ Partial Class frmAccounting
     Friend WithEvents EnrollmentToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SubjectEnlistmentToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripButton7 As ToolStripButton
+    Friend WithEvents SWITCHSEMESTERToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BYCASHIERToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BYDATEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BYDESCRIPTIONToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents STUDENTSACCOUNTSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents STUDENTSWITHBALANCEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LISTOFVOIDRECEIPTSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents tsSchoolExpenses As ToolStripDropDownButton
+    Friend WithEvents EXPENSESToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EXPENSESREPORTToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lblAccountLevel As Label
 End Class

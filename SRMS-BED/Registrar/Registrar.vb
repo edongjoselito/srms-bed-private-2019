@@ -2,7 +2,13 @@
 Public Class frmRegistrar
     Dim str As String
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Me.Close()
+        If lblAccountLevel.Text = "Super Admin" Then
+            Me.Close()
+        ElseIf lblAccountLevel.Text = "Admin" Then
+            Me.Close()
+        Else
+            End
+        End If
     End Sub
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
@@ -59,9 +65,7 @@ Public Class frmRegistrar
         frmPerSpecialization.Show()
     End Sub
 
-    Private Sub StGradingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StGradingToolStripMenuItem.Click
-        frmFirstGrading.Show()
-    End Sub
+
 
     Private Sub SWITCHSEMESTERToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SWITCHSEMESTERToolStripMenuItem.Click
         frmSemChoiceV2.ShowDialog()
@@ -102,5 +106,51 @@ Public Class frmRegistrar
 
     Private Sub ToolStripButton9_Click(sender As Object, e As EventArgs) Handles ToolStripButton9.Click
         formLoad()
+    End Sub
+
+    Private Sub crViewer_Load(sender As Object, e As EventArgs) Handles crViewer.Load
+
+    End Sub
+
+    Private Sub ToolStripButton6_Click(sender As Object, e As EventArgs) Handles ToolStripButton6.Click
+        frmReceiveGradeSheets.Show()
+    End Sub
+
+    Private Sub UPDATEAVERGAEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UPDATEAVERGAEToolStripMenuItem.Click
+        Try
+            str = "UPDATE grades SET average = (PGrade + MGrade + PFinalGrade + FGrade) / 4 where SY='" & stSY.Text & "'"
+            conn.Open()
+            Dim mysc As New MySqlCommand(str, conn)
+            mysc.ExecuteNonQuery()
+            conn.Close()
+            MsgBox("Successfully updated", MsgBoxStyle.Information)
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub CLASSDAYSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CLASSDAYSToolStripMenuItem.Click
+        frmClassDays.ShowDialog()
+    End Sub
+
+    Private Sub ENCODEGRADESToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ENCODEGRADESToolStripMenuItem.Click
+        frmGradesEncodingNew.ShowDialog()
+    End Sub
+
+    Private Sub LOCKGRADESToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LOCKGRADESToolStripMenuItem.Click
+        frmLockUnlock.ShowDialog()
+    End Sub
+
+    Private Sub STUDENTSREPORTSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles STUDENTSREPORTSToolStripMenuItem.Click
+        frmStudeReports.ShowDialog()
+    End Sub
+
+    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
+
+    End Sub
+
+    Private Sub GRADINGSHEETSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GRADINGSHEETSToolStripMenuItem.Click
+        frmGradingSheets.Show()
     End Sub
 End Class

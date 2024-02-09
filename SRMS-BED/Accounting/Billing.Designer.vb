@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmBilling
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,23 +20,13 @@ Partial Class frmBilling
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.lblID = New System.Windows.Forms.Label()
         Me.txtOldAccount = New System.Windows.Forms.TextBox()
-        Me.txtLabRate = New System.Windows.Forms.TextBox()
-        Me.txtLecRate = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.txtPayments = New System.Windows.Forms.TextBox()
-        Me.txtTotalLabUnits = New System.Windows.Forms.TextBox()
-        Me.txtTotalLecUnits = New System.Windows.Forms.TextBox()
-        Me.Label24 = New System.Windows.Forms.Label()
         Me.txtTotalAcct = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtTuition = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtLab = New System.Windows.Forms.TextBox()
         Me.btnCompute = New System.Windows.Forms.Button()
         Me.cboYear = New System.Windows.Forms.ComboBox()
         Me.cboStatus = New System.Windows.Forms.ComboBox()
@@ -56,7 +46,6 @@ Partial Class frmBilling
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.lblSettingsID = New System.Windows.Forms.Label()
         Me.Panel20 = New System.Windows.Forms.Panel()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Panel15 = New System.Windows.Forms.Panel()
@@ -65,18 +54,11 @@ Partial Class frmBilling
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.txtDiscount = New System.Windows.Forms.TextBox()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.cboPaymentMode = New System.Windows.Forms.ComboBox()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
@@ -84,7 +66,6 @@ Partial Class frmBilling
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txtDiscountPercentage = New System.Windows.Forms.TextBox()
         Me.lblMajor = New System.Windows.Forms.Label()
         Me.lblEnrolled = New System.Windows.Forms.Label()
         Me.txtInstallmentFee = New System.Windows.Forms.TextBox()
@@ -95,59 +76,6 @@ Partial Class frmBilling
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.txtTotalAdditional = New System.Windows.Forms.Label()
-        Me.Panel19 = New System.Windows.Forms.Panel()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.txtAmount5 = New System.Windows.Forms.TextBox()
-        Me.txtDesc5 = New System.Windows.Forms.TextBox()
-        Me.Panel18 = New System.Windows.Forms.Panel()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.txtDesc4 = New System.Windows.Forms.TextBox()
-        Me.txtAmount4 = New System.Windows.Forms.TextBox()
-        Me.Panel17 = New System.Windows.Forms.Panel()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.txtDesc3 = New System.Windows.Forms.TextBox()
-        Me.txtAmount3 = New System.Windows.Forms.TextBox()
-        Me.Panel16 = New System.Windows.Forms.Panel()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.txtDesc2 = New System.Windows.Forms.TextBox()
-        Me.txtAmount2 = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtDesc1 = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtAmount1 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.lblDiscTotal = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.txtDiscAmount5 = New System.Windows.Forms.TextBox()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.txtDisc5 = New System.Windows.Forms.TextBox()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.txtDiscAmount4 = New System.Windows.Forms.TextBox()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.txtDisc4 = New System.Windows.Forms.TextBox()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.txtDiscAmount3 = New System.Windows.Forms.TextBox()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.txtDisc3 = New System.Windows.Forms.TextBox()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.txtDiscAmount2 = New System.Windows.Forms.TextBox()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.txtDisc2 = New System.Windows.Forms.TextBox()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.txtDiscAmount1 = New System.Windows.Forms.TextBox()
-        Me.Label45 = New System.Windows.Forms.Label()
-        Me.txtDisc1 = New System.Windows.Forms.TextBox()
-        Me.Panel21 = New System.Windows.Forms.Panel()
-        Me.Label46 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.tsNew = New System.Windows.Forms.ToolStripButton()
@@ -171,24 +99,12 @@ Partial Class frmBilling
         Me.Panel13.SuspendLayout()
         Me.Panel12.SuspendLayout()
         Me.Panel11.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.Panel7.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         Me.Panel9.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel10.SuspendLayout()
         Me.Panel8.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        Me.Panel19.SuspendLayout()
-        Me.Panel18.SuspendLayout()
-        Me.Panel17.SuspendLayout()
-        Me.Panel16.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.Panel21.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -220,47 +136,6 @@ Partial Class frmBilling
         Me.txtOldAccount.Text = "0"
         Me.txtOldAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'txtLabRate
-        '
-        Me.txtLabRate.BackColor = System.Drawing.SystemColors.InactiveBorder
-        Me.txtLabRate.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLabRate.ForeColor = System.Drawing.Color.Black
-        Me.txtLabRate.Location = New System.Drawing.Point(265, 3)
-        Me.txtLabRate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtLabRate.Name = "txtLabRate"
-        Me.txtLabRate.ReadOnly = True
-        Me.txtLabRate.Size = New System.Drawing.Size(87, 23)
-        Me.txtLabRate.TabIndex = 29
-        Me.txtLabRate.TabStop = False
-        Me.txtLabRate.Text = "0"
-        Me.txtLabRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtLecRate
-        '
-        Me.txtLecRate.BackColor = System.Drawing.SystemColors.InactiveBorder
-        Me.txtLecRate.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLecRate.ForeColor = System.Drawing.Color.Black
-        Me.txtLecRate.Location = New System.Drawing.Point(265, 4)
-        Me.txtLecRate.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtLecRate.Name = "txtLecRate"
-        Me.txtLecRate.ReadOnly = True
-        Me.txtLecRate.Size = New System.Drawing.Size(87, 23)
-        Me.txtLecRate.TabIndex = 28
-        Me.txtLecRate.TabStop = False
-        Me.txtLecRate.Text = "0"
-        Me.txtLecRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(199, 6)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(31, 15)
-        Me.Label8.TabIndex = 31
-        Me.Label8.Text = "Rate"
-        '
         'txtPayments
         '
         Me.txtPayments.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(185, Byte), Integer))
@@ -276,45 +151,6 @@ Partial Class frmBilling
         Me.txtPayments.Text = "0"
         Me.txtPayments.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'txtTotalLabUnits
-        '
-        Me.txtTotalLabUnits.BackColor = System.Drawing.SystemColors.InactiveBorder
-        Me.txtTotalLabUnits.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotalLabUnits.ForeColor = System.Drawing.Color.Black
-        Me.txtTotalLabUnits.Location = New System.Drawing.Point(104, 4)
-        Me.txtTotalLabUnits.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtTotalLabUnits.Name = "txtTotalLabUnits"
-        Me.txtTotalLabUnits.Size = New System.Drawing.Size(89, 23)
-        Me.txtTotalLabUnits.TabIndex = 10
-        Me.txtTotalLabUnits.TabStop = False
-        Me.txtTotalLabUnits.Text = "0"
-        Me.txtTotalLabUnits.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtTotalLecUnits
-        '
-        Me.txtTotalLecUnits.BackColor = System.Drawing.SystemColors.InactiveBorder
-        Me.txtTotalLecUnits.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotalLecUnits.ForeColor = System.Drawing.Color.Black
-        Me.txtTotalLecUnits.Location = New System.Drawing.Point(104, 4)
-        Me.txtTotalLecUnits.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtTotalLecUnits.Name = "txtTotalLecUnits"
-        Me.txtTotalLecUnits.Size = New System.Drawing.Size(87, 23)
-        Me.txtTotalLecUnits.TabIndex = 9
-        Me.txtTotalLecUnits.TabStop = False
-        Me.txtTotalLecUnits.Text = "0"
-        Me.txtTotalLecUnits.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.ForeColor = System.Drawing.Color.Black
-        Me.Label24.Location = New System.Drawing.Point(14, 10)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(58, 15)
-        Me.Label24.TabIndex = 23
-        Me.Label24.Text = "Lab Units"
-        '
         'txtTotalAcct
         '
         Me.txtTotalAcct.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(141, Byte), Integer))
@@ -328,56 +164,6 @@ Partial Class frmBilling
         Me.txtTotalAcct.TabStop = False
         Me.txtTotalAcct.Text = "0"
         Me.txtTotalAcct.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(16, 8)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(65, 15)
-        Me.Label9.TabIndex = 1
-        Me.Label9.Text = "Tuition Fee"
-        '
-        'txtTuition
-        '
-        Me.txtTuition.BackColor = System.Drawing.Color.White
-        Me.txtTuition.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTuition.ForeColor = System.Drawing.Color.Black
-        Me.txtTuition.Location = New System.Drawing.Point(104, 1)
-        Me.txtTuition.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtTuition.Name = "txtTuition"
-        Me.txtTuition.Size = New System.Drawing.Size(87, 23)
-        Me.txtTuition.TabIndex = 11
-        Me.txtTuition.TabStop = False
-        Me.txtTuition.Text = "0"
-        Me.txtTuition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(199, 8)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(47, 15)
-        Me.Label10.TabIndex = 2
-        Me.Label10.Text = "Lab Fee"
-        '
-        'txtLab
-        '
-        Me.txtLab.BackColor = System.Drawing.Color.White
-        Me.txtLab.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtLab.ForeColor = System.Drawing.Color.Black
-        Me.txtLab.Location = New System.Drawing.Point(265, 1)
-        Me.txtLab.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtLab.Name = "txtLab"
-        Me.txtLab.Size = New System.Drawing.Size(87, 23)
-        Me.txtLab.TabIndex = 12
-        Me.txtLab.TabStop = False
-        Me.txtLab.Text = "0"
-        Me.txtLab.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnCompute
         '
@@ -592,8 +378,6 @@ Partial Class frmBilling
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(2, 65)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -621,23 +405,17 @@ Partial Class frmBilling
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TabPage1.Size = New System.Drawing.Size(990, 504)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Account Details"
+        Me.TabPage1.Text = "ACCOUNT DETAILS"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.lblSettingsID)
         Me.GroupBox3.Controls.Add(Me.Panel20)
         Me.GroupBox3.Controls.Add(Me.Panel15)
         Me.GroupBox3.Controls.Add(Me.Panel14)
         Me.GroupBox3.Controls.Add(Me.Panel13)
-        Me.GroupBox3.Controls.Add(Me.Label36)
         Me.GroupBox3.Controls.Add(Me.Panel12)
         Me.GroupBox3.Controls.Add(Me.Panel11)
-        Me.GroupBox3.Controls.Add(Me.Panel4)
-        Me.GroupBox3.Controls.Add(Me.cboPaymentMode)
-        Me.GroupBox3.Controls.Add(Me.Panel7)
-        Me.GroupBox3.Controls.Add(Me.Panel3)
         Me.GroupBox3.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(615, 16)
         Me.GroupBox3.Name = "GroupBox3"
@@ -645,16 +423,6 @@ Partial Class frmBilling
         Me.GroupBox3.TabIndex = 61
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "ACCOUNT SUMMARY"
-        '
-        'lblSettingsID
-        '
-        Me.lblSettingsID.AutoSize = True
-        Me.lblSettingsID.Location = New System.Drawing.Point(191, 16)
-        Me.lblSettingsID.Name = "lblSettingsID"
-        Me.lblSettingsID.Size = New System.Drawing.Size(61, 15)
-        Me.lblSettingsID.TabIndex = 60
-        Me.lblSettingsID.Text = "SettingsID"
-        Me.lblSettingsID.Visible = False
         '
         'Panel20
         '
@@ -743,17 +511,6 @@ Partial Class frmBilling
         Me.Label12.TabIndex = 1
         Me.Label12.Text = "TOTAL PAYMENTS"
         '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.Font = New System.Drawing.Font("Segoe Condensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(25, 250)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(94, 19)
-        Me.Label36.TabIndex = 52
-        Me.Label36.Text = "Payment Mode"
-        Me.Label36.Visible = False
-        '
         'Panel12
         '
         Me.Panel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -809,82 +566,6 @@ Partial Class frmBilling
         Me.txtDiscount.TabStop = False
         Me.txtDiscount.Text = "0"
         Me.txtDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel4.Controls.Add(Me.Label26)
-        Me.Panel4.Controls.Add(Me.Label32)
-        Me.Panel4.Controls.Add(Me.txtTotalLecUnits)
-        Me.Panel4.Controls.Add(Me.txtLecRate)
-        Me.Panel4.Location = New System.Drawing.Point(8, 127)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(357, 33)
-        Me.Panel4.TabIndex = 57
-        Me.Panel4.Visible = False
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.ForeColor = System.Drawing.Color.Black
-        Me.Label26.Location = New System.Drawing.Point(16, 8)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(56, 15)
-        Me.Label26.TabIndex = 1
-        Me.Label26.Text = "Lec Units"
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.ForeColor = System.Drawing.Color.Black
-        Me.Label32.Location = New System.Drawing.Point(199, 8)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(31, 15)
-        Me.Label32.TabIndex = 2
-        Me.Label32.Text = "Rate"
-        '
-        'cboPaymentMode
-        '
-        Me.cboPaymentMode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.cboPaymentMode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.cboPaymentMode.Font = New System.Drawing.Font("Segoe Condensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboPaymentMode.FormattingEnabled = True
-        Me.cboPaymentMode.Items.AddRange(New Object() {"Full Payment", "Installment"})
-        Me.cboPaymentMode.Location = New System.Drawing.Point(154, 243)
-        Me.cboPaymentMode.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.cboPaymentMode.Name = "cboPaymentMode"
-        Me.cboPaymentMode.Size = New System.Drawing.Size(207, 27)
-        Me.cboPaymentMode.TabIndex = 51
-        Me.cboPaymentMode.TabStop = False
-        Me.cboPaymentMode.Visible = False
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel7.Controls.Add(Me.Label24)
-        Me.Panel7.Controls.Add(Me.txtTotalLabUnits)
-        Me.Panel7.Controls.Add(Me.Label8)
-        Me.Panel7.Controls.Add(Me.txtLabRate)
-        Me.Panel7.Location = New System.Drawing.Point(8, 165)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(357, 33)
-        Me.Panel7.TabIndex = 58
-        Me.Panel7.Visible = False
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.Label9)
-        Me.Panel3.Controls.Add(Me.txtTuition)
-        Me.Panel3.Controls.Add(Me.Label10)
-        Me.Panel3.Controls.Add(Me.txtLab)
-        Me.Panel3.Location = New System.Drawing.Point(8, 204)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(357, 33)
-        Me.Panel3.TabIndex = 56
-        Me.Panel3.Visible = False
         '
         'Panel9
         '
@@ -956,7 +637,6 @@ Partial Class frmBilling
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.txtDiscountPercentage)
         Me.GroupBox2.Controls.Add(Me.lblMajor)
         Me.GroupBox2.Controls.Add(Me.lblEnrolled)
         Me.GroupBox2.Controls.Add(Me.txtInstallmentFee)
@@ -968,19 +648,11 @@ Partial Class frmBilling
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox2.Size = New System.Drawing.Size(209, 42)
+        Me.GroupBox2.Size = New System.Drawing.Size(138, 40)
         Me.GroupBox2.TabIndex = 55
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Hidden Controls"
         Me.GroupBox2.Visible = False
-        '
-        'txtDiscountPercentage
-        '
-        Me.txtDiscountPercentage.Location = New System.Drawing.Point(112, 18)
-        Me.txtDiscountPercentage.Name = "txtDiscountPercentage"
-        Me.txtDiscountPercentage.Size = New System.Drawing.Size(114, 23)
-        Me.txtDiscountPercentage.TabIndex = 57
-        Me.txtDiscountPercentage.Text = "0"
         '
         'lblMajor
         '
@@ -1093,538 +765,6 @@ Partial Class frmBilling
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(277, 33)
         Me.Panel2.TabIndex = 58
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.txtTotalAdditional)
-        Me.TabPage2.Controls.Add(Me.Panel19)
-        Me.TabPage2.Controls.Add(Me.Panel18)
-        Me.TabPage2.Controls.Add(Me.Panel17)
-        Me.TabPage2.Controls.Add(Me.Panel16)
-        Me.TabPage2.Controls.Add(Me.Panel1)
-        Me.TabPage2.Controls.Add(Me.Label4)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Size = New System.Drawing.Size(990, 504)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Other Fees"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'txtTotalAdditional
-        '
-        Me.txtTotalAdditional.AutoSize = True
-        Me.txtTotalAdditional.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotalAdditional.ForeColor = System.Drawing.Color.Blue
-        Me.txtTotalAdditional.Location = New System.Drawing.Point(470, 243)
-        Me.txtTotalAdditional.Name = "txtTotalAdditional"
-        Me.txtTotalAdditional.Size = New System.Drawing.Size(206, 55)
-        Me.txtTotalAdditional.TabIndex = 20
-        Me.txtTotalAdditional.Tag = ""
-        Me.txtTotalAdditional.Text = "0000.00"
-        '
-        'Panel19
-        '
-        Me.Panel19.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel19.Controls.Add(Me.Label25)
-        Me.Panel19.Controls.Add(Me.Label27)
-        Me.Panel19.Controls.Add(Me.txtAmount5)
-        Me.Panel19.Controls.Add(Me.txtDesc5)
-        Me.Panel19.Location = New System.Drawing.Point(7, 203)
-        Me.Panel19.Name = "Panel19"
-        Me.Panel19.Size = New System.Drawing.Size(698, 33)
-        Me.Panel19.TabIndex = 63
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Segoe Condensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.ForeColor = System.Drawing.Color.Black
-        Me.Label25.Location = New System.Drawing.Point(19, 8)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(84, 19)
-        Me.Label25.TabIndex = 2
-        Me.Label25.Text = "Description 5"
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(529, 8)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(49, 15)
-        Me.Label27.TabIndex = 3
-        Me.Label27.Text = "Amount"
-        '
-        'txtAmount5
-        '
-        Me.txtAmount5.Location = New System.Drawing.Point(597, 4)
-        Me.txtAmount5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtAmount5.Name = "txtAmount5"
-        Me.txtAmount5.Size = New System.Drawing.Size(97, 23)
-        Me.txtAmount5.TabIndex = 18
-        Me.txtAmount5.Text = "00.00"
-        Me.txtAmount5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtDesc5
-        '
-        Me.txtDesc5.Location = New System.Drawing.Point(122, 4)
-        Me.txtDesc5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtDesc5.Name = "txtDesc5"
-        Me.txtDesc5.Size = New System.Drawing.Size(399, 23)
-        Me.txtDesc5.TabIndex = 16
-        '
-        'Panel18
-        '
-        Me.Panel18.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel18.Controls.Add(Me.Label21)
-        Me.Panel18.Controls.Add(Me.Label23)
-        Me.Panel18.Controls.Add(Me.txtDesc4)
-        Me.Panel18.Controls.Add(Me.txtAmount4)
-        Me.Panel18.Location = New System.Drawing.Point(7, 166)
-        Me.Panel18.Name = "Panel18"
-        Me.Panel18.Size = New System.Drawing.Size(698, 33)
-        Me.Panel18.TabIndex = 62
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Segoe Condensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(19, 8)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(84, 19)
-        Me.Label21.TabIndex = 2
-        Me.Label21.Text = "Description 4"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(529, 8)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(49, 15)
-        Me.Label23.TabIndex = 3
-        Me.Label23.Text = "Amount"
-        '
-        'txtDesc4
-        '
-        Me.txtDesc4.Location = New System.Drawing.Point(122, 4)
-        Me.txtDesc4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtDesc4.Name = "txtDesc4"
-        Me.txtDesc4.Size = New System.Drawing.Size(399, 23)
-        Me.txtDesc4.TabIndex = 12
-        '
-        'txtAmount4
-        '
-        Me.txtAmount4.Location = New System.Drawing.Point(597, 4)
-        Me.txtAmount4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtAmount4.Name = "txtAmount4"
-        Me.txtAmount4.Size = New System.Drawing.Size(97, 23)
-        Me.txtAmount4.TabIndex = 14
-        Me.txtAmount4.Text = "00.00"
-        Me.txtAmount4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Panel17
-        '
-        Me.Panel17.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel17.Controls.Add(Me.Label16)
-        Me.Panel17.Controls.Add(Me.Label18)
-        Me.Panel17.Controls.Add(Me.txtDesc3)
-        Me.Panel17.Controls.Add(Me.txtAmount3)
-        Me.Panel17.Location = New System.Drawing.Point(7, 127)
-        Me.Panel17.Name = "Panel17"
-        Me.Panel17.Size = New System.Drawing.Size(698, 33)
-        Me.Panel17.TabIndex = 61
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Segoe Condensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.Color.Black
-        Me.Label16.Location = New System.Drawing.Point(19, 8)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(84, 19)
-        Me.Label16.TabIndex = 2
-        Me.Label16.Text = "Description 3"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(529, 8)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(49, 15)
-        Me.Label18.TabIndex = 3
-        Me.Label18.Text = "Amount"
-        '
-        'txtDesc3
-        '
-        Me.txtDesc3.Location = New System.Drawing.Point(122, 4)
-        Me.txtDesc3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtDesc3.Name = "txtDesc3"
-        Me.txtDesc3.Size = New System.Drawing.Size(399, 23)
-        Me.txtDesc3.TabIndex = 8
-        '
-        'txtAmount3
-        '
-        Me.txtAmount3.Location = New System.Drawing.Point(597, 4)
-        Me.txtAmount3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtAmount3.Name = "txtAmount3"
-        Me.txtAmount3.Size = New System.Drawing.Size(97, 23)
-        Me.txtAmount3.TabIndex = 10
-        Me.txtAmount3.Text = "00.00"
-        Me.txtAmount3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Panel16
-        '
-        Me.Panel16.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel16.Controls.Add(Me.Label13)
-        Me.Panel16.Controls.Add(Me.Label20)
-        Me.Panel16.Controls.Add(Me.txtDesc2)
-        Me.Panel16.Controls.Add(Me.txtAmount2)
-        Me.Panel16.Location = New System.Drawing.Point(7, 87)
-        Me.Panel16.Name = "Panel16"
-        Me.Panel16.Size = New System.Drawing.Size(698, 33)
-        Me.Panel16.TabIndex = 60
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Segoe Condensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(19, 8)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(84, 19)
-        Me.Label13.TabIndex = 2
-        Me.Label13.Text = "Description 2"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(529, 8)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(49, 15)
-        Me.Label20.TabIndex = 3
-        Me.Label20.Text = "Amount"
-        '
-        'txtDesc2
-        '
-        Me.txtDesc2.Location = New System.Drawing.Point(122, 4)
-        Me.txtDesc2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtDesc2.Name = "txtDesc2"
-        Me.txtDesc2.Size = New System.Drawing.Size(399, 23)
-        Me.txtDesc2.TabIndex = 4
-        '
-        'txtAmount2
-        '
-        Me.txtAmount2.Location = New System.Drawing.Point(597, 4)
-        Me.txtAmount2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtAmount2.Name = "txtAmount2"
-        Me.txtAmount2.Size = New System.Drawing.Size(97, 23)
-        Me.txtAmount2.TabIndex = 6
-        Me.txtAmount2.Text = "00.00"
-        Me.txtAmount2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.txtDesc1)
-        Me.Panel1.Controls.Add(Me.Label14)
-        Me.Panel1.Controls.Add(Me.txtAmount1)
-        Me.Panel1.Location = New System.Drawing.Point(7, 49)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(698, 33)
-        Me.Panel1.TabIndex = 59
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe Condensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(19, 8)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(84, 19)
-        Me.Label5.TabIndex = 2
-        Me.Label5.Text = "Description 1"
-        '
-        'txtDesc1
-        '
-        Me.txtDesc1.Location = New System.Drawing.Point(122, 3)
-        Me.txtDesc1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtDesc1.Name = "txtDesc1"
-        Me.txtDesc1.Size = New System.Drawing.Size(399, 23)
-        Me.txtDesc1.TabIndex = 0
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(529, 8)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(49, 15)
-        Me.Label14.TabIndex = 3
-        Me.Label14.Text = "Amount"
-        '
-        'txtAmount1
-        '
-        Me.txtAmount1.Location = New System.Drawing.Point(597, 3)
-        Me.txtAmount1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtAmount1.Name = "txtAmount1"
-        Me.txtAmount1.Size = New System.Drawing.Size(97, 23)
-        Me.txtAmount1.TabIndex = 2
-        Me.txtAmount1.Text = "00.00"
-        Me.txtAmount1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Navy
-        Me.Label4.Location = New System.Drawing.Point(7, 24)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(95, 22)
-        Me.Label4.TabIndex = 51
-        Me.Label4.Text = "OTHER FEES"
-        '
-        'TabPage3
-        '
-        Me.TabPage3.Controls.Add(Me.GroupBox1)
-        Me.TabPage3.Controls.Add(Me.Panel21)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(990, 504)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Discounts"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.lblDiscTotal)
-        Me.GroupBox1.Controls.Add(Me.Label33)
-        Me.GroupBox1.Controls.Add(Me.txtDiscAmount5)
-        Me.GroupBox1.Controls.Add(Me.Label37)
-        Me.GroupBox1.Controls.Add(Me.txtDisc5)
-        Me.GroupBox1.Controls.Add(Me.Label38)
-        Me.GroupBox1.Controls.Add(Me.txtDiscAmount4)
-        Me.GroupBox1.Controls.Add(Me.Label39)
-        Me.GroupBox1.Controls.Add(Me.txtDisc4)
-        Me.GroupBox1.Controls.Add(Me.Label40)
-        Me.GroupBox1.Controls.Add(Me.txtDiscAmount3)
-        Me.GroupBox1.Controls.Add(Me.Label41)
-        Me.GroupBox1.Controls.Add(Me.txtDisc3)
-        Me.GroupBox1.Controls.Add(Me.Label42)
-        Me.GroupBox1.Controls.Add(Me.txtDiscAmount2)
-        Me.GroupBox1.Controls.Add(Me.Label43)
-        Me.GroupBox1.Controls.Add(Me.txtDisc2)
-        Me.GroupBox1.Controls.Add(Me.Label44)
-        Me.GroupBox1.Controls.Add(Me.txtDiscAmount1)
-        Me.GroupBox1.Controls.Add(Me.Label45)
-        Me.GroupBox1.Controls.Add(Me.txtDisc1)
-        Me.GroupBox1.Location = New System.Drawing.Point(33, 96)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(720, 322)
-        Me.GroupBox1.TabIndex = 14
-        Me.GroupBox1.TabStop = False
-        '
-        'lblDiscTotal
-        '
-        Me.lblDiscTotal.AutoSize = True
-        Me.lblDiscTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDiscTotal.ForeColor = System.Drawing.Color.Blue
-        Me.lblDiscTotal.Location = New System.Drawing.Point(441, 252)
-        Me.lblDiscTotal.Name = "lblDiscTotal"
-        Me.lblDiscTotal.Size = New System.Drawing.Size(206, 55)
-        Me.lblDiscTotal.TabIndex = 20
-        Me.lblDiscTotal.Tag = ""
-        Me.lblDiscTotal.Text = "0000.00"
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Location = New System.Drawing.Point(494, 212)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(49, 15)
-        Me.Label33.TabIndex = 19
-        Me.Label33.Text = "Amount"
-        '
-        'txtDiscAmount5
-        '
-        Me.txtDiscAmount5.Location = New System.Drawing.Point(576, 208)
-        Me.txtDiscAmount5.Name = "txtDiscAmount5"
-        Me.txtDiscAmount5.Size = New System.Drawing.Size(124, 23)
-        Me.txtDiscAmount5.TabIndex = 18
-        Me.txtDiscAmount5.Text = "0.0"
-        Me.txtDiscAmount5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(18, 212)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(66, 15)
-        Me.Label37.TabIndex = 17
-        Me.Label37.Text = "Discount 5"
-        '
-        'txtDisc5
-        '
-        Me.txtDisc5.Location = New System.Drawing.Point(105, 208)
-        Me.txtDisc5.Name = "txtDisc5"
-        Me.txtDisc5.Size = New System.Drawing.Size(343, 23)
-        Me.txtDisc5.TabIndex = 16
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(494, 168)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(49, 15)
-        Me.Label38.TabIndex = 15
-        Me.Label38.Text = "Amount"
-        '
-        'txtDiscAmount4
-        '
-        Me.txtDiscAmount4.Location = New System.Drawing.Point(576, 165)
-        Me.txtDiscAmount4.Name = "txtDiscAmount4"
-        Me.txtDiscAmount4.Size = New System.Drawing.Size(124, 23)
-        Me.txtDiscAmount4.TabIndex = 14
-        Me.txtDiscAmount4.Text = "0.0"
-        Me.txtDiscAmount4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(18, 168)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(66, 15)
-        Me.Label39.TabIndex = 13
-        Me.Label39.Text = "Discount 4"
-        '
-        'txtDisc4
-        '
-        Me.txtDisc4.Location = New System.Drawing.Point(105, 165)
-        Me.txtDisc4.Name = "txtDisc4"
-        Me.txtDisc4.Size = New System.Drawing.Size(343, 23)
-        Me.txtDisc4.TabIndex = 12
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(494, 125)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(49, 15)
-        Me.Label40.TabIndex = 11
-        Me.Label40.Text = "Amount"
-        '
-        'txtDiscAmount3
-        '
-        Me.txtDiscAmount3.Location = New System.Drawing.Point(576, 123)
-        Me.txtDiscAmount3.Name = "txtDiscAmount3"
-        Me.txtDiscAmount3.Size = New System.Drawing.Size(124, 23)
-        Me.txtDiscAmount3.TabIndex = 10
-        Me.txtDiscAmount3.Text = "0.0"
-        Me.txtDiscAmount3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(18, 125)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(66, 15)
-        Me.Label41.TabIndex = 9
-        Me.Label41.Text = "Discount 3"
-        '
-        'txtDisc3
-        '
-        Me.txtDisc3.Location = New System.Drawing.Point(105, 123)
-        Me.txtDisc3.Name = "txtDisc3"
-        Me.txtDisc3.Size = New System.Drawing.Size(343, 23)
-        Me.txtDisc3.TabIndex = 8
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(494, 84)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(49, 15)
-        Me.Label42.TabIndex = 7
-        Me.Label42.Text = "Amount"
-        '
-        'txtDiscAmount2
-        '
-        Me.txtDiscAmount2.Location = New System.Drawing.Point(576, 81)
-        Me.txtDiscAmount2.Name = "txtDiscAmount2"
-        Me.txtDiscAmount2.Size = New System.Drawing.Size(124, 23)
-        Me.txtDiscAmount2.TabIndex = 6
-        Me.txtDiscAmount2.Text = "0.0"
-        Me.txtDiscAmount2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label43
-        '
-        Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(18, 84)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(66, 15)
-        Me.Label43.TabIndex = 5
-        Me.Label43.Text = "Discount 2"
-        '
-        'txtDisc2
-        '
-        Me.txtDisc2.Location = New System.Drawing.Point(105, 81)
-        Me.txtDisc2.Name = "txtDisc2"
-        Me.txtDisc2.Size = New System.Drawing.Size(343, 23)
-        Me.txtDisc2.TabIndex = 4
-        '
-        'Label44
-        '
-        Me.Label44.AutoSize = True
-        Me.Label44.Location = New System.Drawing.Point(494, 42)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(49, 15)
-        Me.Label44.TabIndex = 3
-        Me.Label44.Text = "Amount"
-        '
-        'txtDiscAmount1
-        '
-        Me.txtDiscAmount1.Location = New System.Drawing.Point(576, 39)
-        Me.txtDiscAmount1.Name = "txtDiscAmount1"
-        Me.txtDiscAmount1.Size = New System.Drawing.Size(124, 23)
-        Me.txtDiscAmount1.TabIndex = 2
-        Me.txtDiscAmount1.Text = "0.0"
-        Me.txtDiscAmount1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label45
-        '
-        Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(18, 42)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(66, 15)
-        Me.Label45.TabIndex = 1
-        Me.Label45.Text = "Discount 1"
-        '
-        'txtDisc1
-        '
-        Me.txtDisc1.Location = New System.Drawing.Point(105, 39)
-        Me.txtDisc1.Name = "txtDisc1"
-        Me.txtDisc1.Size = New System.Drawing.Size(343, 23)
-        Me.txtDisc1.TabIndex = 0
-        '
-        'Panel21
-        '
-        Me.Panel21.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Panel21.Controls.Add(Me.Label46)
-        Me.Panel21.Location = New System.Drawing.Point(33, 42)
-        Me.Panel21.Name = "Panel21"
-        Me.Panel21.Size = New System.Drawing.Size(720, 42)
-        Me.Panel21.TabIndex = 13
-        '
-        'Label46
-        '
-        Me.Label46.AutoSize = True
-        Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label46.ForeColor = System.Drawing.Color.White
-        Me.Label46.Location = New System.Drawing.Point(238, 8)
-        Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(185, 31)
-        Me.Label46.TabIndex = 0
-        Me.Label46.Text = "DISCOUNTS"
         '
         'ToolStrip1
         '
@@ -1763,7 +903,6 @@ Partial Class frmBilling
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
         Me.Panel20.ResumeLayout(False)
         Me.Panel20.PerformLayout()
         Me.Panel15.ResumeLayout(False)
@@ -1776,12 +915,6 @@ Partial Class frmBilling
         Me.Panel12.PerformLayout()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
         Me.Panel5.ResumeLayout(False)
@@ -1794,23 +927,6 @@ Partial Class frmBilling
         Me.Panel8.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        Me.Panel19.ResumeLayout(False)
-        Me.Panel19.PerformLayout()
-        Me.Panel18.ResumeLayout(False)
-        Me.Panel18.PerformLayout()
-        Me.Panel17.ResumeLayout(False)
-        Me.Panel17.PerformLayout()
-        Me.Panel16.ResumeLayout(False)
-        Me.Panel16.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.TabPage3.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.Panel21.ResumeLayout(False)
-        Me.Panel21.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
@@ -1831,37 +947,15 @@ Partial Class frmBilling
     Friend WithEvents btnCompute As System.Windows.Forms.Button
     Friend WithEvents txtPayments As System.Windows.Forms.TextBox
     Friend WithEvents txtTotalAcct As System.Windows.Forms.TextBox
-    Friend WithEvents txtLab As System.Windows.Forms.TextBox
-    Friend WithEvents txtTuition As System.Windows.Forms.TextBox
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents txtTotalLabUnits As System.Windows.Forms.TextBox
-    Friend WithEvents txtTotalLecUnits As System.Windows.Forms.TextBox
-    Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
     Friend WithEvents lvAccts As System.Windows.Forms.ListView
     Friend WithEvents btnAddFees As System.Windows.Forms.Button
     Friend WithEvents btnRemoveFees As System.Windows.Forms.Button
     Friend WithEvents txtTotalFees As System.Windows.Forms.TextBox
-    Friend WithEvents txtLabRate As System.Windows.Forms.TextBox
-    Friend WithEvents txtLecRate As System.Windows.Forms.TextBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtOldAccount As System.Windows.Forms.TextBox
     Friend WithEvents txtBalance As System.Windows.Forms.TextBox
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
-    Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents txtAmount1 As System.Windows.Forms.TextBox
-    Friend WithEvents txtDesc1 As System.Windows.Forms.TextBox
-    Friend WithEvents txtAmount2 As System.Windows.Forms.TextBox
-    Friend WithEvents txtDesc2 As System.Windows.Forms.TextBox
-    Friend WithEvents txtAmount5 As System.Windows.Forms.TextBox
-    Friend WithEvents txtDesc5 As System.Windows.Forms.TextBox
-    Friend WithEvents txtAmount4 As System.Windows.Forms.TextBox
-    Friend WithEvents txtDesc4 As System.Windows.Forms.TextBox
-    Friend WithEvents txtAmount3 As System.Windows.Forms.TextBox
-    Friend WithEvents txtDesc3 As System.Windows.Forms.TextBox
     Friend WithEvents txtDiscount As System.Windows.Forms.TextBox
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents btnOldAcct As System.Windows.Forms.Button
@@ -1885,14 +979,7 @@ Partial Class frmBilling
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents txtInstallmentFee As System.Windows.Forms.TextBox
     Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents Label36 As System.Windows.Forms.Label
-    Friend WithEvents cboPaymentMode As System.Windows.Forms.ComboBox
     Friend WithEvents lblMajor As System.Windows.Forms.Label
-    Friend WithEvents Panel4 As System.Windows.Forms.Panel
-    Friend WithEvents Label26 As System.Windows.Forms.Label
-    Friend WithEvents Label32 As System.Windows.Forms.Label
-    Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents Panel7 As System.Windows.Forms.Panel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Panel8 As System.Windows.Forms.Panel
@@ -1912,49 +999,6 @@ Partial Class frmBilling
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Panel15 As System.Windows.Forms.Panel
     Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents txtDiscountPercentage As System.Windows.Forms.TextBox
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Panel16 As System.Windows.Forms.Panel
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Label20 As System.Windows.Forms.Label
-    Friend WithEvents Panel17 As System.Windows.Forms.Panel
-    Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents txtTotalAdditional As System.Windows.Forms.Label
-    Friend WithEvents Panel18 As System.Windows.Forms.Panel
-    Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents Label23 As System.Windows.Forms.Label
-    Friend WithEvents Panel19 As System.Windows.Forms.Panel
-    Friend WithEvents Label25 As System.Windows.Forms.Label
-    Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents Panel20 As System.Windows.Forms.Panel
     Friend WithEvents Label28 As System.Windows.Forms.Label
-    Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents lblDiscTotal As System.Windows.Forms.Label
-    Friend WithEvents Label33 As System.Windows.Forms.Label
-    Friend WithEvents txtDiscAmount5 As System.Windows.Forms.TextBox
-    Friend WithEvents Label37 As System.Windows.Forms.Label
-    Friend WithEvents txtDisc5 As System.Windows.Forms.TextBox
-    Friend WithEvents Label38 As System.Windows.Forms.Label
-    Friend WithEvents txtDiscAmount4 As System.Windows.Forms.TextBox
-    Friend WithEvents Label39 As System.Windows.Forms.Label
-    Friend WithEvents txtDisc4 As System.Windows.Forms.TextBox
-    Friend WithEvents Label40 As System.Windows.Forms.Label
-    Friend WithEvents txtDiscAmount3 As System.Windows.Forms.TextBox
-    Friend WithEvents Label41 As System.Windows.Forms.Label
-    Friend WithEvents txtDisc3 As System.Windows.Forms.TextBox
-    Friend WithEvents Label42 As System.Windows.Forms.Label
-    Friend WithEvents txtDiscAmount2 As System.Windows.Forms.TextBox
-    Friend WithEvents Label43 As System.Windows.Forms.Label
-    Friend WithEvents txtDisc2 As System.Windows.Forms.TextBox
-    Friend WithEvents Label44 As System.Windows.Forms.Label
-    Friend WithEvents txtDiscAmount1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label45 As System.Windows.Forms.Label
-    Friend WithEvents txtDisc1 As System.Windows.Forms.TextBox
-    Friend WithEvents Panel21 As System.Windows.Forms.Panel
-    Friend WithEvents Label46 As System.Windows.Forms.Label
-    Friend WithEvents lblSettingsID As System.Windows.Forms.Label
 End Class

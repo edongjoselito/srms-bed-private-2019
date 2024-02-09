@@ -205,7 +205,7 @@ Partial Class frmSemStudent
         Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(92, 28)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(209, 29)
+        Me.Label2.Size = New System.Drawing.Size(166, 23)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "ENROLMENT FORM"
         '
@@ -237,7 +237,7 @@ Partial Class frmSemStudent
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1154, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1154, 24)
         Me.MenuStrip1.TabIndex = 3
         Me.MenuStrip1.Text = "MenuStrip1"
         Me.MenuStrip1.Visible = False
@@ -246,28 +246,28 @@ Partial Class frmSemStudent
         '
         Me.MenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.ReloadToolStripMenuItem, Me.SaveToolStripMenuItem})
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
-        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(60, 24)
+        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.MenuToolStripMenuItem.Text = "Menu"
         '
         'NewToolStripMenuItem
         '
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         Me.NewToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.NewToolStripMenuItem.Text = "New"
         '
         'ReloadToolStripMenuItem
         '
         Me.ReloadToolStripMenuItem.Name = "ReloadToolStripMenuItem"
         Me.ReloadToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.R), System.Windows.Forms.Keys)
-        Me.ReloadToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.ReloadToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.ReloadToolStripMenuItem.Text = "Reload"
         '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
         Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'Panel7
@@ -284,10 +284,10 @@ Partial Class frmSemStudent
         Me.StatusStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(178, Byte), Integer), CType(CType(190, Byte), Integer), CType(CType(195, Byte), Integer))
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 657)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 662)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 16, 0)
-        Me.StatusStrip1.Size = New System.Drawing.Size(1154, 27)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1154, 22)
         Me.StatusStrip1.TabIndex = 68
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -296,7 +296,7 @@ Partial Class frmSemStudent
         Me.ToolStripStatusLabel1.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripStatusLabel1.ForeColor = System.Drawing.Color.DarkRed
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(332, 21)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(269, 17)
         Me.ToolStripStatusLabel1.Text = "RELOAD THE FORM [ Alt + R ] | SAVE [ Ctrl + S ]"
         '
         'lblSem
@@ -305,7 +305,7 @@ Partial Class frmSemStudent
         Me.lblSem.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSem.Location = New System.Drawing.Point(657, 243)
         Me.lblSem.Name = "lblSem"
-        Me.lblSem.Size = New System.Drawing.Size(0, 28)
+        Me.lblSem.Size = New System.Drawing.Size(0, 23)
         Me.lblSem.TabIndex = 30
         '
         'btnAccecelrated
@@ -320,6 +320,7 @@ Partial Class frmSemStudent
         Me.btnAccecelrated.TabIndex = 30
         Me.btnAccecelrated.Text = "ACCELERATED"
         Me.btnAccecelrated.UseVisualStyleBackColor = False
+        Me.btnAccecelrated.Visible = False
         '
         'btnDropped
         '
@@ -333,6 +334,7 @@ Partial Class frmSemStudent
         Me.btnDropped.TabIndex = 29
         Me.btnDropped.Text = "DROP"
         Me.btnDropped.UseVisualStyleBackColor = False
+        Me.btnDropped.Visible = False
         '
         'lblID
         '
@@ -341,7 +343,7 @@ Partial Class frmSemStudent
         Me.lblID.Location = New System.Drawing.Point(468, 176)
         Me.lblID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(23, 20)
+        Me.lblID.Size = New System.Drawing.Size(17, 15)
         Me.lblID.TabIndex = 7
         Me.lblID.Text = "ID"
         Me.lblID.Visible = False
@@ -354,7 +356,7 @@ Partial Class frmSemStudent
         Me.Label1.Location = New System.Drawing.Point(35, 216)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(141, 21)
+        Me.Label1.Size = New System.Drawing.Size(118, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "STUDENT NUMBER"
         '
@@ -367,7 +369,7 @@ Partial Class frmSemStudent
         Me.mskStudentNumber.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.mskStudentNumber.Name = "mskStudentNumber"
         Me.mskStudentNumber.ReadOnly = True
-        Me.mskStudentNumber.Size = New System.Drawing.Size(195, 28)
+        Me.mskStudentNumber.Size = New System.Drawing.Size(195, 24)
         Me.mskStudentNumber.TabIndex = 1
         '
         'txtLastName
@@ -380,7 +382,7 @@ Partial Class frmSemStudent
         Me.txtLastName.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.ReadOnly = True
-        Me.txtLastName.Size = New System.Drawing.Size(195, 28)
+        Me.txtLastName.Size = New System.Drawing.Size(195, 24)
         Me.txtLastName.TabIndex = 4
         '
         'Label21
@@ -391,7 +393,7 @@ Partial Class frmSemStudent
         Me.Label21.Location = New System.Drawing.Point(795, 252)
         Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(91, 21)
+        Me.Label21.Size = New System.Drawing.Size(66, 15)
         Me.Label21.TabIndex = 0
         Me.Label21.Text = "LAST NAME"
         '
@@ -405,7 +407,7 @@ Partial Class frmSemStudent
         Me.txtMName.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.txtMName.Name = "txtMName"
         Me.txtMName.ReadOnly = True
-        Me.txtMName.Size = New System.Drawing.Size(195, 28)
+        Me.txtMName.Size = New System.Drawing.Size(195, 24)
         Me.txtMName.TabIndex = 3
         '
         'Label20
@@ -416,7 +418,7 @@ Partial Class frmSemStudent
         Me.Label20.Location = New System.Drawing.Point(421, 252)
         Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(112, 21)
+        Me.Label20.Size = New System.Drawing.Size(84, 15)
         Me.Label20.TabIndex = 0
         Me.Label20.Text = "MIDDLE NAME"
         '
@@ -428,7 +430,7 @@ Partial Class frmSemStudent
         Me.Label19.Location = New System.Drawing.Point(35, 251)
         Me.Label19.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(95, 21)
+        Me.Label19.Size = New System.Drawing.Size(78, 17)
         Me.Label19.TabIndex = 0
         Me.Label19.Text = "FIRST NAME"
         '
@@ -442,7 +444,7 @@ Partial Class frmSemStudent
         Me.txtFname.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.txtFname.Name = "txtFname"
         Me.txtFname.ReadOnly = True
-        Me.txtFname.Size = New System.Drawing.Size(195, 28)
+        Me.txtFname.Size = New System.Drawing.Size(195, 24)
         Me.txtFname.TabIndex = 2
         '
         'cbo4Ps
@@ -457,7 +459,7 @@ Partial Class frmSemStudent
         Me.cbo4Ps.Location = New System.Drawing.Point(634, 354)
         Me.cbo4Ps.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cbo4Ps.Name = "cbo4Ps"
-        Me.cbo4Ps.Size = New System.Drawing.Size(68, 29)
+        Me.cbo4Ps.Size = New System.Drawing.Size(68, 25)
         Me.cbo4Ps.TabIndex = 12
         '
         'Label25
@@ -468,7 +470,7 @@ Partial Class frmSemStudent
         Me.Label25.Location = New System.Drawing.Point(585, 357)
         Me.Label25.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(43, 21)
+        Me.Label25.Size = New System.Drawing.Size(33, 15)
         Me.Label25.TabIndex = 18
         Me.Label25.Text = "4Ps?"
         '
@@ -484,7 +486,7 @@ Partial Class frmSemStudent
         Me.cboRepeater.Location = New System.Drawing.Point(1015, 354)
         Me.cboRepeater.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboRepeater.Name = "cboRepeater"
-        Me.cboRepeater.Size = New System.Drawing.Size(72, 29)
+        Me.cboRepeater.Size = New System.Drawing.Size(72, 25)
         Me.cboRepeater.TabIndex = 14
         '
         'cboTransferee
@@ -499,7 +501,7 @@ Partial Class frmSemStudent
         Me.cboTransferee.Location = New System.Drawing.Point(846, 354)
         Me.cboTransferee.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboTransferee.Name = "cboTransferee"
-        Me.cboTransferee.Size = New System.Drawing.Size(68, 29)
+        Me.cboTransferee.Size = New System.Drawing.Size(68, 25)
         Me.cboTransferee.TabIndex = 13
         '
         'Label15
@@ -510,7 +512,7 @@ Partial Class frmSemStudent
         Me.Label15.Location = New System.Drawing.Point(735, 357)
         Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(105, 21)
+        Me.Label15.Size = New System.Drawing.Size(78, 15)
         Me.Label15.TabIndex = 24
         Me.Label15.Text = "TRANSFEREE?"
         '
@@ -522,7 +524,7 @@ Partial Class frmSemStudent
         Me.Label26.Location = New System.Drawing.Point(923, 357)
         Me.Label26.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(86, 21)
+        Me.Label26.Size = New System.Drawing.Size(64, 15)
         Me.Label26.TabIndex = 26
         Me.Label26.Text = "REPEATER?"
         '
@@ -549,7 +551,7 @@ Partial Class frmSemStudent
         Me.cboSection.Location = New System.Drawing.Point(867, 285)
         Me.cboSection.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboSection.Name = "cboSection"
-        Me.cboSection.Size = New System.Drawing.Size(179, 29)
+        Me.cboSection.Size = New System.Drawing.Size(179, 25)
         Me.cboSection.TabIndex = 7
         '
         'Label22
@@ -560,7 +562,7 @@ Partial Class frmSemStudent
         Me.Label22.Location = New System.Drawing.Point(799, 288)
         Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(69, 21)
+        Me.Label22.Size = New System.Drawing.Size(53, 15)
         Me.Label22.TabIndex = 0
         Me.Label22.Text = "SECTION"
         '
@@ -572,7 +574,7 @@ Partial Class frmSemStudent
         Me.Label3.Location = New System.Drawing.Point(35, 287)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(105, 21)
+        Me.Label3.Size = New System.Drawing.Size(88, 17)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "DEPARTMENT"
         '
@@ -587,7 +589,7 @@ Partial Class frmSemStudent
         Me.cboCourse.Location = New System.Drawing.Point(182, 285)
         Me.cboCourse.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboCourse.Name = "cboCourse"
-        Me.cboCourse.Size = New System.Drawing.Size(309, 29)
+        Me.cboCourse.Size = New System.Drawing.Size(309, 25)
         Me.cboCourse.TabIndex = 5
         '
         'Label5
@@ -598,7 +600,7 @@ Partial Class frmSemStudent
         Me.Label5.Location = New System.Drawing.Point(526, 288)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(102, 21)
+        Me.Label5.Size = New System.Drawing.Size(75, 15)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "GRADE LEVEL"
         '
@@ -613,7 +615,7 @@ Partial Class frmSemStudent
         Me.cboYear.Location = New System.Drawing.Point(634, 285)
         Me.cboYear.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboYear.Name = "cboYear"
-        Me.cboYear.Size = New System.Drawing.Size(133, 27)
+        Me.cboYear.Size = New System.Drawing.Size(133, 23)
         Me.cboYear.TabIndex = 6
         '
         'lblAdviser
@@ -622,7 +624,7 @@ Partial Class frmSemStudent
         Me.lblAdviser.Location = New System.Drawing.Point(182, 319)
         Me.lblAdviser.Name = "lblAdviser"
         Me.lblAdviser.ReadOnly = True
-        Me.lblAdviser.Size = New System.Drawing.Size(309, 28)
+        Me.lblAdviser.Size = New System.Drawing.Size(309, 24)
         Me.lblAdviser.TabIndex = 8
         Me.lblAdviser.TabStop = False
         '
@@ -634,7 +636,7 @@ Partial Class frmSemStudent
         Me.Label28.Location = New System.Drawing.Point(35, 323)
         Me.Label28.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(69, 21)
+        Me.Label28.Size = New System.Drawing.Size(58, 17)
         Me.Label28.TabIndex = 0
         Me.Label28.Text = "ADVISER"
         '
@@ -673,7 +675,7 @@ Partial Class frmSemStudent
         Me.cboScholarship.Location = New System.Drawing.Point(634, 319)
         Me.cboScholarship.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboScholarship.Name = "cboScholarship"
-        Me.cboScholarship.Size = New System.Drawing.Size(412, 29)
+        Me.cboScholarship.Size = New System.Drawing.Size(412, 25)
         Me.cboScholarship.TabIndex = 9
         '
         'Label31
@@ -684,7 +686,7 @@ Partial Class frmSemStudent
         Me.Label31.Location = New System.Drawing.Point(521, 324)
         Me.Label31.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(107, 21)
+        Me.Label31.Size = New System.Drawing.Size(81, 15)
         Me.Label31.TabIndex = 14
         Me.Label31.Text = "SCHOLARSHIP"
         '
@@ -696,7 +698,7 @@ Partial Class frmSemStudent
         Me.Label23.Location = New System.Drawing.Point(280, 357)
         Me.Label23.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(99, 21)
+        Me.Label23.Size = New System.Drawing.Size(75, 15)
         Me.Label23.TabIndex = 16
         Me.Label23.Text = "IP MEMBER?"
         '
@@ -712,7 +714,7 @@ Partial Class frmSemStudent
         Me.cboIP.Location = New System.Drawing.Point(385, 354)
         Me.cboIP.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboIP.Name = "cboIP"
-        Me.cboIP.Size = New System.Drawing.Size(106, 29)
+        Me.cboIP.Size = New System.Drawing.Size(106, 25)
         Me.cboIP.TabIndex = 11
         '
         'Label12
@@ -723,7 +725,7 @@ Partial Class frmSemStudent
         Me.Label12.Location = New System.Drawing.Point(35, 357)
         Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(97, 21)
+        Me.Label12.Size = New System.Drawing.Size(80, 17)
         Me.Label12.TabIndex = 0
         Me.Label12.Text = "BALIK ARAL?"
         '
@@ -739,7 +741,7 @@ Partial Class frmSemStudent
         Me.cboBalikAral.Location = New System.Drawing.Point(183, 354)
         Me.cboBalikAral.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboBalikAral.Name = "cboBalikAral"
-        Me.cboBalikAral.Size = New System.Drawing.Size(91, 29)
+        Me.cboBalikAral.Size = New System.Drawing.Size(91, 25)
         Me.cboBalikAral.TabIndex = 10
         '
         'cboQualification
@@ -749,7 +751,7 @@ Partial Class frmSemStudent
         Me.cboQualification.FormattingEnabled = True
         Me.cboQualification.Location = New System.Drawing.Point(634, 388)
         Me.cboQualification.Name = "cboQualification"
-        Me.cboQualification.Size = New System.Drawing.Size(453, 29)
+        Me.cboQualification.Size = New System.Drawing.Size(453, 25)
         Me.cboQualification.TabIndex = 17
         '
         'Label7
@@ -760,7 +762,7 @@ Partial Class frmSemStudent
         Me.Label7.Location = New System.Drawing.Point(35, 390)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(55, 21)
+        Me.Label7.Size = New System.Drawing.Size(45, 17)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "TRACK"
         '
@@ -775,7 +777,7 @@ Partial Class frmSemStudent
         Me.cboTrack.Location = New System.Drawing.Point(183, 390)
         Me.cboTrack.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboTrack.Name = "cboTrack"
-        Me.cboTrack.Size = New System.Drawing.Size(308, 29)
+        Me.cboTrack.Size = New System.Drawing.Size(308, 25)
         Me.cboTrack.TabIndex = 15
         '
         'Label6
@@ -786,7 +788,7 @@ Partial Class frmSemStudent
         Me.Label6.Location = New System.Drawing.Point(35, 430)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(141, 21)
+        Me.Label6.Size = New System.Drawing.Size(115, 17)
         Me.Label6.TabIndex = 49
         Me.Label6.Text = "STUDENT'S STATUS"
         '
@@ -798,7 +800,7 @@ Partial Class frmSemStudent
         Me.Label8.Location = New System.Drawing.Point(562, 391)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(66, 21)
+        Me.Label8.Size = New System.Drawing.Size(49, 15)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "STRAND"
         '
@@ -814,7 +816,7 @@ Partial Class frmSemStudent
         Me.cboStudeStatus.Location = New System.Drawing.Point(183, 428)
         Me.cboStudeStatus.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboStudeStatus.Name = "cboStudeStatus"
-        Me.cboStudeStatus.Size = New System.Drawing.Size(308, 29)
+        Me.cboStudeStatus.Size = New System.Drawing.Size(308, 25)
         Me.cboStudeStatus.Sorted = True
         Me.cboStudeStatus.TabIndex = 16
         '
@@ -823,7 +825,7 @@ Partial Class frmSemStudent
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(420, 218)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(113, 21)
+        Me.Label4.Size = New System.Drawing.Size(91, 17)
         Me.Label4.TabIndex = 91
         Me.Label4.Text = "NEW ( Alt + N )"
         '
@@ -859,7 +861,7 @@ Partial Class frmSemStudent
         Me.lblSettingsID.AutoSize = True
         Me.lblSettingsID.Location = New System.Drawing.Point(227, 28)
         Me.lblSettingsID.Name = "lblSettingsID"
-        Me.lblSettingsID.Size = New System.Drawing.Size(79, 21)
+        Me.lblSettingsID.Size = New System.Drawing.Size(65, 17)
         Me.lblSettingsID.TabIndex = 25
         Me.lblSettingsID.Text = "SettingsID"
         '
@@ -868,7 +870,7 @@ Partial Class frmSemStudent
         Me.lblAdviserID.AutoSize = True
         Me.lblAdviserID.Location = New System.Drawing.Point(456, 59)
         Me.lblAdviserID.Name = "lblAdviserID"
-        Me.lblAdviserID.Size = New System.Drawing.Size(76, 21)
+        Me.lblAdviserID.Size = New System.Drawing.Size(62, 17)
         Me.lblAdviserID.TabIndex = 28
         Me.lblAdviserID.Text = "AdviserID"
         Me.lblAdviserID.Visible = False
@@ -883,7 +885,7 @@ Partial Class frmSemStudent
         Me.cboMajor.Location = New System.Drawing.Point(451, 16)
         Me.cboMajor.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cboMajor.Name = "cboMajor"
-        Me.cboMajor.Size = New System.Drawing.Size(248, 32)
+        Me.cboMajor.Size = New System.Drawing.Size(248, 27)
         Me.cboMajor.TabIndex = 8
         '
         'cboStatus
@@ -891,7 +893,7 @@ Partial Class frmSemStudent
         Me.cboStatus.FormattingEnabled = True
         Me.cboStatus.Location = New System.Drawing.Point(100, 78)
         Me.cboStatus.Name = "cboStatus"
-        Me.cboStatus.Size = New System.Drawing.Size(121, 29)
+        Me.cboStatus.Size = New System.Drawing.Size(121, 25)
         Me.cboStatus.TabIndex = 43
         Me.cboStatus.Text = "Enrolled"
         '
@@ -903,7 +905,7 @@ Partial Class frmSemStudent
         Me.Label9.Location = New System.Drawing.Point(404, 20)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(51, 24)
+        Me.Label9.Size = New System.Drawing.Size(42, 19)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Major"
         '
@@ -929,7 +931,7 @@ Partial Class frmSemStudent
         Me.Label10.Location = New System.Drawing.Point(247, 4)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(96, 24)
+        Me.Label10.Size = New System.Drawing.Size(79, 19)
         Me.Label10.TabIndex = 15
         Me.Label10.Text = "Exam Result"
         '
@@ -941,7 +943,7 @@ Partial Class frmSemStudent
         Me.Label11.Location = New System.Drawing.Point(27, 4)
         Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(85, 24)
+        Me.Label11.Size = New System.Drawing.Size(71, 19)
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Exam Date"
         '
@@ -952,7 +954,7 @@ Partial Class frmSemStudent
         Me.mskAssessmentDate.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.mskAssessmentDate.Mask = "00/00/0000"
         Me.mskAssessmentDate.Name = "mskAssessmentDate"
-        Me.mskAssessmentDate.Size = New System.Drawing.Size(121, 28)
+        Me.mskAssessmentDate.Size = New System.Drawing.Size(121, 24)
         Me.mskAssessmentDate.TabIndex = 19
         Me.mskAssessmentDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.mskAssessmentDate.ValidatingType = GetType(Date)
@@ -968,7 +970,7 @@ Partial Class frmSemStudent
         Me.cboAssessmentResult.Location = New System.Drawing.Point(352, 0)
         Me.cboAssessmentResult.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cboAssessmentResult.Name = "cboAssessmentResult"
-        Me.cboAssessmentResult.Size = New System.Drawing.Size(120, 32)
+        Me.cboAssessmentResult.Size = New System.Drawing.Size(120, 27)
         Me.cboAssessmentResult.Sorted = True
         Me.cboAssessmentResult.TabIndex = 20
         '
@@ -980,7 +982,7 @@ Partial Class frmSemStudent
         Me.Label13.Location = New System.Drawing.Point(226, 84)
         Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(74, 24)
+        Me.Label13.Size = New System.Drawing.Size(61, 19)
         Me.Label13.TabIndex = 48
         Me.Label13.Text = "YL Status"
         '
@@ -992,7 +994,7 @@ Partial Class frmSemStudent
         Me.Label18.Location = New System.Drawing.Point(6, 28)
         Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(98, 20)
+        Me.Label18.Size = New System.Drawing.Size(75, 15)
         Me.Label18.TabIndex = 42
         Me.Label18.Text = "Account Status"
         '
@@ -1007,7 +1009,7 @@ Partial Class frmSemStudent
         Me.cboYearStat.Location = New System.Drawing.Point(293, 81)
         Me.cboYearStat.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cboYearStat.Name = "cboYearStat"
-        Me.cboYearStat.Size = New System.Drawing.Size(107, 32)
+        Me.cboYearStat.Size = New System.Drawing.Size(107, 27)
         Me.cboYearStat.TabIndex = 11
         '
         'Panel9
@@ -1032,7 +1034,7 @@ Partial Class frmSemStudent
         Me.mskFrom.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.mskFrom.Mask = "00/00/0000"
         Me.mskFrom.Name = "mskFrom"
-        Me.mskFrom.Size = New System.Drawing.Size(121, 31)
+        Me.mskFrom.Size = New System.Drawing.Size(121, 26)
         Me.mskFrom.TabIndex = 16
         Me.mskFrom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.mskFrom.ValidatingType = GetType(Date)
@@ -1045,7 +1047,7 @@ Partial Class frmSemStudent
         Me.mskTo.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.mskTo.Mask = "00/00/0000"
         Me.mskTo.Name = "mskTo"
-        Me.mskTo.Size = New System.Drawing.Size(127, 31)
+        Me.mskTo.Size = New System.Drawing.Size(127, 26)
         Me.mskTo.TabIndex = 17
         Me.mskTo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.mskTo.ValidatingType = GetType(Date)
@@ -1058,7 +1060,7 @@ Partial Class frmSemStudent
         Me.Label14.Location = New System.Drawing.Point(242, 4)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(16, 24)
+        Me.Label14.Size = New System.Drawing.Size(14, 19)
         Me.Label14.TabIndex = 34
         Me.Label14.Text = "-"
         '
@@ -1070,7 +1072,7 @@ Partial Class frmSemStudent
         Me.Label24.Location = New System.Drawing.Point(27, 4)
         Me.Label24.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(71, 24)
+        Me.Label24.Size = New System.Drawing.Size(58, 19)
         Me.Label24.TabIndex = 0
         Me.Label24.Text = "Duration"
         '
@@ -1082,7 +1084,7 @@ Partial Class frmSemStudent
         Me.Label16.Location = New System.Drawing.Point(314, 27)
         Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(86, 20)
+        Me.Label16.Size = New System.Drawing.Size(66, 15)
         Me.Label16.TabIndex = 36
         Me.Label16.Text = "Result/Status"
         '
@@ -1094,7 +1096,7 @@ Partial Class frmSemStudent
         Me.Label17.Location = New System.Drawing.Point(18, 108)
         Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(261, 35)
+        Me.Label17.Size = New System.Drawing.Size(209, 28)
         Me.Label17.TabIndex = 51
         Me.Label17.Text = "FOR TESDA PROGRAM"
         '
@@ -1109,7 +1111,7 @@ Partial Class frmSemStudent
         Me.cboAccountStatus.Location = New System.Drawing.Point(100, 20)
         Me.cboAccountStatus.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cboAccountStatus.Name = "cboAccountStatus"
-        Me.cboAccountStatus.Size = New System.Drawing.Size(94, 27)
+        Me.cboAccountStatus.Size = New System.Drawing.Size(94, 23)
         Me.cboAccountStatus.TabIndex = 8
         '
         'Label27
@@ -1120,7 +1122,7 @@ Partial Class frmSemStudent
         Me.Label27.Location = New System.Drawing.Point(395, 146)
         Me.Label27.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(116, 20)
+        Me.Label27.Size = New System.Drawing.Size(90, 15)
         Me.Label27.TabIndex = 40
         Me.Label27.Text = "Scholarship Value"
         '
@@ -1130,7 +1132,7 @@ Partial Class frmSemStudent
         Me.txtGrantAmount.Location = New System.Drawing.Point(523, 142)
         Me.txtGrantAmount.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtGrantAmount.Name = "txtGrantAmount"
-        Me.txtGrantAmount.Size = New System.Drawing.Size(77, 28)
+        Me.txtGrantAmount.Size = New System.Drawing.Size(77, 24)
         Me.txtGrantAmount.TabIndex = 9
         Me.txtGrantAmount.Text = "0.00"
         Me.txtGrantAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -1147,11 +1149,12 @@ Partial Class frmSemStudent
         Me.btnTransferredOut.TabIndex = 93
         Me.btnTransferredOut.Text = "TRANSFERRED OUT"
         Me.btnTransferredOut.UseVisualStyleBackColor = False
+        Me.btnTransferredOut.Visible = False
         '
         'frmSemStudent
         '
         Me.AcceptButton = Me.btnSave
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1154, 684)
         Me.Controls.Add(Me.btnTransferredOut)

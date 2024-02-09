@@ -26,12 +26,12 @@ Partial Class frmMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel11 = New System.Windows.Forms.Panel()
         Me.IconButton12 = New FontAwesome.Sharp.IconButton()
+        Me.Panel11 = New System.Windows.Forms.Panel()
         Me.IconButton11 = New FontAwesome.Sharp.IconButton()
         Me.IconButton10 = New FontAwesome.Sharp.IconButton()
         Me.IconButton9 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton7 = New FontAwesome.Sharp.IconButton()
+        Me.btnSettings = New FontAwesome.Sharp.IconButton()
         Me.IconButton6 = New FontAwesome.Sharp.IconButton()
         Me.IconButton5 = New FontAwesome.Sharp.IconButton()
         Me.IconButton4 = New FontAwesome.Sharp.IconButton()
@@ -43,23 +43,19 @@ Partial Class frmMain
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.lblSchoolAddress = New System.Windows.Forms.Label()
         Me.IconButton8 = New FontAwesome.Sharp.IconButton()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblSchoolName = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.lblAccountLevel = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.stDate = New System.Windows.Forms.ToolStripStatusLabel()
         Me.stSemester = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.lblSY = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.stSY = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.stUser = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.lblPrograms = New System.Windows.Forms.Label()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -70,6 +66,7 @@ Partial Class frmMain
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.lblStudents = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -77,8 +74,6 @@ Partial Class frmMain
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
-        Me.Panel8.SuspendLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel10.SuspendLayout()
@@ -97,12 +92,12 @@ Partial Class frmMain
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(99, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Panel11)
         Me.Panel2.Controls.Add(Me.IconButton12)
+        Me.Panel2.Controls.Add(Me.Panel11)
         Me.Panel2.Controls.Add(Me.IconButton11)
         Me.Panel2.Controls.Add(Me.IconButton10)
         Me.Panel2.Controls.Add(Me.IconButton9)
-        Me.Panel2.Controls.Add(Me.IconButton7)
+        Me.Panel2.Controls.Add(Me.btnSettings)
         Me.Panel2.Controls.Add(Me.IconButton6)
         Me.Panel2.Controls.Add(Me.IconButton5)
         Me.Panel2.Controls.Add(Me.IconButton4)
@@ -116,6 +111,26 @@ Partial Class frmMain
         Me.Panel2.Size = New System.Drawing.Size(245, 827)
         Me.Panel2.TabIndex = 1
         '
+        'IconButton12
+        '
+        Me.IconButton12.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(185, Byte), Integer))
+        Me.IconButton12.FlatAppearance.BorderSize = 0
+        Me.IconButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton12.ForeColor = System.Drawing.Color.White
+        Me.IconButton12.IconChar = FontAwesome.Sharp.IconChar.Squarespace
+        Me.IconButton12.IconColor = System.Drawing.Color.White
+        Me.IconButton12.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton12.IconSize = 40
+        Me.IconButton12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton12.Location = New System.Drawing.Point(0, 455)
+        Me.IconButton12.Name = "IconButton12"
+        Me.IconButton12.Size = New System.Drawing.Size(245, 44)
+        Me.IconButton12.TabIndex = 13
+        Me.IconButton12.Text = "SWITCH SEM/SY"
+        Me.IconButton12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.IconButton12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IconButton12.UseVisualStyleBackColor = False
+        '
         'Panel11
         '
         Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(156, Byte), Integer), CType(CType(18, Byte), Integer))
@@ -123,26 +138,6 @@ Partial Class frmMain
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(245, 10)
         Me.Panel11.TabIndex = 10
-        '
-        'IconButton12
-        '
-        Me.IconButton12.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(185, Byte), Integer))
-        Me.IconButton12.FlatAppearance.BorderSize = 0
-        Me.IconButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton12.ForeColor = System.Drawing.Color.White
-        Me.IconButton12.IconChar = FontAwesome.Sharp.IconChar.Database
-        Me.IconButton12.IconColor = System.Drawing.Color.White
-        Me.IconButton12.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton12.IconSize = 40
-        Me.IconButton12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton12.Location = New System.Drawing.Point(0, 500)
-        Me.IconButton12.Name = "IconButton12"
-        Me.IconButton12.Size = New System.Drawing.Size(245, 44)
-        Me.IconButton12.TabIndex = 13
-        Me.IconButton12.Text = "MANAGE DATABASE"
-        Me.IconButton12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton12.UseVisualStyleBackColor = False
         '
         'IconButton11
         '
@@ -204,25 +199,25 @@ Partial Class frmMain
         Me.IconButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton9.UseVisualStyleBackColor = False
         '
-        'IconButton7
+        'btnSettings
         '
-        Me.IconButton7.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(185, Byte), Integer))
-        Me.IconButton7.FlatAppearance.BorderSize = 0
-        Me.IconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton7.ForeColor = System.Drawing.Color.White
-        Me.IconButton7.IconChar = FontAwesome.Sharp.IconChar.SquareVirus
-        Me.IconButton7.IconColor = System.Drawing.Color.White
-        Me.IconButton7.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton7.IconSize = 40
-        Me.IconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton7.Location = New System.Drawing.Point(0, 455)
-        Me.IconButton7.Name = "IconButton7"
-        Me.IconButton7.Size = New System.Drawing.Size(245, 44)
-        Me.IconButton7.TabIndex = 9
-        Me.IconButton7.Text = "SETTINGS"
-        Me.IconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.IconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton7.UseVisualStyleBackColor = False
+        Me.btnSettings.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(185, Byte), Integer))
+        Me.btnSettings.FlatAppearance.BorderSize = 0
+        Me.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSettings.ForeColor = System.Drawing.Color.White
+        Me.btnSettings.IconChar = FontAwesome.Sharp.IconChar.SquareVirus
+        Me.btnSettings.IconColor = System.Drawing.Color.White
+        Me.btnSettings.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnSettings.IconSize = 40
+        Me.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSettings.Location = New System.Drawing.Point(0, 500)
+        Me.btnSettings.Name = "btnSettings"
+        Me.btnSettings.Size = New System.Drawing.Size(245, 44)
+        Me.btnSettings.TabIndex = 9
+        Me.btnSettings.Text = "SETTINGS"
+        Me.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnSettings.UseVisualStyleBackColor = False
         '
         'IconButton6
         '
@@ -385,9 +380,9 @@ Partial Class frmMain
         '
         'Panel5
         '
-        Me.Panel5.Controls.Add(Me.Label9)
+        Me.Panel5.Controls.Add(Me.lblSchoolAddress)
         Me.Panel5.Controls.Add(Me.IconButton8)
-        Me.Panel5.Controls.Add(Me.Label2)
+        Me.Panel5.Controls.Add(Me.lblSchoolName)
         Me.Panel5.Controls.Add(Me.Panel6)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel5.Location = New System.Drawing.Point(245, 18)
@@ -395,15 +390,15 @@ Partial Class frmMain
         Me.Panel5.Size = New System.Drawing.Size(1060, 86)
         Me.Panel5.TabIndex = 3
         '
-        'Label9
+        'lblSchoolAddress
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(76, 50)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(258, 23)
-        Me.Label9.TabIndex = 3
-        Me.Label9.Text = "PASAY CITY, METRO MANILA, PHILIPPINES"
+        Me.lblSchoolAddress.AutoSize = True
+        Me.lblSchoolAddress.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSchoolAddress.Location = New System.Drawing.Point(76, 50)
+        Me.lblSchoolAddress.Name = "lblSchoolAddress"
+        Me.lblSchoolAddress.Size = New System.Drawing.Size(258, 23)
+        Me.lblSchoolAddress.TabIndex = 3
+        Me.lblSchoolAddress.Text = "PASAY CITY, METRO MANILA, PHILIPPINES"
         '
         'IconButton8
         '
@@ -419,18 +414,19 @@ Partial Class frmMain
         Me.IconButton8.TabIndex = 2
         Me.IconButton8.UseVisualStyleBackColor = False
         '
-        'Label2
+        'lblSchoolName
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Bahnschrift SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(75, 19)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(447, 29)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "WESLEYAN COLLEGE OF MANILA (WCM)"
+        Me.lblSchoolName.AutoSize = True
+        Me.lblSchoolName.Font = New System.Drawing.Font("Bahnschrift SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSchoolName.Location = New System.Drawing.Point(75, 19)
+        Me.lblSchoolName.Name = "lblSchoolName"
+        Me.lblSchoolName.Size = New System.Drawing.Size(447, 29)
+        Me.lblSchoolName.TabIndex = 1
+        Me.lblSchoolName.Text = "WESLEYAN COLLEGE OF MANILA (WCM)"
         '
         'Panel6
         '
+        Me.Panel6.Controls.Add(Me.lblAccountLevel)
         Me.Panel6.Controls.Add(Me.Button2)
         Me.Panel6.Controls.Add(Me.Button1)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Right
@@ -438,6 +434,16 @@ Partial Class frmMain
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(200, 86)
         Me.Panel6.TabIndex = 0
+        '
+        'lblAccountLevel
+        '
+        Me.lblAccountLevel.AutoSize = True
+        Me.lblAccountLevel.Location = New System.Drawing.Point(23, 56)
+        Me.lblAccountLevel.Name = "lblAccountLevel"
+        Me.lblAccountLevel.Size = New System.Drawing.Size(86, 17)
+        Me.lblAccountLevel.TabIndex = 4
+        Me.lblAccountLevel.Text = "Account Level"
+        Me.lblAccountLevel.Visible = False
         '
         'Button2
         '
@@ -463,7 +469,7 @@ Partial Class frmMain
         'StatusStrip1
         '
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.stDate, Me.stSemester, Me.lblSY})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.stDate, Me.stSemester, Me.stSY, Me.stUser})
         Me.StatusStrip1.Location = New System.Drawing.Point(245, 823)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(1060, 22)
@@ -482,14 +488,18 @@ Partial Class frmMain
         Me.stSemester.Size = New System.Drawing.Size(80, 17)
         Me.stSemester.Text = "First Semester"
         '
-        'lblSY
+        'stSY
         '
-        Me.lblSY.Name = "lblSY"
-        Me.lblSY.Size = New System.Drawing.Size(20, 17)
-        Me.lblSY.Text = "SY"
+        Me.stSY.Name = "stSY"
+        Me.stSY.Size = New System.Drawing.Size(20, 17)
+        Me.stSY.Text = "SY"
         '
-        'Timer1
+        'stUser
         '
+        Me.stUser.Name = "stUser"
+        Me.stUser.Size = New System.Drawing.Size(30, 17)
+        Me.stUser.Text = "User"
+        Me.stUser.Visible = False
         '
         'Label8
         '
@@ -502,58 +512,6 @@ Partial Class frmMain
         Me.Label8.Text = "DASHBOARD"
         Me.Label8.Visible = False
         '
-        'Panel8
-        '
-        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(131, Byte), Integer), CType(CType(149, Byte), Integer), CType(CType(167, Byte), Integer))
-        Me.Panel8.Controls.Add(Me.PictureBox4)
-        Me.Panel8.Controls.Add(Me.Label1)
-        Me.Panel8.Controls.Add(Me.Label3)
-        Me.Panel8.Controls.Add(Me.lblPrograms)
-        Me.Panel8.Location = New System.Drawing.Point(781, 158)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(250, 100)
-        Me.Panel8.TabIndex = 9
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Location = New System.Drawing.Point(196, 5)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(50, 54)
-        Me.PictureBox4.TabIndex = 3
-        Me.PictureBox4.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label1.Location = New System.Drawing.Point(30, 50)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(239, 17)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "_________________________________"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(29, 68)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(101, 23)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "PROGRAMS"
-        '
-        'lblPrograms
-        '
-        Me.lblPrograms.AutoSize = True
-        Me.lblPrograms.Font = New System.Drawing.Font("Calibri", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrograms.ForeColor = System.Drawing.Color.White
-        Me.lblPrograms.Location = New System.Drawing.Point(25, 14)
-        Me.lblPrograms.Name = "lblPrograms"
-        Me.lblPrograms.Size = New System.Drawing.Size(105, 45)
-        Me.lblPrograms.TabIndex = 0
-        Me.lblPrograms.Text = "0,000"
-        '
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
@@ -563,12 +521,12 @@ Partial Class frmMain
         Me.Panel9.Controls.Add(Me.lblStaff)
         Me.Panel9.Location = New System.Drawing.Point(269, 158)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(250, 100)
+        Me.Panel9.Size = New System.Drawing.Size(351, 100)
         Me.Panel9.TabIndex = 8
         '
         'PictureBox3
         '
-        Me.PictureBox3.Location = New System.Drawing.Point(196, 5)
+        Me.PictureBox3.Location = New System.Drawing.Point(296, 5)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(50, 54)
         Me.PictureBox3.TabIndex = 3
@@ -580,9 +538,9 @@ Partial Class frmMain
         Me.Label5.ForeColor = System.Drawing.SystemColors.HotTrack
         Me.Label5.Location = New System.Drawing.Point(30, 50)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(239, 17)
+        Me.Label5.Size = New System.Drawing.Size(316, 17)
         Me.Label5.TabIndex = 2
-        Me.Label5.Text = "_________________________________"
+        Me.Label5.Text = "____________________________________________"
         '
         'Label6
         '
@@ -613,14 +571,14 @@ Partial Class frmMain
         Me.Panel10.Controls.Add(Me.Label4)
         Me.Panel10.Controls.Add(Me.Label7)
         Me.Panel10.Controls.Add(Me.lblStudents)
-        Me.Panel10.Location = New System.Drawing.Point(525, 158)
+        Me.Panel10.Location = New System.Drawing.Point(652, 158)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(250, 100)
+        Me.Panel10.Size = New System.Drawing.Size(351, 100)
         Me.Panel10.TabIndex = 7
         '
         'PictureBox2
         '
-        Me.PictureBox2.Location = New System.Drawing.Point(196, 5)
+        Me.PictureBox2.Location = New System.Drawing.Point(296, 5)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(50, 54)
         Me.PictureBox2.TabIndex = 3
@@ -632,9 +590,9 @@ Partial Class frmMain
         Me.Label4.ForeColor = System.Drawing.SystemColors.HotTrack
         Me.Label4.Location = New System.Drawing.Point(30, 50)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(239, 17)
+        Me.Label4.Size = New System.Drawing.Size(316, 17)
         Me.Label4.TabIndex = 2
-        Me.Label4.Text = "_________________________________"
+        Me.Label4.Text = "____________________________________________"
         '
         'Label7
         '
@@ -658,6 +616,9 @@ Partial Class frmMain
         Me.lblStudents.TabIndex = 0
         Me.lblStudents.Text = "0,000"
         '
+        'Timer1
+        '
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -665,7 +626,6 @@ Partial Class frmMain
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1305, 845)
-        Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.Panel9)
         Me.Controls.Add(Me.Panel10)
         Me.Controls.Add(Me.Label8)
@@ -688,11 +648,9 @@ Partial Class frmMain
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
-        Me.Panel8.ResumeLayout(False)
-        Me.Panel8.PerformLayout()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -711,35 +669,28 @@ Partial Class frmMain
     Friend WithEvents Button1 As Button
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblSchoolName As Label
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton6 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton4 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton3 As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconButton7 As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnSettings As FontAwesome.Sharp.IconButton
     Friend WithEvents Button2 As Button
     Friend WithEvents Panel7 As Panel
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents stDate As ToolStripStatusLabel
-    Friend WithEvents Timer1 As Timer
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents IconButton8 As FontAwesome.Sharp.IconButton
     Friend WithEvents stSemester As ToolStripStatusLabel
-    Friend WithEvents lblSY As ToolStripStatusLabel
+    Friend WithEvents stSY As ToolStripStatusLabel
     Friend WithEvents IconButton9 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton11 As FontAwesome.Sharp.IconButton
     Friend WithEvents IconButton10 As FontAwesome.Sharp.IconButton
-    Friend WithEvents IconButton12 As FontAwesome.Sharp.IconButton
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
+    Friend WithEvents lblSchoolAddress As Label
     Friend WithEvents Panel11 As Panel
-    Friend WithEvents Panel8 As Panel
-    Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents lblPrograms As Label
     Friend WithEvents Panel9 As Panel
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label5 As Label
@@ -750,4 +701,8 @@ Partial Class frmMain
     Friend WithEvents Label4 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents lblStudents As Label
+    Friend WithEvents IconButton12 As FontAwesome.Sharp.IconButton
+    Friend WithEvents stUser As ToolStripStatusLabel
+    Friend WithEvents lblAccountLevel As Label
+    Friend WithEvents Timer1 As Timer
 End Class

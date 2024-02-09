@@ -22,8 +22,9 @@ Partial Class frmSearchPersonnel
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.lblSource = New System.Windows.Forms.Label()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.btnClose = New System.Windows.Forms.Button()
@@ -35,6 +36,7 @@ Partial Class frmSearchPersonnel
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.lblSource)
         Me.Panel3.Controls.Add(Me.txtSearch)
         Me.Panel3.Controls.Add(Me.Label12)
         Me.Panel3.Controls.Add(Me.btnClose)
@@ -43,6 +45,16 @@ Partial Class frmSearchPersonnel
         Me.Panel3.Size = New System.Drawing.Size(662, 31)
         Me.Panel3.TabIndex = 0
         '
+        'lblSource
+        '
+        Me.lblSource.AutoSize = True
+        Me.lblSource.Location = New System.Drawing.Point(388, 8)
+        Me.lblSource.Name = "lblSource"
+        Me.lblSource.Size = New System.Drawing.Size(44, 15)
+        Me.lblSource.TabIndex = 32
+        Me.lblSource.Text = "Source"
+        Me.lblSource.Visible = False
+        '
         'txtSearch
         '
         Me.txtSearch.BackColor = System.Drawing.Color.White
@@ -50,7 +62,7 @@ Partial Class frmSearchPersonnel
         Me.txtSearch.ForeColor = System.Drawing.Color.Black
         Me.txtSearch.Location = New System.Drawing.Point(96, 3)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(171, 27)
+        Me.txtSearch.Size = New System.Drawing.Size(171, 23)
         Me.txtSearch.TabIndex = 1
         '
         'Label12
@@ -60,7 +72,7 @@ Partial Class frmSearchPersonnel
         Me.Label12.ForeColor = System.Drawing.Color.White
         Me.Label12.Location = New System.Drawing.Point(25, 5)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(65, 21)
+        Me.Label12.Size = New System.Drawing.Size(48, 15)
         Me.Label12.TabIndex = 30
         Me.Label12.Text = "SEARCH"
         '
@@ -79,8 +91,8 @@ Partial Class frmSearchPersonnel
         '
         Me.dgProfile.AllowUserToAddRows = False
         Me.dgProfile.AllowUserToDeleteRows = False
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(212, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.dgProfile.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(212, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(241, Byte), Integer))
+        Me.dgProfile.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgProfile.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgProfile.Location = New System.Drawing.Point(0, 35)
         Me.dgProfile.Name = "dgProfile"
@@ -92,7 +104,7 @@ Partial Class frmSearchPersonnel
         '
         'frmSearchPersonnel
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.CancelButton = Me.btnClose
@@ -118,4 +130,5 @@ Partial Class frmSearchPersonnel
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents dgProfile As System.Windows.Forms.DataGridView
     Friend WithEvents btnClose As System.Windows.Forms.Button
+    Friend WithEvents lblSource As Label
 End Class

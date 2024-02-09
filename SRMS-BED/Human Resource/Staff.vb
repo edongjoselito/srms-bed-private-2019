@@ -173,6 +173,7 @@ Public Class frmStaff
     End Sub
 
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
+        frmSearchPersonnel.lblSource.Text = "Profile Form"
         frmSearchPersonnel.ShowDialog()
     End Sub
 

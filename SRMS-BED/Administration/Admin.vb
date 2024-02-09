@@ -6,7 +6,7 @@ Public Class frmAdmin
     End Sub
 
     Private Sub frmAdmin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'getDepartment()
+        stDate.Text = Today
         schoolInfo()
     End Sub
 
@@ -58,6 +58,11 @@ Public Class frmAdmin
             MsgBox(ex.Message)
             conn.Close()
         End Try
+    End Sub
+
+
+    Private Sub ToolStripButton6_Click(sender As Object, e As EventArgs) Handles ToolStripButton6.Click
+        frmManageUsers.ShowDialog()
     End Sub
 
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
