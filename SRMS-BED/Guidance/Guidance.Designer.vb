@@ -121,7 +121,7 @@ Partial Class frmGuidance
         '
         'Panel7
         '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel7.Location = New System.Drawing.Point(0, 86)
         Me.Panel7.Name = "Panel7"
@@ -220,12 +220,15 @@ Partial Class frmGuidance
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.BackgroundImage = Global.SRMS_BED.My.Resources.Resources.bg3
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1337, 823)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel1)
+        Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

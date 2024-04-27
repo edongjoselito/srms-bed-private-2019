@@ -60,7 +60,7 @@ Partial Class frmTeacher
         '
         'Panel7
         '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel7.Location = New System.Drawing.Point(0, 86)
         Me.Panel7.Name = "Panel7"
@@ -273,6 +273,7 @@ Partial Class frmTeacher
         Me.stTime.Name = "stTime"
         Me.stTime.Size = New System.Drawing.Size(36, 17)
         Me.stTime.Text = "Time"
+        Me.stTime.Visible = False
         '
         'stUser
         '
@@ -280,6 +281,7 @@ Partial Class frmTeacher
         Me.stUser.Name = "stUser"
         Me.stUser.Size = New System.Drawing.Size(34, 17)
         Me.stUser.Text = "User"
+        Me.stUser.Visible = False
         '
         'stSemester
         '
@@ -307,11 +309,14 @@ Partial Class frmTeacher
         Me.lblInstructor.Name = "lblInstructor"
         Me.lblInstructor.Size = New System.Drawing.Size(64, 17)
         Me.lblInstructor.Text = "Instructor"
+        Me.lblInstructor.Visible = False
         '
         'frmTeacher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.SRMS_BED.My.Resources.Resources.bg3
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1337, 823)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.crViewer)
@@ -319,6 +324,7 @@ Partial Class frmTeacher
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel1)
+        Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmTeacher"

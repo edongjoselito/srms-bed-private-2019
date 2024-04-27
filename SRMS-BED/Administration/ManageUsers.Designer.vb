@@ -243,7 +243,7 @@ Partial Class frmManageUsers
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(269, 23)
-        Me.txtEmail.TabIndex = 16
+        Me.txtEmail.TabIndex = 8
         '
         'Label7
         '
@@ -275,7 +275,7 @@ Partial Class frmManageUsers
         Me.txtConfirm.Name = "txtConfirm"
         Me.txtConfirm.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtConfirm.Size = New System.Drawing.Size(271, 23)
-        Me.txtConfirm.TabIndex = 12
+        Me.txtConfirm.TabIndex = 6
         '
         'Label9
         '
@@ -296,7 +296,7 @@ Partial Class frmManageUsers
         Me.txtpassword1.Name = "txtpassword1"
         Me.txtpassword1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtpassword1.Size = New System.Drawing.Size(271, 23)
-        Me.txtpassword1.TabIndex = 10
+        Me.txtpassword1.TabIndex = 5
         '
         'Label1
         '
@@ -316,7 +316,7 @@ Partial Class frmManageUsers
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(271, 23)
-        Me.txtUsername.TabIndex = 8
+        Me.txtUsername.TabIndex = 4
         '
         'Label3
         '
@@ -336,7 +336,7 @@ Partial Class frmManageUsers
         Me.txtLName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtLName.Name = "txtLName"
         Me.txtLName.Size = New System.Drawing.Size(271, 23)
-        Me.txtLName.TabIndex = 6
+        Me.txtLName.TabIndex = 3
         '
         'Label4
         '
@@ -356,7 +356,7 @@ Partial Class frmManageUsers
         Me.txtMName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtMName.Name = "txtMName"
         Me.txtMName.Size = New System.Drawing.Size(271, 23)
-        Me.txtMName.TabIndex = 4
+        Me.txtMName.TabIndex = 2
         '
         'lblOldUsername
         '
@@ -400,7 +400,7 @@ Partial Class frmManageUsers
         Me.cboposition.Name = "cboposition"
         Me.cboposition.Size = New System.Drawing.Size(269, 23)
         Me.cboposition.Sorted = True
-        Me.cboposition.TabIndex = 29
+        Me.cboposition.TabIndex = 7
         '
         'btnResetPassword
         '

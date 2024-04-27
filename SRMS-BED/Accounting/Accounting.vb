@@ -134,4 +134,8 @@ Public Class frmAccounting
     Private Sub EXPENSESREPORTToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EXPENSESREPORTToolStripMenuItem.Click
         frmExpReportDashobard.ShowDialog()
     End Sub
+
+    Private Sub OTHERFEESDESCRIPTIONToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OTHERFEESDESCRIPTIONToolStripMenuItem.Click
+        frmOtherIncomDesc.ShowDialog()
+    End Sub
 End Class

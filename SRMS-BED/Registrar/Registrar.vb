@@ -81,7 +81,9 @@ Public Class frmRegistrar
         Timer1.Enabled = True
         schoolInfo()
 
-        crViewer.Visible = False
+        crViewer.Hide()
+        Panel3.Hide()
+
     End Sub
 
     Private Sub ReloadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReloadToolStripMenuItem.Click
@@ -100,15 +102,12 @@ Public Class frmRegistrar
         frmStudeProfile.ShowDialog()
     End Sub
 
-    Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles ToolStrip1.ItemClicked
-
-    End Sub
 
     Private Sub ToolStripButton9_Click(sender As Object, e As EventArgs) Handles ToolStripButton9.Click
         formLoad()
     End Sub
 
-    Private Sub crViewer_Load(sender As Object, e As EventArgs) Handles crViewer.Load
+    Private Sub crViewer_Load(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -146,11 +145,74 @@ Public Class frmRegistrar
         frmStudeReports.ShowDialog()
     End Sub
 
+    Private Sub GRADINGSHEETSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GRADINGSHEETSToolStripMenuItem.Click
+        frmGradingSheets.Show()
+    End Sub
+
+    Private Sub CONSOLIDATEDGRADESToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CONSOLIDATEDGRADESToolStripMenuItem.Click
+        frmConsolidatedDashboard.Show()
+    End Sub
+
+    Private Sub VERSION1ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VERSION1ToolStripMenuItem.Click
+        Try
+            str = "select ss.YearLevel, p.sex, count(p.sex) as sexCount, p.classification, ss.Course, ss.Semester, ss.SY, ss.Section, st.Region, st.division, st.SchoolName, st.SchoolAddress, st.letterHead, st.depedlogo, st.schoolLogo, st.telNo,st.RegistrarJHS, st.RegistrarSHS, st.SchoolHead, st.sHeadPosition from semesterstude ss join srms_settings st on ss.settingsID=st.settingsID join studeprofile p on p.StudentNumber=ss.StudentNumber where ss.SY='" & stSY.Text & "' and ss.Semester!='Second Semester' and ss.Status='Enrolled' group by ss.YearLevel, p.classification, p.Sex"
+            conn.Open()
+            Dim mysDA As New MySqlDataAdapter(str, conn)
+            Dim mysds As New DataSet
+            mysDA.Fill(mysds, "studeprofile, semesterstude")
+            Dim obj As New EnrollmentSummaryV2
+            obj.SetDataSource(mysds.Tables("studeprofile, semesterstude"))
+            crViewer.ReportSource = obj
+            conn.Close()
+            crViewer.Visible = True
+            Panel3.Visible = True
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub VERSION2ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VERSION2ToolStripMenuItem.Click
+        Try
+            str = "select ss.YearLevel, p.sex, count(p.sex) as sexCount, ss.Course, ss.Semester, ss.SY, ss.Section, st.Region, st.division, st.SchoolName, st.SchoolAddress, st.letterHead, st.depedlogo, st.schoolLogo, st.telNo,st.RegistrarJHS, st.RegistrarSHS, st.SchoolHead, st.sHeadPosition from semesterstude ss join srms_settings st on ss.settingsID=st.settingsID join studeprofile p on p.StudentNumber=ss.StudentNumber where ss.SY='" & stSY.Text & "' and ss.Semester!='Second Semester' and ss.Status='Enrolled' group by ss.YearLevel,ss.Section, p.Sex"
+            conn.Open()
+            Dim mysDA As New MySqlDataAdapter(str, conn)
+            Dim mysds As New DataSet
+            mysDA.Fill(mysds, "studeprofile, semesterstude")
+            Dim obj As New EnrollmentSummaryV3
+            obj.SetDataSource(mysds.Tables("studeprofile, semesterstude"))
+            crViewer.ReportSource = obj
+            conn.Close()
+            crViewer.Visible = True
+            Panel3.Visible = True
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub VERSION3ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VERSION3ToolStripMenuItem.Click
+        frmStatisticsDashboard.lblSource.Text = "Registrar"
+        frmStatisticsDashboard.Show()
+    End Sub
+
+    Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles ToolStrip1.ItemClicked
+
+    End Sub
+
     Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
 
     End Sub
 
-    Private Sub GRADINGSHEETSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GRADINGSHEETSToolStripMenuItem.Click
-        frmGradingSheets.Show()
+    Private Sub crViewer_Load_1(sender As Object, e As EventArgs) Handles crViewer.Load
+
+    End Sub
+
+    Private Sub ToolStripButton4_Click(sender As Object, e As EventArgs) Handles ToolStripButton4.Click
+        frmStudentAttendance.Show()
+    End Sub
+
+    Private Sub BATCHPRINTINGToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BATCHPRINTINGToolStripMenuItem.Click
+        frmGradesBatchPrinting.Show()
     End Sub
 End Class

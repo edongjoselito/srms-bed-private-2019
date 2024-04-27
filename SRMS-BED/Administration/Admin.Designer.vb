@@ -53,7 +53,7 @@ Partial Class frmAdmin
         '
         'Panel7
         '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel7.Location = New System.Drawing.Point(0, 86)
         Me.Panel7.Name = "Panel7"
@@ -124,7 +124,7 @@ Partial Class frmAdmin
         '
         'Panel2
         '
-        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Panel2.Controls.Add(Me.StatusStrip1)
         Me.Panel2.Controls.Add(Me.ToolStrip1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
@@ -217,8 +217,8 @@ Partial Class frmAdmin
         Me.ToolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(110, 52)
-        Me.ToolStripButton3.Text = "ADVISER"
+        Me.ToolStripButton3.Size = New System.Drawing.Size(116, 52)
+        Me.ToolStripButton3.Text = "ADVISERS"
         '
         'ToolStripButton4
         '
@@ -255,11 +255,13 @@ Partial Class frmAdmin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.BackgroundImage = Global.SRMS_BED.My.Resources.Resources.bg3
         Me.ClientSize = New System.Drawing.Size(1337, 823)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel5)
+        Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

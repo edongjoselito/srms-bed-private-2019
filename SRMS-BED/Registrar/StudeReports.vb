@@ -96,11 +96,11 @@ Public Class frmStudeReports
 
             End If
 
-            'Report of Grades V2
+            'Report of Grades
             If cboStudeReport.SelectedIndex = 5 Then
                 getDepartment()
                 If lblDepartment.Text = "Senior High School" Then
-                    str = "select p.StudentNumber, concat(p.LastName,', ',p.FirstName,' ',p.MiddleName) as StudeName, p.Sex, p.BirthDate, p.Age, p.BirthPlace, p.Guardian, ss.Course, ss.YearLevel, ss.Section, ss.Track, ss.Qualification, g.Description, g.PGrade, g.MGrade, g.PFinalGrade, g.FGrade, g.Average, g.SY, sr.SchoolName, sr.SchoolAddress, sr.SchoolHead, sr.sHeadPosition,sr.Division,sr.Region, sr.letterHead from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber join grades g on ss.StudentNumber=g.StudentNumber join srms_settings sr on ss.settingsID=sr.settingsID where p.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and g.SY='" & frmRegistrar.stSY.Text & "' and g.Sem='" & frmRegistrar.stSemester.Text & "'  group by g.SubjectCode order by g.SubjectCode"
+                    str = "select p.LRN, p.StudentNumber, concat(p.LastName,', ',p.FirstName,' ',p.MiddleName) as StudeName, p.Sex, p.BirthDate, p.Age, p.BirthPlace, p.Guardian, ss.Course, ss.YearLevel, ss.Section, ss.Track, ss.Qualification, g.Description, g.PGrade, g.MGrade, g.PFinalGrade, g.FGrade, g.Average, g.SY, g.Adviser, sr.SchoolName, sr.SchoolAddress, sr.SchoolHead, sr.sHeadPosition,sr.Division,sr.Region, sr.letterHead from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber join grades g on ss.StudentNumber=g.StudentNumber join srms_settings sr on ss.settingsID=sr.settingsID where p.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and g.SY='" & frmRegistrar.stSY.Text & "' and g.Sem='" & frmRegistrar.stSemester.Text & "'  group by g.SubjectCode order by g.SubjectCode"
                     conn.Open()
                     Dim mysDA As New MySqlDataAdapter(Str, conn)
                     Dim mysds As New DataSet
@@ -111,7 +111,7 @@ Public Class frmStudeReports
                     specialReportViewer.Refresh()
                     conn.Close()
                 ElseIf lblDepartment.Text = "Junior High School" Then
-                    str = "select p.StudentNumber, concat(p.FirstName,' ',p.MiddleName,' ',p.LastName) as StudeName, p.Sex, p.BirthDate, p.Age, p.BirthPlace, p.Guardian, ss.Course, g.YearLevel, ss.Section, g.Track, g.strand, g.Description, g.PGrade, g.MGrade, g.PFinalGrade, g.FGrade, g.Average, g.Sem, g.SY, g.subComponent, sr.SchoolName, sr.SchoolAddress, sr.SchoolHead, sr.sHeadPosition,sr.Division,sr.Region, sr.letterHead, sr.depedlogo, sr.schoolLogo, sr.district, sr.principalPre, sr.principalGS, sr.principalJHS, sr.principalSHS, sr.RegistrarJHS, sr.RegistrarSHS from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber join grades g on ss.StudentNumber=g.StudentNumber join srms_settings sr on ss.settingsID=sr.settingsID where p.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and g.SY='" & frmRegistrar.stSY.Text & "' and g.Sem='" & frmRegistrar.stSemester.Text & "' order by g.SubjectCode"
+                    str = "select p.LRN, p.StudentNumber, concat(p.FirstName,' ',p.MiddleName,' ',p.LastName) as StudeName, p.Sex, p.BirthDate, p.Age, p.BirthPlace, p.Guardian, ss.Course, g.YearLevel, ss.Section, g.Track, g.strand, g.Description, g.PGrade, g.MGrade, g.PFinalGrade, g.FGrade, g.Average, g.Sem, g.SY, g.subComponent, g.Adviser, sr.SchoolName, sr.SchoolAddress, sr.SchoolHead, sr.sHeadPosition,sr.Division,sr.Region, sr.letterHead, sr.depedlogo, sr.schoolLogo, sr.district, sr.principalPre, sr.principalGS, sr.principalJHS, sr.principalSHS, sr.RegistrarJHS, sr.RegistrarSHS from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber join grades g on ss.StudentNumber=g.StudentNumber join srms_settings sr on ss.settingsID=sr.settingsID where p.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and g.SY='" & frmRegistrar.stSY.Text & "' and g.Sem='" & frmRegistrar.stSemester.Text & "' order by g.SubjectCode"
                     conn.Open()
                     Dim mysDA As New MySqlDataAdapter(Str, conn)
                     Dim mysds As New DataSet
@@ -120,11 +120,15 @@ Public Class frmStudeReports
                     obj.SetDataSource(mysds.Tables("p.studeprofile, g.grades, ss.semesterstude"))
                     obj.SetParameterValue("studeType", lblStudeType.Text)
                     obj.SetParameterValue("GenAve", lblGenAve.Text)
+                    obj.SetParameterValue("FirstAve", lblFirstAve.Text)
+                    obj.SetParameterValue("SecondAve", lblSecondAve.Text)
+                    obj.SetParameterValue("ThirdAve", lblThirdAve.Text)
+                    obj.SetParameterValue("FourthAve", lblFourthAve.Text)
                     specialReportViewer.ReportSource = obj
                     conn.Close()
 
                 Else
-                    str = "select p.StudentNumber, concat(p.FirstName,' ',p.MiddleName,' ',p.LastName) as StudeName, p.Sex, p.BirthDate, p.Age, p.BirthPlace, p.Guardian, ss.Course, g.YearLevel, ss.Section, g.Track, g.strand, g.Description, g.PGrade, g.MGrade, g.PFinalGrade, g.FGrade, g.Average, g.Sem, g.SY, g.subComponent, sr.SchoolName, sr.SchoolAddress, sr.SchoolHead, sr.sHeadPosition,sr.Division,sr.Region, sr.letterHead, sr.depedlogo, sr.schoolLogo, sr.district, sr.principalPre, sr.principalGS, sr.principalJHS, sr.principalSHS, sr.RegistrarJHS, sr.RegistrarSHS from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber join grades g on ss.StudentNumber=g.StudentNumber join srms_settings sr on ss.settingsID=sr.settingsID where p.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and g.SY='" & frmRegistrar.stSY.Text & "' and g.Sem='" & frmRegistrar.stSemester.Text & "' order by g.SubjectCode"
+                    str = "select p.LRN, p.StudentNumber, concat(p.FirstName,' ',p.MiddleName,' ',p.LastName) as StudeName, p.Sex, p.BirthDate, p.Age, p.BirthPlace, p.Guardian, ss.Course, g.YearLevel, ss.Section, g.Track, g.strand, g.Description, g.PGrade, g.MGrade, g.PFinalGrade, g.FGrade, g.Average, g.Sem, g.SY, g.subComponent, g.Adviser, sr.SchoolName, sr.SchoolAddress, sr.SchoolHead, sr.sHeadPosition,sr.Division,sr.Region, sr.letterHead, sr.depedlogo, sr.schoolLogo, sr.district, sr.principalPre, sr.principalGS, sr.principalJHS, sr.principalSHS, sr.RegistrarJHS, sr.RegistrarSHS from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber join grades g on ss.StudentNumber=g.StudentNumber join srms_settings sr on ss.settingsID=sr.settingsID where p.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and g.SY='" & frmRegistrar.stSY.Text & "' and g.Sem='" & frmRegistrar.stSemester.Text & "' order by g.SubjectCode"
                     conn.Open()
                     Dim mysDA As New MySqlDataAdapter(Str, conn)
                     Dim mysds As New DataSet
@@ -134,17 +138,21 @@ Public Class frmStudeReports
                     obj.SetDataSource(mysds.Tables("p.studeprofile, g.grades, ss.semesterstude"))
                     obj.SetParameterValue("studeType", lblStudeType.Text)
                     obj.SetParameterValue("GenAve", lblGenAve.Text)
+                    obj.SetParameterValue("FirstAve", lblFirstAve.Text)
+                    obj.SetParameterValue("SecondAve", lblSecondAve.Text)
+                    obj.SetParameterValue("ThirdAve", lblThirdAve.Text)
+                    obj.SetParameterValue("FourthAve", lblFourthAve.Text)
                     specialReportViewer.ReportSource = obj
                     conn.Close()
                 End If
 
             End If
 
-            'Report of Grades
+            'Report of Grades V2
             If cboStudeReport.SelectedIndex = 6 Then
                 getDepartment()
                 If lblDepartment.Text = "Senior High School" Then
-                    str = "select p.StudentNumber, LRN, concat(p.LastName,', ',p.FirstName,' ',p.MiddleName) as StudeName, p.Sex, p.BirthDate, p.Age, p.BirthPlace, p.Guardian, ss.Course, ss.YearLevel, ss.Section, ss.Track, ss.Qualification, g.Description, g.PGrade, g.MGrade, g.PFinalGrade, g.FGrade, g.Average, g.SY, sr.SchoolName, sr.SchoolAddress, sr.SchoolHead, sr.sHeadPosition,sr.Division,sr.Region, sr.letterHead from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber join grades g on ss.StudentNumber=g.StudentNumber join srms_settings sr on ss.settingsID=sr.settingsID where p.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and g.SY='" & frmRegistrar.stSY.Text & "' and g.Sem='" & frmRegistrar.stSemester.Text & "'  group by g.SubjectCode order by g.SubjectCode"
+                    str = "select p.StudentNumber, LRN, concat(p.LastName,', ',p.FirstName,' ',p.MiddleName) as StudeName, p.Sex, p.BirthDate, p.Age, p.BirthPlace, p.Guardian, ss.Course, ss.YearLevel, ss.Section, ss.Track, ss.Qualification, g.Description, g.PGrade, g.MGrade, g.PFinalGrade, g.FGrade, g.Average, g.SY, g.adviser, sr.SchoolName, sr.SchoolAddress, sr.SchoolHead, sr.sHeadPosition,sr.Division,sr.Region, sr.letterHead from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber join grades g on ss.StudentNumber=g.StudentNumber join srms_settings sr on ss.settingsID=sr.settingsID where p.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and g.SY='" & frmRegistrar.stSY.Text & "' and g.Sem='" & frmRegistrar.stSemester.Text & "'  group by g.SubjectCode order by g.SubjectCode"
                     conn.Open()
                     Dim mysDA As New MySqlDataAdapter(Str, conn)
                     Dim mysds As New DataSet
@@ -154,7 +162,7 @@ Public Class frmStudeReports
                     specialReportViewer.ReportSource = obj
                     conn.Close()
                 ElseIf lblDepartment.Text = "Junior High School" Then
-                    str = "select p.StudentNumber, LRN, concat(p.LastName,', ',p.FirstName,' ',p.MiddleName) as StudeName, p.Sex, p.BirthDate, p.Age, p.BirthPlace, p.Guardian, ss.Course, ss.YearLevel, ss.Section, ss.Track, ss.Qualification, g.Description, g.PGrade, g.MGrade, g.PFinalGrade, g.FGrade, g.Average, g.SY, g.subComponent, sr.SchoolName, sr.SchoolAddress, sr.SchoolHead, sr.sHeadPosition,sr.Division,sr.Region, sr.letterHead from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber join grades g on ss.StudentNumber=g.StudentNumber join srms_settings sr on ss.settingsID=sr.settingsID where p.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and g.SY='" & frmRegistrar.stSY.Text & "' and g.Sem='" & frmRegistrar.stSemester.Text & "' order by g.SubjectCode"
+                    str = "select p.StudentNumber, LRN, concat(p.LastName,', ',p.FirstName,' ',p.MiddleName) as StudeName, p.Sex, p.BirthDate, p.Age, p.BirthPlace, p.Guardian, ss.Course, ss.YearLevel, ss.Section, ss.Track, ss.Qualification, g.Description, g.PGrade, g.MGrade, g.PFinalGrade, g.FGrade, g.Average, g.SY, g.subComponent, g.adviser, sr.SchoolName, sr.SchoolAddress, sr.SchoolHead, sr.sHeadPosition,sr.Division,sr.Region, sr.letterHead from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber join grades g on ss.StudentNumber=g.StudentNumber join srms_settings sr on ss.settingsID=sr.settingsID where p.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and g.SY='" & frmRegistrar.stSY.Text & "' and g.Sem='" & frmRegistrar.stSemester.Text & "' order by g.SubjectCode"
                     conn.Open()
                     Dim mysDA As New MySqlDataAdapter(Str, conn)
                     Dim mysds As New DataSet
@@ -162,11 +170,15 @@ Public Class frmStudeReports
                     Dim obj As New ReportOfGradesJHS
                     obj.SetDataSource(mysds.Tables("p.studeprofile, g.grades, ss.semesterstude"))
                     obj.SetParameterValue("GenAve", lblGenAve.Text)
+                    obj.SetParameterValue("FirstAve", lblFirstAve.Text)
+                    obj.SetParameterValue("SecondAve", lblSecondAve.Text)
+                    obj.SetParameterValue("ThirdAve", lblThirdAve.Text)
+                    obj.SetParameterValue("FourthAve", lblFourthAve.Text)
                     specialReportViewer.ReportSource = obj
                     conn.Close()
 
                 Else
-                    str = "select p.StudentNumber, concat(p.LastName,', ',p.FirstName,' ',p.MiddleName) as StudeName, p.Sex, p.BirthDate, p.Age, p.BirthPlace, p.Guardian, ss.Course, ss.YearLevel, ss.Section, ss.Track, ss.Qualification, g.Description, g.PGrade, g.MGrade, g.PFinalGrade, g.FGrade, g.Average, g.SY, g.subComponent, sr.SchoolName, sr.SchoolAddress, sr.SchoolHead, sr.sHeadPosition,sr.Division,sr.Region, sr.letterHead from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber join grades g on ss.StudentNumber=g.StudentNumber join srms_settings sr on ss.settingsID=sr.settingsID where p.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and g.SY='" & frmRegistrar.stSY.Text & "' and g.Sem='" & frmRegistrar.stSemester.Text & "' order by g.SubjectCode"
+                    str = "select p.StudentNumber, LRN, concat(p.LastName,', ',p.FirstName,' ',p.MiddleName) as StudeName, p.Sex, p.BirthDate, p.Age, p.BirthPlace, p.Guardian, ss.Course, ss.YearLevel, ss.Section, ss.Track, ss.Qualification, g.Description, g.PGrade, g.MGrade, g.PFinalGrade, g.FGrade, g.Average, g.SY, g.subComponent, g.adviser, sr.SchoolName, sr.SchoolAddress, sr.SchoolHead, sr.sHeadPosition,sr.Division,sr.Region, sr.letterHead from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber join grades g on ss.StudentNumber=g.StudentNumber join srms_settings sr on ss.settingsID=sr.settingsID where p.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and g.SY='" & frmRegistrar.stSY.Text & "' and g.Sem='" & frmRegistrar.stSemester.Text & "' order by g.SubjectCode"
                     conn.Open()
                     Dim mysDA As New MySqlDataAdapter(Str, conn)
                     Dim mysds As New DataSet
@@ -174,6 +186,10 @@ Public Class frmStudeReports
                     Dim obj As New ReportOfGradesJHS
                     obj.SetDataSource(mysds.Tables("p.studeprofile, g.grades, ss.semesterstude"))
                     obj.SetParameterValue("GenAve", lblGenAve.Text)
+                    obj.SetParameterValue("FirstAve", lblFirstAve.Text)
+                    obj.SetParameterValue("SecondAve", lblSecondAve.Text)
+                    obj.SetParameterValue("ThirdAve", lblThirdAve.Text)
+                    obj.SetParameterValue("FourthAve", lblFourthAve.Text)
                     specialReportViewer.ReportSource = obj
                     conn.Close()
                 End If
@@ -185,7 +201,7 @@ Public Class frmStudeReports
                 Dim str1 As String
                 If lblDepartment.Text = "Senior High School" Then
 
-                    str = "select p.StudentNumber, LRN, concat(p.LastName,', ',p.FirstName,' ',p.MiddleName) as StudeName, p.Sex, p.BirthDate, p.Age, p.BirthPlace, p.Guardian, ss.Course, g.YearLevel, g.Adviser, ss.Section, g.Track, g.strand, g.Description, g.PGrade, g.MGrade, g.PFinalGrade, g.FGrade, g.Average, g.Sem, g.SY, sr.SchoolName, sr.SchoolAddress, sr.SchoolHead, sr.sHeadPosition,sr.Division,sr.Region, sr.letterHead, sr.depedlogo, sr.schoolLogo, sr.district, sr.principalPre, sr.principalGS, sr.principalJHS, sr.principalSHS from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber join grades g on ss.StudentNumber=g.StudentNumber join srms_settings sr on ss.settingsID=sr.settingsID where p.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and g.SY='" & frmRegistrar.stSY.Text & "' group by g.Sem, g.SubjectCode order by g.SubjectCode"
+                    str = "select p.StudentNumber, LRN, concat(p.LastName,', ',p.FirstName,' ',p.MiddleName) as StudeName, p.Sex, p.BirthDate, p.Age, p.BirthPlace, p.Guardian, ss.Course, g.YearLevel, g.Adviser, ss.Section, g.Track, g.strand, g.Description, g.PGrade, g.MGrade, g.PFinalGrade, g.FGrade, g.Average, g.Sem, g.SY, g.Adviser, sr.SchoolName, sr.SchoolAddress, sr.SchoolHead, sr.sHeadPosition,sr.Division,sr.Region, sr.letterHead, sr.depedlogo, sr.schoolLogo, sr.district, sr.principalPre, sr.principalGS, sr.principalJHS, sr.principalSHS from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber join grades g on ss.StudentNumber=g.StudentNumber join srms_settings sr on ss.settingsID=sr.settingsID where p.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and g.SY='" & frmRegistrar.stSY.Text & "' group by g.Sem, g.SubjectCode order by g.SubjectCode"
                     str1 = "SELECT s.attendanceID, s.StudentNumber, s.fName, s.mName, s.lName, s.janPres, s.janTardy, s.febPres, s.febTardy, s.marPres, s.marTardy, s.aprPres, s.aprTardy, s.mayPres, s.mayTardy, s.junPres, s.junTardy, s.julPres, s.julTardy, s.augPres, s.augTardy, s.sepPres, s.sepTardy, s.octPres, s.octTardy, s.novPres, s.novTardy, s.decPres, s.decTardy, s.YearLevel, s.studeSection, s.SY, c.jan, c.feb, c.mar, c.apr, c.may, c.jun, c.jul, c.aug, c.sep, c.oct, c.nov, c.december FROM stude_attendance s join classdays c on s.SY=c.SY where s.StudentNumber='" & mskStudentNumber.Text & "' and s.SY='" & frmRegistrar.stSY.Text & "'"
                     conn.Open()
                     Dim mysDA As New MySqlDataAdapter(Str, conn)
@@ -278,8 +294,8 @@ Public Class frmStudeReports
 
             'Student's Profile
             If cboStudeReport.SelectedIndex = 9 Then
-                'str = "SELECT * FROM studeprofile s join semesterstude ss on s.StudentNumber=ss.StudentNumber join srms_settings st on s.settingsID=st.settingsID join profimage pi on s.StudentNumber=pi.StudentNumber join stude_requirements sr on s.StudentNumber=sr.StudentNumber join stude_esc_requirements ser on s.StudentNumber=ser.StudentNumber where ss.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmParent.lblSY.Text & "'"
-                str = "SELECT * FROM studeprofile s join semesterstude ss on s.StudentNumber=ss.StudentNumber join srms_settings st on s.settingsID=st.settingsID join stude_requirements sr on s.StudentNumber=sr.StudentNumber join stude_esc_requirements ser on s.StudentNumber=ser.StudentNumber where ss.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "'"
+                str = "SELECT * FROM studeprofile s join semesterstude ss on s.StudentNumber=ss.StudentNumber join srms_settings st on s.settingsID=st.settingsID join stude_requirements sr on s.StudentNumber=sr.StudentNumber where ss.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "'"
+                'str = "SELECT * FROM studeprofile s join semesterstude ss on s.StudentNumber=ss.StudentNumber join srms_settings st on s.settingsID=st.settingsID join stude_requirements sr on s.StudentNumber=sr.StudentNumber join stude_esc_requirements ser on s.StudentNumber=ser.StudentNumber where ss.StudentNumber='" & mskStudentNumber.Text & "' and ss.SY='" & frmRegistrar.stSY.Text & "'"
                 conn.Open()
                 Dim mysDA As New MySqlDataAdapter(Str, conn)
                 Dim mysds As New Reports3
@@ -319,7 +335,7 @@ Public Class frmStudeReports
             objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
             dtReader = objCmd.ExecuteReader()
             If dtReader.Read Then
-                lblDepartment.Text = dtReader(5)
+                lblDepartment.Text = dtReader(2)
 
             End If
             conn.Close()
@@ -339,5 +355,206 @@ Public Class frmStudeReports
             MsgBox(ex.Message)
             conn.Close()
         End Try
+    End Sub
+
+    Private Sub mskStudentNumber_TextChanged(sender As Object, e As EventArgs) Handles mskStudentNumber.TextChanged
+        getDepartment()
+        getSumPerQuarter()
+        getMapehPerQuarter()
+        getmapehAve()
+        getSubjectSum()
+        getSubjectCount()
+
+
+    End Sub
+    Public Sub getSumPerQuarter()
+        Try
+            Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
+            str = "SELECT Sum(PGrade) as FirstQuarter, Sum(MGrade) as SecondQuarter, Sum(PFinalGrade) as ThirdQuarter, Sum(FGrade) as FourthQuarter FROM grades where Description not like '%mapeh%' and Description not like '%Music%' and (StudentNumber='" & mskStudentNumber.Text & "' and Sem='" & frmRegistrar.stSemester.Text & "' and SY='" & frmRegistrar.stSY.Text & "')"
+            conn.Open()
+            Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
+            objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
+            dtReader = objCmd.ExecuteReader()
+            If dtReader.Read Then
+                If Not dtReader.IsDBNull(0) Then
+                    lblFirst.Text = dtReader(0)
+                    lblSecond.Text = dtReader(1)
+                    lblThird.Text = dtReader(2)
+                    lblFourth.Text = dtReader(3)
+                Else
+                    lblFirst.Text = 0
+                    lblSecond.Text = 0
+                    lblThird.Text = 0
+                    lblFourth.Text = 0
+                End If
+                conn.Close()
+            Else
+                lblFirst.Text = 0
+                lblSecond.Text = 0
+                lblThird.Text = 0
+                lblFourth.Text = 0
+            End If
+            conn.Close()
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            conn.Close()
+        End Try
+    End Sub
+    Public Sub getMapehPerQuarter()
+        Try
+            Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
+            str = "SELECT Avg(PGrade) as PAverage, Avg(MGrade) as MAverage, Avg(PFinalGrade) as PFAverage, Avg(FGrade) as FAverage FROM grades where (Description like '%mapeh%' or Description like '%Music%') and StudentNumber='" & mskStudentNumber.Text & "' and Sem='" & frmRegistrar.stSemester.Text & "' and SY='" & frmRegistrar.stSY.Text & "'"
+            conn.Open()
+            Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
+            objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
+            dtReader = objCmd.ExecuteReader()
+
+            If dtReader.Read() Then
+                ' Check for DBNull before assigning the value
+                If Not dtReader.IsDBNull(0) Then
+                    lblMFirst.Text = dtReader(0)
+                    lblMSecond.Text = dtReader(1)
+                    lblMThird.Text = dtReader(2)
+                    lblMFourth.Text = dtReader(3)
+
+                Else
+
+                    lblMFirst.Text = "0"
+                    lblMSecond.Text = "0"
+                    lblMThird.Text = "0"
+                    lblMFourth.Text = "0"
+                End If
+                conn.Close()
+            Else
+
+                lblMFirst.Text = "0"
+                lblMSecond.Text = "0"
+                lblMThird.Text = "0"
+                lblMFourth.Text = "0"
+            End If
+
+
+            conn.Close()
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            conn.Close()
+        End Try
+    End Sub
+    Public Sub getmapehAve()
+        Try
+            Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
+            str = "SELECT Avg(Average) as Average FROM grades where (Description like '%mapeh%' or Description like '%Music%') and StudentNumber='" & mskStudentNumber.Text & "' and Sem='" & frmRegistrar.stSemester.Text & "' and SY='" & frmRegistrar.stSY.Text & "'"
+            conn.Open()
+            Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
+            objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
+            dtReader = objCmd.ExecuteReader()
+
+            If dtReader.Read() Then
+                ' Check for DBNull before assigning the value
+                If Not dtReader.IsDBNull(0) Then
+                    lblMapehAve.Text = dtReader(0)
+                Else
+                    lblMapehAve.Text = "0"
+                End If
+                conn.Close()
+            Else
+                lblMapehAve.Text = "0"
+            End If
+
+
+            conn.Close()
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            conn.Close()
+        End Try
+    End Sub
+    Public Sub getSubjectSum()
+        Try
+            Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
+            str = "SELECT Sum(Average) as Average FROM grades where Description not like '%mapeh%' and Description not like '%Music%' and (StudentNumber='" & mskStudentNumber.Text & "' and Sem='" & frmRegistrar.stSemester.Text & "' and SY='" & frmRegistrar.stSY.Text & "')"
+            conn.Open()
+            Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
+            objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
+            dtReader = objCmd.ExecuteReader()
+            If dtReader.Read Then
+                If Not dtReader.IsDBNull(0) Then
+                    lblSubjAve.Text = dtReader(0)
+                Else
+                    lblSubjAve.Text = "0"
+                End If
+                conn.Close()
+            Else
+                lblSubjAve.Text = 0
+            End If
+            conn.Close()
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            conn.Close()
+        End Try
+    End Sub
+    Public Sub getSubjectCount()
+        Try
+            Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
+            str = "SELECT Count(Distinct Description) as CountDesc FROM grades where StudentNumber='" & mskStudentNumber.Text & "' and Sem='" & frmRegistrar.stSemester.Text & "' and SY='" & frmRegistrar.stSY.Text & "'"
+            conn.Open()
+            Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
+            objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
+            dtReader = objCmd.ExecuteReader()
+            If dtReader.Read Then
+                lblSubjCount.Text = dtReader.GetInt32(0)
+            Else
+                lblSubjCount.Text = 0
+            End If
+            conn.Close()
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            conn.Close()
+        End Try
+    End Sub
+    Public Sub ComputeAve()
+        Try
+            Dim TotalAve, GenAve, FirstAve, SecondAve, ThirdAve, FourthAve As Double
+
+            TotalAve = Val(lblSubjAve.Text) + Val(lblMapehAve.Text)
+
+            FirstAve = Val(Val(lblFirst.Text) + Val(lblMFirst.Text)) / lblSubjCount.Text
+            SecondAve = Val(Val(lblSecond.Text) + Val(lblMSecond.Text)) / lblSubjCount.Text
+            ThirdAve = Val(Val(lblThird.Text) + Val(lblMThird.Text)) / lblSubjCount.Text
+            FourthAve = Val(Val(lblFourth.Text) + Val(lblMFourth.Text)) / lblSubjCount.Text
+
+            GenAve = TotalAve / lblSubjCount.Text
+            lblGenAve.Text = Math.Round(GenAve)
+
+            lblFirstAve.Text = Math.Round(FirstAve)
+            lblSecondAve.Text = Math.Round(SecondAve)
+            lblThirdAve.Text = Math.Round(ThirdAve)
+            lblFourthAve.Text = Math.Round(FourthAve)
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub lblMapehAve_TextChanged(sender As Object, e As EventArgs) Handles lblMapehAve.TextChanged
+        ComputeAve()
+    End Sub
+
+    Private Sub lblSubjAve_TextChanged(sender As Object, e As EventArgs) Handles lblSubjAve.TextChanged
+        ComputeAve()
+    End Sub
+
+    Private Sub lblSubjCount_TextChanged(sender As Object, e As EventArgs) Handles lblSubjCount.TextChanged
+        ComputeAve()
     End Sub
 End Class

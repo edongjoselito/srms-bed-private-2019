@@ -26,25 +26,12 @@ Partial Class frmMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.IconButton12 = New FontAwesome.Sharp.IconButton()
         Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.IconButton11 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton10 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton9 = New FontAwesome.Sharp.IconButton()
-        Me.btnSettings = New FontAwesome.Sharp.IconButton()
-        Me.IconButton6 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton5 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.lblSchoolAddress = New System.Windows.Forms.Label()
-        Me.IconButton8 = New FontAwesome.Sharp.IconButton()
         Me.lblSchoolName = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.lblAccountLevel = New System.Windows.Forms.Label()
@@ -57,27 +44,40 @@ Partial Class frmMain
         Me.stUser = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.lblStaff = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.lblStudents = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.IconButton8 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton12 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton11 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton10 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton9 = New FontAwesome.Sharp.IconButton()
+        Me.btnSettings = New FontAwesome.Sharp.IconButton()
+        Me.IconButton6 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton5 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton4 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton3 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.Panel9.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel10.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -111,6 +111,287 @@ Partial Class frmMain
         Me.Panel2.Size = New System.Drawing.Size(245, 827)
         Me.Panel2.TabIndex = 1
         '
+        'Panel11
+        '
+        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(156, Byte), Integer), CType(CType(18, Byte), Integer))
+        Me.Panel11.Location = New System.Drawing.Point(0, 86)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(245, 10)
+        Me.Panel11.TabIndex = 10
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.IconButton1)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel4.Location = New System.Drawing.Point(0, 772)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(245, 55)
+        Me.Panel4.TabIndex = 2
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.PictureBox1)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(245, 83)
+        Me.Panel3.TabIndex = 2
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Red
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button1.Location = New System.Drawing.Point(157, 6)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(40, 37)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "x"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Panel5
+        '
+        Me.Panel5.Controls.Add(Me.lblSchoolAddress)
+        Me.Panel5.Controls.Add(Me.IconButton8)
+        Me.Panel5.Controls.Add(Me.lblSchoolName)
+        Me.Panel5.Controls.Add(Me.Panel6)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel5.Location = New System.Drawing.Point(245, 18)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(1060, 86)
+        Me.Panel5.TabIndex = 3
+        '
+        'lblSchoolAddress
+        '
+        Me.lblSchoolAddress.AutoSize = True
+        Me.lblSchoolAddress.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSchoolAddress.Location = New System.Drawing.Point(76, 50)
+        Me.lblSchoolAddress.Name = "lblSchoolAddress"
+        Me.lblSchoolAddress.Size = New System.Drawing.Size(258, 23)
+        Me.lblSchoolAddress.TabIndex = 3
+        Me.lblSchoolAddress.Text = "PASAY CITY, METRO MANILA, PHILIPPINES"
+        '
+        'lblSchoolName
+        '
+        Me.lblSchoolName.AutoSize = True
+        Me.lblSchoolName.Font = New System.Drawing.Font("Bahnschrift SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSchoolName.Location = New System.Drawing.Point(75, 19)
+        Me.lblSchoolName.Name = "lblSchoolName"
+        Me.lblSchoolName.Size = New System.Drawing.Size(447, 29)
+        Me.lblSchoolName.TabIndex = 1
+        Me.lblSchoolName.Text = "WESLEYAN COLLEGE OF MANILA (WCM)"
+        '
+        'Panel6
+        '
+        Me.Panel6.Controls.Add(Me.lblAccountLevel)
+        Me.Panel6.Controls.Add(Me.Button2)
+        Me.Panel6.Controls.Add(Me.Button1)
+        Me.Panel6.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel6.Location = New System.Drawing.Point(860, 0)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(200, 86)
+        Me.Panel6.TabIndex = 0
+        '
+        'lblAccountLevel
+        '
+        Me.lblAccountLevel.AutoSize = True
+        Me.lblAccountLevel.Location = New System.Drawing.Point(23, 56)
+        Me.lblAccountLevel.Name = "lblAccountLevel"
+        Me.lblAccountLevel.Size = New System.Drawing.Size(86, 17)
+        Me.lblAccountLevel.TabIndex = 4
+        Me.lblAccountLevel.Text = "Account Level"
+        Me.lblAccountLevel.Visible = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.SkyBlue
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button2.Location = New System.Drawing.Point(111, 6)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(40, 37)
+        Me.Button2.TabIndex = 3
+        Me.Button2.Text = "-"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel7.Location = New System.Drawing.Point(245, 104)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(1060, 10)
+        Me.Panel7.TabIndex = 4
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.stDate, Me.stSemester, Me.stSY, Me.stUser})
+        Me.StatusStrip1.Location = New System.Drawing.Point(245, 823)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(1060, 22)
+        Me.StatusStrip1.TabIndex = 6
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'stDate
+        '
+        Me.stDate.Name = "stDate"
+        Me.stDate.Size = New System.Drawing.Size(34, 17)
+        Me.stDate.Text = "Date "
+        '
+        'stSemester
+        '
+        Me.stSemester.Name = "stSemester"
+        Me.stSemester.Size = New System.Drawing.Size(80, 17)
+        Me.stSemester.Text = "First Semester"
+        '
+        'stSY
+        '
+        Me.stSY.Name = "stSY"
+        Me.stSY.Size = New System.Drawing.Size(20, 17)
+        Me.stSY.Text = "SY"
+        '
+        'stUser
+        '
+        Me.stUser.Name = "stUser"
+        Me.stUser.Size = New System.Drawing.Size(30, 17)
+        Me.stUser.Text = "User"
+        Me.stUser.Visible = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 18.0!)
+        Me.Label8.Location = New System.Drawing.Point(263, 123)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(127, 29)
+        Me.Label8.TabIndex = 3
+        Me.Label8.Text = "DASHBOARD"
+        Me.Label8.Visible = False
+        '
+        'Panel9
+        '
+        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
+        Me.Panel9.Controls.Add(Me.PictureBox3)
+        Me.Panel9.Controls.Add(Me.Label5)
+        Me.Panel9.Controls.Add(Me.Label6)
+        Me.Panel9.Controls.Add(Me.lblStaff)
+        Me.Panel9.Location = New System.Drawing.Point(269, 158)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(351, 100)
+        Me.Panel9.TabIndex = 8
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label5.Location = New System.Drawing.Point(30, 50)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(316, 17)
+        Me.Label5.TabIndex = 2
+        Me.Label5.Text = "____________________________________________"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(29, 68)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(165, 23)
+        Me.Label6.TabIndex = 1
+        Me.Label6.Text = "FACULTY AND STAFF"
+        '
+        'lblStaff
+        '
+        Me.lblStaff.AutoSize = True
+        Me.lblStaff.Font = New System.Drawing.Font("Calibri", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStaff.ForeColor = System.Drawing.Color.White
+        Me.lblStaff.Location = New System.Drawing.Point(25, 14)
+        Me.lblStaff.Name = "lblStaff"
+        Me.lblStaff.Size = New System.Drawing.Size(105, 45)
+        Me.lblStaff.TabIndex = 0
+        Me.lblStaff.Text = "0,000"
+        '
+        'Panel10
+        '
+        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel10.Controls.Add(Me.PictureBox2)
+        Me.Panel10.Controls.Add(Me.Label4)
+        Me.Panel10.Controls.Add(Me.Label7)
+        Me.Panel10.Controls.Add(Me.lblStudents)
+        Me.Panel10.Location = New System.Drawing.Point(652, 158)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(351, 100)
+        Me.Panel10.TabIndex = 7
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label4.Location = New System.Drawing.Point(30, 50)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(316, 17)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "____________________________________________"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(29, 68)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(164, 23)
+        Me.Label7.TabIndex = 1
+        Me.Label7.Text = "STUDENT'S PROFILE"
+        '
+        'lblStudents
+        '
+        Me.lblStudents.AutoSize = True
+        Me.lblStudents.Font = New System.Drawing.Font("Calibri", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblStudents.ForeColor = System.Drawing.Color.White
+        Me.lblStudents.Location = New System.Drawing.Point(25, 14)
+        Me.lblStudents.Name = "lblStudents"
+        Me.lblStudents.Size = New System.Drawing.Size(105, 45)
+        Me.lblStudents.TabIndex = 0
+        Me.lblStudents.Text = "0,000"
+        '
+        'Timer1
+        '
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.SRMS_BED.My.Resources.Resources.dashboard___Management
+        Me.PictureBox3.Location = New System.Drawing.Point(296, 5)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(50, 54)
+        Me.PictureBox3.TabIndex = 3
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.SRMS_BED.My.Resources.Resources.dashboard___Student_Registration
+        Me.PictureBox2.Location = New System.Drawing.Point(296, 5)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(50, 54)
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
+        '
+        'IconButton8
+        '
+        Me.IconButton8.BackColor = System.Drawing.SystemColors.Control
+        Me.IconButton8.FlatAppearance.BorderSize = 0
+        Me.IconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton8.IconChar = FontAwesome.Sharp.IconChar.HomeUser
+        Me.IconButton8.IconColor = System.Drawing.Color.Black
+        Me.IconButton8.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton8.Location = New System.Drawing.Point(22, 27)
+        Me.IconButton8.Name = "IconButton8"
+        Me.IconButton8.Size = New System.Drawing.Size(47, 37)
+        Me.IconButton8.TabIndex = 2
+        Me.IconButton8.UseVisualStyleBackColor = False
+        '
         'IconButton12
         '
         Me.IconButton12.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(185, Byte), Integer))
@@ -130,14 +411,6 @@ Partial Class frmMain
         Me.IconButton12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.IconButton12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton12.UseVisualStyleBackColor = False
-        '
-        'Panel11
-        '
-        Me.Panel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(156, Byte), Integer), CType(CType(18, Byte), Integer))
-        Me.Panel11.Location = New System.Drawing.Point(0, 86)
-        Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(245, 10)
-        Me.Panel11.TabIndex = 10
         '
         'IconButton11
         '
@@ -319,15 +592,6 @@ Partial Class frmMain
         Me.IconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton2.UseVisualStyleBackColor = False
         '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.IconButton1)
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel4.Location = New System.Drawing.Point(0, 772)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(245, 55)
-        Me.Panel4.TabIndex = 2
-        '
         'IconButton1
         '
         Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(185, Byte), Integer))
@@ -348,15 +612,6 @@ Partial Class frmMain
         Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconButton1.UseVisualStyleBackColor = False
         '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.PictureBox1)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(245, 83)
-        Me.Panel3.TabIndex = 2
-        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.SRMS_BED.My.Resources.Resources.softtech_logo
@@ -365,259 +620,6 @@ Partial Class frmMain
         Me.PictureBox1.Size = New System.Drawing.Size(89, 87)
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Red
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(157, 6)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(40, 37)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "x"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Panel5
-        '
-        Me.Panel5.Controls.Add(Me.lblSchoolAddress)
-        Me.Panel5.Controls.Add(Me.IconButton8)
-        Me.Panel5.Controls.Add(Me.lblSchoolName)
-        Me.Panel5.Controls.Add(Me.Panel6)
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel5.Location = New System.Drawing.Point(245, 18)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1060, 86)
-        Me.Panel5.TabIndex = 3
-        '
-        'lblSchoolAddress
-        '
-        Me.lblSchoolAddress.AutoSize = True
-        Me.lblSchoolAddress.Font = New System.Drawing.Font("Bahnschrift Condensed", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSchoolAddress.Location = New System.Drawing.Point(76, 50)
-        Me.lblSchoolAddress.Name = "lblSchoolAddress"
-        Me.lblSchoolAddress.Size = New System.Drawing.Size(258, 23)
-        Me.lblSchoolAddress.TabIndex = 3
-        Me.lblSchoolAddress.Text = "PASAY CITY, METRO MANILA, PHILIPPINES"
-        '
-        'IconButton8
-        '
-        Me.IconButton8.BackColor = System.Drawing.SystemColors.Control
-        Me.IconButton8.FlatAppearance.BorderSize = 0
-        Me.IconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton8.IconChar = FontAwesome.Sharp.IconChar.HomeUser
-        Me.IconButton8.IconColor = System.Drawing.Color.Black
-        Me.IconButton8.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton8.Location = New System.Drawing.Point(22, 27)
-        Me.IconButton8.Name = "IconButton8"
-        Me.IconButton8.Size = New System.Drawing.Size(47, 37)
-        Me.IconButton8.TabIndex = 2
-        Me.IconButton8.UseVisualStyleBackColor = False
-        '
-        'lblSchoolName
-        '
-        Me.lblSchoolName.AutoSize = True
-        Me.lblSchoolName.Font = New System.Drawing.Font("Bahnschrift SemiBold", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSchoolName.Location = New System.Drawing.Point(75, 19)
-        Me.lblSchoolName.Name = "lblSchoolName"
-        Me.lblSchoolName.Size = New System.Drawing.Size(447, 29)
-        Me.lblSchoolName.TabIndex = 1
-        Me.lblSchoolName.Text = "WESLEYAN COLLEGE OF MANILA (WCM)"
-        '
-        'Panel6
-        '
-        Me.Panel6.Controls.Add(Me.lblAccountLevel)
-        Me.Panel6.Controls.Add(Me.Button2)
-        Me.Panel6.Controls.Add(Me.Button1)
-        Me.Panel6.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel6.Location = New System.Drawing.Point(860, 0)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(200, 86)
-        Me.Panel6.TabIndex = 0
-        '
-        'lblAccountLevel
-        '
-        Me.lblAccountLevel.AutoSize = True
-        Me.lblAccountLevel.Location = New System.Drawing.Point(23, 56)
-        Me.lblAccountLevel.Name = "lblAccountLevel"
-        Me.lblAccountLevel.Size = New System.Drawing.Size(86, 17)
-        Me.lblAccountLevel.TabIndex = 4
-        Me.lblAccountLevel.Text = "Account Level"
-        Me.lblAccountLevel.Visible = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.SkyBlue
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button2.Location = New System.Drawing.Point(111, 6)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(40, 37)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "-"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel7.Location = New System.Drawing.Point(245, 104)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(1060, 10)
-        Me.Panel7.TabIndex = 4
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.stDate, Me.stSemester, Me.stSY, Me.stUser})
-        Me.StatusStrip1.Location = New System.Drawing.Point(245, 823)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1060, 22)
-        Me.StatusStrip1.TabIndex = 6
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'stDate
-        '
-        Me.stDate.Name = "stDate"
-        Me.stDate.Size = New System.Drawing.Size(34, 17)
-        Me.stDate.Text = "Date "
-        '
-        'stSemester
-        '
-        Me.stSemester.Name = "stSemester"
-        Me.stSemester.Size = New System.Drawing.Size(80, 17)
-        Me.stSemester.Text = "First Semester"
-        '
-        'stSY
-        '
-        Me.stSY.Name = "stSY"
-        Me.stSY.Size = New System.Drawing.Size(20, 17)
-        Me.stSY.Text = "SY"
-        '
-        'stUser
-        '
-        Me.stUser.Name = "stUser"
-        Me.stUser.Size = New System.Drawing.Size(30, 17)
-        Me.stUser.Text = "User"
-        Me.stUser.Visible = False
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Bahnschrift SemiCondensed", 18.0!)
-        Me.Label8.Location = New System.Drawing.Point(263, 123)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(127, 29)
-        Me.Label8.TabIndex = 3
-        Me.Label8.Text = "DASHBOARD"
-        Me.Label8.Visible = False
-        '
-        'Panel9
-        '
-        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
-        Me.Panel9.Controls.Add(Me.PictureBox3)
-        Me.Panel9.Controls.Add(Me.Label5)
-        Me.Panel9.Controls.Add(Me.Label6)
-        Me.Panel9.Controls.Add(Me.lblStaff)
-        Me.Panel9.Location = New System.Drawing.Point(269, 158)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(351, 100)
-        Me.Panel9.TabIndex = 8
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Location = New System.Drawing.Point(296, 5)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(50, 54)
-        Me.PictureBox3.TabIndex = 3
-        Me.PictureBox3.TabStop = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label5.Location = New System.Drawing.Point(30, 50)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(316, 17)
-        Me.Label5.TabIndex = 2
-        Me.Label5.Text = "____________________________________________"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(29, 68)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(165, 23)
-        Me.Label6.TabIndex = 1
-        Me.Label6.Text = "FACULTY AND STAFF"
-        '
-        'lblStaff
-        '
-        Me.lblStaff.AutoSize = True
-        Me.lblStaff.Font = New System.Drawing.Font("Calibri", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStaff.ForeColor = System.Drawing.Color.White
-        Me.lblStaff.Location = New System.Drawing.Point(25, 14)
-        Me.lblStaff.Name = "lblStaff"
-        Me.lblStaff.Size = New System.Drawing.Size(105, 45)
-        Me.lblStaff.TabIndex = 0
-        Me.lblStaff.Text = "0,000"
-        '
-        'Panel10
-        '
-        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel10.Controls.Add(Me.PictureBox2)
-        Me.Panel10.Controls.Add(Me.Label4)
-        Me.Panel10.Controls.Add(Me.Label7)
-        Me.Panel10.Controls.Add(Me.lblStudents)
-        Me.Panel10.Location = New System.Drawing.Point(652, 158)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(351, 100)
-        Me.Panel10.TabIndex = 7
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Location = New System.Drawing.Point(296, 5)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(50, 54)
-        Me.PictureBox2.TabIndex = 3
-        Me.PictureBox2.TabStop = False
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label4.Location = New System.Drawing.Point(30, 50)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(316, 17)
-        Me.Label4.TabIndex = 2
-        Me.Label4.Text = "____________________________________________"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(29, 68)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(164, 23)
-        Me.Label7.TabIndex = 1
-        Me.Label7.Text = "STUDENT'S PROFILE"
-        '
-        'lblStudents
-        '
-        Me.lblStudents.AutoSize = True
-        Me.lblStudents.Font = New System.Drawing.Font("Calibri", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStudents.ForeColor = System.Drawing.Color.White
-        Me.lblStudents.Location = New System.Drawing.Point(25, 14)
-        Me.lblStudents.Name = "lblStudents"
-        Me.lblStudents.Size = New System.Drawing.Size(105, 45)
-        Me.lblStudents.TabIndex = 0
-        Me.lblStudents.Text = "0,000"
-        '
-        'Timer1
-        '
         '
         'frmMain
         '
@@ -644,7 +646,6 @@ Partial Class frmMain
         Me.Panel2.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
         Me.Panel6.ResumeLayout(False)
@@ -653,10 +654,11 @@ Partial Class frmMain
         Me.StatusStrip1.PerformLayout()
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel10.ResumeLayout(False)
         Me.Panel10.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

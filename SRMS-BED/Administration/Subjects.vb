@@ -17,9 +17,10 @@ Public Class frmSubjects
         btnSave.Enabled = True
         btnSave.Text = "SAVE"
 
-
         getDepatment()
-        getSubjects()
+        getYearLevel()
+        GetSubjects()
+
     End Sub
 
     Public Sub GetSubjects()
@@ -126,7 +127,9 @@ Public Class frmSubjects
     End Sub
 
     Private Sub cboDepartment_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboDepartment.SelectedIndexChanged
+
         getYearLevel()
+        GetSubjects()
     End Sub
 
     Private Sub dg1_DoubleClick(sender As Object, e As EventArgs) Handles dg1.DoubleClick
@@ -140,6 +143,7 @@ Public Class frmSubjects
             cboDepartment.Text = dg1.Item(4, i).Value
             cboSem.Text = dg1.Item(5, i).Value
             cboCategory.Text = dg1.Item(6, i).Value
+
 
             btnCancel.Visible = True
             btnDelete.Visible = True
@@ -201,5 +205,17 @@ Public Class frmSubjects
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Close()
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    Private Sub txtCode_TextChanged(sender As Object, e As EventArgs) Handles txtCode.TextChanged
+
+    End Sub
+
+    Private Sub cboYearLevel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboYearLevel.SelectedIndexChanged
+        GetSubjects()
     End Sub
 End Class

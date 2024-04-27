@@ -21,20 +21,29 @@ Public Class frmAddMedicalRecords
         tsDelete.Enabled = False
         Button1.Enabled = True
 
-        ' getCaseNo()
+        getCaseNo()
 
     End Sub
     Public Sub getCaseNo()
         Try
-            Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
-            str = "select caseNO from medical_records order by caseNo desc limit 1"
+            Dim objCmd As New MySql.Data.MySqlClient.MySqlCommand
+            Dim str As String = "SELECT caseNO FROM medical_records ORDER BY caseNo DESC LIMIT 1"
             conn.Open()
             Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
             objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
             dtReader = objCmd.ExecuteReader()
-            If dtReader.Read Then
-                txtCaseNo.Text = dtReader.Item(0).ToString
-                txtCaseNo.Text = txtCaseNo.Text + 1
+            If dtReader.Read() Then
+                Dim currentCaseNo As String = dtReader.GetString(0)
+                Dim nextCaseNo As Integer
+                If Integer.TryParse(currentCaseNo, nextCaseNo) Then
+                    txtCaseNo.Text = (nextCaseNo + 1).ToString()
+                Else
+
+                    txtCaseNo.Text = "Invalid Case Number"
+                End If
+            Else
+
+                txtCaseNo.Text = "1"
             End If
             conn.Close()
         Catch ex As Exception
@@ -77,6 +86,7 @@ Public Class frmAddMedicalRecords
 
     Private Sub frmAddMedicalRecords_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         formload()
+
     End Sub
 
     Private Sub tsUpdate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsUpdate.Click

@@ -104,6 +104,44 @@ Public Class TeacherGradesEncoding
             conn.Close()
         End Try
     End Sub
+
+    Public Sub getStatus()
+        Try
+            Dim subcom As String = If(lblMapehStat.Text = 1, cboSubSubject.Text, "")
+            Dim str As String = "SELECT firstStat, secondStat, thirdStat, fourthStat FROM grades WHERE SubjectCode = @SubjectCode AND Description = @Description AND subComponent = @subComponent AND Section = @Section AND Instructor = @Instructor AND Sem = @Sem AND SY = @SY"
+
+            conn.Open()
+            Dim objCmd As New MySql.Data.MySqlClient.MySqlCommand(str, conn)
+            objCmd.Parameters.AddWithValue("@SubjectCode", txtSubjectcode.Text)
+            objCmd.Parameters.AddWithValue("@Description", txtDescription.Text)
+            objCmd.Parameters.AddWithValue("@subComponent", subcom)
+            objCmd.Parameters.AddWithValue("@Section", txtSection.Text)
+            objCmd.Parameters.AddWithValue("@Instructor", frmTeacher.lblInstructor.Text)
+            objCmd.Parameters.AddWithValue("@Sem", frmTeacher.stSemester.Text)
+            objCmd.Parameters.AddWithValue("@SY", frmTeacher.stSY.Text)
+
+            Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader = objCmd.ExecuteReader()
+            If dtReader.Read() Then
+                Dim firstStat As String = dtReader.GetString(0)
+                Dim secondStat As String = dtReader.GetString(1)
+                Dim thirdStat As String = dtReader.GetString(2)
+                Dim fourthStat As String = dtReader.GetString(3)
+
+                dg1.Columns(2).ReadOnly = (firstStat = "Closed")
+                dg1.Columns(3).ReadOnly = (secondStat = "Closed")
+                dg1.Columns(4).ReadOnly = (thirdStat = "Closed")
+                dg1.Columns(5).ReadOnly = (fourthStat = "Closed")
+            End If
+
+            dtReader.Close()
+            conn.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+            conn.Close()
+        End Try
+    End Sub
+
     Private Sub TeacherGradesEncoding_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         formLoad()
     End Sub
@@ -122,6 +160,7 @@ Public Class TeacherGradesEncoding
 
     Private Sub txtSubjectcode_TextChanged(sender As Object, e As EventArgs) Handles txtSubjectcode.TextChanged
         Grades()
+        getStatus()
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
@@ -182,8 +221,16 @@ Public Class TeacherGradesEncoding
             Else
                 For x As Integer = 0 To dg1.Rows.Count - 1
                     conn.Close()
+                    Dim PGrade As Double = If(dg1.Item(5, x).Value IsNot Nothing AndAlso IsNumeric(dg1.Item(5, x).Value), CDbl(dg1.Item(5, x).Value), 0)
+                    Dim MGrade As Double = If(dg1.Item(6, x).Value IsNot Nothing AndAlso IsNumeric(dg1.Item(6, x).Value), CDbl(dg1.Item(6, x).Value), 0)
+                    Dim PFGrade As Double = If(dg1.Item(7, x).Value IsNot Nothing AndAlso IsNumeric(dg1.Item(7, x).Value), CDbl(dg1.Item(7, x).Value), 0)
+                    Dim FGrade As Double = If(dg1.Item(8, x).Value IsNot Nothing AndAlso IsNumeric(dg1.Item(8, x).Value), CDbl(dg1.Item(8, x).Value), 0)
 
-                    str = "insert into grades values('0','" & dg1.Item(0, x).Value & "','" & txtSubjectcode.Text & "','" & txtDescription.Text & "','" & frmTeacher.lblInstructor.Text & "','" & txtSection.Text & "','" & dg1.Item(5, x).Value & "','" & dg1.Item(6, x).Value & "','" & dg1.Item(7, x).Value & "','" & dg1.Item(8, x).Value & "','0','" & frmTeacher.stSemester.Text & "','" & frmTeacher.stSY.Text & "','Open','Open','Open','Open','" & dg1.Item(2, x).Value & "','" & dg1.Item(3, x).Value & "','" & dg1.Item(4, x).Value & "','','" & subcom & "')"
+
+
+                    ' str = "insert into grades values('0','" & dg1.Item(0, x).Value & "','" & txtSubjectcode.Text & "','" & txtDescription.Text & "','" & txtInstructor.Text & "','" & txtSection.Text & "', COALESCE('" & dg1.Item(5, x).Value & "', 0),COALESCE('" & dg1.Item(6, x).Value & "', 0),COALESCE('" & dg1.Item(7, x).Value & "', 0),COALESCE('" & dg1.Item(8, x).Value & "', 0),'0','" & frmRegistrar.stSemester.Text & "','" & frmRegistrar.stSY.Text & "','Open','Open','Open','Open','" & dg1.Item(2, x).Value & "','" & dg1.Item(3, x).Value & "','" & dg1.Item(4, x).Value & "','','" & subcom & "')"
+                    str = "insert into grades values('0','" & dg1.Item(0, x).Value & "','" & txtSubjectcode.Text & "','" & txtDescription.Text & "','" & frmTeacher.lblInstructor.Text & "','" & txtSection.Text & "', '" & PGrade & "','" & MGrade & "','" & PFGrade & "','" & FGrade & "','0','" & frmTeacher.stSemester.Text & "','" & frmTeacher.stSY.Text & "','Open','Open','Open','Open','" & dg1.Item(2, x).Value & "','" & dg1.Item(3, x).Value & "','" & dg1.Item(4, x).Value & "','','" & subcom & "')"
+
                     conn.Open()
                     Dim mysC2 As New MySqlCommand(str, conn)
                     mysC2.ExecuteNonQuery()
@@ -216,18 +263,38 @@ Public Class TeacherGradesEncoding
                 Else
                     subcom = ""
                 End If
-                str = "delete from grades where SubjectCode='" & txtSubjectcode.Text & "' and Description='" & txtDescription.Text & "' and Section='" & txtSection.Text & "' and Sem='" & frmTeacher.stSY.Text & "' and SY='" & frmTeacher.stSY.Text & "'"
-                'str = "delete from grades where SubjectCode='" & txtSubjectcode.Text & "' and Description='" & txtDescription.Text & "' and subComponent='" & subcom & "' and Instructor='" & frmTeacher.lblInstructor.Text & "' and Section='" & txtSection.Text & "' and Sem='" & frmTeacher.stSY.Text & "' and SY='" & frmTeacher.stSY.Text & "'"
-                conn.Open()
-                Dim mysc As New MySqlCommand(str, conn)
-                mysc.ExecuteNonQuery()
-                conn.Close()
-                MsgBox("Grades successfully deleted", MsgBoxStyle.Information)
-                formLoad()
+
+                If cboStatus.Text = "Closed" Then
+                    MsgBox("Grades cannot be deleted!", MsgBoxStyle.Exclamation)
+                    Exit Sub
+                Else
+                    str = "delete from grades where SubjectCode='" & txtSubjectcode.Text & "' and Description='" & txtDescription.Text & "' and subComponent='" & subcom & "' and Instructor='" & frmTeacher.lblInstructor.Text & "' and Section='" & txtSection.Text & "' and Sem='" & frmTeacher.stSemester.Text & "' and SY='" & frmTeacher.stSY.Text & "'"
+                    conn.Open()
+                    Dim mysc As New MySqlCommand(str, conn)
+                    mysc.ExecuteNonQuery()
+                    conn.Close()
+                    MsgBox("Grades successfully deleted", MsgBoxStyle.Information)
+                    formLoad()
+                End If
+
             End If
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
             conn.Close()
         End Try
+    End Sub
+
+    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
+
+    End Sub
+
+    Private Sub txtDescription_TextChanged(sender As Object, e As EventArgs) Handles txtDescription.TextChanged
+        If txtDescription.Text.Contains("MAPEH") OrElse txtDescription.Text.Contains("Mapeh") OrElse txtDescription.Text.Contains("Music Arts Physical Education Health") Then
+            cboSubSubject.Visible = True ' Show the combo box
+            lblMapehStat.Text = 1
+        Else
+            cboSubSubject.Visible = False ' Hide the combo box
+            lblMapehStat.Text = 0
+        End If
     End Sub
 End Class

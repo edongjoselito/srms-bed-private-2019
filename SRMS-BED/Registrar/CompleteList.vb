@@ -164,7 +164,6 @@ Public Class frmCompleteList
                 dgstudentsearch.Columns(62).Visible = False
                 dgstudentsearch.Columns(63).Visible = False
                 dgstudentsearch.Columns(64).Visible = False
-                dgstudentsearch.Columns(65).Visible = False
 
             End If
         Catch ex As Exception
@@ -258,7 +257,6 @@ Public Class frmCompleteList
             dgstudentsearch.Columns(62).Visible = False
             dgstudentsearch.Columns(63).Visible = False
             dgstudentsearch.Columns(64).Visible = False
-            dgstudentsearch.Columns(65).Visible = False
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Information)
@@ -353,53 +351,54 @@ Public Class frmCompleteList
                 frmStudeProfile.txtJHSAddress.Text = dgstudentsearch.Item(13, dclick).Value
                 frmStudeProfile.txtCollege.Text = dgstudentsearch.Item(14, dclick).Value
                 frmStudeProfile.txtCollegeAddress.Text = dgstudentsearch.Item(15, dclick).Value
-                frmStudeProfile.txtRequirements.Text = dgstudentsearch.Item(16, dclick).Value
-                frmStudeProfile.dtpBirthDate.Text = dgstudentsearch.Item(18, dclick).Value
-                'frmStudeProfile.dtpAdmission.Text = dgstudentsearch.Item(19, dclick).Value
+                'frmStudeProfile.txtRequirements.Text = dgstudentsearch.Item(16, dclick).Value
+                frmStudeProfile.dtpBirthDate.Text = dgstudentsearch.Item(17, dclick).Value
+                'frmStudeProfile.dtpAdmission.Text = dgstudentsearch.Item(18, dclick).Value
                 ' frmStudeProfile.dtpGraduation.Text = dgstudentsearch.Item(20, dclick).Value
-                frmStudeProfile.txtGuardian.Text = dgstudentsearch.Item(19, dclick).Value
-                frmStudeProfile.txtGuardianContact.Text = dgstudentsearch.Item(20, dclick).Value
-                frmStudeProfile.btnSet.Text = dgstudentsearch.Item(21, dclick).Value
-                frmStudeProfile.cboCourse.Text = dgstudentsearch.Item(22, dclick).Value
-                frmStudeProfile.txtElementary.Text = dgstudentsearch.Item(23, dclick).Value
-                frmStudeProfile.txtElemAddress.Text = dgstudentsearch.Item(24, dclick).Value
-                frmStudeProfile.txtGuardianRelationship.Text = dgstudentsearch.Item(25, dclick).Value
-                frmStudeProfile.mskGuardianTel.Text = dgstudentsearch.Item(26, dclick).Value
-                frmStudeProfile.txtEmail.Text = dgstudentsearch.Item(27, dclick).Value
-                frmStudeProfile.txtFather.Text = dgstudentsearch.Item(28, dclick).Value
-                frmStudeProfile.txtFatherOccupation.Text = dgstudentsearch.Item(29, dclick).Value
-                frmStudeProfile.txtMother.Text = dgstudentsearch.Item(30, dclick).Value
-                frmStudeProfile.txtMotherOccupation.Text = dgstudentsearch.Item(31, dclick).Value
-                frmStudeProfile.txtAge.Text = dgstudentsearch.Item(32, dclick).Value
+                frmStudeProfile.txtGuardian.Text = dgstudentsearch.Item(18, dclick).Value
+                frmStudeProfile.txtGuardianContact.Text = dgstudentsearch.Item(19, dclick).Value
+                frmStudeProfile.btnSet.Text = dgstudentsearch.Item(20, dclick).Value
+                frmStudeProfile.cboCourse.Text = dgstudentsearch.Item(21, dclick).Value
+                frmStudeProfile.txtElementary.Text = dgstudentsearch.Item(22, dclick).Value
+                frmStudeProfile.txtElemAddress.Text = dgstudentsearch.Item(23, dclick).Value
+                frmStudeProfile.txtGuardianRelationship.Text = dgstudentsearch.Item(24, dclick).Value
+                frmStudeProfile.mskGuardianTel.Text = dgstudentsearch.Item(25, dclick).Value
+                frmStudeProfile.txtEmail.Text = dgstudentsearch.Item(26, dclick).Value
+                frmStudeProfile.txtFather.Text = dgstudentsearch.Item(27, dclick).Value
+                frmStudeProfile.txtFatherOccupation.Text = dgstudentsearch.Item(28, dclick).Value
+                frmStudeProfile.txtMother.Text = dgstudentsearch.Item(29, dclick).Value
+                frmStudeProfile.txtMotherOccupation.Text = dgstudentsearch.Item(30, dclick).Value
+                frmStudeProfile.txtAge.Text = dgstudentsearch.Item(31, dclick).Value
 
-                frmStudeProfile.cboEthnicity.Text = dgstudentsearch.Item(37, dclick).Value
-                frmStudeProfile.txtMonthlyIncome.Text = dgstudentsearch.Item(38, dclick).Value
-                frmStudeProfile.cboProvince.Text = dgstudentsearch.Item(39, dclick).Value
-                frmStudeProfile.cboMuncipality.Text = dgstudentsearch.Item(40, dclick).Value
-                frmStudeProfile.cboBrgy.Text = dgstudentsearch.Item(41, dclick).Value
-                frmStudeProfile.txtSubdivision.Text = dgstudentsearch.Item(42, dclick).Value
+                frmStudeProfile.cboEthnicity.Text = dgstudentsearch.Item(36, dclick).Value
+                frmStudeProfile.txtMonthlyIncome.Text = dgstudentsearch.Item(37, dclick).Value
+                frmStudeProfile.cboProvince.Text = dgstudentsearch.Item(38, dclick).Value
+                frmStudeProfile.cboMuncipality.Text = dgstudentsearch.Item(39, dclick).Value
+                frmStudeProfile.cboBrgy.Text = dgstudentsearch.Item(40, dclick).Value
+                frmStudeProfile.txtSubdivision.Text = dgstudentsearch.Item(41, dclick).Value
 
-                frmStudeProfile.lblGuardianOccupation.Text = dgstudentsearch.Item(44, dclick).Value
-                frmStudeProfile.txtelemSchoolYear.Text = dgstudentsearch.Item(45, dclick).Value
-                frmStudeProfile.txtElemGenAve.Text = dgstudentsearch.Item(46, dclick).Value
-                frmStudeProfile.mskElemGradDate.Text = dgstudentsearch.Item(47, dclick).Value
-                frmStudeProfile.cboEligibility.Text = dgstudentsearch.Item(48, dclick).Value
-                frmStudeProfile.txtJHSGenAve.Text = dgstudentsearch.Item(49, dclick).Value
-                frmStudeProfile.mskJHSGradDate.Text = dgstudentsearch.Item(50, dclick).Value
-                frmStudeProfile.txtElemSchoolID.Text = dgstudentsearch.Item(51, dclick).Value
-                frmStudeProfile.txtJHSSchoolID.Text = dgstudentsearch.Item(52, dclick).Value
-                frmStudeProfile.txtPEPTRating.Text = dgstudentsearch.Item(53, dclick).Value
-                frmStudeProfile.mskPEPTExamDate.Text = dgstudentsearch.Item(54, dclick).Value
-                frmStudeProfile.txtALSRating.Text = dgstudentsearch.Item(55, dclick).Value
-                frmStudeProfile.txtAlsTestingCenter.Text = dgstudentsearch.Item(56, dclick).Value
-                frmStudeProfile.txtNameExt.Text = dgstudentsearch.Item(57, dclick).Value
-                frmStudeProfile.txtRFID.Text = dgstudentsearch.Item(58, dclick).Value
-                frmStudeProfile.txtLRN.Text = dgstudentsearch.Item(59, dclick).Value
-                frmStudeProfile.cboClassification.Text = dgstudentsearch.Item(60, dclick).Value
-                frmStudeProfile.txtFatherContactNo.Text = dgstudentsearch.Item(61, dclick).Value
-                frmStudeProfile.txtMotherContactNo.Text = dgstudentsearch.Item(62, dclick).Value
-                frmStudeProfile.cboScholarship.Text = dgstudentsearch.Item(64, dclick).Value
-                frmStudeProfile.txtNotes.Text = dgstudentsearch.Item(65, dclick).Value
+                frmStudeProfile.lblGuardianOccupation.Text = dgstudentsearch.Item(43, dclick).Value
+                frmStudeProfile.txtelemSchoolYear.Text = dgstudentsearch.Item(44, dclick).Value
+                frmStudeProfile.txtElemGenAve.Text = dgstudentsearch.Item(45, dclick).Value
+                frmStudeProfile.mskElemGradDate.Text = dgstudentsearch.Item(46, dclick).Value
+                frmStudeProfile.cboEligibility.Text = dgstudentsearch.Item(47, dclick).Value
+                frmStudeProfile.txtJHSGenAve.Text = dgstudentsearch.Item(48, dclick).Value
+                frmStudeProfile.mskJHSGradDate.Text = dgstudentsearch.Item(49, dclick).Value
+                frmStudeProfile.txtElemSchoolID.Text = dgstudentsearch.Item(50, dclick).Value
+                frmStudeProfile.txtJHSSchoolID.Text = dgstudentsearch.Item(51, dclick).Value
+                frmStudeProfile.txtPEPTRating.Text = dgstudentsearch.Item(52, dclick).Value
+                frmStudeProfile.mskPEPTExamDate.Text = dgstudentsearch.Item(53, dclick).Value
+                frmStudeProfile.txtALSRating.Text = dgstudentsearch.Item(54, dclick).Value
+                frmStudeProfile.txtAlsTestingCenter.Text = dgstudentsearch.Item(55, dclick).Value
+                frmStudeProfile.txtNameExt.Text = dgstudentsearch.Item(56, dclick).Value
+                frmStudeProfile.txtRFID.Text = dgstudentsearch.Item(57, dclick).Value
+                frmStudeProfile.txtLRN.Text = dgstudentsearch.Item(58, dclick).Value
+                frmStudeProfile.cboClassification.Text = dgstudentsearch.Item(59, dclick).Value
+                frmStudeProfile.txtFatherContactNo.Text = dgstudentsearch.Item(60, dclick).Value
+                frmStudeProfile.txtMotherContactNo.Text = dgstudentsearch.Item(61, dclick).Value
+                'upload batch 62
+                frmStudeProfile.cboScholarship.Text = dgstudentsearch.Item(63, dclick).Value
+                frmStudeProfile.txtNotes.Text = dgstudentsearch.Item(64, dclick).Value
 
                 frmOtherIncome.mskStudentNumber.Text = dgstudentsearch.Item(0, dclick).Value
                 frmOtherIncome.txtFname.Text = dgstudentsearch.Item(1, dclick).Value

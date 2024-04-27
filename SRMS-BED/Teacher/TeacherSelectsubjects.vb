@@ -50,6 +50,7 @@ Public Class frmTeacherSelectsubjects
                 TeacherGradesEncoding.txtSection.Text = dg1(2, i).Value
 
                 TeacherGradesEncoding.Grades()
+                TeacherGradesEncoding.getStatus()
 
             End If
 

@@ -22,7 +22,7 @@ Partial Class frmSubjects
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -354,8 +354,8 @@ Partial Class frmSubjects
         '
         Me.dg1.AllowUserToAddRows = False
         Me.dg1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray
-        Me.dg1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray
+        Me.dg1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dg1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg1.Location = New System.Drawing.Point(492, 160)
         Me.dg1.Name = "dg1"

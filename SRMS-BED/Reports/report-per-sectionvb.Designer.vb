@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmReportPerSection
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmReportPerSection
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.cboSection = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -29,7 +29,6 @@ Partial Class frmReportPerSection
         Me.cboCourse = New System.Windows.Forms.ComboBox()
         Me.cboYearLevel = New System.Windows.Forms.ComboBox()
         Me.btnPreview = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'cboSection
@@ -114,18 +113,6 @@ Partial Class frmReportPerSection
         Me.btnPreview.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnPreview.UseVisualStyleBackColor = False
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(140, Byte), Integer))
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(9, 95)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(400, 15)
-        Me.Label1.TabIndex = 23
-        Me.Label1.Text = "Note: If Section field is empty, it will generate a masterlist per year level."
-        '
         'frmReportPerSection
         '
         Me.AcceptButton = Me.btnPreview
@@ -135,7 +122,6 @@ Partial Class frmReportPerSection
         Me.ClientSize = New System.Drawing.Size(457, 174)
         Me.Controls.Add(Me.cboSection)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.cboYearLevel)
         Me.Controls.Add(Me.btnPreview)
@@ -159,5 +145,4 @@ Partial Class frmReportPerSection
     Friend WithEvents cboCourse As System.Windows.Forms.ComboBox
     Friend WithEvents btnPreview As System.Windows.Forms.Button
     Friend WithEvents cboYearLevel As System.Windows.Forms.ComboBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

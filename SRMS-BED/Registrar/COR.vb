@@ -96,7 +96,7 @@ Public Class frmCOR
                 conn.Close()
             Else
                 Dim dt As New DataTable
-                str = "SELECT s.SubjectCode, s.Description, s.SchedTime, s.Room, s.Section, s.IDNumber, concat(FirstName, MiddleName, LastName) as Teacher FROM semsubjects s join staff ff on s.IDNumber=ff.IDNumber where Course='" & txtCourse.Text & "' and YearLevel='" & txtYearLevel.Text & "' and Semester='" & frmRegistrar.stSemester.Text & "' and SY='" & frmRegistrar.stSY.Text & "' and Section='" & lblSection.Text & "'"
+                str = "SELECT s.SubjectCode, s.Description, s.SchedTime, s.Room, s.Section, s.IDNumber, concat(FirstName,' ',MiddleName,' ',LastName) as Teacher FROM semsubjects s join staff ff on s.IDNumber=ff.IDNumber where Course='" & txtCourse.Text & "' and YearLevel='" & txtYearLevel.Text & "' and Semester='" & frmRegistrar.stSemester.Text & "' and SY='" & frmRegistrar.stSY.Text & "' and Section='" & lblSection.Text & "'"
                 conn.Open()
                 Dim mysda As New MySqlDataAdapter(str, conn)
                 mysda.Fill(dt)
@@ -257,7 +257,7 @@ Public Class frmCOR
             mysC.ExecuteNonQuery()
             conn.Close()
             tsSave.PerformClick()
-            lvCOR.Items.Clear()
+            ' lvCOR.Items.Clear()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Information)
             conn.Close()

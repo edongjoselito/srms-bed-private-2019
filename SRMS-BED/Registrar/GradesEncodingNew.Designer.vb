@@ -34,7 +34,13 @@ Partial Class frmGradesEncodingNew
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.lblstat4 = New System.Windows.Forms.Label()
+        Me.lblstat3 = New System.Windows.Forms.Label()
+        Me.lblstat2 = New System.Windows.Forms.Label()
+        Me.lblstat1 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.cboStatus = New System.Windows.Forms.ComboBox()
+        Me.btnCancel = New FontAwesome.Sharp.IconButton()
         Me.lblMapehStat = New System.Windows.Forms.Label()
         Me.lblInstructorID = New System.Windows.Forms.Label()
         Me.btnSelect = New System.Windows.Forms.Button()
@@ -147,7 +153,13 @@ Partial Class frmGradesEncodingNew
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.IconButton1)
+        Me.GroupBox1.Controls.Add(Me.lblstat4)
+        Me.GroupBox1.Controls.Add(Me.lblstat3)
+        Me.GroupBox1.Controls.Add(Me.lblstat2)
+        Me.GroupBox1.Controls.Add(Me.lblstat1)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.cboStatus)
+        Me.GroupBox1.Controls.Add(Me.btnCancel)
         Me.GroupBox1.Controls.Add(Me.lblMapehStat)
         Me.GroupBox1.Controls.Add(Me.lblInstructorID)
         Me.GroupBox1.Controls.Add(Me.btnSelect)
@@ -169,22 +181,82 @@ Partial Class frmGradesEncodingNew
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "SUBJECT DETAILS"
         '
-        'IconButton1
+        'lblstat4
         '
-        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(148, Byte), Integer))
-        Me.IconButton1.FlatAppearance.BorderSize = 0
-        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton1.ForeColor = System.Drawing.Color.Black
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.None
-        Me.IconButton1.IconColor = System.Drawing.Color.Black
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(15, 423)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(102, 37)
-        Me.IconButton1.TabIndex = 44
-        Me.IconButton1.TabStop = False
-        Me.IconButton1.Text = "CANCEL"
-        Me.IconButton1.UseVisualStyleBackColor = False
+        Me.lblstat4.AutoSize = True
+        Me.lblstat4.Location = New System.Drawing.Point(34, 340)
+        Me.lblstat4.Name = "lblstat4"
+        Me.lblstat4.Size = New System.Drawing.Size(35, 15)
+        Me.lblstat4.TabIndex = 51
+        Me.lblstat4.Text = "stat4"
+        Me.lblstat4.Visible = False
+        '
+        'lblstat3
+        '
+        Me.lblstat3.AutoSize = True
+        Me.lblstat3.Location = New System.Drawing.Point(34, 325)
+        Me.lblstat3.Name = "lblstat3"
+        Me.lblstat3.Size = New System.Drawing.Size(35, 15)
+        Me.lblstat3.TabIndex = 50
+        Me.lblstat3.Text = "stat3"
+        Me.lblstat3.Visible = False
+        '
+        'lblstat2
+        '
+        Me.lblstat2.AutoSize = True
+        Me.lblstat2.Location = New System.Drawing.Point(34, 310)
+        Me.lblstat2.Name = "lblstat2"
+        Me.lblstat2.Size = New System.Drawing.Size(35, 15)
+        Me.lblstat2.TabIndex = 49
+        Me.lblstat2.Text = "stat2"
+        Me.lblstat2.Visible = False
+        '
+        'lblstat1
+        '
+        Me.lblstat1.AutoSize = True
+        Me.lblstat1.Location = New System.Drawing.Point(34, 295)
+        Me.lblstat1.Name = "lblstat1"
+        Me.lblstat1.Size = New System.Drawing.Size(35, 15)
+        Me.lblstat1.TabIndex = 48
+        Me.lblstat1.Text = "stat1"
+        Me.lblstat1.Visible = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(12, 140)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(78, 15)
+        Me.Label4.TabIndex = 47
+        Me.Label4.Text = "COMPONENT"
+        '
+        'cboStatus
+        '
+        Me.cboStatus.FormattingEnabled = True
+        Me.cboStatus.Location = New System.Drawing.Point(199, 287)
+        Me.cboStatus.Name = "cboStatus"
+        Me.cboStatus.Size = New System.Drawing.Size(121, 23)
+        Me.cboStatus.TabIndex = 46
+        Me.cboStatus.Visible = False
+        '
+        'btnCancel
+        '
+        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(148, Byte), Integer))
+        Me.btnCancel.FlatAppearance.BorderSize = 0
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancel.ForeColor = System.Drawing.Color.Black
+        Me.btnCancel.IconChar = FontAwesome.Sharp.IconChar.None
+        Me.btnCancel.IconColor = System.Drawing.Color.Black
+        Me.btnCancel.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.btnCancel.Location = New System.Drawing.Point(15, 423)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(102, 37)
+        Me.btnCancel.TabIndex = 44
+        Me.btnCancel.TabStop = False
+        Me.btnCancel.Text = "CANCEL"
+        Me.btnCancel.UseVisualStyleBackColor = False
         '
         'lblMapehStat
         '
@@ -222,7 +294,7 @@ Partial Class frmGradesEncodingNew
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(12, 172)
+        Me.Label3.Location = New System.Drawing.Point(12, 203)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(54, 15)
         Me.Label3.TabIndex = 39
@@ -233,7 +305,7 @@ Partial Class frmGradesEncodingNew
         Me.txtInstructor.BackColor = System.Drawing.Color.White
         Me.txtInstructor.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtInstructor.ForeColor = System.Drawing.Color.Black
-        Me.txtInstructor.Location = New System.Drawing.Point(103, 169)
+        Me.txtInstructor.Location = New System.Drawing.Point(103, 200)
         Me.txtInstructor.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtInstructor.Name = "txtInstructor"
         Me.txtInstructor.ReadOnly = True
@@ -245,7 +317,7 @@ Partial Class frmGradesEncodingNew
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(12, 141)
+        Me.Label6.Location = New System.Drawing.Point(12, 172)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(53, 15)
         Me.Label6.TabIndex = 38
@@ -256,11 +328,11 @@ Partial Class frmGradesEncodingNew
         Me.txtSection.BackColor = System.Drawing.Color.White
         Me.txtSection.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSection.ForeColor = System.Drawing.Color.Black
-        Me.txtSection.Location = New System.Drawing.Point(103, 138)
+        Me.txtSection.Location = New System.Drawing.Point(103, 169)
         Me.txtSection.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtSection.Name = "txtSection"
         Me.txtSection.ReadOnly = True
-        Me.txtSection.Size = New System.Drawing.Size(122, 23)
+        Me.txtSection.Size = New System.Drawing.Size(154, 23)
         Me.txtSection.TabIndex = 37
         '
         'cboSubSubject
@@ -268,7 +340,7 @@ Partial Class frmGradesEncodingNew
         Me.cboSubSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboSubSubject.FormattingEnabled = True
         Me.cboSubSubject.Items.AddRange(New Object() {"Music", "Arts", "Physical Education", "Health"})
-        Me.cboSubSubject.Location = New System.Drawing.Point(199, 230)
+        Me.cboSubSubject.Location = New System.Drawing.Point(103, 137)
         Me.cboSubSubject.Name = "cboSubSubject"
         Me.cboSubSubject.Size = New System.Drawing.Size(154, 23)
         Me.cboSubSubject.TabIndex = 36
@@ -373,6 +445,7 @@ Partial Class frmGradesEncodingNew
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1147, 681)
         Me.Controls.Add(Me.dg1)
         Me.Controls.Add(Me.GroupBox1)
@@ -424,5 +497,11 @@ Partial Class frmGradesEncodingNew
     Friend WithEvents btnSelect As Button
     Friend WithEvents lblInstructorID As Label
     Friend WithEvents lblMapehStat As Label
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents btnCancel As FontAwesome.Sharp.IconButton
+    Friend WithEvents cboStatus As ComboBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents lblstat4 As Label
+    Friend WithEvents lblstat3 As Label
+    Friend WithEvents lblstat2 As Label
+    Friend WithEvents lblstat1 As Label
 End Class

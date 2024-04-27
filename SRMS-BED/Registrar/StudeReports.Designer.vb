@@ -34,6 +34,23 @@ Partial Class frmStudeReports
         Me.ReloadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblMFourth = New System.Windows.Forms.Label()
+        Me.lblMThird = New System.Windows.Forms.Label()
+        Me.lblMSecond = New System.Windows.Forms.Label()
+        Me.lblMFirst = New System.Windows.Forms.Label()
+        Me.lblFourthAve = New System.Windows.Forms.Label()
+        Me.lblThirdAve = New System.Windows.Forms.Label()
+        Me.lblSecondAve = New System.Windows.Forms.Label()
+        Me.lblFirstAve = New System.Windows.Forms.Label()
+        Me.lblFourth = New System.Windows.Forms.Label()
+        Me.lblThird = New System.Windows.Forms.Label()
+        Me.lblSecond = New System.Windows.Forms.Label()
+        Me.lblFirst = New System.Windows.Forms.Label()
+        Me.lblSubjCount = New System.Windows.Forms.Label()
+        Me.lblSubjAve = New System.Windows.Forms.Label()
+        Me.lblMapehAve = New System.Windows.Forms.Label()
+        Me.lblStudeType = New System.Windows.Forms.Label()
+        Me.lblGenAve = New System.Windows.Forms.Label()
         Me.lblDepartment = New System.Windows.Forms.Label()
         Me.cboStudeReport = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -43,8 +60,6 @@ Partial Class frmStudeReports
         Me.mskStudentNumber = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.specialReportViewer = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.lblGenAve = New System.Windows.Forms.Label()
-        Me.lblStudeType = New System.Windows.Forms.Label()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
@@ -58,7 +73,7 @@ Partial Class frmStudeReports
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel7.Location = New System.Drawing.Point(0, 0)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(1154, 4)
+        Me.Panel7.Size = New System.Drawing.Size(1167, 4)
         Me.Panel7.TabIndex = 21
         '
         'Panel5
@@ -70,7 +85,7 @@ Partial Class frmStudeReports
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel5.Location = New System.Drawing.Point(0, 4)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1154, 95)
+        Me.Panel5.Size = New System.Drawing.Size(1167, 95)
         Me.Panel5.TabIndex = 22
         '
         'PictureBox1
@@ -96,7 +111,7 @@ Partial Class frmStudeReports
         '
         Me.Panel6.Controls.Add(Me.btnClose)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel6.Location = New System.Drawing.Point(929, 0)
+        Me.Panel6.Location = New System.Drawing.Point(942, 0)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(225, 95)
         Me.Panel6.TabIndex = 0
@@ -156,6 +171,21 @@ Partial Class frmStudeReports
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.lblMFourth)
+        Me.Panel1.Controls.Add(Me.lblMThird)
+        Me.Panel1.Controls.Add(Me.lblMSecond)
+        Me.Panel1.Controls.Add(Me.lblMFirst)
+        Me.Panel1.Controls.Add(Me.lblFourthAve)
+        Me.Panel1.Controls.Add(Me.lblThirdAve)
+        Me.Panel1.Controls.Add(Me.lblSecondAve)
+        Me.Panel1.Controls.Add(Me.lblFirstAve)
+        Me.Panel1.Controls.Add(Me.lblFourth)
+        Me.Panel1.Controls.Add(Me.lblThird)
+        Me.Panel1.Controls.Add(Me.lblSecond)
+        Me.Panel1.Controls.Add(Me.lblFirst)
+        Me.Panel1.Controls.Add(Me.lblSubjCount)
+        Me.Panel1.Controls.Add(Me.lblSubjAve)
+        Me.Panel1.Controls.Add(Me.lblMapehAve)
         Me.Panel1.Controls.Add(Me.lblStudeType)
         Me.Panel1.Controls.Add(Me.lblGenAve)
         Me.Panel1.Controls.Add(Me.lblDepartment)
@@ -169,8 +199,178 @@ Partial Class frmStudeReports
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 99)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1154, 66)
+        Me.Panel1.Size = New System.Drawing.Size(1167, 66)
         Me.Panel1.TabIndex = 23
+        '
+        'lblMFourth
+        '
+        Me.lblMFourth.AutoSize = True
+        Me.lblMFourth.Location = New System.Drawing.Point(1070, 43)
+        Me.lblMFourth.Name = "lblMFourth"
+        Me.lblMFourth.Size = New System.Drawing.Size(14, 15)
+        Me.lblMFourth.TabIndex = 24
+        Me.lblMFourth.Text = "0"
+        Me.lblMFourth.Visible = False
+        '
+        'lblMThird
+        '
+        Me.lblMThird.AutoSize = True
+        Me.lblMThird.Location = New System.Drawing.Point(1050, 43)
+        Me.lblMThird.Name = "lblMThird"
+        Me.lblMThird.Size = New System.Drawing.Size(14, 15)
+        Me.lblMThird.TabIndex = 23
+        Me.lblMThird.Text = "0"
+        Me.lblMThird.Visible = False
+        '
+        'lblMSecond
+        '
+        Me.lblMSecond.AutoSize = True
+        Me.lblMSecond.Location = New System.Drawing.Point(1030, 43)
+        Me.lblMSecond.Name = "lblMSecond"
+        Me.lblMSecond.Size = New System.Drawing.Size(14, 15)
+        Me.lblMSecond.TabIndex = 22
+        Me.lblMSecond.Text = "0"
+        Me.lblMSecond.Visible = False
+        '
+        'lblMFirst
+        '
+        Me.lblMFirst.AutoSize = True
+        Me.lblMFirst.Location = New System.Drawing.Point(1010, 43)
+        Me.lblMFirst.Name = "lblMFirst"
+        Me.lblMFirst.Size = New System.Drawing.Size(14, 15)
+        Me.lblMFirst.TabIndex = 21
+        Me.lblMFirst.Text = "0"
+        Me.lblMFirst.Visible = False
+        '
+        'lblFourthAve
+        '
+        Me.lblFourthAve.AutoSize = True
+        Me.lblFourthAve.Location = New System.Drawing.Point(1070, 28)
+        Me.lblFourthAve.Name = "lblFourthAve"
+        Me.lblFourthAve.Size = New System.Drawing.Size(14, 15)
+        Me.lblFourthAve.TabIndex = 20
+        Me.lblFourthAve.Text = "0"
+        Me.lblFourthAve.Visible = False
+        '
+        'lblThirdAve
+        '
+        Me.lblThirdAve.AutoSize = True
+        Me.lblThirdAve.Location = New System.Drawing.Point(1050, 28)
+        Me.lblThirdAve.Name = "lblThirdAve"
+        Me.lblThirdAve.Size = New System.Drawing.Size(14, 15)
+        Me.lblThirdAve.TabIndex = 19
+        Me.lblThirdAve.Text = "0"
+        Me.lblThirdAve.Visible = False
+        '
+        'lblSecondAve
+        '
+        Me.lblSecondAve.AutoSize = True
+        Me.lblSecondAve.Location = New System.Drawing.Point(1030, 28)
+        Me.lblSecondAve.Name = "lblSecondAve"
+        Me.lblSecondAve.Size = New System.Drawing.Size(14, 15)
+        Me.lblSecondAve.TabIndex = 18
+        Me.lblSecondAve.Text = "0"
+        Me.lblSecondAve.Visible = False
+        '
+        'lblFirstAve
+        '
+        Me.lblFirstAve.AutoSize = True
+        Me.lblFirstAve.Location = New System.Drawing.Point(1010, 28)
+        Me.lblFirstAve.Name = "lblFirstAve"
+        Me.lblFirstAve.Size = New System.Drawing.Size(14, 15)
+        Me.lblFirstAve.TabIndex = 17
+        Me.lblFirstAve.Text = "0"
+        Me.lblFirstAve.Visible = False
+        '
+        'lblFourth
+        '
+        Me.lblFourth.AutoSize = True
+        Me.lblFourth.Location = New System.Drawing.Point(1070, 13)
+        Me.lblFourth.Name = "lblFourth"
+        Me.lblFourth.Size = New System.Drawing.Size(14, 15)
+        Me.lblFourth.TabIndex = 16
+        Me.lblFourth.Text = "0"
+        Me.lblFourth.Visible = False
+        '
+        'lblThird
+        '
+        Me.lblThird.AutoSize = True
+        Me.lblThird.Location = New System.Drawing.Point(1050, 13)
+        Me.lblThird.Name = "lblThird"
+        Me.lblThird.Size = New System.Drawing.Size(14, 15)
+        Me.lblThird.TabIndex = 15
+        Me.lblThird.Text = "0"
+        Me.lblThird.Visible = False
+        '
+        'lblSecond
+        '
+        Me.lblSecond.AutoSize = True
+        Me.lblSecond.Location = New System.Drawing.Point(1030, 13)
+        Me.lblSecond.Name = "lblSecond"
+        Me.lblSecond.Size = New System.Drawing.Size(14, 15)
+        Me.lblSecond.TabIndex = 14
+        Me.lblSecond.Text = "0"
+        Me.lblSecond.Visible = False
+        '
+        'lblFirst
+        '
+        Me.lblFirst.AutoSize = True
+        Me.lblFirst.Location = New System.Drawing.Point(1010, 13)
+        Me.lblFirst.Name = "lblFirst"
+        Me.lblFirst.Size = New System.Drawing.Size(14, 15)
+        Me.lblFirst.TabIndex = 13
+        Me.lblFirst.Text = "0"
+        Me.lblFirst.Visible = False
+        '
+        'lblSubjCount
+        '
+        Me.lblSubjCount.AutoSize = True
+        Me.lblSubjCount.Location = New System.Drawing.Point(762, 41)
+        Me.lblSubjCount.Name = "lblSubjCount"
+        Me.lblSubjCount.Size = New System.Drawing.Size(14, 15)
+        Me.lblSubjCount.TabIndex = 12
+        Me.lblSubjCount.Text = "0"
+        Me.lblSubjCount.Visible = False
+        '
+        'lblSubjAve
+        '
+        Me.lblSubjAve.AutoSize = True
+        Me.lblSubjAve.Location = New System.Drawing.Point(733, 41)
+        Me.lblSubjAve.Name = "lblSubjAve"
+        Me.lblSubjAve.Size = New System.Drawing.Size(14, 15)
+        Me.lblSubjAve.TabIndex = 11
+        Me.lblSubjAve.Text = "0"
+        Me.lblSubjAve.Visible = False
+        '
+        'lblMapehAve
+        '
+        Me.lblMapehAve.AutoSize = True
+        Me.lblMapehAve.Location = New System.Drawing.Point(701, 41)
+        Me.lblMapehAve.Name = "lblMapehAve"
+        Me.lblMapehAve.Size = New System.Drawing.Size(14, 15)
+        Me.lblMapehAve.TabIndex = 10
+        Me.lblMapehAve.Text = "0"
+        Me.lblMapehAve.Visible = False
+        '
+        'lblStudeType
+        '
+        Me.lblStudeType.AutoSize = True
+        Me.lblStudeType.Location = New System.Drawing.Point(917, 19)
+        Me.lblStudeType.Name = "lblStudeType"
+        Me.lblStudeType.Size = New System.Drawing.Size(63, 15)
+        Me.lblStudeType.TabIndex = 9
+        Me.lblStudeType.Text = "stude type"
+        Me.lblStudeType.Visible = False
+        '
+        'lblGenAve
+        '
+        Me.lblGenAve.AutoSize = True
+        Me.lblGenAve.Location = New System.Drawing.Point(787, 41)
+        Me.lblGenAve.Name = "lblGenAve"
+        Me.lblGenAve.Size = New System.Drawing.Size(14, 15)
+        Me.lblGenAve.TabIndex = 8
+        Me.lblGenAve.Text = "0"
+        Me.lblGenAve.Visible = False
         '
         'lblDepartment
         '
@@ -255,35 +455,15 @@ Partial Class frmStudeReports
         Me.specialReportViewer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.specialReportViewer.Location = New System.Drawing.Point(0, 165)
         Me.specialReportViewer.Name = "specialReportViewer"
-        Me.specialReportViewer.Size = New System.Drawing.Size(1154, 519)
+        Me.specialReportViewer.Size = New System.Drawing.Size(1167, 519)
         Me.specialReportViewer.TabIndex = 24
         Me.specialReportViewer.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
-        '
-        'lblGenAve
-        '
-        Me.lblGenAve.AutoSize = True
-        Me.lblGenAve.Location = New System.Drawing.Point(788, 42)
-        Me.lblGenAve.Name = "lblGenAve"
-        Me.lblGenAve.Size = New System.Drawing.Size(50, 15)
-        Me.lblGenAve.TabIndex = 8
-        Me.lblGenAve.Text = "Gen Ave"
-        Me.lblGenAve.Visible = False
-        '
-        'lblStudeType
-        '
-        Me.lblStudeType.AutoSize = True
-        Me.lblStudeType.Location = New System.Drawing.Point(917, 19)
-        Me.lblStudeType.Name = "lblStudeType"
-        Me.lblStudeType.Size = New System.Drawing.Size(63, 15)
-        Me.lblStudeType.TabIndex = 9
-        Me.lblStudeType.Text = "stude type"
-        Me.lblStudeType.Visible = False
         '
         'frmStudeReports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1154, 684)
+        Me.ClientSize = New System.Drawing.Size(1167, 684)
         Me.Controls.Add(Me.specialReportViewer)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel5)
@@ -294,7 +474,7 @@ Partial Class frmStudeReports
         Me.MinimizeBox = False
         Me.Name = "frmStudeReports"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "::"
+        Me.Text = "+"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
@@ -331,4 +511,19 @@ Partial Class frmStudeReports
     Friend WithEvents lblDepartment As Label
     Friend WithEvents lblGenAve As Label
     Friend WithEvents lblStudeType As Label
+    Friend WithEvents lblMFourth As Label
+    Friend WithEvents lblMThird As Label
+    Friend WithEvents lblMSecond As Label
+    Friend WithEvents lblMFirst As Label
+    Friend WithEvents lblFourthAve As Label
+    Friend WithEvents lblThirdAve As Label
+    Friend WithEvents lblSecondAve As Label
+    Friend WithEvents lblFirstAve As Label
+    Friend WithEvents lblFourth As Label
+    Friend WithEvents lblThird As Label
+    Friend WithEvents lblSecond As Label
+    Friend WithEvents lblFirst As Label
+    Friend WithEvents lblSubjCount As Label
+    Friend WithEvents lblSubjAve As Label
+    Friend WithEvents lblMapehAve As Label
 End Class

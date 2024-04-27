@@ -34,26 +34,32 @@ Public Class frmClassDays
     End Sub
     Public Sub daysload()
         Try
+
             Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
-            str = "SELECT jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, december FROM classdays WHERE Semester='" & frmRegistrar.stSemester.Text & "' and SY='" & frmRegistrar.stSemester.Text & "'"
+            str = "SELECT jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, december FROM classdays WHERE Semester=@Semester AND SY=@SY"
             conn.Open()
-            Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
             objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
-            dtReader = objCmd.ExecuteReader()
-            If dtReader.Read Then
-                txtJan.Text = dtReader.Item(0)
-                txtFeb.Text = dtReader.Item(1)
-                txtMar.Text = dtReader.Item(2)
-                txtApr.Text = dtReader.Item(3)
-                txtMay.Text = dtReader.Item(4)
-                txtJun.Text = dtReader.Item(5)
-                txtJul.Text = dtReader.Item(6)
-                txtAug.Text = dtReader.Item(7)
-                txtSep.Text = dtReader.Item(8)
-                txtOct.Text = dtReader.Item(9)
-                txtNov.Text = dtReader.Item(10)
-                txtDec.Text = dtReader.Item(11)
+            objCmd.Parameters.AddWithValue("@Semester", frmRegistrar.stSemester.Text)
+            objCmd.Parameters.AddWithValue("@SY", frmRegistrar.stSY.Text)
+            Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader = objCmd.ExecuteReader()
+
+            If dtReader.Read() Then
+                txtJan.Text = dtReader.Item("jan").ToString()
+                txtFeb.Text = dtReader.Item("feb").ToString()
+                txtMar.Text = dtReader.Item("mar").ToString()
+                txtApr.Text = dtReader.Item("apr").ToString()
+                txtMay.Text = dtReader.Item("may").ToString()
+                txtJun.Text = dtReader.Item("jun").ToString()
+                txtJul.Text = dtReader.Item("jul").ToString()
+                txtAug.Text = dtReader.Item("aug").ToString()
+                txtSep.Text = dtReader.Item("sep").ToString()
+                txtOct.Text = dtReader.Item("oct").ToString()
+                txtNov.Text = dtReader.Item("nov").ToString()
+                txtDec.Text = dtReader.Item("december").ToString()
+
+                ' Continue for other months...
             Else
+                ' If no records found, set text boxes to 0 or handle it as required.
                 txtJan.Text = 0
                 txtFeb.Text = 0
                 txtMar.Text = 0
@@ -67,8 +73,9 @@ Public Class frmClassDays
                 txtNov.Text = 0
                 txtDec.Text = 0
 
-
+                ' Continue for other months...
             End If
+            dtReader.Close()
             conn.Close()
         Catch ex As Exception
             MsgBox(ex.Message)

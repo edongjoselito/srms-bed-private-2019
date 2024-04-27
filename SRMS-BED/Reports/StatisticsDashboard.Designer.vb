@@ -22,10 +22,11 @@ Partial Class frmStatisticsDashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.dtpFrom = New System.Windows.Forms.DateTimePicker
-        Me.dtpTo = New System.Windows.Forms.DateTimePicker
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.btnPreview = New System.Windows.Forms.Button
+        Me.dtpFrom = New System.Windows.Forms.DateTimePicker()
+        Me.dtpTo = New System.Windows.Forms.DateTimePicker()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnPreview = New System.Windows.Forms.Button()
+        Me.lblSource = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'dtpFrom
@@ -68,6 +69,16 @@ Partial Class frmStatisticsDashboard
         Me.btnPreview.Text = "PREVIEW"
         Me.btnPreview.UseVisualStyleBackColor = True
         '
+        'lblSource
+        '
+        Me.lblSource.AutoSize = True
+        Me.lblSource.Location = New System.Drawing.Point(60, 98)
+        Me.lblSource.Name = "lblSource"
+        Me.lblSource.Size = New System.Drawing.Size(44, 15)
+        Me.lblSource.TabIndex = 4
+        Me.lblSource.Text = "Source"
+        Me.lblSource.Visible = False
+        '
         'frmStatisticsDashboard
         '
         Me.AcceptButton = Me.btnPreview
@@ -75,6 +86,7 @@ Partial Class frmStatisticsDashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(489, 143)
+        Me.Controls.Add(Me.lblSource)
         Me.Controls.Add(Me.btnPreview)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dtpTo)
@@ -94,4 +106,5 @@ Partial Class frmStatisticsDashboard
     Friend WithEvents dtpTo As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnPreview As System.Windows.Forms.Button
+    Friend WithEvents lblSource As Label
 End Class

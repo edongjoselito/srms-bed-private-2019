@@ -22,31 +22,33 @@ Partial Class frmGradingSheets
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmGradingSheets))
-        Me.cboPeriod = New System.Windows.Forms.ComboBox
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.lblIDNumber = New System.Windows.Forms.Label
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.btnSelectSubject = New System.Windows.Forms.Button
-        Me.txtDescription = New System.Windows.Forms.TextBox
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.btnPreview = New System.Windows.Forms.Button
-        Me.txtInstructor = New System.Windows.Forms.TextBox
-        Me.txtSection = New System.Windows.Forms.TextBox
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.txtsubjectcode = New System.Windows.Forms.TextBox
-        Me.btnCancel = New System.Windows.Forms.Button
-        Me.cboSubComp = New System.Windows.Forms.ComboBox
-        Me.GroupBox1.SuspendLayout()
+        Me.cboPeriod = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblIDNumber = New System.Windows.Forms.Label()
+        Me.btnSelectSubject = New System.Windows.Forms.Button()
+        Me.txtDescription = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtInstructor = New System.Windows.Forms.TextBox()
+        Me.txtSection = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtsubjectcode = New System.Windows.Forms.TextBox()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.cboSubComp = New System.Windows.Forms.ComboBox()
+        Me.btnPreview = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cboPeriod
         '
         Me.cboPeriod.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboPeriod.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cboPeriod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboPeriod.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboPeriod.FormattingEnabled = True
         Me.cboPeriod.Items.AddRange(New Object() {"1st Grading", "2nd Grading", "3rd Grading", "4th Grading"})
@@ -76,28 +78,6 @@ Partial Class frmGradingSheets
         Me.lblIDNumber.TabIndex = 45
         Me.lblIDNumber.Text = "IDNumber"
         Me.lblIDNumber.Visible = False
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(116, Byte), Integer), CType(CType(166, Byte), Integer))
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(542, 68)
-        Me.GroupBox1.TabIndex = 44
-        Me.GroupBox1.TabStop = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Calibri", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(148, 14)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(252, 42)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "GRADING SHEET"
         '
         'btnSelectSubject
         '
@@ -134,22 +114,6 @@ Partial Class frmGradingSheets
         Me.Label2.Size = New System.Drawing.Size(79, 15)
         Me.Label2.TabIndex = 41
         Me.Label2.Text = "DESCRIPTION"
-        '
-        'btnPreview
-        '
-        Me.btnPreview.BackColor = System.Drawing.Color.FromArgb(CType(CType(174, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.btnPreview.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPreview.ForeColor = System.Drawing.Color.Black
-        Me.btnPreview.Image = CType(resources.GetObject("btnPreview.Image"), System.Drawing.Image)
-        Me.btnPreview.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPreview.Location = New System.Drawing.Point(404, 256)
-        Me.btnPreview.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.btnPreview.Name = "btnPreview"
-        Me.btnPreview.Size = New System.Drawing.Size(110, 39)
-        Me.btnPreview.TabIndex = 5
-        Me.btnPreview.Text = "&PREVIEW"
-        Me.btnPreview.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnPreview.UseVisualStyleBackColor = False
         '
         'txtInstructor
         '
@@ -223,7 +187,6 @@ Partial Class frmGradingSheets
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.Color.Black
-        Me.btnCancel.Image = CType(resources.GetObject("btnCancel.Image"), System.Drawing.Image)
         Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancel.Location = New System.Drawing.Point(284, 197)
         Me.btnCancel.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
@@ -245,15 +208,63 @@ Partial Class frmGradingSheets
         Me.cboSubComp.Size = New System.Drawing.Size(131, 23)
         Me.cboSubComp.TabIndex = 54
         '
+        'btnPreview
+        '
+        Me.btnPreview.BackColor = System.Drawing.Color.FromArgb(CType(CType(174, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(241, Byte), Integer))
+        Me.btnPreview.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPreview.ForeColor = System.Drawing.Color.Black
+        Me.btnPreview.Image = Global.SRMS_BED.My.Resources.Resources.View_30px
+        Me.btnPreview.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPreview.Location = New System.Drawing.Point(404, 256)
+        Me.btnPreview.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
+        Me.btnPreview.Name = "btnPreview"
+        Me.btnPreview.Size = New System.Drawing.Size(110, 39)
+        Me.btnPreview.TabIndex = 5
+        Me.btnPreview.Text = "&PREVIEW"
+        Me.btnPreview.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnPreview.UseVisualStyleBackColor = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(9, Byte), Integer), CType(CType(132, Byte), Integer), CType(CType(227, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(567, 66)
+        Me.Panel1.TabIndex = 55
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SRMS_BED.My.Resources.Resources.Statistic_Document_60px
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 1)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(54, 62)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label5.Location = New System.Drawing.Point(85, 23)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(139, 23)
+        Me.Label5.TabIndex = 0
+        Me.Label5.Text = "GRADING SHEET"
+        '
         'frmGradingSheets
         '
         Me.AcceptButton = Me.btnPreview
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(542, 314)
+        Me.ClientSize = New System.Drawing.Size(567, 314)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.cboSubComp)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.cboPeriod)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.btnPreview)
@@ -276,14 +287,13 @@ Partial Class frmGradingSheets
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "::"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents btnSelectSubject As System.Windows.Forms.Button
     Friend WithEvents txtDescription As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -299,4 +309,7 @@ Partial Class frmGradingSheets
     Friend WithEvents cboPeriod As System.Windows.Forms.ComboBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents cboSubComp As System.Windows.Forms.ComboBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label5 As Label
 End Class

@@ -46,21 +46,21 @@ Public Class frmSearchSemesterStudent
             conn.Close()
             dgsemstudent.Columns(0).Visible = False
             dgsemstudent.Columns(1).Visible = True
-            dgsemstudent.Columns(1).HeaderText = "LRN"
+            dgsemstudent.Columns(1).HeaderText = "STUDENT NUMBER"
             dgsemstudent.Columns(2).Visible = True
-            dgsemstudent.Columns(2).HeaderText = "First Name"
+            dgsemstudent.Columns(2).HeaderText = "FIRST NAME"
             dgsemstudent.Columns(2).Width = 200
             dgsemstudent.Columns(3).Visible = True
-            dgsemstudent.Columns(3).HeaderText = "Middle Name"
+            dgsemstudent.Columns(3).HeaderText = "MIDDLE NAME"
             dgsemstudent.Columns(3).Width = 200
             dgsemstudent.Columns(4).Visible = True
-            dgsemstudent.Columns(4).HeaderText = "Last Name"
+            dgsemstudent.Columns(4).HeaderText = "LAST NAME"
             dgsemstudent.Columns(4).Width = 200
             dgsemstudent.Columns(5).Visible = True
-            dgsemstudent.Columns(5).HeaderText = "Department"
+            dgsemstudent.Columns(5).HeaderText = "DEPARTMENT"
             dgsemstudent.Columns(5).Width = 150
             dgsemstudent.Columns(6).Visible = True
-            dgsemstudent.Columns(6).HeaderText = "Grade Level"
+            dgsemstudent.Columns(6).HeaderText = "GRADE LEVEL"
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Information)
             conn.Close()

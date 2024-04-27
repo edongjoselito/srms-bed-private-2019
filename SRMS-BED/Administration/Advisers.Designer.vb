@@ -22,11 +22,9 @@ Partial Class frmAdvisers
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dg1 = New System.Windows.Forms.DataGridView()
         Me.cboYearLevel = New System.Windows.Forms.ComboBox()
-        Me.cboDepartment = New System.Windows.Forms.ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnSelect = New System.Windows.Forms.Button()
         Me.txtAdviser = New System.Windows.Forms.TextBox()
@@ -46,6 +44,7 @@ Partial Class frmAdvisers
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.lblIDNumber = New System.Windows.Forms.Label()
         CType(Me.dg1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,8 +57,8 @@ Partial Class frmAdvisers
         '
         Me.dg1.AllowUserToAddRows = False
         Me.dg1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray
-        Me.dg1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray
+        Me.dg1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dg1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg1.Location = New System.Drawing.Point(492, 162)
         Me.dg1.Name = "dg1"
@@ -77,39 +76,17 @@ Partial Class frmAdvisers
         Me.cboYearLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboYearLevel.FormattingEnabled = True
         Me.cboYearLevel.Items.AddRange(New Object() {"", "Elementary", "Junior High School", "Senior High School"})
-        Me.cboYearLevel.Location = New System.Drawing.Point(119, 113)
+        Me.cboYearLevel.Location = New System.Drawing.Point(119, 75)
         Me.cboYearLevel.Name = "cboYearLevel"
-        Me.cboYearLevel.Size = New System.Drawing.Size(352, 29)
+        Me.cboYearLevel.Size = New System.Drawing.Size(352, 25)
         Me.cboYearLevel.TabIndex = 16
-        '
-        'cboDepartment
-        '
-        Me.cboDepartment.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.cboDepartment.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.cboDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboDepartment.FormattingEnabled = True
-        Me.cboDepartment.Items.AddRange(New Object() {"", "Elementary", "Junior High School", "Senior High School"})
-        Me.cboDepartment.Location = New System.Drawing.Point(119, 79)
-        Me.cboDepartment.Name = "cboDepartment"
-        Me.cboDepartment.Size = New System.Drawing.Size(352, 29)
-        Me.cboDepartment.TabIndex = 4
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(12, 82)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(105, 21)
-        Me.Label7.TabIndex = 15
-        Me.Label7.Text = "DEPARTMENT"
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.lblIDNumber)
         Me.GroupBox1.Controls.Add(Me.btnSelect)
         Me.GroupBox1.Controls.Add(Me.txtAdviser)
         Me.GroupBox1.Controls.Add(Me.cboYearLevel)
-        Me.GroupBox1.Controls.Add(Me.cboDepartment)
-        Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.lblID)
@@ -130,34 +107,35 @@ Partial Class frmAdvisers
         Me.btnSelect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(148, Byte), Integer))
         Me.btnSelect.FlatAppearance.BorderSize = 0
         Me.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSelect.Location = New System.Drawing.Point(426, 151)
+        Me.btnSelect.Location = New System.Drawing.Point(426, 112)
         Me.btnSelect.Name = "btnSelect"
-        Me.btnSelect.Size = New System.Drawing.Size(45, 23)
+        Me.btnSelect.Size = New System.Drawing.Size(45, 24)
         Me.btnSelect.TabIndex = 18
         Me.btnSelect.UseVisualStyleBackColor = False
         '
         'txtAdviser
         '
-        Me.txtAdviser.Location = New System.Drawing.Point(119, 148)
+        Me.txtAdviser.Location = New System.Drawing.Point(119, 110)
         Me.txtAdviser.Name = "txtAdviser"
-        Me.txtAdviser.Size = New System.Drawing.Size(301, 28)
+        Me.txtAdviser.ReadOnly = True
+        Me.txtAdviser.Size = New System.Drawing.Size(301, 24)
         Me.txtAdviser.TabIndex = 17
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 151)
+        Me.Label5.Location = New System.Drawing.Point(12, 113)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(69, 21)
+        Me.Label5.Size = New System.Drawing.Size(58, 17)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "ADVISER"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 116)
+        Me.Label1.Location = New System.Drawing.Point(12, 78)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 21)
+        Me.Label1.Size = New System.Drawing.Size(75, 17)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "YEAR LEVEL"
         '
@@ -166,7 +144,7 @@ Partial Class frmAdvisers
         Me.lblID.AutoSize = True
         Me.lblID.Location = New System.Drawing.Point(23, 304)
         Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(24, 21)
+        Me.lblID.Size = New System.Drawing.Size(21, 17)
         Me.lblID.TabIndex = 6
         Me.lblID.Text = "ID"
         Me.lblID.Visible = False
@@ -209,7 +187,7 @@ Partial Class frmAdvisers
         '
         Me.txtSection.Location = New System.Drawing.Point(119, 45)
         Me.txtSection.Name = "txtSection"
-        Me.txtSection.Size = New System.Drawing.Size(352, 28)
+        Me.txtSection.Size = New System.Drawing.Size(352, 24)
         Me.txtSection.TabIndex = 1
         '
         'Label3
@@ -217,7 +195,7 @@ Partial Class frmAdvisers
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(12, 48)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 21)
+        Me.Label3.Size = New System.Drawing.Size(57, 17)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "SECTION"
         '
@@ -254,7 +232,7 @@ Partial Class frmAdvisers
         '
         Me.txtSearch.Location = New System.Drawing.Point(910, 19)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(225, 28)
+        Me.txtSearch.Size = New System.Drawing.Size(225, 24)
         Me.txtSearch.TabIndex = 1
         Me.txtSearch.TabStop = False
         '
@@ -264,7 +242,7 @@ Partial Class frmAdvisers
         Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.Label8.Location = New System.Drawing.Point(839, 22)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(65, 21)
+        Me.Label8.Size = New System.Drawing.Size(53, 17)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "SEARCH"
         '
@@ -285,7 +263,7 @@ Partial Class frmAdvisers
         Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(82, 25)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(111, 29)
+        Me.Label2.Size = New System.Drawing.Size(88, 23)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "ADVISERS"
         '
@@ -310,9 +288,19 @@ Partial Class frmAdvisers
         Me.btnClose.Text = "x"
         Me.btnClose.UseVisualStyleBackColor = False
         '
+        'lblIDNumber
+        '
+        Me.lblIDNumber.AutoSize = True
+        Me.lblIDNumber.Location = New System.Drawing.Point(23, 190)
+        Me.lblIDNumber.Name = "lblIDNumber"
+        Me.lblIDNumber.Size = New System.Drawing.Size(70, 17)
+        Me.lblIDNumber.TabIndex = 19
+        Me.lblIDNumber.Text = "ID Number"
+        Me.lblIDNumber.Visible = False
+        '
         'frmAdvisers
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1147, 665)
         Me.Controls.Add(Me.dg1)
@@ -342,8 +330,6 @@ Partial Class frmAdvisers
 
     Friend WithEvents dg1 As DataGridView
     Friend WithEvents cboYearLevel As ComboBox
-    Friend WithEvents cboDepartment As ComboBox
-    Friend WithEvents Label7 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label1 As Label
@@ -363,4 +349,5 @@ Partial Class frmAdvisers
     Friend WithEvents btnClose As Button
     Friend WithEvents txtAdviser As TextBox
     Friend WithEvents btnSelect As Button
+    Friend WithEvents lblIDNumber As Label
 End Class

@@ -5,6 +5,7 @@ Public Class frmHR
         If lblAccountLevel.Text = "Super Admin" Then
             Me.Close()
         ElseIf lblAccountLevel.Text = "Admin" Then
+
             Me.Close()
         Else
             End
@@ -27,7 +28,7 @@ Public Class frmHR
             crViewer.ReportSource = obj
             crViewer.Refresh()
             conn.Close()
-
+            crViewer.Visible = True
 
 
         Catch ex As Exception
@@ -46,5 +47,22 @@ Public Class frmHR
 
     Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
         frmLoading.Show()
+    End Sub
+
+    Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles ToolStrip1.ItemClicked
+
+    End Sub
+
+    Private Sub frmHR_Load(sender As Object, e As EventArgs) Handles Me.Load
+        formLoad()
+    End Sub
+
+    Public Sub formLoad()
+        crViewer.Visible = False
+
+    End Sub
+
+    Private Sub FormloadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FormloadToolStripMenuItem.Click
+        formLoad()
     End Sub
 End Class

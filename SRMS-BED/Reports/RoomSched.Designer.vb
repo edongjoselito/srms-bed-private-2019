@@ -69,7 +69,7 @@ Partial Class frmRoomSched
         Me.btnPreview.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnPreview.Image = CType(resources.GetObject("btnPreview.Image"), System.Drawing.Image)
         Me.btnPreview.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPreview.Location = New System.Drawing.Point(360, 53)
+        Me.btnPreview.Location = New System.Drawing.Point(355, 56)
         Me.btnPreview.Name = "btnPreview"
         Me.btnPreview.Size = New System.Drawing.Size(95, 28)
         Me.btnPreview.TabIndex = 6

@@ -6,7 +6,9 @@ Public Class frmReportsDashboard
     End Sub
 
     Private Sub VERSION4ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VERSION4ToolStripMenuItem.Click
-        frmStatisticsDashboard.ShowDialog()
+        frmStatisticsDashboard.lblSource.Text = "Reports"
+        frmStatisticsDashboard.Show()
+
     End Sub
 
     Private Sub VERSION3ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VERSION3ToolStripMenuItem.Click

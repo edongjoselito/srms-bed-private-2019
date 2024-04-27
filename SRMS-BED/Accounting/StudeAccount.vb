@@ -10,7 +10,7 @@ Public Class frmStudeAccount
     Private Sub btnStudeAccount_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStudeAccount.Click
         Try
             If cboSection.Text = "" Then
-                str = "select p.StudentNumber, concat(p.LastName,', ',p.FirstName) as Fullname, b.AcctTotal, b.TotalPayments, b.Discount, b.CurrentBalance, b.PaymentMode, b.Course, b.YearLevel, b.Section, b.SY, (b.Amount1+b.Amount2+b.Amount3+b.Amount4+b.Amount5) as OtherFees, st.letterHead  from studeprofile p join studeaccount b on p.StudentNumber=b.StudentNumber join srms_settings st on p.settingsID=st.settingsID where b.YearLevel='" & cboYearLevelAccount.Text & "' and b.Sem='" & frmAccounting.stSemester.Text & "' and b.SY='" & frmAccounting.stSY.Text & "' group by p.StudentNumber order by Fullname"
+                str = "select p.StudentNumber, concat(p.LastName,', ',p.FirstName) as Fullname, b.AcctTotal, b.TotalPayments, b.Discount, b.CurrentBalance, b.Course, b.YearLevel, b.Section, b.SY, st.letterHead  from studeprofile p join studeaccount b on p.StudentNumber=b.StudentNumber join srms_settings st on p.settingsID=st.settingsID where b.YearLevel='" & cboYearLevelAccount.Text & "' and b.Sem='" & frmAccounting.stSemester.Text & "' and b.SY='" & frmAccounting.stSY.Text & "' group by p.StudentNumber order by Fullname"
                 conn.Open()
                 Dim mysda As New MySqlDataAdapter(str, conn)
                 Dim mysds As New DataSet
@@ -22,7 +22,7 @@ Public Class frmStudeAccount
                 frmAccounting.crViewer.Visible = True
                 Me.Close()
             Else
-                str = "select p.StudentNumber, concat(p.LastName,', ',p.FirstName) as Fullname, b.AcctTotal, b.TotalPayments, b.Discount, b.CurrentBalance, b.PaymentMode, b.Course, b.YearLevel, b.Section, b.SY, (b.Amount1+b.Amount2+b.Amount3+b.Amount4+b.Amount5) as OtherFees, st.letterHead  from studeprofile p join studeaccount b on p.StudentNumber=b.StudentNumber join srms_settings st on p.settingsID=st.settingsID where b.Section='" & cboSection.Text & "' and b.YearLevel='" & cboYearLevelAccount.Text & "' and b.Sem='" & frmAccounting.stSemester.Text & "' and b.SY='" & frmAccounting.stSY.Text & "' group by p.StudentNumber order by Fullname"
+                str = "select p.StudentNumber, concat(p.LastName,', ',p.FirstName) as Fullname, b.AcctTotal, b.TotalPayments, b.Discount, b.CurrentBalance, b.Course, b.YearLevel, b.Section, b.SY, st.letterHead  from studeprofile p join studeaccount b on p.StudentNumber=b.StudentNumber join srms_settings st on p.settingsID=st.settingsID where b.Section='" & cboSection.Text & "' and b.YearLevel='" & cboYearLevelAccount.Text & "' and b.Sem='" & frmAccounting.stSemester.Text & "' and b.SY='" & frmAccounting.stSY.Text & "' group by p.StudentNumber order by Fullname"
                 conn.Open()
                 Dim mysda As New MySqlDataAdapter(str, conn)
                 Dim mysds As New DataSet

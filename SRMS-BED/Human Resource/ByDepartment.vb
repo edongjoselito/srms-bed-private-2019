@@ -11,6 +11,7 @@ Public Class frmByDepartment
             Dim obj As New PersonnelList
             obj.SetDataSource(mysds.Tables("staff, srms_settings"))
             frmHR.crViewer.ReportSource = obj
+            frmHR.crViewer.Visible = True
             conn.Close()
             Me.Close()
         Catch ex As Exception

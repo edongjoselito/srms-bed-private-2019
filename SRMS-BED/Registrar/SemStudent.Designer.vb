@@ -109,6 +109,8 @@ Partial Class frmSemStudent
         Me.Label27 = New System.Windows.Forms.Label()
         Me.txtGrantAmount = New System.Windows.Forms.TextBox()
         Me.btnTransferredOut = New System.Windows.Forms.Button()
+        Me.lblIDNumber = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,6 +120,7 @@ Partial Class frmSemStudent
         Me.GroupBox1.SuspendLayout()
         Me.Panel10.SuspendLayout()
         Me.Panel9.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -303,7 +306,7 @@ Partial Class frmSemStudent
         '
         Me.lblSem.AutoSize = True
         Me.lblSem.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSem.Location = New System.Drawing.Point(657, 243)
+        Me.lblSem.Location = New System.Drawing.Point(653, 73)
         Me.lblSem.Name = "lblSem"
         Me.lblSem.Size = New System.Drawing.Size(0, 23)
         Me.lblSem.TabIndex = 30
@@ -314,7 +317,7 @@ Partial Class frmSemStudent
         Me.btnAccecelrated.FlatAppearance.BorderSize = 0
         Me.btnAccecelrated.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAccecelrated.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnAccecelrated.Location = New System.Drawing.Point(619, 540)
+        Me.btnAccecelrated.Location = New System.Drawing.Point(618, 387)
         Me.btnAccecelrated.Name = "btnAccecelrated"
         Me.btnAccecelrated.Size = New System.Drawing.Size(152, 39)
         Me.btnAccecelrated.TabIndex = 30
@@ -328,7 +331,7 @@ Partial Class frmSemStudent
         Me.btnDropped.FlatAppearance.BorderSize = 0
         Me.btnDropped.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDropped.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnDropped.Location = New System.Drawing.Point(935, 540)
+        Me.btnDropped.Location = New System.Drawing.Point(934, 387)
         Me.btnDropped.Name = "btnDropped"
         Me.btnDropped.Size = New System.Drawing.Size(152, 39)
         Me.btnDropped.TabIndex = 29
@@ -340,7 +343,7 @@ Partial Class frmSemStudent
         '
         Me.lblID.AutoSize = True
         Me.lblID.Font = New System.Drawing.Font("Segoe Condensed", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblID.Location = New System.Drawing.Point(468, 176)
+        Me.lblID.Location = New System.Drawing.Point(1065, 43)
         Me.lblID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblID.Name = "lblID"
         Me.lblID.Size = New System.Drawing.Size(17, 15)
@@ -353,7 +356,7 @@ Partial Class frmSemStudent
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(35, 216)
+        Me.Label1.Location = New System.Drawing.Point(31, 46)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(118, 17)
@@ -365,7 +368,7 @@ Partial Class frmSemStudent
         Me.mskStudentNumber.BackColor = System.Drawing.Color.LightSteelBlue
         Me.mskStudentNumber.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.mskStudentNumber.ForeColor = System.Drawing.Color.Black
-        Me.mskStudentNumber.Location = New System.Drawing.Point(182, 214)
+        Me.mskStudentNumber.Location = New System.Drawing.Point(178, 44)
         Me.mskStudentNumber.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.mskStudentNumber.Name = "mskStudentNumber"
         Me.mskStudentNumber.ReadOnly = True
@@ -378,7 +381,7 @@ Partial Class frmSemStudent
         Me.txtLastName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtLastName.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLastName.ForeColor = System.Drawing.Color.Black
-        Me.txtLastName.Location = New System.Drawing.Point(892, 249)
+        Me.txtLastName.Location = New System.Drawing.Point(888, 79)
         Me.txtLastName.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.ReadOnly = True
@@ -390,7 +393,7 @@ Partial Class frmSemStudent
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.Black
-        Me.Label21.Location = New System.Drawing.Point(795, 252)
+        Me.Label21.Location = New System.Drawing.Point(791, 82)
         Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(66, 15)
@@ -403,7 +406,7 @@ Partial Class frmSemStudent
         Me.txtMName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtMName.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtMName.ForeColor = System.Drawing.Color.Black
-        Me.txtMName.Location = New System.Drawing.Point(539, 249)
+        Me.txtMName.Location = New System.Drawing.Point(535, 79)
         Me.txtMName.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.txtMName.Name = "txtMName"
         Me.txtMName.ReadOnly = True
@@ -415,7 +418,7 @@ Partial Class frmSemStudent
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.Black
-        Me.Label20.Location = New System.Drawing.Point(421, 252)
+        Me.Label20.Location = New System.Drawing.Point(417, 82)
         Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(84, 15)
@@ -427,7 +430,7 @@ Partial Class frmSemStudent
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.Black
-        Me.Label19.Location = New System.Drawing.Point(35, 251)
+        Me.Label19.Location = New System.Drawing.Point(31, 81)
         Me.Label19.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(78, 17)
@@ -440,7 +443,7 @@ Partial Class frmSemStudent
         Me.txtFname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtFname.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFname.ForeColor = System.Drawing.Color.Black
-        Me.txtFname.Location = New System.Drawing.Point(182, 249)
+        Me.txtFname.Location = New System.Drawing.Point(178, 79)
         Me.txtFname.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.txtFname.Name = "txtFname"
         Me.txtFname.ReadOnly = True
@@ -455,8 +458,8 @@ Partial Class frmSemStudent
         Me.cbo4Ps.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbo4Ps.ForeColor = System.Drawing.Color.Black
         Me.cbo4Ps.FormattingEnabled = True
-        Me.cbo4Ps.Items.AddRange(New Object() {"Yes", "No"})
-        Me.cbo4Ps.Location = New System.Drawing.Point(634, 354)
+        Me.cbo4Ps.Items.AddRange(New Object() {"", "Yes", "No"})
+        Me.cbo4Ps.Location = New System.Drawing.Point(630, 184)
         Me.cbo4Ps.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cbo4Ps.Name = "cbo4Ps"
         Me.cbo4Ps.Size = New System.Drawing.Size(68, 25)
@@ -467,7 +470,7 @@ Partial Class frmSemStudent
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.ForeColor = System.Drawing.Color.Black
-        Me.Label25.Location = New System.Drawing.Point(585, 357)
+        Me.Label25.Location = New System.Drawing.Point(581, 187)
         Me.Label25.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(33, 15)
@@ -482,8 +485,8 @@ Partial Class frmSemStudent
         Me.cboRepeater.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboRepeater.ForeColor = System.Drawing.Color.Black
         Me.cboRepeater.FormattingEnabled = True
-        Me.cboRepeater.Items.AddRange(New Object() {"Yes", "No"})
-        Me.cboRepeater.Location = New System.Drawing.Point(1015, 354)
+        Me.cboRepeater.Items.AddRange(New Object() {"", "Yes", "No"})
+        Me.cboRepeater.Location = New System.Drawing.Point(1011, 184)
         Me.cboRepeater.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboRepeater.Name = "cboRepeater"
         Me.cboRepeater.Size = New System.Drawing.Size(72, 25)
@@ -497,8 +500,8 @@ Partial Class frmSemStudent
         Me.cboTransferee.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboTransferee.ForeColor = System.Drawing.Color.Black
         Me.cboTransferee.FormattingEnabled = True
-        Me.cboTransferee.Items.AddRange(New Object() {"Yes", "No"})
-        Me.cboTransferee.Location = New System.Drawing.Point(846, 354)
+        Me.cboTransferee.Items.AddRange(New Object() {"", "Yes", "No"})
+        Me.cboTransferee.Location = New System.Drawing.Point(842, 184)
         Me.cboTransferee.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboTransferee.Name = "cboTransferee"
         Me.cboTransferee.Size = New System.Drawing.Size(68, 25)
@@ -509,7 +512,7 @@ Partial Class frmSemStudent
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.Black
-        Me.Label15.Location = New System.Drawing.Point(735, 357)
+        Me.Label15.Location = New System.Drawing.Point(731, 187)
         Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(78, 15)
@@ -521,7 +524,7 @@ Partial Class frmSemStudent
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.Color.Black
-        Me.Label26.Location = New System.Drawing.Point(923, 357)
+        Me.Label26.Location = New System.Drawing.Point(919, 187)
         Me.Label26.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(64, 15)
@@ -533,7 +536,7 @@ Partial Class frmSemStudent
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(1055, 285)
+        Me.Button3.Location = New System.Drawing.Point(1051, 115)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(32, 25)
         Me.Button3.TabIndex = 90
@@ -548,7 +551,7 @@ Partial Class frmSemStudent
         Me.cboSection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboSection.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboSection.FormattingEnabled = True
-        Me.cboSection.Location = New System.Drawing.Point(867, 285)
+        Me.cboSection.Location = New System.Drawing.Point(863, 115)
         Me.cboSection.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboSection.Name = "cboSection"
         Me.cboSection.Size = New System.Drawing.Size(179, 25)
@@ -559,7 +562,7 @@ Partial Class frmSemStudent
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.ForeColor = System.Drawing.Color.Black
-        Me.Label22.Location = New System.Drawing.Point(799, 288)
+        Me.Label22.Location = New System.Drawing.Point(795, 118)
         Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(53, 15)
@@ -571,7 +574,7 @@ Partial Class frmSemStudent
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(35, 287)
+        Me.Label3.Location = New System.Drawing.Point(31, 117)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(88, 17)
@@ -586,7 +589,7 @@ Partial Class frmSemStudent
         Me.cboCourse.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboCourse.ForeColor = System.Drawing.Color.Black
         Me.cboCourse.FormattingEnabled = True
-        Me.cboCourse.Location = New System.Drawing.Point(182, 285)
+        Me.cboCourse.Location = New System.Drawing.Point(178, 115)
         Me.cboCourse.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboCourse.Name = "cboCourse"
         Me.cboCourse.Size = New System.Drawing.Size(309, 25)
@@ -597,7 +600,7 @@ Partial Class frmSemStudent
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(526, 288)
+        Me.Label5.Location = New System.Drawing.Point(522, 118)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(75, 15)
@@ -612,7 +615,7 @@ Partial Class frmSemStudent
         Me.cboYear.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboYear.ForeColor = System.Drawing.Color.Black
         Me.cboYear.FormattingEnabled = True
-        Me.cboYear.Location = New System.Drawing.Point(634, 285)
+        Me.cboYear.Location = New System.Drawing.Point(630, 115)
         Me.cboYear.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboYear.Name = "cboYear"
         Me.cboYear.Size = New System.Drawing.Size(133, 23)
@@ -621,7 +624,7 @@ Partial Class frmSemStudent
         'lblAdviser
         '
         Me.lblAdviser.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAdviser.Location = New System.Drawing.Point(182, 319)
+        Me.lblAdviser.Location = New System.Drawing.Point(178, 149)
         Me.lblAdviser.Name = "lblAdviser"
         Me.lblAdviser.ReadOnly = True
         Me.lblAdviser.Size = New System.Drawing.Size(309, 24)
@@ -633,7 +636,7 @@ Partial Class frmSemStudent
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.ForeColor = System.Drawing.Color.Black
-        Me.Label28.Location = New System.Drawing.Point(35, 323)
+        Me.Label28.Location = New System.Drawing.Point(31, 153)
         Me.Label28.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(58, 17)
@@ -643,7 +646,7 @@ Partial Class frmSemStudent
         'tsNew
         '
         Me.tsNew.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.tsNew.Location = New System.Drawing.Point(385, 213)
+        Me.tsNew.Location = New System.Drawing.Point(381, 43)
         Me.tsNew.Name = "tsNew"
         Me.tsNew.Size = New System.Drawing.Size(28, 27)
         Me.tsNew.TabIndex = 23
@@ -656,7 +659,7 @@ Partial Class frmSemStudent
         Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.ForeColor = System.Drawing.Color.White
-        Me.Button7.Location = New System.Drawing.Point(1055, 319)
+        Me.Button7.Location = New System.Drawing.Point(1051, 149)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(32, 25)
         Me.Button7.TabIndex = 89
@@ -672,7 +675,7 @@ Partial Class frmSemStudent
         Me.cboScholarship.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboScholarship.ForeColor = System.Drawing.Color.Black
         Me.cboScholarship.FormattingEnabled = True
-        Me.cboScholarship.Location = New System.Drawing.Point(634, 319)
+        Me.cboScholarship.Location = New System.Drawing.Point(630, 149)
         Me.cboScholarship.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboScholarship.Name = "cboScholarship"
         Me.cboScholarship.Size = New System.Drawing.Size(412, 25)
@@ -683,7 +686,7 @@ Partial Class frmSemStudent
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label31.ForeColor = System.Drawing.Color.Black
-        Me.Label31.Location = New System.Drawing.Point(521, 324)
+        Me.Label31.Location = New System.Drawing.Point(517, 154)
         Me.Label31.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(81, 15)
@@ -695,7 +698,7 @@ Partial Class frmSemStudent
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.ForeColor = System.Drawing.Color.Black
-        Me.Label23.Location = New System.Drawing.Point(280, 357)
+        Me.Label23.Location = New System.Drawing.Point(276, 187)
         Me.Label23.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(75, 15)
@@ -710,8 +713,8 @@ Partial Class frmSemStudent
         Me.cboIP.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboIP.ForeColor = System.Drawing.Color.Black
         Me.cboIP.FormattingEnabled = True
-        Me.cboIP.Items.AddRange(New Object() {"Yes", "No"})
-        Me.cboIP.Location = New System.Drawing.Point(385, 354)
+        Me.cboIP.Items.AddRange(New Object() {"", "Yes", "No"})
+        Me.cboIP.Location = New System.Drawing.Point(381, 184)
         Me.cboIP.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboIP.Name = "cboIP"
         Me.cboIP.Size = New System.Drawing.Size(106, 25)
@@ -722,7 +725,7 @@ Partial Class frmSemStudent
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(35, 357)
+        Me.Label12.Location = New System.Drawing.Point(31, 187)
         Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(80, 17)
@@ -737,8 +740,8 @@ Partial Class frmSemStudent
         Me.cboBalikAral.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboBalikAral.ForeColor = System.Drawing.Color.Black
         Me.cboBalikAral.FormattingEnabled = True
-        Me.cboBalikAral.Items.AddRange(New Object() {"Yes", "No"})
-        Me.cboBalikAral.Location = New System.Drawing.Point(183, 354)
+        Me.cboBalikAral.Items.AddRange(New Object() {"", "Yes", "No"})
+        Me.cboBalikAral.Location = New System.Drawing.Point(179, 184)
         Me.cboBalikAral.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboBalikAral.Name = "cboBalikAral"
         Me.cboBalikAral.Size = New System.Drawing.Size(91, 25)
@@ -749,7 +752,7 @@ Partial Class frmSemStudent
         Me.cboQualification.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboQualification.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboQualification.FormattingEnabled = True
-        Me.cboQualification.Location = New System.Drawing.Point(634, 388)
+        Me.cboQualification.Location = New System.Drawing.Point(630, 218)
         Me.cboQualification.Name = "cboQualification"
         Me.cboQualification.Size = New System.Drawing.Size(453, 25)
         Me.cboQualification.TabIndex = 17
@@ -759,7 +762,7 @@ Partial Class frmSemStudent
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(35, 390)
+        Me.Label7.Location = New System.Drawing.Point(31, 220)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(45, 17)
@@ -774,7 +777,7 @@ Partial Class frmSemStudent
         Me.cboTrack.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboTrack.ForeColor = System.Drawing.Color.Black
         Me.cboTrack.FormattingEnabled = True
-        Me.cboTrack.Location = New System.Drawing.Point(183, 390)
+        Me.cboTrack.Location = New System.Drawing.Point(179, 220)
         Me.cboTrack.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboTrack.Name = "cboTrack"
         Me.cboTrack.Size = New System.Drawing.Size(308, 25)
@@ -785,7 +788,7 @@ Partial Class frmSemStudent
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(35, 430)
+        Me.Label6.Location = New System.Drawing.Point(31, 260)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(115, 17)
@@ -797,7 +800,7 @@ Partial Class frmSemStudent
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(562, 391)
+        Me.Label8.Location = New System.Drawing.Point(558, 221)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(49, 15)
@@ -812,8 +815,8 @@ Partial Class frmSemStudent
         Me.cboStudeStatus.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboStudeStatus.ForeColor = System.Drawing.Color.Black
         Me.cboStudeStatus.FormattingEnabled = True
-        Me.cboStudeStatus.Items.AddRange(New Object() {"New", "Old"})
-        Me.cboStudeStatus.Location = New System.Drawing.Point(183, 428)
+        Me.cboStudeStatus.Items.AddRange(New Object() {"", "New", "Old"})
+        Me.cboStudeStatus.Location = New System.Drawing.Point(179, 258)
         Me.cboStudeStatus.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.cboStudeStatus.Name = "cboStudeStatus"
         Me.cboStudeStatus.Size = New System.Drawing.Size(308, 25)
@@ -823,7 +826,7 @@ Partial Class frmSemStudent
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(420, 218)
+        Me.Label4.Location = New System.Drawing.Point(416, 48)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(91, 17)
         Me.Label4.TabIndex = 91
@@ -846,7 +849,7 @@ Partial Class frmSemStudent
         Me.GroupBox1.Controls.Add(Me.cboAccountStatus)
         Me.GroupBox1.Controls.Add(Me.Label27)
         Me.GroupBox1.Controls.Add(Me.txtGrantAmount)
-        Me.GroupBox1.Location = New System.Drawing.Point(39, 490)
+        Me.GroupBox1.Location = New System.Drawing.Point(38, 337)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -868,12 +871,11 @@ Partial Class frmSemStudent
         'lblAdviserID
         '
         Me.lblAdviserID.AutoSize = True
-        Me.lblAdviserID.Location = New System.Drawing.Point(456, 59)
+        Me.lblAdviserID.Location = New System.Drawing.Point(448, 61)
         Me.lblAdviserID.Name = "lblAdviserID"
-        Me.lblAdviserID.Size = New System.Drawing.Size(62, 17)
+        Me.lblAdviserID.Size = New System.Drawing.Size(65, 17)
         Me.lblAdviserID.TabIndex = 28
-        Me.lblAdviserID.Text = "AdviserID"
-        Me.lblAdviserID.Visible = False
+        Me.lblAdviserID.Text = "Section ID"
         '
         'cboMajor
         '
@@ -1006,7 +1008,7 @@ Partial Class frmSemStudent
         Me.cboYearStat.ForeColor = System.Drawing.Color.Black
         Me.cboYearStat.FormattingEnabled = True
         Me.cboYearStat.Items.AddRange(New Object() {"Regular", "Irregular"})
-        Me.cboYearStat.Location = New System.Drawing.Point(293, 81)
+        Me.cboYearStat.Location = New System.Drawing.Point(306, 68)
         Me.cboYearStat.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.cboYearStat.Name = "cboYearStat"
         Me.cboYearStat.Size = New System.Drawing.Size(107, 27)
@@ -1143,7 +1145,7 @@ Partial Class frmSemStudent
         Me.btnTransferredOut.FlatAppearance.BorderSize = 0
         Me.btnTransferredOut.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTransferredOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnTransferredOut.Location = New System.Drawing.Point(777, 540)
+        Me.btnTransferredOut.Location = New System.Drawing.Point(776, 387)
         Me.btnTransferredOut.Name = "btnTransferredOut"
         Me.btnTransferredOut.Size = New System.Drawing.Size(152, 39)
         Me.btnTransferredOut.TabIndex = 93
@@ -1151,60 +1153,81 @@ Partial Class frmSemStudent
         Me.btnTransferredOut.UseVisualStyleBackColor = False
         Me.btnTransferredOut.Visible = False
         '
+        'lblIDNumber
+        '
+        Me.lblIDNumber.AutoSize = True
+        Me.lblIDNumber.Location = New System.Drawing.Point(689, 337)
+        Me.lblIDNumber.Name = "lblIDNumber"
+        Me.lblIDNumber.Size = New System.Drawing.Size(67, 17)
+        Me.lblIDNumber.TabIndex = 94
+        Me.lblIDNumber.Text = "IDNumber"
+        Me.lblIDNumber.Visible = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.lblID)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.btnDropped)
+        Me.Panel2.Controls.Add(Me.cboQualification)
+        Me.Panel2.Controls.Add(Me.GroupBox1)
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.lblIDNumber)
+        Me.Panel2.Controls.Add(Me.cboTrack)
+        Me.Panel2.Controls.Add(Me.btnTransferredOut)
+        Me.Panel2.Controls.Add(Me.cbo4Ps)
+        Me.Panel2.Controls.Add(Me.btnAccecelrated)
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.Label28)
+        Me.Panel2.Controls.Add(Me.mskStudentNumber)
+        Me.Panel2.Controls.Add(Me.Label31)
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.txtLastName)
+        Me.Panel2.Controls.Add(Me.tsNew)
+        Me.Panel2.Controls.Add(Me.Button3)
+        Me.Panel2.Controls.Add(Me.Label25)
+        Me.Panel2.Controls.Add(Me.cboSection)
+        Me.Panel2.Controls.Add(Me.txtFname)
+        Me.Panel2.Controls.Add(Me.cboScholarship)
+        Me.Panel2.Controls.Add(Me.cboStudeStatus)
+        Me.Panel2.Controls.Add(Me.Label21)
+        Me.Panel2.Controls.Add(Me.Label19)
+        Me.Panel2.Controls.Add(Me.cboBalikAral)
+        Me.Panel2.Controls.Add(Me.cboRepeater)
+        Me.Panel2.Controls.Add(Me.Label22)
+        Me.Panel2.Controls.Add(Me.Label20)
+        Me.Panel2.Controls.Add(Me.lblAdviser)
+        Me.Panel2.Controls.Add(Me.cboTransferee)
+        Me.Panel2.Controls.Add(Me.cboYear)
+        Me.Panel2.Controls.Add(Me.Label12)
+        Me.Panel2.Controls.Add(Me.Label15)
+        Me.Panel2.Controls.Add(Me.Label5)
+        Me.Panel2.Controls.Add(Me.txtMName)
+        Me.Panel2.Controls.Add(Me.cboIP)
+        Me.Panel2.Controls.Add(Me.Label26)
+        Me.Panel2.Controls.Add(Me.cboCourse)
+        Me.Panel2.Controls.Add(Me.lblSem)
+        Me.Panel2.Controls.Add(Me.Button7)
+        Me.Panel2.Controls.Add(Me.Label23)
+        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Location = New System.Drawing.Point(12, 181)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1130, 478)
+        Me.Panel2.TabIndex = 96
+        '
         'frmSemStudent
         '
         Me.AcceptButton = Me.btnSave
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1154, 684)
-        Me.Controls.Add(Me.btnTransferredOut)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.cboQualification)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.cboTrack)
-        Me.Controls.Add(Me.cbo4Ps)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.btnAccecelrated)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label25)
-        Me.Controls.Add(Me.cboStudeStatus)
-        Me.Controls.Add(Me.cboRepeater)
-        Me.Controls.Add(Me.cboTransferee)
-        Me.Controls.Add(Me.btnDropped)
-        Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.Label26)
-        Me.Controls.Add(Me.Label23)
-        Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.cboIP)
-        Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.lblAdviser)
-        Me.Controls.Add(Me.cboBalikAral)
-        Me.Controls.Add(Me.cboScholarship)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Label31)
-        Me.Controls.Add(Me.Label28)
-        Me.Controls.Add(Me.txtLastName)
-        Me.Controls.Add(Me.cboSection)
-        Me.Controls.Add(Me.Label21)
-        Me.Controls.Add(Me.Label22)
-        Me.Controls.Add(Me.cboYear)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.cboCourse)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.lblSem)
-        Me.Controls.Add(Me.txtMName)
-        Me.Controls.Add(Me.mskStudentNumber)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.Label19)
-        Me.Controls.Add(Me.lblID)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.txtFname)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel7)
-        Me.Controls.Add(Me.tsNew)
         Me.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1228,6 +1251,8 @@ Partial Class frmSemStudent
         Me.Panel10.PerformLayout()
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1318,4 +1343,6 @@ Partial Class frmSemStudent
     Friend WithEvents NewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReloadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lblIDNumber As Label
+    Friend WithEvents Panel2 As Panel
 End Class

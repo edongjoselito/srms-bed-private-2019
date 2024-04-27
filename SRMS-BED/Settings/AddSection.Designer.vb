@@ -22,7 +22,7 @@ Partial Class frmAddSection
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblID = New System.Windows.Forms.Label()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
@@ -34,6 +34,7 @@ Partial Class frmAddSection
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtAdviser = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblIDNumber = New System.Windows.Forms.Label()
         CType(Me.dg1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -42,7 +43,7 @@ Partial Class frmAddSection
         Me.lblID.AutoSize = True
         Me.lblID.Location = New System.Drawing.Point(28, 269)
         Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(55, 21)
+        Me.lblID.Size = New System.Drawing.Size(45, 17)
         Me.lblID.TabIndex = 20
         Me.lblID.Text = "Label3"
         Me.lblID.Visible = False
@@ -80,7 +81,7 @@ Partial Class frmAddSection
         Me.txtSection.Location = New System.Drawing.Point(71, 6)
         Me.txtSection.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtSection.Name = "txtSection"
-        Me.txtSection.Size = New System.Drawing.Size(471, 28)
+        Me.txtSection.Size = New System.Drawing.Size(471, 24)
         Me.txtSection.TabIndex = 13
         '
         'Label1
@@ -88,7 +89,7 @@ Partial Class frmAddSection
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(4, 10)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(69, 21)
+        Me.Label1.Size = New System.Drawing.Size(57, 17)
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "SECTION"
         '
@@ -96,8 +97,8 @@ Partial Class frmAddSection
         '
         Me.dg1.AllowUserToAddRows = False
         Me.dg1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Silver
-        Me.dg1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver
+        Me.dg1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dg1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg1.Location = New System.Drawing.Point(0, 73)
         Me.dg1.Name = "dg1"
@@ -112,7 +113,7 @@ Partial Class frmAddSection
         Me.lblCourse.AutoSize = True
         Me.lblCourse.Location = New System.Drawing.Point(154, 269)
         Me.lblCourse.Name = "lblCourse"
-        Me.lblCourse.Size = New System.Drawing.Size(58, 21)
+        Me.lblCourse.Size = New System.Drawing.Size(46, 17)
         Me.lblCourse.TabIndex = 21
         Me.lblCourse.Text = "Course"
         Me.lblCourse.Visible = False
@@ -122,7 +123,7 @@ Partial Class frmAddSection
         Me.lblYearLevel.AutoSize = True
         Me.lblYearLevel.Location = New System.Drawing.Point(421, 269)
         Me.lblYearLevel.Name = "lblYearLevel"
-        Me.lblYearLevel.Size = New System.Drawing.Size(78, 21)
+        Me.lblYearLevel.Size = New System.Drawing.Size(65, 17)
         Me.lblYearLevel.TabIndex = 22
         Me.lblYearLevel.Text = "Year Level"
         Me.lblYearLevel.Visible = False
@@ -132,7 +133,7 @@ Partial Class frmAddSection
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(4, 38)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 21)
+        Me.Label2.Size = New System.Drawing.Size(58, 17)
         Me.Label2.TabIndex = 23
         Me.Label2.Text = "ADVISER"
         '
@@ -142,7 +143,7 @@ Partial Class frmAddSection
         Me.txtAdviser.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtAdviser.Name = "txtAdviser"
         Me.txtAdviser.ReadOnly = True
-        Me.txtAdviser.Size = New System.Drawing.Size(471, 28)
+        Me.txtAdviser.Size = New System.Drawing.Size(471, 24)
         Me.txtAdviser.TabIndex = 24
         '
         'Button1
@@ -159,11 +160,22 @@ Partial Class frmAddSection
         Me.Button1.Text = "SEARCH"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'lblIDNumber
+        '
+        Me.lblIDNumber.AutoSize = True
+        Me.lblIDNumber.Location = New System.Drawing.Point(266, 269)
+        Me.lblIDNumber.Name = "lblIDNumber"
+        Me.lblIDNumber.Size = New System.Drawing.Size(67, 17)
+        Me.lblIDNumber.TabIndex = 26
+        Me.lblIDNumber.Text = "IDNumber"
+        Me.lblIDNumber.Visible = False
+        '
         'frmAddSection
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 299)
+        Me.Controls.Add(Me.lblIDNumber)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtAdviser)
         Me.Controls.Add(Me.Label2)
@@ -199,4 +211,5 @@ Partial Class frmAddSection
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtAdviser As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents lblIDNumber As Label
 End Class

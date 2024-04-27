@@ -1,8 +1,20 @@
 ﻿Imports MySql.Data.MySqlClient
 Module connection
-    Public conn As New MySqlConnection("Database=srms_bed;" &
+    'Public conn As New MySqlConnection("database=wcmanilasrms_bed;" &
+    '                                     "server =srms-db-new.ce0mhjgkvjuk.ap-southeast-2.rds.amazonaws.com;" &
+    '                                     "user id = admin; password = wcm-softtech2024;")
+
+
+    Public conn As New MySqlConnection("Database=wcmanilasrms_bed;" &
                                            "Server =localhost;" &
-                                           "User ID = root; Password = ;")
+                                           "User ID = root; Password = moth34board;")
+    ' "Server =srms-db-new.ce0mhjgkvjuk.ap-southeast-2.rds.amazonaws.com;" &
+    '                                     "User ID = admin; Password = Wcm-softtech2024;")
+
+    'New connection
+    ' srms-db-new.ce0mhjgkvjuk.ap-southeast-2.rds.amazonaws.com
+    ' admin
+    ' Wcm-softtech2024
 
     Function getSHA1Hash(ByVal strToHash As String) As String
         Dim sha1Obj As New Security.Cryptography.SHA1CryptoServiceProvider
@@ -15,7 +27,7 @@ Module connection
         Return strResult
     End Function
 
-    Public Sub AddSemSubjects(ByVal ls As ListView, ByVal subjectcode As String, ByVal Description As String, ByVal SchedTime As String, ByVal Room As String, ByVal Section As String, ByVal IDNumber As String)
+    Public Sub AddSemSubjects(ByVal ls As ListView, ByVal subjectcode As String, ByVal Description As String, ByVal SchedTime As String, ByVal Room As String, ByVal Section As String, ByVal IDNumber As String, ByVal Teacher As String)
         Dim lv As New ListViewItem
         ls.Items.Add(lv)
         lv.Text = subjectcode
@@ -24,6 +36,7 @@ Module connection
         lv.SubItems.Add(Room)
         lv.SubItems.Add(Section)
         lv.SubItems.Add(IDNumber)
+        lv.SubItems.Add(Teacher)
 
     End Sub
 

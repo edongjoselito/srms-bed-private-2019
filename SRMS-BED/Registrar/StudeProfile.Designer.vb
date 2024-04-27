@@ -29,8 +29,10 @@ Partial Class frmStudeProfile
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button14 = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.Tab = New System.Windows.Forms.TabPage()
@@ -195,6 +197,7 @@ Partial Class frmStudeProfile
         Me.txtRequirements = New System.Windows.Forms.TextBox()
         Me.brnBrowse = New System.Windows.Forms.Button()
         Me.txtImagePath = New System.Windows.Forms.TextBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.lblPronoun3 = New System.Windows.Forms.Label()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.lblPronoun2 = New System.Windows.Forms.Label()
@@ -214,12 +217,10 @@ Partial Class frmStudeProfile
         Me.MenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel6.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.Tab.SuspendLayout()
         Me.TabPage3.SuspendLayout()
@@ -229,11 +230,10 @@ Partial Class frmStudeProfile
         Me.TabPage1.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnClose
@@ -309,6 +309,23 @@ Partial Class frmStudeProfile
         Me.btnDelete.Text = "DELETE"
         Me.btnDelete.UseVisualStyleBackColor = False
         '
+        'IconButton1
+        '
+        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(241, Byte), Integer))
+        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Searchengin
+        Me.IconButton1.IconColor = System.Drawing.Color.DeepSkyBlue
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.Location = New System.Drawing.Point(1163, 7)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(136, 42)
+        Me.IconButton1.TabIndex = 0
+        Me.IconButton1.TabStop = False
+        Me.IconButton1.Text = "SEARCH"
+        Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IconButton1.UseVisualStyleBackColor = False
+        '
         'btnSave
         '
         Me.btnSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -333,6 +350,15 @@ Partial Class frmStudeProfile
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(1316, 86)
         Me.Panel5.TabIndex = 18
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.SRMS_BED.My.Resources.Resources.Student_Registration
+        Me.PictureBox1.Location = New System.Drawing.Point(24, 15)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(52, 49)
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
         '
         'Panel7
         '
@@ -2223,6 +2249,18 @@ Partial Class frmStudeProfile
         Me.txtImagePath.TabIndex = 34
         Me.txtImagePath.Visible = False
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox2.InitialImage = Nothing
+        Me.PictureBox2.Location = New System.Drawing.Point(9, 30)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(48, 29)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 59
+        Me.PictureBox2.TabStop = False
+        Me.PictureBox2.Visible = False
+        '
         'lblPronoun3
         '
         Me.lblPronoun3.AutoSize = True
@@ -2406,49 +2444,12 @@ Partial Class frmStudeProfile
         Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox2.InitialImage = Nothing
-        Me.PictureBox2.Location = New System.Drawing.Point(9, 30)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(48, 29)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 59
-        Me.PictureBox2.TabStop = False
-        Me.PictureBox2.Visible = False
-        '
-        'IconButton1
-        '
-        Me.IconButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Searchengin
-        Me.IconButton1.IconColor = System.Drawing.Color.DeepSkyBlue
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(1163, 7)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(136, 42)
-        Me.IconButton1.TabIndex = 0
-        Me.IconButton1.TabStop = False
-        Me.IconButton1.Text = "SEARCH"
-        Me.IconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton1.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.SRMS_BED.My.Resources.Resources.Student_Registration
-        Me.PictureBox1.Location = New System.Drawing.Point(24, 15)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(52, 49)
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
         'frmStudeProfile
         '
         Me.AcceptButton = Me.btnSave
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1316, 826)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -2473,6 +2474,7 @@ Partial Class frmStudeProfile
         Me.Panel1.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.Tab.ResumeLayout(False)
         Me.Tab.PerformLayout()
@@ -2490,14 +2492,13 @@ Partial Class frmStudeProfile
         Me.GroupBox5.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

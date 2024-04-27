@@ -57,7 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=srms_bed")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("server=srms-db-new.ce0mhjgkvjuk.ap-southeast-2.rds.amazonaws.com;user id=Admin;pa"& _ 
+            "ssword=Wcm-softtech2024;database=wcmanilasrms_bed")>  _
         Public ReadOnly Property srms_bedConnectionString() As String
             Get
                 Return CType(Me("srms_bedConnectionString"),String)

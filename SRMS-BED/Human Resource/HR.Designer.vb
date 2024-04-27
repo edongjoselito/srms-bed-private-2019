@@ -36,9 +36,11 @@ Partial Class frmHR
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.MenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FormloadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.crViewer = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.stDate = New System.Windows.Forms.ToolStripStatusLabel()
         Me.stTime = New System.Windows.Forms.ToolStripStatusLabel()
@@ -46,9 +48,12 @@ Partial Class frmHR
         Me.stSemester = New System.Windows.Forms.ToolStripStatusLabel()
         Me.stSY = New System.Windows.Forms.ToolStripStatusLabel()
         Me.lblSettingsID = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.crViewer = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel5.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -87,13 +92,13 @@ Partial Class frmHR
         'ACCOUNTSToolStripMenuItem
         '
         Me.ACCOUNTSToolStripMenuItem.Name = "ACCOUNTSToolStripMenuItem"
-        Me.ACCOUNTSToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.ACCOUNTSToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ACCOUNTSToolStripMenuItem.Text = "ALL"
         '
         'OTHERSERVICESToolStripMenuItem
         '
         Me.OTHERSERVICESToolStripMenuItem.Name = "OTHERSERVICESToolStripMenuItem"
-        Me.OTHERSERVICESToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.OTHERSERVICESToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.OTHERSERVICESToolStripMenuItem.Text = "BY DEPARTMENT"
         '
         'ToolStripButton2
@@ -150,7 +155,7 @@ Partial Class frmHR
         '
         'Panel7
         '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel7.Location = New System.Drawing.Point(0, 86)
         Me.Panel7.Name = "Panel7"
@@ -162,6 +167,7 @@ Partial Class frmHR
         Me.Panel5.Controls.Add(Me.IconButton1)
         Me.Panel5.Controls.Add(Me.Label2)
         Me.Panel5.Controls.Add(Me.Panel6)
+        Me.Panel5.Controls.Add(Me.MenuStrip1)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel5.Location = New System.Drawing.Point(0, 0)
         Me.Panel5.Name = "Panel5"
@@ -179,6 +185,30 @@ Partial Class frmHR
         Me.IconButton1.TabIndex = 7
         Me.IconButton1.UseVisualStyleBackColor = True
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1337, 24)
+        Me.MenuStrip1.TabIndex = 8
+        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.MenuStrip1.Visible = False
+        '
+        'MenuToolStripMenuItem
+        '
+        Me.MenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FormloadToolStripMenuItem})
+        Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
+        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
+        Me.MenuToolStripMenuItem.Text = "Menu"
+        '
+        'FormloadToolStripMenuItem
+        '
+        Me.FormloadToolStripMenuItem.Name = "FormloadToolStripMenuItem"
+        Me.FormloadToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.W), System.Windows.Forms.Keys)
+        Me.FormloadToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.FormloadToolStripMenuItem.Text = "Formload"
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(84, Byte), Integer), CType(CType(160, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -190,6 +220,7 @@ Partial Class frmHR
         '
         'Panel2
         '
+        Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel2.Controls.Add(Me.crViewer)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 151)
@@ -197,23 +228,11 @@ Partial Class frmHR
         Me.Panel2.Size = New System.Drawing.Size(1337, 662)
         Me.Panel2.TabIndex = 24
         '
-        'crViewer
-        '
-        Me.crViewer.ActiveViewIndex = -1
-        Me.crViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.crViewer.Cursor = System.Windows.Forms.Cursors.Default
-        Me.crViewer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.crViewer.Location = New System.Drawing.Point(0, 0)
-        Me.crViewer.Name = "crViewer"
-        Me.crViewer.Size = New System.Drawing.Size(1337, 662)
-        Me.crViewer.TabIndex = 0
-        Me.crViewer.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
-        '
         'StatusStrip1
         '
         Me.StatusStrip1.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.stDate, Me.stTime, Me.stUser, Me.stSemester, Me.stSY, Me.lblSettingsID})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.stDate, Me.stTime, Me.stUser, Me.stSemester, Me.stSY, Me.lblSettingsID, Me.ToolStripStatusLabel1})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 791)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(1337, 22)
@@ -257,6 +276,7 @@ Partial Class frmHR
         Me.stSY.Name = "stSY"
         Me.stSY.Size = New System.Drawing.Size(68, 17)
         Me.stSY.Text = "2023-2024"
+        Me.stSY.Visible = False
         '
         'lblSettingsID
         '
@@ -264,6 +284,24 @@ Partial Class frmHR
         Me.lblSettingsID.Size = New System.Drawing.Size(65, 17)
         Me.lblSettingsID.Text = "SettingsID"
         Me.lblSettingsID.Visible = False
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(171, 17)
+        Me.ToolStripStatusLabel1.Text = "CTRL + W [ Reload the Form ]"
+        '
+        'crViewer
+        '
+        Me.crViewer.ActiveViewIndex = -1
+        Me.crViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.crViewer.Cursor = System.Windows.Forms.Cursors.Default
+        Me.crViewer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.crViewer.Location = New System.Drawing.Point(0, 0)
+        Me.crViewer.Name = "crViewer"
+        Me.crViewer.Size = New System.Drawing.Size(1337, 662)
+        Me.crViewer.TabIndex = 0
+        Me.crViewer.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
         'frmHR
         '
@@ -277,9 +315,11 @@ Partial Class frmHR
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel1)
+        Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "frmHR"
         Me.Text = "::"
@@ -290,6 +330,8 @@ Partial Class frmHR
         Me.Panel6.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
@@ -308,7 +350,6 @@ Partial Class frmHR
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents crViewer As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents ToolStripButton2 As ToolStripButton
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents stDate As ToolStripStatusLabel
@@ -321,4 +362,9 @@ Partial Class frmHR
     Friend WithEvents ACCOUNTSToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OTHERSERVICESToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lblAccountLevel As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents MenuToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FormloadToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
+    Friend WithEvents crViewer As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class

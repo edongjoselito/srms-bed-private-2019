@@ -10,9 +10,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("SRMS-BED")>
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyCompany("SOFTTECH SOLUTIONS AND SERVICES CO.")>
 <Assembly: AssemblyProduct("SRMS-BED")>
-<Assembly: AssemblyCopyright("Copyright ©  2023")>
+<Assembly: AssemblyCopyright("Copyright ©  2024")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

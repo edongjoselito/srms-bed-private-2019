@@ -6,7 +6,7 @@ Public Class frmAddSection
     End Sub
     Public Sub formLoad()
         Try
-            str = "select * from sections where YearLevel='" & lblYearLevel.Text & "' order by Section"
+            str = "select sectionID, Section, YearLevel, concat(FirstName,' ',MiddleName,' ',LastName) as Adviser from sections s join staff st on s.IDNumber=st.IDNumber where YearLevel='" & lblYearLevel.Text & "' order by Section"
             conn.Open()
             Dim Search As New MySqlDataAdapter(Str, conn)
             Dim ds As Data.DataSet = New Data.DataSet
@@ -16,9 +16,10 @@ Public Class frmAddSection
 
             dg1.Columns(0).Visible = False
             dg1.Columns(1).HeaderText = "Section"
-            dg1.Columns(1).Width = 500
+            dg1.Columns(1).Width = 250
             dg1.Columns(2).HeaderText = "Year Level"
-
+            dg1.Columns(3).HeaderText = "Adviser"
+            dg1.Columns(3).Width = 250
 
             txtSection.Clear()
             'cboYearLevel.ResetText()
@@ -37,7 +38,7 @@ Public Class frmAddSection
         Try
 
             If btnAdd.Text = "+ ADD" Then
-                str = "insert into sections values(0,'" & txtSection.Text & "','" & lblYearLevel.Text & "','" & txtAdviser.Text & "')"
+                str = "insert into sections values(0,'" & txtSection.Text & "','" & lblYearLevel.Text & "','" & lblIDNumber.Text & "')"
                 conn.Open()
                 Dim mysc As New MySqlCommand(str, conn)
                 mysc.ExecuteNonQuery()
@@ -94,6 +95,7 @@ Public Class frmAddSection
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        frmSearchPersonnel.lblSource.Text = "Enrollment Form Section"
         frmSearchPersonnel.ShowDialog()
     End Sub
 End Class

@@ -28,7 +28,7 @@ Public Class frmStudeReport_Accounting
 
             'payment history
             If cboStudeReport.SelectedIndex = 1 Then
-                str = "select s.StudentNumber, concat(p.FirstName,' ',p.MiddleName,' ',p.LastName) as StudentName, s.AcctTotal, s.CurrentBalance, s.Discount, s.Sem, s.SY, pa.PDate, pa.ORNumber, pa.Amount, pa.description, pa.PaymentType, pa.ORStatus, pa.Sem, pa.SY, st.letterHead, st.LedgerPreparedBy, st.LedgerPrepByPosition, st.Notes, st.financeOfficer, st.financeOfficerPosition from studeaccount s join paymentsaccounts pa on s.StudentNumber=pa.StudentNumber join studeprofile p on s.StudentNumber=p.StudentNumber join srms_settings st on s.settingsID=st.settingsID where s.StudentNumber='" & mskStudentNumber.Text & "' and s.SY='" & frmAccounting.stSY.Text & "' and pa.SY='" & frmAccounting.stSY.Text & "' and pa.ORStatus='Valid' and pa.CollectionSource!='Services' group by pa.ORNumber"
+                str = "select s.StudentNumber, concat(p.FirstName,' ',p.MiddleName,' ',p.LastName) as StudentName, s.AcctTotal, s.CurrentBalance, s.Discount, s.Sem, s.SY, pa.PDate, pa.ORNumber, pa.Amount, pa.description, pa.PaymentType, pa.ORStatus, pa.Sem, pa.SY, st.letterHead, st.LedgerPreparedBy, st.LedgerPrepByPosition, st.Notes, st.financeOfficer, st.financeOfficerPosition from studeaccount s join paymentsaccounts pa on s.StudentNumber=pa.StudentNumber join studeprofile p on s.StudentNumber=p.StudentNumber join srms_settings st on s.settingsID=st.settingsID where s.StudentNumber='" & mskStudentNumber.Text & "' and pa.SY='" & frmAccounting.stSY.Text & "' and pa.ORStatus='Valid' and pa.CollectionSource!='Services' group by pa.ORNumber"
                 conn.Open()
                 Dim mysDA As New MySqlDataAdapter(Str, conn)
                 Dim mysds As New DataSet
@@ -43,7 +43,7 @@ Public Class frmStudeReport_Accounting
 
             'ledger (other servicesss)
             If cboStudeReport.SelectedIndex = 2 Then
-                str = "select s.StudentNumber, concat(p.FirstName,' ',p.MiddleName,' ',p.LastName) as StudentName, s.AcctTotal, s.CurrentBalance, s.Discount, s.Sem, s.SY, pa.PDate, pa.ORNumber, pa.Amount, pa.description, pa.PaymentType, pa.ORStatus, pa.Sem, pa.SY, st.letterHead, st.LedgerPreparedBy, st.LedgerPrepByPosition, st.Notes, st.financeOfficer, st.financeOfficerPosition from studeaccount s join paymentsaccounts pa on s.StudentNumber=pa.StudentNumber join studeprofile p on s.StudentNumber=p.StudentNumber join srms_settings st on s.settingsID=st.settingsID where s.StudentNumber='" & mskStudentNumber.Text & "' and s.SY='" & frmAccounting.stSY.Text & "' and pa.SY='" & frmAccounting.stSY.Text & "' and pa.ORStatus='Valid' and pa.CollectionSource='Services' group by pa.ORNumber"
+                str = "select pa.StudentNumber, concat(FirstName,' ',MiddleName,' ',LastName) as StudentName, PDate, ORNumber, Amount, PaymentType, description, letterHead from studeprofile s join paymentsaccounts pa on s.StudentNumber=pa.StudentNumber join srms_settings st on s.settingsID=st.settingsID where pa.StudentNumber='" & mskStudentNumber.Text & "' and pa.SY='" & frmAccounting.stSY.Text & "' and pa.ORStatus='Valid' and pa.CollectionSource='Services' group by pa.ORNumber"
                 conn.Open()
                 Dim mysDA As New MySqlDataAdapter(str, conn)
                 Dim mysds As New DataSet

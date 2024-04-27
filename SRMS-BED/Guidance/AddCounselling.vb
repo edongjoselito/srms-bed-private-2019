@@ -16,6 +16,7 @@ Public Class frmAddCounselling
         tsUpdate.Enabled = False
         tsDelete.Enabled = False
         Button1.Enabled = True
+        getCounsellingNumber()
     End Sub
     Private Sub frmAddCounselling_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Formload()
@@ -24,6 +25,26 @@ Public Class frmAddCounselling
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         frmCompleteList.lblSource.Text = "Counselling"
         frmCompleteList.ShowDialog()
+    End Sub
+    Public Sub getCounsellingNumber()
+        Try
+            Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
+            str = "select recordNo from guidance_counselling order by recordNo desc limit 1"
+            conn.Open()
+            Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
+            objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
+            dtReader = objCmd.ExecuteReader()
+            If dtReader.Read Then
+                txtCounsellingNo.Text = dtReader.Item(0).ToString
+                txtCounsellingNo.Text = txtCounsellingNo.Text + 1
+            Else
+                txtCounsellingNo.Text = 1
+            End If
+            conn.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            conn.Close()
+        End Try
     End Sub
 
     Private Sub tsSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsSave.Click

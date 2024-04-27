@@ -48,6 +48,28 @@ Public Class frmSearchPersonnel
 
             Me.Close()
 
+        ElseIf lblSource.Text = "Advisers" Then
+            Dim i As Integer
+            i = dgProfile.CurrentRow.Index
+            frmAdvisers.lblIDNumber.Text = dgProfile.Item(0, i).Value
+            frmAdvisers.txtAdviser.Text = dgProfile.Item(1, i).Value + " " + dgProfile.Item(2, i).Value + " " + dgProfile.Item(3, i).Value
+            Me.Close()
+
+
+        ElseIf lblSource.Text = "Class Program" Then
+            Dim i As Integer
+            i = dgProfile.CurrentRow.Index
+            frmSemSubjects.txtInstructor.Text = dgProfile.Item(0, i).Value
+            frmSemSubjects.txtInstructorName.Text = dgProfile.Item(1, i).Value + " " + dgProfile.Item(2, i).Value + " " + dgProfile.Item(3, i).Value
+            Me.Close()
+
+        ElseIf lblSource.Text = "Enrollment Form Section" Then
+            Dim i As Integer
+            i = dgProfile.CurrentRow.Index
+            frmAddSection.lblIDNumber.Text = dgProfile.Item(0, i).Value
+            frmAddSection.txtAdviser.Text = dgProfile.Item(1, i).Value + " " + dgProfile.Item(2, i).Value + " " + dgProfile.Item(3, i).Value
+            Me.Close()
+
         ElseIf lblSource.Text = "Profile Form" Then
             Dim i As Integer
             i = dgProfile.CurrentRow.Index

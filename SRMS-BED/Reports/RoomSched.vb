@@ -19,4 +19,26 @@ Public Class frmRoomSched
             conn.Close()
         End Try
     End Sub
+
+    Private Sub frmRoomSched_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        getRooms()
+    End Sub
+
+    Public Sub getRooms()
+        Try
+            str = "select * from rooms group by Room order by Room"
+            conn.Open()
+            Dim mysda As New MySqlDataAdapter(str, conn)
+            Dim ds As New Data.DataSet
+            mysda.Fill(ds, "rooms")
+            conn.Close()
+            cboRoom.ValueMember = "rooms"
+            cboRoom.DisplayMember = "Room"
+            cboRoom.DataSource = ds.Tables("rooms")
+            conn.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation)
+            conn.Close()
+        End Try
+    End Sub
 End Class

@@ -6,31 +6,13 @@ Public Class frmAdvisers
     End Sub
 
     Private Sub btnSelect_Click(sender As Object, e As EventArgs) Handles btnSelect.Click
+        frmSearchPersonnel.lblSource.Text = "Advisers"
         frmSearchPersonnel.ShowDialog()
     End Sub
 
-    Public Sub getCourse()
-        Try
-            str = "select * from course_table group by CourseDescription order by CourseDescription"
-            conn.Open()
-                Dim mysda As New MySqlDataAdapter(str, conn)
-                Dim ds As New Data.DataSet
-                mysda.Fill(ds, "course_table")
-                conn.Close()
-
-                cboDepartment.ValueMember = "course_table"
-                cboDepartment.DisplayMember = "CourseDescription"
-                cboDepartment.DataSource = ds.Tables("course_table")
-            conn.Close()
-
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Exclamation)
-            conn.Close()
-        End Try
-    End Sub
     Public Sub getCourseMajor()
         Try
-            str = "select * from course_table where CourseDescription='" & cboDepartment.Text & "' order by Major"
+            str = "select * from course_table"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
             Dim ds As New Data.DataSet
@@ -50,7 +32,7 @@ Public Class frmAdvisers
         formLoad()
     End Sub
 
-    Private Sub cboDepartment_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboDepartment.SelectedIndexChanged
+    Private Sub cboDepartment_SelectedIndexChanged(sender As Object, e As EventArgs)
         getCourseMajor()
     End Sub
 
@@ -61,7 +43,7 @@ Public Class frmAdvisers
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
             If btnSave.Text = "SAVE" Then
-                str = "insert into sections (Section, YearLevel, Adviser) values('" & txtSection.Text & "','" & cboYearLevel.Text & "','" & txtAdviser.Text & "')"
+                str = "insert into sections (Section, YearLevel, IDNumber) values('" & txtSection.Text & "','" & cboYearLevel.Text & "','" & lblIDNumber.Text & "')"
                 conn.Open()
                 Dim mysc As New MySqlCommand(str, conn)
                 mysc.ExecuteNonQuery()
@@ -69,11 +51,18 @@ Public Class frmAdvisers
                 MsgBox("Added successfully!", MsgBoxStyle.Information)
                 formLoad
             Else
-                str = "update sections set Section='" & txtSection.Text & "', YearLevel='" & cboYearLevel.Text & "', Adviser='" & txtAdviser.Text & "' where sectionID='" & lblID.Text & "'"
+                str = "update sections set Section='" & txtSection.Text & "', YearLevel='" & cboYearLevel.Text & "', IDNumber='" & lblIDNumber.Text & "' where sectionID='" & lblID.Text & "'"
                 conn.Open()
                 Dim mysc As New MySqlCommand(str, conn)
                 mysc.ExecuteNonQuery()
                 conn.Close()
+
+                str = "update semesterstude set Section='" & txtSection.Text & "',IDNumber='" & lblIDNumber.Text & "',Adviser='" & txtAdviser.Text & "'  where sectionID='" & lblID.Text & "' and Semester='" & frmRegistrar.stSemester.Text & "' and SY='" & frmRegistrar.stSY.Text & "'"
+                conn.Open()
+                Dim mysc1 As New MySqlCommand(str, conn)
+                mysc1.ExecuteNonQuery()
+                conn.Close()
+
                 MsgBox("Updated successfully!", MsgBoxStyle.Information)
                 formLoad()
             End If
@@ -85,7 +74,7 @@ Public Class frmAdvisers
         End Try
     End Sub
     Public Sub formLoad()
-        getCourse()
+        getCourseMajor()
 
         btnSave.Text = "SAVE"
         btnDelete.Visible = False
@@ -93,7 +82,7 @@ Public Class frmAdvisers
         txtAdviser.Clear()
 
         Try
-            str = "select * from sections  order by YearLevel, Section"
+            str = "select sectionID, Section, YearLevel, s.IDNumber, concat(FirstName,' ',MiddleName,' ',LastName) as Name from sections s join staff st on s.IDNumber=st.IDNumber  order by YearLevel, Section"
             conn.Open()
             Dim Search As New MySqlDataAdapter(str, conn)
             Dim ds As Data.DataSet = New Data.DataSet
@@ -105,8 +94,9 @@ Public Class frmAdvisers
             dg1.Columns(1).HeaderText = "SECTION"
             dg1.Columns(1).Width = 150
             dg1.Columns(2).HeaderText = "YEAR LEVEL"
-            dg1.Columns(3).HeaderText = "ADVISER"
-            dg1.Columns(3).Width = 330
+            dg1.Columns(3).Visible = False
+            dg1.Columns(4).HeaderText = "ADVISER"
+            dg1.Columns(4).Width = 350
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
             conn.Close()
@@ -116,7 +106,7 @@ Public Class frmAdvisers
 
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
         Try
-            str = "select * from sections where Section like '%" & txtSearch.Text & "%' or Adviser like '%" & txtSearch.Text & "%' order by YearLevel, Section"
+            str = "select sectionID, Section, YearLevel, s.IDNumber, concat(FirstName,' ',MiddleName,' ',LastName) as Name from sections s join staff st on s.IDNumber=st.IDNumber where Section like '%" & txtSearch.Text & "%'  order by YearLevel, Section"
             conn.Open()
             Dim Search As New MySqlDataAdapter(str, conn)
             Dim ds As Data.DataSet = New Data.DataSet
@@ -128,9 +118,10 @@ Public Class frmAdvisers
             dg1.Columns(1).HeaderText = "SECTION"
             dg1.Columns(1).Width = 150
             dg1.Columns(2).HeaderText = "YEAR LEVEL"
-            dg1.Columns(2).Width = 150
-            dg1.Columns(3).HeaderText = "ADVISER"
-            dg1.Columns(3).Width = 330
+            dg1.Columns(3).Visible = False
+            dg1.Columns(4).HeaderText = "ADVISER"
+            dg1.Columns(4).Width = 35023
+
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
             conn.Close()
@@ -144,7 +135,8 @@ Public Class frmAdvisers
             lblID.Text = dg1.Item(0, i).Value
             txtSection.Text = dg1.Item(1, i).Value
             cboYearLevel.Text = dg1.Item(2, i).Value
-            txtAdviser.Text = dg1.Item(3, i).Value
+            lblIDNumber.Text = dg1.Item(3, i).Value
+            txtAdviser.Text = dg1.Item(4, i).Value
 
             btnSave.Text = "UPDATE"
             btnDelete.Visible = True

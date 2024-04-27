@@ -127,6 +127,9 @@
   <data name="Report Card" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Report Card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Untitled-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,6 +156,9 @@
   </data>
   <data name="News" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\News.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="No Synchronize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\No Synchronize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,14 +235,17 @@
   <data name="Refresh 48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Refresh 48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Statistic Document 60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Statistic Document 60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Contacts" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Contacts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Laptop Medical" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Laptop Medical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Search Contacts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search Contacts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="List View" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\List View.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,8 +253,8 @@
   <data name="Move  Out 48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Move  Out 48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Update User" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Update User.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dashboard - Management" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashboard - Management.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Information1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Information1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,6 +280,9 @@
   <data name="Settings 48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings 48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Laptop Medical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Laptop Medical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Timetable" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Timetable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -289,9 +301,6 @@
   <data name="Summary List" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Summary List.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search Contacts" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search Contacts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="UsersIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UsersIcon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -300,6 +309,12 @@
   </data>
   <data name="Search Account" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search Account.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Administrator Male 48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Administrator Male 48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Spectators On Seats" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Spectators On Seats.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,6 +328,12 @@
   <data name="Ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="schoolrms" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\schoolrms.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Update User" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Update User.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Syllabus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Syllabus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -321,6 +342,9 @@
   </data>
   <data name="48 px - Profiles" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\48 px - Profiles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="423036528_5919370991521249_7306368735227972431_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\423036528_5919370991521249_7306368735227972431_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Clock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Clock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -358,10 +382,16 @@
   <data name="softtech logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\softtech logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dashboard - Student Registration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashboard - Student Registration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="COVER" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\COVER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Statistic Document 60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Statistic Document 60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bg11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Administrator Male 48px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Administrator Male 48px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

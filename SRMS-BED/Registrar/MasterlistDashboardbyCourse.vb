@@ -21,6 +21,7 @@ Public Class frmMasterlistDashboardbyCourse
                 conn.Close()
                 frmRegistrar.crViewer.ReportSource = obj
                 frmRegistrar.crViewer.Visible = True
+                frmRegistrar.Panel3.Visible = True
                 Me.Hide()
             Else
                 'str = "select p.StudentNumber, concat(p.LastName,', ',p.FirstName,' ',p.MiddleName) as Fullname, p.Sex, ss.Course, ss.YearLevel, ss.Status, ss.SY, YearLevelStat, ss.Section, ss.semstudentid from semesterstude ss join studeprofile p on p.StudentNumber=ss.StudentNumber where ss.Course='" & cboCourse.Text & "' and ss.SY='" & frmParent.lblSY.Text & "' order by p.Sex, Fullname"
@@ -34,6 +35,7 @@ Public Class frmMasterlistDashboardbyCourse
                 conn.Close()
                 frmRegistrar.crViewer.ReportSource = obj
                 frmRegistrar.crViewer.Visible = True
+                frmRegistrar.Panel3.Visible = True
                 Me.Hide()
             End If
 

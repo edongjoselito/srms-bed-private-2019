@@ -5,16 +5,16 @@ Public Class frmPerSpecialization
     Public Sub getQualification()
         Try
 
-            str = "select * from qualifications group by Qualification order by Qualification"
+            str = "select * from track_strand group by track order by track"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
             Dim ds As New DataSet
-            mysda.Fill(ds, "qualifications")
+            mysda.Fill(ds, "track_strand")
             conn.Close()
 
-            cboQualification.ValueMember = "Qualification"
-            cboQualification.DisplayMember = "Qualification"
-            cboQualification.DataSource = ds.Tables("qualifications")
+            cboQualification.ValueMember = "track"
+            cboQualification.DisplayMember = "track"
+            cboQualification.DataSource = ds.Tables("track_strand")
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
@@ -44,6 +44,7 @@ Public Class frmPerSpecialization
                     conn.Close()
                     frmRegistrar.crViewer.ReportSource = obj
                     frmRegistrar.crViewer.Visible = True
+                    frmRegistrar.Panel3.Visible = True
                     Me.Hide()
                 Else
                     str = "select p.StudentNumber, p.FirstName, p.MiddleName, p.LastName, p.Sex, p.BirthDate, p.Age, p.MobileNumber, ss.Course, ss.YearLevel, ss.Semester, ss.SY, ss.Section, ss.Track, ss.Qualification, ss.BalikAral, ss.IP, ss.FourPs, st.Division, st.Region, st.SchoolName, st.SchoolAddress,st.letterHead from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber join srms_settings st on ss.settingsID=st.settingsID where ss.SY='" & frmRegistrar.stSY.Text & "' and ss.Qualification='" & cboQualification.Text & "' and ss.YearLevel='" & cboYearLevel.Text & "' and ss.Section='" & cboSection.Text & "' and ss.Status='Enrolled' order by p.LastName"
@@ -56,6 +57,7 @@ Public Class frmPerSpecialization
                     conn.Close()
                     frmRegistrar.crViewer.ReportSource = obj
                     frmRegistrar.crViewer.Visible = True
+                    frmRegistrar.Panel3.Visible = True
                     Me.Hide()
                     Me.Hide()
                 End If
@@ -71,7 +73,7 @@ Public Class frmPerSpecialization
                     conn.Close()
                     frmRegistrar.crViewer.ReportSource = obj
                     frmRegistrar.crViewer.Visible = True
-
+                    frmRegistrar.Panel3.Visible = True
                     Me.Hide()
                 Else
                     str = "select p.StudentNumber, p.FirstName, p.MiddleName, p.LastName, p.Sex, p.BirthDate, p.Age, p.MobileNumber, ss.Course, ss.YearLevel, ss.Semester, ss.SY, ss.Section, ss.Track, ss.Qualification, ss.BalikAral, ss.IP, ss.FourPs, st.Division, st.Region, st.SchoolName, st.SchoolAddress, st.letterHead from studeprofile p join semesterstude ss on p.StudentNumber=ss.StudentNumber join srms_settings st on ss.settingsID=st.settingsID where ss.SY='" & frmRegistrar.stSY.Text & "' and ss.Semester='" & frmRegistrar.stSemester.Text & "' and ss.Qualification='" & cboQualification.Text & "' and ss.YearLevel='" & cboYearLevel.Text & "' and ss.Section='" & cboSection.Text & "' order by p.LastName"
@@ -84,11 +86,10 @@ Public Class frmPerSpecialization
                     conn.Close()
                     frmRegistrar.crViewer.ReportSource = obj
                     frmRegistrar.crViewer.Visible = True
-
+                    frmRegistrar.Panel3.Visible = True
                     Me.Hide()
                 End If
             End If
-            
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Information)

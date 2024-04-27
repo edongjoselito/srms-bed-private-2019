@@ -29,7 +29,7 @@ Public Class frmSearchCOR
 
     Private Sub txtSearch_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtSearch.TextChanged
         Try
-            str = "SELECT r.StudentNumber, p.FirstName, p.MiddleName, p.LastName, r.Course, r.YearLevel FROM registration r join studeprofile p on r.StudentNumber=p.StudentNumber where (r.StudentNumber like '%" & txtSearch.Text & "%' or LastName like '%" & txtSearch.Text & "%') and Sem='" & frmRegistrar.stSemester.Text & "' and SY='" & frmRegistrar.stSY.Text & "' group by r.StudentNumber"
+            str = "SELECT r.StudentNumber, p.FirstName, p.MiddleName, p.LastName, r.Course, r.YearLevel FROM registration r join studeprofile p on r.StudentNumber=p.StudentNumber where (r.StudentNumber like '%" & txtSearch.Text & "%' or p.LastName like '%" & txtSearch.Text & "%') and Sem='" & frmRegistrar.stSemester.Text & "' and SY='" & frmRegistrar.stSY.Text & "' group by r.StudentNumber"
             conn.Open()
             Dim mysDA As New MySqlDataAdapter(str, conn)
             Dim ds As New Data.DataSet

@@ -46,7 +46,7 @@ Public Class frmSemesterChoice
                     frmMain.schoolInfo()
                     frmMain.ShowDialog()
 
-                Case "Principal", "Registrar"
+                Case "Principal", "Registrar", "Academic Officer"
                     frmRegistrar.stSemester.Text = cboSem.Text
                     frmRegistrar.stSY.Text = txtSYfrom.Text + "-" + txtSYto.Text
                     frmRegistrar.stUser.Text = lblUser.Text

@@ -25,6 +25,17 @@ Public Class frmSearchEnrollees
             dg1.Columns(6).Visible = True
             dg1.Columns(6).HeaderText = "Grade Level"
 
+            dg1.Columns(7).Visible = False
+            dg1.Columns(8).Visible = False
+            dg1.Columns(9).Visible = False
+            dg1.Columns(10).Visible = False
+            dg1.Columns(11).Visible = False
+            dg1.Columns(12).Visible = False
+            dg1.Columns(13).Visible = False
+            dg1.Columns(14).Visible = False
+            dg1.Columns(15).Visible = False
+            dg1.Columns(16).Visible = False
+            dg1.Columns(17).Visible = False
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
@@ -54,6 +65,20 @@ Public Class frmSearchEnrollees
             dg1.Columns(5).HeaderText = "Department"
             dg1.Columns(6).Visible = True
             dg1.Columns(6).HeaderText = "Grade Level"
+
+
+            dg1.Columns(7).Visible = False
+            dg1.Columns(8).Visible = False
+            dg1.Columns(9).Visible = False
+            dg1.Columns(10).Visible = False
+            dg1.Columns(11).Visible = False
+            dg1.Columns(12).Visible = False
+            dg1.Columns(13).Visible = False
+            dg1.Columns(14).Visible = False
+            dg1.Columns(15).Visible = False
+            dg1.Columns(16).Visible = False
+            dg1.Columns(17).Visible = False
+
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)

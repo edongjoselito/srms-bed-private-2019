@@ -22,6 +22,7 @@ Public Class frmGradingSheets
                 frmRegistrar.crViewer.ReportSource = obj
                 conn.Close()
                 frmRegistrar.crViewer.Visible = True
+                frmRegistrar.Panel3.Visible = True
                 Me.Hide()
 
             ElseIf cboPeriod.Text = "2nd Grading" Then
@@ -36,6 +37,7 @@ Public Class frmGradingSheets
                 frmRegistrar.crViewer.ReportSource = obj
                 conn.Close()
                 frmRegistrar.crViewer.Visible = True
+                frmRegistrar.Panel3.Visible = True
                 Me.Hide()
 
             ElseIf cboPeriod.Text = "3rd Grading" Then
@@ -50,6 +52,7 @@ Public Class frmGradingSheets
                 frmRegistrar.crViewer.ReportSource = obj
                 conn.Close()
                 frmRegistrar.crViewer.Visible = True
+                frmRegistrar.Panel3.Visible = True
                 Me.Hide()
 
             ElseIf cboPeriod.Text = "4th Grading" Then
@@ -64,6 +67,7 @@ Public Class frmGradingSheets
                 frmRegistrar.crViewer.ReportSource = obj
                 conn.Close()
                 frmRegistrar.crViewer.Visible = True
+                frmRegistrar.Panel3.Visible = True
                 Me.Hide()
             Else
                 If frmRegistrar.stSemester.Text = "" Then
@@ -78,6 +82,7 @@ Public Class frmGradingSheets
                     frmRegistrar.crViewer.ReportSource = obj
                     conn.Close()
                     frmRegistrar.crViewer.Visible = True
+                    frmRegistrar.Panel3.Visible = True
                     Me.Hide()
                 Else
                     str = "select g.Instructor, sp.StudentNumber, sp.Sex, concat(sp.LastName,', ',sp.FirstName,' ',sp.MiddleName) as StudentName, g.Section, g.SubjectCode, g.Description, g.PGrade, g.MGrade, g.PFinalGrade, g.FGrade, g.Average, g.SY, g.Sem, sr.SchoolName, sr.SchoolAddress, sr.letterHead from grades g join studeprofile sp on sp.StudentNumber=g.StudentNumber join srms_settings sr on sp.settingsID=sr.settingsID where g.SubjectCode='" & txtsubjectcode.Text & "' and g.Instructor='" & txtInstructor.Text & "' and g.Section='" & txtSection.Text & "' and g.Description='" & txtDescription.Text & "' and g.subComponent='" & cboSubComp.Text & "' and g.SY='" & frmRegistrar.stSY.Text & "' order by StudentName"
@@ -91,6 +96,7 @@ Public Class frmGradingSheets
                     frmRegistrar.crViewer.ReportSource = obj
                     conn.Close()
                     frmRegistrar.crViewer.Visible = True
+                    frmRegistrar.Panel3.Visible = True
                     Me.Hide()
                 End If
 

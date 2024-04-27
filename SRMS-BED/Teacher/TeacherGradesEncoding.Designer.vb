@@ -22,8 +22,8 @@ Partial Class TeacherGradesEncoding
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -34,6 +34,7 @@ Partial Class TeacherGradesEncoding
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.dg1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cboStatus = New System.Windows.Forms.ComboBox()
         Me.btnCancel = New FontAwesome.Sharp.IconButton()
         Me.lblMapehStat = New System.Windows.Forms.Label()
         Me.lblInstructorID = New System.Windows.Forms.Label()
@@ -47,6 +48,7 @@ Partial Class TeacherGradesEncoding
         Me.txtSubjectcode = New System.Windows.Forms.TextBox()
         Me.btnDelete = New FontAwesome.Sharp.IconButton()
         Me.btnSave = New FontAwesome.Sharp.IconButton()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
@@ -139,19 +141,21 @@ Partial Class TeacherGradesEncoding
         '
         Me.dg1.AllowUserToAddRows = False
         Me.dg1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.dg1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.dg1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dg1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg1.Location = New System.Drawing.Point(377, 164)
         Me.dg1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dg1.Name = "dg1"
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
-        Me.dg1.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        Me.dg1.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.dg1.Size = New System.Drawing.Size(758, 499)
         Me.dg1.TabIndex = 30
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.cboStatus)
         Me.GroupBox1.Controls.Add(Me.btnCancel)
         Me.GroupBox1.Controls.Add(Me.lblMapehStat)
         Me.GroupBox1.Controls.Add(Me.lblInstructorID)
@@ -171,6 +175,15 @@ Partial Class TeacherGradesEncoding
         Me.GroupBox1.TabIndex = 29
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "SUBJECT DETAILS"
+        '
+        'cboStatus
+        '
+        Me.cboStatus.FormattingEnabled = True
+        Me.cboStatus.Location = New System.Drawing.Point(199, 281)
+        Me.cboStatus.Name = "cboStatus"
+        Me.cboStatus.Size = New System.Drawing.Size(121, 23)
+        Me.cboStatus.TabIndex = 45
+        Me.cboStatus.Visible = False
         '
         'btnCancel
         '
@@ -225,7 +238,7 @@ Partial Class TeacherGradesEncoding
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(12, 141)
+        Me.Label6.Location = New System.Drawing.Point(12, 170)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(53, 15)
         Me.Label6.TabIndex = 38
@@ -236,11 +249,11 @@ Partial Class TeacherGradesEncoding
         Me.txtSection.BackColor = System.Drawing.Color.White
         Me.txtSection.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSection.ForeColor = System.Drawing.Color.Black
-        Me.txtSection.Location = New System.Drawing.Point(103, 138)
+        Me.txtSection.Location = New System.Drawing.Point(103, 167)
         Me.txtSection.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtSection.Name = "txtSection"
         Me.txtSection.ReadOnly = True
-        Me.txtSection.Size = New System.Drawing.Size(122, 23)
+        Me.txtSection.Size = New System.Drawing.Size(154, 23)
         Me.txtSection.TabIndex = 37
         '
         'cboSubSubject
@@ -248,7 +261,7 @@ Partial Class TeacherGradesEncoding
         Me.cboSubSubject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboSubSubject.FormattingEnabled = True
         Me.cboSubSubject.Items.AddRange(New Object() {"Music", "Arts", "Physical Education", "Health"})
-        Me.cboSubSubject.Location = New System.Drawing.Point(199, 230)
+        Me.cboSubSubject.Location = New System.Drawing.Point(103, 137)
         Me.cboSubSubject.Name = "cboSubSubject"
         Me.cboSubSubject.Size = New System.Drawing.Size(154, 23)
         Me.cboSubSubject.TabIndex = 36
@@ -334,6 +347,17 @@ Partial Class TeacherGradesEncoding
         Me.btnSave.Text = "SAVE"
         Me.btnSave.UseVisualStyleBackColor = False
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(12, 140)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(78, 15)
+        Me.Label4.TabIndex = 49
+        Me.Label4.Text = "COMPONENT"
+        '
         'TeacherGradesEncoding
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -386,4 +410,6 @@ Partial Class TeacherGradesEncoding
     Friend WithEvents btnDelete As FontAwesome.Sharp.IconButton
     Friend WithEvents btnSave As FontAwesome.Sharp.IconButton
     Friend WithEvents Label3 As Label
+    Friend WithEvents cboStatus As ComboBox
+    Friend WithEvents Label4 As Label
 End Class

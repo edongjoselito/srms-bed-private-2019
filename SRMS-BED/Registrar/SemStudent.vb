@@ -50,6 +50,10 @@ Public Class frmSemStudent
         cbo4Ps.ResetText()
         cboRepeater.ResetText()
         cboTransferee.ResetText()
+        lblAdviser.Clear()
+        cboYear.ResetText()
+        cboStatus.ResetText()
+        cboStudeStatus.ResetText()
 
         mskStudentNumber.Focus()
 
@@ -175,16 +179,16 @@ Public Class frmSemStudent
     Public Sub getQualification()
         Try
 
-            str = "select * from qualifications where Track='" & cboTrack.Text & "' order by Qualification"
+            str = "select * from track_strand where track='" & cboTrack.Text & "' order by strand"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
             Dim ds As New Data.DataSet
-            mysda.Fill(ds, "qualifications")
+            mysda.Fill(ds, "track_strand")
             conn.Close()
 
-            cboQualification.ValueMember = "Qualification"
-            cboQualification.DisplayMember = "Qualification"
-            cboQualification.DataSource = ds.Tables("qualifications")
+            cboQualification.ValueMember = "strand"
+            cboQualification.DisplayMember = "strand"
+            cboQualification.DataSource = ds.Tables("track_strand")
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
@@ -194,16 +198,16 @@ Public Class frmSemStudent
     End Sub
     Public Sub getTrack()
         Try
-            str = "select * from qualifications group by Track order by Track"
+            str = "select * from track_strand group by track order by track"
             conn.Open()
             Dim mysda As New MySqlDataAdapter(str, conn)
             Dim ds As New Data.DataSet
-            mysda.Fill(ds, "qualifications")
+            mysda.Fill(ds, "track_strand")
             conn.Close()
 
-            cboTrack.ValueMember = "Track"
-            cboTrack.DisplayMember = "Track"
-            cboTrack.DataSource = ds.Tables("qualifications")
+            cboTrack.ValueMember = "track"
+            cboTrack.DisplayMember = "track"
+            cboTrack.DataSource = ds.Tables("track_strand")
 
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
@@ -214,13 +218,14 @@ Public Class frmSemStudent
     Public Sub getAdviser()
         Try
             Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
-            str = "select sectionID, Adviser from sections where sectionID='" & lblAdviserID.Text & "'"
+            str = "select sectionID, concat(FirstName,' ',MiddleName,' ',LastName) as Adviser, s.IDNumber from sections s join staff st on s.IDNumber=st.IDNumber where sectionID='" & lblAdviserID.Text & "'"
             conn.Open()
             Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
             objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
             dtReader = objCmd.ExecuteReader()
             If dtReader.Read Then
                 lblAdviser.Text = dtReader.Item(1)
+                lblIDNumber.Text = dtReader.Item(2)
             End If
             conn.Close()
         Catch ex As Exception
@@ -297,14 +302,14 @@ Public Class frmSemStudent
                     Exit Sub
                 End If
 
-                str = "insert into semesterstude values('0','" & mskStudentNumber.Text & "','" & cboCourse.Text & "','" & cboYear.Text & "','" & cboStatus.Text & "','" & frmRegistrar.stSemester.Text & "','" & frmRegistrar.stSY.Text & "','" & cboSection.Text & "','" & cboStudeStatus.Text & "','" & cboScholarship.Text & "','" & cboYearStat.Text & "','" & cboMajor.Text & "','" & cboTrack.Text & "','" & cboQualification.Text & "','" & cboBalikAral.Text & "','" & cboIP.Text & "','" & cbo4Ps.Text & "','" & cboRepeater.Text & "','" & cboTransferee.Text & "','" & Convert.ToDateTime(frmRegistrar.stDate.Text).ToString("yyyy-MM-dd") & "','" & lblSettingsID.Text & "','" & lblAdviserID.Text & "')"
+                str = "insert into semesterstude values('0','" & mskStudentNumber.Text & "','" & cboCourse.Text & "','" & cboYear.Text & "','" & cboStatus.Text & "','" & frmRegistrar.stSemester.Text & "','" & frmRegistrar.stSY.Text & "','" & cboSection.Text & "','" & cboStudeStatus.Text & "','" & cboScholarship.Text & "','" & cboYearStat.Text & "','" & cboMajor.Text & "','" & cboTrack.Text & "','" & cboQualification.Text & "','" & cboBalikAral.Text & "','" & cboIP.Text & "','" & cbo4Ps.Text & "','" & cboRepeater.Text & "','" & cboTransferee.Text & "','" & Convert.ToDateTime(frmRegistrar.stDate.Text).ToString("yyyy-MM-dd") & "','" & lblAdviser.Text & "','" & lblSettingsID.Text & "','" & lblAdviserID.Text & "','" & lblIDNumber.Text & "')"
                 conn.Open()
                 Dim mysC As New MySqlCommand(str, conn)
                 mysC.ExecuteNonQuery()
                 conn.Close()
 
                 'Audit Trail
-                str = "insert into atrail values('0','Enrolled a Student','" & frmRegistrar.stDate.Text & "','" & frmRegistrar.stTime.Text & "','" & frmRegistrar.stUser.Text & "','" & mskStudentNumber.Text & "')"
+                str = "insert into atrail values('0','Enrolled a Student','" & Convert.ToDateTime(frmRegistrar.stDate.Text).ToString("yyyy-MM-dd") & "','" & frmRegistrar.stTime.Text & "','" & frmRegistrar.stUser.Text & "','" & mskStudentNumber.Text & "')"
                 conn.Open()
                 Dim mysc1 As New MySqlCommand(str, conn)
                 mysc1.ExecuteNonQuery()
@@ -318,7 +323,7 @@ Public Class frmSemStudent
                 'Update Enrollment
             Else
 
-                str = "update semesterstude set Course='" & cboCourse.Text & "',YearLevel='" & cboYear.Text & "',Status='" & cboStatus.Text & "',Section='" & cboSection.Text & "',StudeStatus='" & cboStudeStatus.Text & "',Scholarship='" & cboScholarship.Text & "',YearLevelStat='" & cboYearStat.Text & "',semstudentid='" & lblID.Text & "',Major='" & cboMajor.Text & "',Track='" & cboTrack.Text & "',Qualification='" & cboQualification.Text & "',BalikAral='" & cboBalikAral.Text & "',IP='" & cboIP.Text & "',FourPs='" & cbo4Ps.Text & "',Repeater='" & cboRepeater.Text & "',Transferee='" & cboTransferee.Text & "',sectionID='" & lblAdviserID.Text & "' where semstudentid='" & lblID.Text & "'"
+                str = "update semesterstude set Course='" & cboCourse.Text & "',YearLevel='" & cboYear.Text & "',Status='" & cboStatus.Text & "',Section='" & cboSection.Text & "',StudeStatus='" & cboStudeStatus.Text & "',Scholarship='" & cboScholarship.Text & "',YearLevelStat='" & cboYearStat.Text & "',Major='" & cboMajor.Text & "',Track='" & cboTrack.Text & "',Qualification='" & cboQualification.Text & "',BalikAral='" & cboBalikAral.Text & "',IP='" & cboIP.Text & "',FourPs='" & cbo4Ps.Text & "',Repeater='" & cboRepeater.Text & "',Transferee='" & cboTransferee.Text & "',sectionID='" & lblAdviserID.Text & "',Adviser='" & lblAdviser.Text & "',IDNumber='" & lblIDNumber.Text & "' where semstudentid='" & lblID.Text & "'"
                 conn.Open()
                 Dim mysC As New MySqlCommand(str, conn)
                 mysC.ExecuteNonQuery()
@@ -342,7 +347,7 @@ Public Class frmSemStudent
 
 
                 'Audit Trail
-                str = "insert into atrail values('0','Update Student Enrollment','" & frmRegistrar.stDate.Text & "','" & frmRegistrar.stTime.Text & "','" & frmRegistrar.stUser.Text & "','" & mskStudentNumber.Text & "')"
+                str = "insert into atrail values('0','Update Student Enrollment','" & Convert.ToDateTime(frmRegistrar.stDate.Text).ToString("yyyy-MM-dd") & "','" & frmRegistrar.stTime.Text & "','" & frmRegistrar.stUser.Text & "','" & mskStudentNumber.Text & "')"
                 conn.Open()
                 Dim mysc1 As New MySqlCommand(str, conn)
                 mysc1.ExecuteNonQuery()
@@ -404,7 +409,7 @@ Public Class frmSemStudent
 
 
                 'Audit Trail
-                str = "insert into atrail values('0','Delete Student from Enrollment','" & frmRegistrar.stDate.Text & "','" & frmRegistrar.stTime.Text & "','" & frmRegistrar.stUser.Text & "','" & mskStudentNumber.Text & "')"
+                str = "insert into atrail values('0','Delete Student from Enrollment','" & Convert.ToDateTime(frmRegistrar.stDate.Text).ToString("yyyy-MM-dd") & "','" & frmRegistrar.stTime.Text & "','" & frmRegistrar.stUser.Text & "','" & mskStudentNumber.Text & "')"
                 conn.Open()
                 Dim mysc3 As New MySqlCommand(str, conn)
                 mysc3.ExecuteNonQuery()
@@ -427,7 +432,7 @@ Public Class frmSemStudent
     Public Sub sectionID()
         Try
             Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
-            str = "select sectionID, Adviser from sections where YearLevel='" & cboYear.Text & "' and Section='" & cboSection.Text & "'"
+            str = "select sectionID, concat(FirstName,' ',MiddleName,' ',LastName) as Adviser from sections s join staff st on s.IDNumber=st.IDNumber where YearLevel='" & cboYear.Text & "' and Section='" & cboSection.Text & "'"
             conn.Open()
             Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
             objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
@@ -440,5 +445,9 @@ Public Class frmSemStudent
             MsgBox(ex.Message, MsgBoxStyle.Exclamation)
             conn.Close()
         End Try
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

@@ -1,0 +1,22 @@
+Test Semester: 2021-2022
+
+Super Admin
+sa, sa
+Admin
+admin, moth34board
+Academic Officer
+ao, ao
+Cashier
+ca, ca
+Accounting
+ac, ac
+Guidance
+g, g
+HR
+hr, hr
+Principal
+p, p
+School Nurse
+sn, sn
+Teacher
+19-090-N , 1

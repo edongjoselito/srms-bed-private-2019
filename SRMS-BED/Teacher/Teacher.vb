@@ -56,16 +56,16 @@ Public Class frmTeacher
 
     Private Sub CONSOLIDATEDGRADESToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CONSOLIDATEDGRADESToolStripMenuItem.Click
         Try
-            Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
-            str = "select concat(FirstName,' ',MiddleName,' ',LastName) as Name from staff where IDNumber='" & stUser.Text & "'"
-            conn.Open()
-            Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
-            objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
-            dtReader = objCmd.ExecuteReader()
-            If dtReader.Read Then
-                lblInstructor.Text = dtReader.Item(0)
-            End If
-            conn.Close()
+            'Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
+            'str = "select concat(FirstName,' ',MiddleName,' ',LastName) as Name from staff where IDNumber='" & stUser.Text & "'"
+            'conn.Open()
+            'Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
+            'objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
+            'dtReader = objCmd.ExecuteReader()
+            'If dtReader.Read Then
+            'lblInstructor.Text = dtReader.Item(0)
+            ' End If
+            'conn.Close()
 
             str = "select s.SubjectCode, s.Description, s.Section, s.SchedTime, s.Room, s.SY, s.Semester, i.IDNumber, concat(i.FirstName,' ',i.LastName) as Name from semsubjects s join staff i on s.IDNumber=i.IDNumber where i.IDNumber='" & stUser.Text & "' and s.Semester='" & stSemester.Text & "' and s.SY='" & stSY.Text & "' group by s.SubjectCode, s.SchedTime, s.Room order by s.SubjectCode"
             conn.Open()

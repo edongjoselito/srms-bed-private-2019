@@ -14,6 +14,22 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Janndale\Documents\WCM BED Installer\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>4.5.4.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -49,6 +65,18 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>School.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2D98DEF386B428A6F42C66038CE67A2CF2A0B2EC</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SRMS-BED_4_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
@@ -246,6 +274,12 @@
       <DependentUpon>ORServices.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Accounting\OtherIncomDesc.Designer.vb">
+      <DependentUpon>OtherIncomDesc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\OtherIncomDesc.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Accounting\OtherIncome.Designer.vb">
       <DependentUpon>OtherIncome.vb</DependentUpon>
     </Compile>
@@ -414,6 +448,12 @@
     <Compile Include="Administration\Track.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Attendance\StudentAttendance.Designer.vb">
+      <DependentUpon>StudentAttendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\StudentAttendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Bulk Uploading\BulkUploadStudent.Designer.vb">
       <DependentUpon>BulkUploadStudent.vb</DependentUpon>
     </Compile>
@@ -431,6 +471,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data Sets\DataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Data Sets\Reports3.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -645,6 +690,42 @@
     <Compile Include="Registrar\CompleteList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Registrar\ConsolidatedDashboard.Designer.vb">
+      <DependentUpon>ConsolidatedDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\ConsolidatedDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\ConsolidatedGrades.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsolidatedGrades.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Registrar\ConsolidatedGrades2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsolidatedGrades2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Registrar\ConsolidatedGrades3.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsolidatedGrades3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Registrar\ConsolidatedGrades4.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsolidatedGrades4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Registrar\ConsolidatedGradesNew.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConsolidatedGradesNew.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Registrar\COR.Designer.vb">
       <DependentUpon>COR.vb</DependentUpon>
     </Compile>
@@ -663,6 +744,12 @@
     <Compile Include="Registrar\EncodeGrades.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Registrar\GradesBatchPrinting.Designer.vb">
+      <DependentUpon>GradesBatchPrinting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar\GradesBatchPrinting.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Registrar\GradingSheets.Designer.vb">
       <DependentUpon>GradingSheets.vb</DependentUpon>
     </Compile>
@@ -674,6 +761,12 @@
     </Compile>
     <Compile Include="Registrar\select_report_gradingsheet.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar\StudentsAttendance.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentsAttendance.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\GradingSheetJHS.vb">
       <AutoGen>True</AutoGen>
@@ -1298,6 +1391,9 @@
     <EmbeddedResource Include="Administration\Track.resx">
       <DependentUpon>Track.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Attendance\StudentAttendance.resx">
+      <DependentUpon>StudentAttendance.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Guidance\AddCounselling.resx">
       <DependentUpon>AddCounselling.vb</DependentUpon>
     </EmbeddedResource>
@@ -1396,12 +1492,42 @@
     <EmbeddedResource Include="Registrar\CompleteList.resx">
       <DependentUpon>CompleteList.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\ConsolidatedGrades.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsolidatedGrades.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\ConsolidatedGrades2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsolidatedGrades2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\ConsolidatedGrades3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsolidatedGrades3.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\ConsolidatedGrades4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsolidatedGrades4.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\ConsolidatedGradesNew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ConsolidatedGradesNew.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registrar\COR.resx">
       <DependentUpon>COR.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registrar\COR.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>COR1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\GradesBatchPrinting.resx">
+      <DependentUpon>GradesBatchPrinting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\GradingSheets.resx">
+      <DependentUpon>GradingSheets.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar\StudentsAttendance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StudentsAttendance.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\GradingSheetJHS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1422,6 +1548,9 @@
     <EmbeddedResource Include="Reports\GS4th.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>GS4th.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StatisticsDashboard.resx">
+      <DependentUpon>StatisticsDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teacher\PrintGradingSheet.resx">
       <DependentUpon>PrintGradingSheet.vb</DependentUpon>
@@ -1682,6 +1811,17 @@
     <None Include="Data Sets\DataSet.xss">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </None>
+    <None Include="Data Sets\DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Data Sets\DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data Sets\DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Data Sets\Reports3.xsc">
       <DependentUpon>Reports3.xsd</DependentUpon>
     </None>
@@ -1715,6 +1855,11 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="SRMS-BED_1_TemporaryKey.pfx" />
+    <None Include="SRMS-BED_2_TemporaryKey.pfx" />
+    <None Include="SRMS-BED_3_TemporaryKey.pfx" />
+    <None Include="SRMS-BED_4_TemporaryKey.pfx" />
+    <None Include="SRMS-BED_TemporaryKey.pfx" />
     <None Include="webfonts\fa-brands-400.eot" />
     <None Include="webfonts\fa-brands-400.ttf" />
     <None Include="webfonts\fa-brands-400.woff" />
@@ -1828,6 +1973,16 @@
     <None Include="Resources\UsersIcon1.png" />
     <None Include="Resources\Access.png" />
     <None Include="Resources\Statistic Document 60px.png" />
+    <None Include="Resources\schoolrms.jpg" />
+    <None Include="Resources\dashboard - Management.png" />
+    <None Include="Resources\dashboard - Student Registration.png" />
+    <None Include="Resources\423036528_5919370991521249_7306368735227972431_n.jpg" />
+    <None Include="Resources\Untitled-2.jpg" />
+    <None Include="Resources\bg1.jpg" />
+    <None Include="Resources\bg11.jpg" />
+    <None Include="Resources\bg3.jpg" />
+    <None Include="Resources\Administrator Male 48px.png" />
+    <None Include="Resources\Administrator Male 48px1.png" />
     <Content Include="School.ico" />
     <Content Include="Scripts\fontawesome\all.js" />
     <Content Include="Scripts\fontawesome\all.min.js" />
@@ -1849,6 +2004,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

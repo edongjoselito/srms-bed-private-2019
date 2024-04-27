@@ -4,7 +4,7 @@ Public Class frmSelectSubjects
     Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
         Try
 
-            str = " select SubjectCode, Description, Section, ff.IDNumber, concat(FIrstName,' ',MiddleName,' ',LastName) as Teacher from semsubjects s join staff ff on s.IDNumber=ff.IDNumber where SubjectCode like '%" & txtSearch.Text & "%' and Semester='" & frmRegistrar.stSemester.Text & "' and SY='" & frmRegistrar.stSY.Text & "' order by SubjectCode"
+            str = " select SubjectCode, Description, Section, ff.IDNumber, concat(FIrstName,' ',LastName) as Teacher from semsubjects s join staff ff on s.IDNumber=ff.IDNumber where SubjectCode like '%" & txtSearch.Text & "%' and Semester='" & frmRegistrar.stSemester.Text & "' and SY='" & frmRegistrar.stSY.Text & "' order by SubjectCode"
             conn.Open()
             Dim Search As New MySqlDataAdapter(str, conn)
             Dim ds As DataSet = New DataSet
@@ -29,7 +29,7 @@ Public Class frmSelectSubjects
     Private Sub SelectSubjects_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
 
-            str = "select SubjectCode, Description, Section, ff.IDNumber, concat(FIrstName,' ',MiddleName,' ',LastName) as Teacher from semsubjects s join staff ff on s.IDNumber=ff.IDNumber where Semester='" & frmRegistrar.stSemester.Text & "' and SY='" & frmRegistrar.stSY.Text & "' order by SubjectCode"
+            str = "select SubjectCode, Description, Section, ff.IDNumber, concat(FIrstName,' ',LastName) as Teacher from semsubjects s join staff ff on s.IDNumber=ff.IDNumber where Semester='" & frmRegistrar.stSemester.Text & "' and SY='" & frmRegistrar.stSY.Text & "' order by SubjectCode"
             conn.Open()
             Dim mysC As New MySqlDataAdapter(str, conn)
             Dim ds As New DataSet
@@ -76,7 +76,9 @@ Public Class frmSelectSubjects
                 frmGradesEncodingNew.txtInstructor.Text = dg1(4, i).Value
 
                 frmGradesEncodingNew.Grades()
-
+                frmGradesEncodingNew.getStatus()
+                frmGradesEncodingNew.btnCancel.Visible = True
+                frmGradesEncodingNew.btnDelete.Visible = True
             End If
 
             Me.Close()

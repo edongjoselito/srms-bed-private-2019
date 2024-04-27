@@ -19,7 +19,7 @@ Public Class frmMasterList
             frmRegistrar.crViewer.ReportSource = obj
             conn.Close()
             frmRegistrar.crViewer.Visible = True
-
+            frmRegistrar.Panel3.Visible = True
             Me.Hide()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Information)

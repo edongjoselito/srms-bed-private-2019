@@ -68,6 +68,7 @@ Partial Class frmAccounting
         Me.StudentProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EnrollmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SubjectEnlistmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OTHERFEESDESCRIPTIONToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -86,7 +87,7 @@ Partial Class frmAccounting
         '
         'Panel7
         '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(34, Byte), Integer), CType(CType(47, Byte), Integer), CType(CType(62, Byte), Integer))
+        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(116, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel7.Location = New System.Drawing.Point(0, 86)
         Me.Panel7.Name = "Panel7"
@@ -179,7 +180,7 @@ Partial Class frmAccounting
         '
         'ToolStripButton3
         '
-        Me.ToolStripButton3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ACCOUNTSToolStripMenuItem, Me.OTHERSERVICESToolStripMenuItem})
+        Me.ToolStripButton3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ACCOUNTSToolStripMenuItem, Me.OTHERSERVICESToolStripMenuItem, Me.OTHERFEESDESCRIPTIONToolStripMenuItem})
         Me.ToolStripButton3.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripButton3.Image = Global.SRMS_BED.My.Resources.Resources.Online_Money_Transfer
         Me.ToolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
@@ -191,13 +192,13 @@ Partial Class frmAccounting
         'ACCOUNTSToolStripMenuItem
         '
         Me.ACCOUNTSToolStripMenuItem.Name = "ACCOUNTSToolStripMenuItem"
-        Me.ACCOUNTSToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.ACCOUNTSToolStripMenuItem.Size = New System.Drawing.Size(237, 22)
         Me.ACCOUNTSToolStripMenuItem.Text = "ACCOUNTS"
         '
         'OTHERSERVICESToolStripMenuItem
         '
         Me.OTHERSERVICESToolStripMenuItem.Name = "OTHERSERVICESToolStripMenuItem"
-        Me.OTHERSERVICESToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.OTHERSERVICESToolStripMenuItem.Size = New System.Drawing.Size(237, 22)
         Me.OTHERSERVICESToolStripMenuItem.Text = "OTHER SERVICES"
         '
         'tsSchoolExpenses
@@ -214,13 +215,13 @@ Partial Class frmAccounting
         'EXPENSESToolStripMenuItem
         '
         Me.EXPENSESToolStripMenuItem.Name = "EXPENSESToolStripMenuItem"
-        Me.EXPENSESToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EXPENSESToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.EXPENSESToolStripMenuItem.Text = "EXPENSES"
         '
         'EXPENSESREPORTToolStripMenuItem
         '
         Me.EXPENSESREPORTToolStripMenuItem.Name = "EXPENSESREPORTToolStripMenuItem"
-        Me.EXPENSESREPORTToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EXPENSESREPORTToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.EXPENSESREPORTToolStripMenuItem.Text = "EXPENSES REPORT"
         '
         'tsOR
@@ -320,13 +321,13 @@ Partial Class frmAccounting
         'tsFeesDescription
         '
         Me.tsFeesDescription.Name = "tsFeesDescription"
-        Me.tsFeesDescription.Size = New System.Drawing.Size(174, 22)
+        Me.tsFeesDescription.Size = New System.Drawing.Size(180, 22)
         Me.tsFeesDescription.Text = "FEES DESCRIPTION"
         '
         'SWITCHSEMESTERToolStripMenuItem
         '
         Me.SWITCHSEMESTERToolStripMenuItem.Name = "SWITCHSEMESTERToolStripMenuItem"
-        Me.SWITCHSEMESTERToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.SWITCHSEMESTERToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SWITCHSEMESTERToolStripMenuItem.Text = "SWITCH SEMESTER"
         '
         'ToolStripButton7
@@ -443,11 +444,19 @@ Partial Class frmAccounting
         Me.SubjectEnlistmentToolStripMenuItem.Size = New System.Drawing.Size(208, 22)
         Me.SubjectEnlistmentToolStripMenuItem.Text = "Subject Enlistment"
         '
+        'OTHERFEESDESCRIPTIONToolStripMenuItem
+        '
+        Me.OTHERFEESDESCRIPTIONToolStripMenuItem.Name = "OTHERFEESDESCRIPTIONToolStripMenuItem"
+        Me.OTHERFEESDESCRIPTIONToolStripMenuItem.Size = New System.Drawing.Size(237, 22)
+        Me.OTHERFEESDESCRIPTIONToolStripMenuItem.Text = "OTHER SERVICES DESCRIPTION"
+        '
         'frmAccounting
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.BackgroundImage = Global.SRMS_BED.My.Resources.Resources.bg3
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1337, 823)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.crViewer)
@@ -456,6 +465,7 @@ Partial Class frmAccounting
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel5)
+        Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -524,4 +534,5 @@ Partial Class frmAccounting
     Friend WithEvents EXPENSESToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EXPENSESREPORTToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lblAccountLevel As Label
+    Friend WithEvents OTHERFEESDESCRIPTIONToolStripMenuItem As ToolStripMenuItem
 End Class

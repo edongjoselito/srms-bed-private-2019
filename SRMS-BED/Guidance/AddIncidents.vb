@@ -12,16 +12,37 @@ Public Class frmAddIncidents
         txtOffense.Clear()
         txtSanction.Clear()
         txtActionTaken.Clear()
-       
+
 
         tsSave.Enabled = True
         tsUpdate.Enabled = False
         tsDelete.Enabled = False
         Button1.Enabled = True
+        getCaseNo()
+    End Sub
+    Public Sub getCaseNo()
+        Try
+            Dim objCmd As MySql.Data.MySqlClient.MySqlCommand
+            str = "select caseNO from guidance_incidents order by caseNo desc limit 1"
+            conn.Open()
+            Dim dtReader As MySql.Data.MySqlClient.MySqlDataReader
+            objCmd = New MySql.Data.MySqlClient.MySqlCommand(str, conn)
+            dtReader = objCmd.ExecuteReader()
+            If dtReader.Read Then
+                txtCaseNo.Text = dtReader.Item(0).ToString
+                txtCaseNo.Text = txtCaseNo.Text + 1
+            Else
+                txtCaseNo.Text = 1
+            End If
+            conn.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            conn.Close()
+        End Try
     End Sub
 
     Private Sub frmAddIncidents_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        Formload()
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click

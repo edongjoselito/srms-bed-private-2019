@@ -349,6 +349,8 @@ Public Class frmSemSubjects
     End Sub
 
     Private Sub btnSearchInstructor_Click(sender As Object, e As EventArgs) Handles btnSearchInstructor.Click
+
+        frmSearchPersonnel.lblSource.Text = "Class Program"
         frmSearchPersonnel.ShowDialog()
     End Sub
     Public Sub GetSchedule()
@@ -412,8 +414,9 @@ Public Class frmSemSubjects
                 MsgBox("Data successfully added!", MsgBoxStyle.Information)
                 conn.Close()
 
-                Formload()
                 loadSubjects()
+                Formload()
+
 
             Else
                 GetSchedule()

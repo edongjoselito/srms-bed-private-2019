@@ -23,6 +23,7 @@ Public Class frmReportPerSection
                 obj.SetDataSource(mysds.Tables("semesterstude"))
                 frmRegistrar.crViewer.ReportSource = obj
                 frmRegistrar.crViewer.Visible = True
+                frmRegistrar.Panel3.Visible = True
                 conn.Close()
                 'Me.Hide()
 
@@ -36,7 +37,7 @@ Public Class frmReportPerSection
                 obj.SetDataSource(mysds.Tables("semesterstude"))
                 frmRegistrar.crViewer.ReportSource = obj
                 frmRegistrar.crViewer.Visible = True
-
+                frmRegistrar.Panel3.Visible = True
                 conn.Close()
                 'Me.Hide()
             End If

@@ -237,7 +237,7 @@ Public Class frmPayment
             conn.Close()
 
 
-            If (MsgBox("Payment has been acknowledged! Do you want to print the Official Receipt?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes) Then
+            If (MsgBox("Payment has been acknowledged! Do you want to print the Acknowledgement Receipt?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes) Then
                 'str = "select p.StudentNumber, concat(p.LastName,', ',p.FirstName,' ',p.MiddleName) as StudentName, ss.Course, ss.YearLevel, pa.PDate, pa.ORNumber, pa.Amount, pa.description, pa.PaymentType, pa.CheckNumber, pa.Sem, pa.SY, pa.Address, sa.CurrentBalance from studeprofile p join paymentsaccounts pa on p.StudentNumber=pa.StudentNumber join semesterstude ss on p.StudentNumber=ss.StudentNumber join studeaccount sa on pa.StudentNumber=sa.StudentNumber where pa.StudentNumber='" & mskStudentNumber.Text & "' and pa.ORNumber='" & txtOR.Text & "' and pa.Sem='" & frmParent.lblSem.Text & "' and pa.SY='" & frmParent.lblSY.Text & "'"
                 str = "select pa.StudentNumber, concat(FirstName,' ',MiddleName,' ',LastName) as StudentName, concat(sa.Course,'/ ',pa.YearLevel) as Course, pa.PaymentType, pa.description, pa.Amount, pa.ORNumber, pa.PDate, sa.CurrentBalance, sa.YearLevel, sa.Sem, sa.SY from paymentsaccounts pa join studeaccount sa on pa.StudentNumber=sa.StudentNumber join studeprofile p on sa.StudentNumber=p.StudentNumber where sa.StudentNumber='" & mskStudentNumber.Text & "' and sa.Sem='" & frmAccounting.stSemester.Text & "' and sa.SY='" & frmAccounting.stSY.Text & "' and pa.ORNumber='" & txtOR.Text & "' group by sa.StudentNumber"
                 conn.Open()

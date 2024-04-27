@@ -114,7 +114,8 @@ Public Class frmSearchSemSubjects
                     Exit Sub
                 End If
             Next
-            AddSemSubjects(frmCOR.lvCOR, dgsubjects.Item(0, i).Value, dgsubjects.Item(1, i).Value, dgsubjects.Item(2, i).Value, dgsubjects.Item(3, i).Value, dgsubjects.Item(4, i).Value, dgsubjects.Item(5, i).Value)
+            AddSemSubjects(frmCOR.lvCOR, dgsubjects.Item(0, i).Value, dgsubjects.Item(1, i).Value, dgsubjects.Item(2, i).Value, dgsubjects.Item(3, i).Value, dgsubjects.Item(4, i).Value, dgsubjects.Item(5, i).Value, dgsubjects.Item(6, i).Value)
+
 
             frmCOR.tsSave.Enabled = True
 
