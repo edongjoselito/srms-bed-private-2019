@@ -343,14 +343,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SRMS-BED.exe" size="7082416">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SRMS-BED.exe" size="7082384">
       <assemblyIdentity name="SRMS-BED" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1SGOYtXmHfAaq/zl1MGN7d++k6nFimdn+hyJ4qGv8YY=</dsig:DigestValue>
+        <dsig:DigestValue>IXI30RNvk/yJhU/Har/uaChux06+4Nm2QO2sF9G9bfI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
